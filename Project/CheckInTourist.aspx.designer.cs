@@ -11,7 +11,7 @@ namespace Project
 {
 
 
-    public partial class CheckIn
+    public partial class CheckInTourist
     {
 
         /// <summary>

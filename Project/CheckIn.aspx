@@ -49,7 +49,8 @@
                                 <td class="auto-style4" style="border-style: inset; border-color: #006600; background-color: #006600">&nbsp;<br />
                                     <asp:Label ID="lblZooInfo" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="White" Text="ZooInfoSys"></asp:Label>
                                     &nbsp;&nbsp;&nbsp;
-                                    <img alt="Logo" class="flex-shrink-0" data-nimg="1" decoding="async" src="https://zooinfosys-10b2-local.rocketpreview.app/_next/image?url=%2Fassets%2Fimages%2Fapp_logo.png&amp;w=64&amp;q=85" srcset="/_next/image?url=%2Fassets%2Fimages%2Fapp_logo.png&amp;w=32&amp;q=85 1x, /_next/image?url=%2Fassets%2Fimages%2Fapp_logo.png&amp;w=64&amp;q=85 2x" style="color: transparent; height: 34px; width: 35px;" /><br />
+                                    <asp:Image ID="Image2" runat="server" ImageUrl="~/Images/Screenshot 2026-08-10 122157.png" />
+                                    <br />
                                     &nbsp;&nbsp;&nbsp;&nbsp;
                                     <asp:Label ID="lblZooInfo0" runat="server" Font-Size="Small" ForeColor="#999999" Text="Operations"></asp:Label>
                                 </td>

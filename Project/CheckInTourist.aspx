@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CheckInTourist.aspx.cs" Inherits="Project.CheckIn" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CheckInTourist.aspx.cs" Inherits="Project.CheckInTourist" %>
 
 <!DOCTYPE html>
 
@@ -6,9 +6,7 @@
 <head runat="server">
     <title></title>
     <style type="text/css">
-        .auto-style1 {
-            width: 1368px;
-        }
+
         .auto-style6 {
             width: 170px;
         }
@@ -18,11 +16,13 @@
         .auto-style5 {
             width: 456px;
         }
-    </style>
+        .auto-style1 {
+            width: 1368px;
+        }
+        </style>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
             <table class="auto-style1">
                 <tr>
                     <td class="auto-style6" rowspan="3">
@@ -52,11 +52,8 @@
                     <td class="auto-style2">&nbsp;</td>
                     <td class="auto-style5">&nbsp;</td>
                 </tr>
-                <tr>
-                    <td class="auto-style2">&nbsp;</td>
-                    <td class="auto-style5">&nbsp;</td>
-                </tr>
             </table>
+        <div>
         </div>
     </form>
 </body>
