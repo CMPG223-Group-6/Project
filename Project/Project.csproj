@@ -7,7 +7,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{ED90A132-70CA-4C42-9641-DF016338A446}</ProjectGuid>
+    <ProjectGuid>{DC83FD24-818A-4613-82E3-3A901A1D68F9}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -16,7 +16,7 @@
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
-    <IISExpressSSLPort>44338</IISExpressSSLPort>
+    <IISExpressSSLPort>44328</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
@@ -67,65 +67,66 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Bookings.aspx" />
-    <Content Include="CheckIn.aspx" />
-    <Content Include="MyOverview.aspx" />
-    <Content Include="MyProfile.aspx" />
-    <Content Include="Payment.aspx" />
-    <Content Include="TouristMenu.aspx" />
+    <Content Include="CheckInTourist.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Images\zims_zoo_logo.png" />
+    <Content Include="MaintainBookings.aspx" />
+    <Content Include="MaintainEventsTypes.aspx" />
+    <Content Include="MaintainTourists.aspx" />
+    <Content Include="ProcessPayments.aspx" />
+    <Content Include="Reports.aspx" />
     <Content Include="Web.config" />
-    <Content Include="ZooInformation.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bookings.aspx.cs">
-      <DependentUpon>Bookings.aspx</DependentUpon>
+    <Compile Include="CheckInTourist.aspx.cs">
+      <DependentUpon>CheckInTourist.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Bookings.aspx.designer.cs">
-      <DependentUpon>Bookings.aspx</DependentUpon>
+    <Compile Include="CheckInTourist.aspx.designer.cs">
+      <DependentUpon>CheckInTourist.aspx</DependentUpon>
     </Compile>
-    <Compile Include="CheckIn.aspx.cs">
-      <DependentUpon>CheckIn.aspx</DependentUpon>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CheckIn.aspx.designer.cs">
-      <DependentUpon>CheckIn.aspx</DependentUpon>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="MyOverview.aspx.cs">
-      <DependentUpon>MyOverview.aspx</DependentUpon>
+    <Compile Include="MaintainBookings.aspx.cs">
+      <DependentUpon>MaintainBookings.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MyOverview.aspx.designer.cs">
-      <DependentUpon>MyOverview.aspx</DependentUpon>
+    <Compile Include="MaintainBookings.aspx.designer.cs">
+      <DependentUpon>MaintainBookings.aspx</DependentUpon>
     </Compile>
-    <Compile Include="MyProfile.aspx.cs">
-      <DependentUpon>MyProfile.aspx</DependentUpon>
+    <Compile Include="MaintainEventsTypes.aspx.cs">
+      <DependentUpon>MaintainEventsTypes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MyProfile.aspx.designer.cs">
-      <DependentUpon>MyProfile.aspx</DependentUpon>
+    <Compile Include="MaintainEventsTypes.aspx.designer.cs">
+      <DependentUpon>MaintainEventsTypes.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Payment.aspx.cs">
-      <DependentUpon>Payment.aspx</DependentUpon>
+    <Compile Include="MaintainTourists.aspx.cs">
+      <DependentUpon>MaintainTourists.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Payment.aspx.designer.cs">
-      <DependentUpon>Payment.aspx</DependentUpon>
+    <Compile Include="MaintainTourists.aspx.designer.cs">
+      <DependentUpon>MaintainTourists.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProcessPayments.aspx.cs">
+      <DependentUpon>ProcessPayments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProcessPayments.aspx.designer.cs">
+      <DependentUpon>ProcessPayments.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TouristMenu.aspx.cs">
-      <DependentUpon>TouristMenu.aspx</DependentUpon>
+    <Compile Include="Reports.aspx.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="TouristMenu.aspx.designer.cs">
-      <DependentUpon>TouristMenu.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ZooInformation.aspx.cs">
-      <DependentUpon>ZooInformation.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ZooInformation.aspx.designer.cs">
-      <DependentUpon>ZooInformation.aspx</DependentUpon>
+    <Compile Include="Reports.aspx.designer.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -144,22 +145,15 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
   <ProjectExtensions>
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>52449</DevelopmentServerPort>
+          <DevelopmentServerPort>54687</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>https://localhost:44338/</IISUrl>
+          <IISUrl>http://localhost:44328/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
@@ -175,4 +169,11 @@
     </PropertyGroup>
     <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
   </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
 </Project>
