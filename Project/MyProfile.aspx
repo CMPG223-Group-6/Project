@@ -92,7 +92,7 @@
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <asp:Label ID="lblNameDisplay" runat="server" Font-Size="Small" ForeColor="#999999"></asp:Label>
                     </td>
-                    <td class="auto-style7"></td>
+                    <td class="auto-style7">&nbsp;</td>
                     <td class="auto-style7"></td>
                 </tr>
                 <tr>

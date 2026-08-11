@@ -7,16 +7,16 @@ using System.Web.UI.WebControls;
 
 namespace Project
 {
-    public partial class Bookings : System.Web.UI.Page
+    public partial class MyBookings : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
-        protected void btnMyBookings_Click(object sender, EventArgs e)
+        protected void btnAvailableEvents_Click(object sender, EventArgs e)
         {
-            Response.Redirect("MyBookings.aspx");
+            Response.Redirect("Bookings.aspx");
         }
 
         protected void btnNewBooking_Click(object sender, EventArgs e)
@@ -24,14 +24,14 @@ namespace Project
             Response.Redirect("BookEvent.aspx");
         }
 
+        protected void btnUpdate_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("UpdateBooking.aspx");
+        }
+
         protected void btnCancelBooking_Click(object sender, EventArgs e)
         {
             Response.Redirect("CancelBooking.aspx");
-        }
-
-        protected void btnUpdateBooking_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("UpdateBooking.aspx");
         }
     }
 }

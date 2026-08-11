@@ -20,7 +20,6 @@
             height: 282px;
         }
         .auto-style3 {
-            height: 282px;
         }
         .auto-style6 {
             width: 191px;
@@ -35,6 +34,9 @@
         }
         .auto-style8 {
             height: 40px;
+        }
+        .auto-style9 {
+            width: 625px;
         }
     </style>
 </head>
@@ -57,7 +59,7 @@
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
                 </tr>
                 <tr>
-                    <td class="auto-style2" style="border-style: inset; border-color: #006600; background-color: #006600">
+                    <td class="auto-style2" style="border-style: inset; border-color: #006600; background-color: #006600" rowspan="2">
                         <asp:Label ID="lblZooNavigation" runat="server" Font-Size="Small" ForeColor="#999999" Text="NAVIGATION"></asp:Label>
                         <br />
                         <br />
@@ -75,8 +77,36 @@
                             <StaticHoverStyle BackColor="#669999" />
                         </asp:Menu>
                     </td>
-                    <td class="auto-style3">&nbsp;</td>
-                    <td class="auto-style3"></td>
+                    <td class="auto-style9" rowspan="4">
+                        <asp:Panel ID="Panel2" runat="server" Height="427px" Width="802px">
+                            &nbsp;&nbsp;&nbsp;
+                            <asp:Label ID="lblInformation" runat="server" style="text-align: justify" Text="Upcoming Events"></asp:Label>
+                            <br />
+                            <asp:GridView ID="gdvDisplayEvents" runat="server" Height="367px" Width="790px">
+                            </asp:GridView>
+                        </asp:Panel>
+                    </td>
+                    <td>
+                        <asp:Panel ID="Panel3" runat="server" Height="121px">
+                            <br />
+                            &nbsp;<asp:Label ID="lblInformation0" runat="server" style="text-align: justify" Text="Total Visits"></asp:Label>
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:Label ID="lblDisplayVisits" runat="server" ForeColor="#006600" style="text-align: justify"></asp:Label>
+                        </asp:Panel>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style3">
+                        <asp:Panel ID="Panel4" runat="server" Height="116px">
+                            <br />
+                            &nbsp;
+                            <asp:Label ID="lblInformation1" runat="server" style="text-align: justify" Text="Booked Events"></asp:Label>
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:Label ID="lblBookedDisplay" runat="server" ForeColor="#0099FF" style="text-align: justify"></asp:Label>
+                        </asp:Panel>
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style6" style="border-style: inset; border-color: #006600; background-color: #006600">
@@ -90,8 +120,16 @@
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <asp:Label ID="lblNameDisplay" runat="server" Font-Size="Small" ForeColor="#999999"></asp:Label>
                     </td>
-                    <td class="auto-style7"></td>
-                    <td class="auto-style7"></td>
+                    <td class="auto-style7">
+                        <asp:Panel ID="Panel5" runat="server" Height="107px">
+                            <br />
+                            &nbsp;
+                            <asp:Label ID="lblInformation2" runat="server" style="text-align: justify" Text="Total Spent"></asp:Label>
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:Label ID="lblDisplaySpent" runat="server" ForeColor="#660066" style="text-align: justify"></asp:Label>
+                        </asp:Panel>
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style1" style="border-style: inset; border-color: #006600; background-color: #006600">
@@ -102,7 +140,6 @@
                             <StaticHoverStyle BorderColor="#669999" />
                         </asp:Menu>
                     </td>
-                    <td class="auto-style8"></td>
                     <td class="auto-style8"></td>
                 </tr>
             </table>

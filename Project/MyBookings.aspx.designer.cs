@@ -11,7 +11,7 @@ namespace Project
 {
 
 
-    public partial class Bookings
+    public partial class MyBookings
     {
 
         /// <summary>
@@ -87,67 +87,49 @@ namespace Project
         protected global::System.Web.UI.WebControls.Panel Panel1;
 
         /// <summary>
-        /// lblSearch control.
+        /// btnAvailableEvents control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSearch;
+        protected global::System.Web.UI.WebControls.Button btnAvailableEvents;
 
         /// <summary>
-        /// TextBox1 control.
+        /// btnNewBooking0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.Button btnNewBooking0;
 
         /// <summary>
-        /// btnMyBookings control.
+        /// btnUpdate0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnMyBookings;
+        protected global::System.Web.UI.WebControls.Button btnUpdate0;
 
         /// <summary>
-        /// btnNewBooking control.
+        /// btnCancelBooking0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnNewBooking;
+        protected global::System.Web.UI.WebControls.Button btnCancelBooking0;
 
         /// <summary>
-        /// btnUpdateBooking control.
+        /// lblUpcomingEvents control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnUpdateBooking;
-
-        /// <summary>
-        /// btnCancelBooking control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCancelBooking;
-
-        /// <summary>
-        /// lblAvailableEvents control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAvailableEvents;
+        protected global::System.Web.UI.WebControls.Label lblUpcomingEvents;
 
         /// <summary>
         /// gdvDisplayEvents control.
@@ -175,14 +157,5 @@ namespace Project
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblNameDisplay;
-
-        /// <summary>
-        /// Menu3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Menu Menu3;
     }
 }
