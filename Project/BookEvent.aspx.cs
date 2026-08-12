@@ -18,5 +18,12 @@ namespace Project
         {
             Response.Redirect("Bookings.aspx");
         }
+
+        protected void btnBook_Click(object sender, EventArgs e)
+        {
+            lblInfo0.Visible = true;
+            lblConfirmation.Visible = true;
+            btnDone.Visible = true;
+        }
     }
 }

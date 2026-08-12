@@ -93,7 +93,7 @@
                         <asp:Label ID="lblNameDisplay" runat="server" Font-Size="Small" ForeColor="#999999"></asp:Label>
                     </td>
                     <td class="auto-style7"></td>
-                    <td class="auto-style7"></td>
+                    <td class="auto-style7">&nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style1" style="border-style: inset; border-color: #006600; background-color: #006600">

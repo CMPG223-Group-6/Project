@@ -81,7 +81,7 @@
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                         <asp:Label ID="lblSearch" runat="server" Text="Type To Search Event:"></asp:Label>
                                         &nbsp;&nbsp;
-                                        <asp:TextBox ID="TextBox1" runat="server" Width="396px"></asp:TextBox>
+                                        <asp:TextBox ID="txtSearch" runat="server" Width="396px"></asp:TextBox>
                                         <br />
                                         <br />
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

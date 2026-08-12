@@ -21,13 +21,6 @@
             height: 4px;
             width: 944px;
         }
-        .auto-style1 {
-            width: 195px;
-            height: 3px;
-        }
-        .auto-style12 {
-            height: 3px;
-        }
         .auto-style13 {
             width: 195px;
             height: 4px;
@@ -65,7 +58,7 @@
                         </td>
                     <td class="auto-style9">
                         <asp:Panel ID="Panel1" runat="server" Height="404px" Width="711px">
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="lblDeleteInfo0" runat="server" Font-Bold="True" Font-Size="Large" Text="Account Deletion"></asp:Label>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /> &nbsp;<asp:Label ID="lblDeleteInfo0" runat="server" Font-Bold="True" Font-Size="Large" Text="Account Deletion"></asp:Label>
                             &nbsp;&nbsp;<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <br />
                             &nbsp;<asp:Label ID="lblQuestion" runat="server" ForeColor="#999999" Text="This will permanently remove the account and all data associated with this account. This cannot be undone, do you still want to proceed?"></asp:Label>
