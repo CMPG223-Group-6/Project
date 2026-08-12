@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Project
 {
-    public partial class Default : System.Web.UI.Page
+    public partial class StaffLoginPage : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -16,12 +16,7 @@ namespace Project
 
         protected void btnLoginStaff_Click(object sender, EventArgs e)
         {
-            Response.Redirect("StaffLoginPage.aspx");
-        }
 
-        protected void btnLoginTourist_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("TouristLoginPage.aspx");
         }
     }
 }

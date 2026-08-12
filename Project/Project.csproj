@@ -114,6 +114,8 @@
     <Content Include="CheckIn.aspx" />
     <Content Include="CheckInTourist.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="TouristLoginPage.aspx" />
+    <Content Include="TouristSignUpPage.aspx" />
     <Content Include="Images\Screenshot 2026-08-10 122157.png" />
     <Content Include="Images\zims_zoo_logo.png" />
     <Content Include="MaintainBookings.aspx" />
@@ -187,6 +189,7 @@
     <Content Include="ProcessPayments.aspx" />
     <Content Include="Project.slnx" />
     <Content Include="Reports.aspx" />
+    <Content Include="StaffLoginPage.aspx" />
     <Content Include="TouristMenu.aspx" />
     <Content Include="Web.config" />
     <Content Include="ZooInformation.aspx" />
@@ -219,6 +222,20 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TouristLoginPage.aspx.cs">
+      <DependentUpon>TouristLoginPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TouristLoginPage.aspx.designer.cs">
+      <DependentUpon>TouristLoginPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TouristSignUpPage.aspx.cs">
+      <DependentUpon>TouristSignUpPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TouristSignUpPage.aspx.designer.cs">
+      <DependentUpon>TouristSignUpPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="MaintainBookings.aspx.cs">
       <DependentUpon>MaintainBookings.aspx</DependentUpon>
@@ -277,6 +294,13 @@
     </Compile>
     <Compile Include="Reports.aspx.designer.cs">
       <DependentUpon>Reports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StaffLoginPage.aspx.cs">
+      <DependentUpon>StaffLoginPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaffLoginPage.aspx.designer.cs">
+      <DependentUpon>StaffLoginPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="TouristMenu.aspx.cs">
       <DependentUpon>TouristMenu.aspx</DependentUpon>
