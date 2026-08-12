@@ -33,7 +33,7 @@
 </head>
 <body style="height: 622px">
     <form id="form1" runat="server">
-        <div style="height: 621px">
+        <div style="height: 621px; margin-top: 0px;">
             <table style="width:100%; height: 637px;">
                 <tr>
                     <td>
@@ -77,7 +77,7 @@
                                     </asp:Menu>
                                 </td>
                                 <td class="auto-style3" rowspan="3">
-                                    <asp:Panel ID="Panel1" runat="server" Height="426px">
+                                    <asp:Panel ID="Panel1" runat="server" Height="426px" ScrollBars="Horizontal">
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                         <asp:Label ID="lblSearch" runat="server" Text="Type To Search Event:"></asp:Label>
                                         &nbsp;&nbsp;

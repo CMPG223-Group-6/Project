@@ -116,6 +116,7 @@
     <Content Include="CheckIn.aspx" />
     <Content Include="CheckInTourist.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="DeleteAccount.aspx" />
     <Content Include="Images\Screenshot 2026-08-10 122157.png" />
     <Content Include="Images\zims_zoo_logo.png" />
     <Content Include="MaintainBookings.aspx" />
@@ -190,6 +191,7 @@
     <Content Include="ProcessPayments.aspx" />
     <Content Include="Project.slnx" />
     <Content Include="Reports.aspx" />
+    <Content Include="SQLQuery2.sql" />
     <Content Include="TouristMenu.aspx" />
     <Content Include="UpdateBooking.aspx" />
     <Content Include="Web.config" />
@@ -237,6 +239,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteAccount.aspx.cs">
+      <DependentUpon>DeleteAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeleteAccount.aspx.designer.cs">
+      <DependentUpon>DeleteAccount.aspx</DependentUpon>
     </Compile>
     <Compile Include="MaintainBookings.aspx.cs">
       <DependentUpon>MaintainBookings.aspx</DependentUpon>
