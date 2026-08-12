@@ -70,7 +70,7 @@
                                 </td>
                                 <td class="auto-style3" rowspan="3">
                                     <asp:Panel ID="Panel1" runat="server" Height="426px">
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="btnAvailableEvents" runat="server" BackColor="#669999" ForeColor="White" OnClick="btnAvailableEvents_Click" Text="Available Events" Width="192px" />
+                                        &nbsp;&nbsp;&nbsp;<br /> &nbsp;&nbsp; &nbsp;&nbsp;<asp:Button ID="btnAvailableEvents" runat="server" BackColor="#669999" ForeColor="White" OnClick="btnAvailableEvents_Click" Text="Available Events" Width="192px" />
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                         <asp:Button ID="btnNewBooking0" runat="server" BackColor="#006600" BorderColor="#003300" BorderStyle="Groove" ForeColor="White" OnClick="btnNewBooking_Click" Text="+ New Booking" Width="161px" />
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

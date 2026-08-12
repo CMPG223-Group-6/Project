@@ -65,9 +65,9 @@
                             <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <br />
                             <br />
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="btnBack" runat="server" ForeColor="#009900" Text="Back" Width="118px" />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="btnBack" runat="server" ForeColor="#009900" Text="Back" Width="118px" OnClick="btnBack_Click" />
                             &nbsp;&nbsp;&nbsp;&nbsp;
-                            <asp:Button ID="btnProceed" runat="server" ForeColor="Red" Text="Proceed To Delete" Width="238px" />
+                            <asp:Button ID="btnProceed" runat="server" ForeColor="Red" Text="Proceed To Delete" Width="238px" OnClick="btnProceed_Click1" />
                         </asp:Panel>
                     </td>
                     <td class="auto-style14">

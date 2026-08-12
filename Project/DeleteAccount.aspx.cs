@@ -18,5 +18,15 @@ namespace Project
         {
 
         }
+
+        protected void btnProceed_Click1(object sender, EventArgs e)
+        {
+            Response.Redirect("default.aspx");
+        }
+
+        protected void btnBack_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("MyProfile.aspx");
+        }
     }
 }

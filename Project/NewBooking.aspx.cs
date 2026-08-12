@@ -16,7 +16,7 @@ namespace Project
 
         protected void btnCancelProgress_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Bookings.aspx");
+            Response.Redirect("NewBooking.aspx");
         }
 
         protected void btnBook_Click(object sender, EventArgs e)

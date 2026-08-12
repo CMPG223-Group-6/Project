@@ -110,7 +110,7 @@
     <Content Include="bin\roslyn\System.Xml.XPath.XDocument.dll" />
     <Content Include="bin\roslyn\vbc.exe" />
     <Content Include="bin\roslyn\VBCSCompiler.exe" />
-    <Content Include="BookEvent.aspx" />
+    <Content Include="NewBooking.aspx" />
     <Content Include="Bookings.aspx" />
     <Content Include="CancelBooking.aspx" />
     <Content Include="CheckIn.aspx" />
@@ -199,12 +199,12 @@
     <Content Include="ZooInformation.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BookEvent.aspx.cs">
-      <DependentUpon>BookEvent.aspx</DependentUpon>
+    <Compile Include="NewBooking.aspx.cs">
+      <DependentUpon>NewBooking.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="BookEvent.aspx.designer.cs">
-      <DependentUpon>BookEvent.aspx</DependentUpon>
+    <Compile Include="NewBooking.aspx.designer.cs">
+      <DependentUpon>NewBooking.aspx</DependentUpon>
     </Compile>
     <Compile Include="Bookings.aspx.cs">
       <DependentUpon>Bookings.aspx</DependentUpon>

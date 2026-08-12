@@ -21,7 +21,7 @@ namespace Project
 
         protected void btnNewBooking_Click(object sender, EventArgs e)
         {
-            Response.Redirect("BookEvent.aspx");
+            Response.Redirect("NewBooking.aspx");
         }
 
         protected void btnCancelBooking_Click(object sender, EventArgs e)
@@ -33,5 +33,7 @@ namespace Project
         {
             Response.Redirect("UpdateBooking.aspx");
         }
+
+
     }
 }

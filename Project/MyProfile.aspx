@@ -85,7 +85,7 @@
                             <asp:Label ID="lblEmail" runat="server" Text="Email Address"></asp:Label>
                             <br />
                             &nbsp;&nbsp;&nbsp;&nbsp;
-                            <asp:TextBox ID="txtEmail" runat="server" Height="20px" Width="249px"></asp:TextBox>
+                            <asp:TextBox ID="txtEmail" runat="server" Height="20px" Width="249px" TextMode="Email"></asp:TextBox>
                             <br />
                             &nbsp;&nbsp;&nbsp;&nbsp;
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtEmail" ErrorMessage="Please Enter Email Address" Font-Size="Small" ForeColor="Red"></asp:RequiredFieldValidator>
@@ -129,7 +129,7 @@
                             <asp:Label ID="lblEmail0" runat="server" Text="Email Address"></asp:Label>
                             <br />
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <asp:TextBox ID="txtEmailDelete" runat="server" Width="221px"></asp:TextBox>
+                            <asp:TextBox ID="txtEmailDelete" runat="server" Width="221px" TextMode="Email"></asp:TextBox>
                             <br />
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtEmailDelete" ErrorMessage="Please Enter Email Address" Font-Size="Small" ForeColor="Red" ValidationGroup="btnDelete"></asp:RequiredFieldValidator>
@@ -146,7 +146,7 @@
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtPassword" ErrorMessage="Please Enter Password" Font-Size="Small" ForeColor="Red" ValidationGroup="btnDelete"></asp:RequiredFieldValidator>
                             <br />
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <asp:Button ID="btnDelete" runat="server" BackColor="#FF3300" BorderColor="#CC3300" BorderStyle="Groove" ForeColor="White" Text="Delete" Width="136px" ValidationGroup="btnDelete" />
+                            <asp:Button ID="btnDelete" runat="server" BackColor="#FF3300" BorderColor="#CC3300" BorderStyle="Groove" ForeColor="White" Text="Delete" Width="136px" ValidationGroup="btnDelete" OnClick="btnDelete_Click" />
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <asp:LinkButton ID="lnkForgotPassword" runat="server">Forgot Password?</asp:LinkButton>
                             <br />

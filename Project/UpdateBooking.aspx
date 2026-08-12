@@ -81,7 +81,7 @@
                             &nbsp;&nbsp;&nbsp;
                             <asp:Label ID="lblTickets" runat="server" Text="Number of Tickets:"></asp:Label>
                             &nbsp;&nbsp;&nbsp;
-                            <asp:TextBox ID="txtNumberTickets" runat="server" AutoPostBack="True" Width="161px"></asp:TextBox>
+                            <asp:TextBox ID="txtNumberTickets" runat="server" AutoPostBack="True" Width="60px" TextMode="Number"></asp:TextBox>
                             <br />
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtNumberTickets" ErrorMessage="Please number of tickets" Font-Size="Small" ForeColor="Red" ValidationGroup="btnUpdate"></asp:RequiredFieldValidator>
