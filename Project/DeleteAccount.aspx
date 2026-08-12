@@ -17,16 +17,9 @@
             height: 14px;
         text-align: left;
     }
-        .auto-style10 {
-            width: 195px;
-            height: 151px;
-        }
         .auto-style9 {
-            height: 151px;
+            height: 4px;
             width: 944px;
-        }
-        .auto-style13 {
-            height: 151px;
         }
         .auto-style1 {
             width: 195px;
@@ -35,12 +28,19 @@
         .auto-style12 {
             height: 3px;
         }
+        .auto-style13 {
+            width: 195px;
+            height: 4px;
+        }
+        .auto-style14 {
+            height: 4px;
+        }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
-            <table style="width: 98%; height: 601px;">
+            <table style="width: 98%; height: 465px;">
                 <tr>
                     <td class="auto-style4" style="border-style: inset; border-color: #006600; background-color: #006600">&nbsp;<br />
                         <asp:Label ID="lblZooInfo" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="White" Text="ZooInfoSys"></asp:Label>
@@ -57,7 +57,7 @@
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
                 </tr>
                 <tr>
-                    <td class="auto-style10" style="border-style: inset; border-color: #006600; background-color: #006600">
+                    <td class="auto-style13" style="border-style: inset; border-color: #006600; background-color: #006600">
                         <br />
                         <br />
                         <br />
@@ -65,32 +65,22 @@
                         </td>
                     <td class="auto-style9">
                         <asp:Panel ID="Panel1" runat="server" Height="404px" Width="711px">
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="lblDeleteInfo0" runat="server" Font-Bold="True" Font-Size="Large" Text="Canceling Booking event" Visible="False"></asp:Label>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="lblDeleteInfo0" runat="server" Font-Bold="True" Font-Size="Large" Text="Account Deletion"></asp:Label>
                             &nbsp;&nbsp;<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <br />
-                            &nbsp;<asp:Label ID="lblQuestion" runat="server" ForeColor="#999999" Text="This will permanently remove the account and all data associated with this account. This cannot be undone, do you still want to proceed?" Visible="False"></asp:Label>
+                            &nbsp;<asp:Label ID="lblQuestion" runat="server" ForeColor="#999999" Text="This will permanently remove the account and all data associated with this account. This cannot be undone, do you still want to proceed?"></asp:Label>
                             <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <br />
                             <br />
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <asp:Button ID="btnBack" runat="server" ForeColor="Green" OnClick="btnCancelProgress_Click" Text="Back" Visible="False" Width="98px" />
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="btnBack" runat="server" ForeColor="#009900" Text="Back" Width="118px" />
+                            &nbsp;&nbsp;&nbsp;&nbsp;
                             <asp:Button ID="btnProceed" runat="server" ForeColor="Red" Text="Proceed To Delete" Width="238px" />
                         </asp:Panel>
                     </td>
-                    <td class="auto-style13">
-                        &nbsp;</td>
+                    <td class="auto-style14">
+                        </td>
                 </tr>
-                <tr>
-                    <td class="auto-style1" style="border-style: inset; border-color: #006600; background-color: #006600">
-                        &nbsp;</td>
-                    <td class="auto-style12" colspan="2">
-                        <br />
-                        <br />
-                        <br />
-                    </td>
-                </tr>
-            </table>
+                </table>
         </div>
     </form>
 </body>

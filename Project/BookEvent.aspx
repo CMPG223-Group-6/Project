@@ -72,17 +72,18 @@
                                 <asp:ListItem>2</asp:ListItem>
                                 <asp:ListItem>3</asp:ListItem>
                             </asp:DropDownList>
-                            &nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="ddrlEventID" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <br />
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="ddrlEventID" ErrorMessage="Please Select Event ID" Font-Size="Small" ForeColor="Red" ValidationGroup="btnCreateBooking"></asp:RequiredFieldValidator>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <br />
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <asp:Label ID="lblArrivalDate" runat="server" Text="Arrival Date:"></asp:Label>
                             &nbsp;
                             <asp:TextBox ID="txtDate" runat="server" AutoPostBack="True" ReadOnly="True" TextMode="Date" Width="156px">  yyyy / mm / dd</asp:TextBox>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <asp:Calendar ID="TheCal" runat="server" Height="40px">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtDate" ErrorMessage="Please Select Date" Font-Size="Small" ForeColor="Red" InitialValue="0" ValidationGroup="btnCreateBooking"></asp:RequiredFieldValidator>
+                            &nbsp;<asp:Calendar ID="TheCal" runat="server" Height="40px">
                                 <SelectedDayStyle BackColor="#66FFFF" BorderStyle="Solid" />
                                 <TodayDayStyle BorderStyle="Dotted" />
                                 <WeekendDayStyle BackColor="#999999" />
@@ -94,7 +95,7 @@
                         </asp:Panel>
                     </td>
                     <td class="auto-style13">
-                        <asp:Panel ID="Panel2" runat="server" Height="417px">
+                        <asp:Panel ID="Panel2" runat="server" Height="417px" style="margin-left: 0px">
                             <br />
                             <asp:Label ID="lblEventType" runat="server" Text="Event Type:"></asp:Label>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -104,8 +105,8 @@
                             <asp:Label ID="lblTickets" runat="server" Text="Number of Tickets:"></asp:Label>
                             &nbsp;&nbsp;&nbsp;
                             <asp:TextBox ID="txtNumberTickets" runat="server" AutoPostBack="True" Width="161px"></asp:TextBox>
-                            &nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtNumberTickets" ErrorMessage="*" ForeColor="Red" InitialValue="0"></asp:RequiredFieldValidator>
-                            <br />
+                            &nbsp;<br />
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtNumberTickets" ErrorMessage="Please Enter Number of tickets" Font-Size="Small" ForeColor="Red" InitialValue="0" ValidationGroup="btnCreateBooking"></asp:RequiredFieldValidator>
                             <br />
                             <asp:Label ID="lblAmount" runat="server" Text="Payment Amount:"></asp:Label>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -120,9 +121,9 @@
                                 <asp:ListItem Value="2">Card</asp:ListItem>
                             </asp:DropDownList>
 &nbsp;
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="ddrlMethod" ErrorMessage="*" ForeColor="Red" InitialValue="0"></asp:RequiredFieldValidator>
                             <br />
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="ddrlMethod" ErrorMessage="Please Select payment method" Font-Size="Small" ForeColor="Red" InitialValue="0" ValidationGroup="btnCreateBooking"></asp:RequiredFieldValidator>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <br />
                             <br />
                             <br />

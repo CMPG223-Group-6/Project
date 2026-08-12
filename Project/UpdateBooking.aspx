@@ -63,7 +63,7 @@
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </td>
                     <td class="auto-style9">
-                        <asp:Panel ID="Panel1" runat="server" Height="404px" Width="566px">
+                        <asp:Panel ID="Panel1" runat="server" Height="404px" Width="566px" BorderColor="Black" BorderStyle="Groove">
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<asp:Label ID="lblEventID" runat="server" Text="Event ID:"></asp:Label>
                             &nbsp;&nbsp;&nbsp;&nbsp;
                             <asp:DropDownList ID="ddrlEventID" runat="server" AutoPostBack="True" Width="149px">
@@ -71,16 +71,17 @@
                                 <asp:ListItem>2</asp:ListItem>
                                 <asp:ListItem>3</asp:ListItem>
                             </asp:DropDownList>
-                            &nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="ddrlEventID" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <br />
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="ddrlEventID" ErrorMessage="Please Select Event ID" Font-Size="Small" ForeColor="Red" ValidationGroup="btnUpdateBooking"></asp:RequiredFieldValidator>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <br />
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <asp:Label ID="lblArrivalDate" runat="server" Text="Arrival Date:"></asp:Label>
                             &nbsp;
                             <asp:TextBox ID="txtDate" runat="server" AutoPostBack="True" ReadOnly="True" TextMode="Date" Width="156px">  yyyy / mm / dd</asp:TextBox>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtDate" ErrorMessage="Please Select Date" Font-Size="Small" ForeColor="Red" InitialValue="0" ValidationGroup="btnUpdateBooking"></asp:RequiredFieldValidator>
                             <br />
                             <asp:Calendar ID="TheCal" runat="server" Height="40px">
                                 <SelectedDayStyle BackColor="#66FFFF" BorderStyle="Solid" />
@@ -93,24 +94,28 @@
                         </asp:Panel>
                     </td>
                     <td class="auto-style13">
-                        <asp:Panel ID="Panel2" runat="server" Height="417px">
+                        <asp:Panel ID="Panel2" runat="server" Height="417px" BorderColor="Black" BorderStyle="Groove">
                             <br />
+                            &nbsp;&nbsp;&nbsp;
                             <asp:Label ID="lblEventType" runat="server" Text="Event Type:"></asp:Label>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <asp:TextBox ID="txtDisplayEventType" runat="server" AutoPostBack="True" ReadOnly="True" Width="230px"></asp:TextBox>
+                            <asp:TextBox ID="txtDisplayEventType" runat="server" AutoPostBack="True" Width="230px" ReadOnly="True"></asp:TextBox>
                             <br />
                             <br />
-                            <asp:Label ID="lblTickets" runat="server" Text="Number of Tickets:"></asp:Label>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="lblTickets" runat="server" Text="Number of Tickets:"></asp:Label>
                             &nbsp;&nbsp;&nbsp;
                             <asp:TextBox ID="txtNumberTickets" runat="server" AutoPostBack="True" Width="161px"></asp:TextBox>
-                            &nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtNumberTickets" ErrorMessage="*" ForeColor="Red" InitialValue="0"></asp:RequiredFieldValidator>
                             <br />
+                            &nbsp;&nbsp;&nbsp;
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtNumberTickets" ErrorMessage="Please Enter Number of tickets" Font-Size="Small" ForeColor="Red" InitialValue="0" ValidationGroup="btnUpdateBooking"></asp:RequiredFieldValidator>
                             <br />
+                            &nbsp;&nbsp;&nbsp;
                             <asp:Label ID="lblAmount" runat="server" Text="Payment Amount:"></asp:Label>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <asp:TextBox ID="txtAmount0" runat="server" AutoPostBack="True" ReadOnly="True" Width="172px"></asp:TextBox>
                             <br />
                             <br />
+                            &nbsp;&nbsp;&nbsp;
                             <asp:Label ID="lblPaymentMethod" runat="server" Text="Payment Method:"></asp:Label>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <asp:DropDownList ID="ddrlMethod" runat="server" Width="189px">
@@ -119,15 +124,16 @@
                                 <asp:ListItem Value="2">Card</asp:ListItem>
                             </asp:DropDownList>
 &nbsp;
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="ddrlMethod" ErrorMessage="*" ForeColor="Red" InitialValue="0"></asp:RequiredFieldValidator>
                             <br />
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="ddrlMethod" ErrorMessage="Please Select payment method" Font-Size="Small" ForeColor="Red" InitialValue="0" ValidationGroup="btnUpdateBooking"></asp:RequiredFieldValidator>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <br />
                             <br />
                             <br />
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="btnCancel" runat="server" OnClick="btnCancel_Click" Text="Cancel" Width="131px" />
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <asp:Button ID="btnUpdateBooking" runat="server" BackColor="#339933" BorderColor="#006600" BorderStyle="Outset" ForeColor="White" Text="Update Booking" Width="153px" />
+                            <asp:Button ID="btnUpdateBooking" runat="server" BackColor="#339933" BorderColor="#006600" BorderStyle="Outset" ForeColor="White" Text="Update Booking" Width="153px" ValidationGroup="btnUpdateBooking" />
                             <br />
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </asp:Panel>
@@ -142,7 +148,7 @@
                             <StaticHoverStyle BorderColor="#669999" />
                         </asp:Menu>
                     </td>
-                    <td class="auto-style12" colspan="2">
+                    <td class="auto-style12" colspan="2" style="border-style: groove; border-color: #000000">
                         <asp:Label ID="lblConfirmation" runat="server"></asp:Label>
                         <br />
                         <asp:Label ID="lblError" runat="server" ForeColor="Red"></asp:Label>

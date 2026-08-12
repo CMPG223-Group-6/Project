@@ -191,6 +191,7 @@
     <Content Include="ProcessPayments.aspx" />
     <Content Include="Project.slnx" />
     <Content Include="Reports.aspx" />
+    <Content Include="ResetPassword.aspx" />
     <Content Include="SQLQuery2.sql" />
     <Content Include="TouristMenu.aspx" />
     <Content Include="UpdateBooking.aspx" />
@@ -311,6 +312,13 @@
     </Compile>
     <Compile Include="Reports.aspx.designer.cs">
       <DependentUpon>Reports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResetPassword.aspx.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResetPassword.aspx.designer.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="TouristMenu.aspx.cs">
       <DependentUpon>TouristMenu.aspx</DependentUpon>

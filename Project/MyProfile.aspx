@@ -145,9 +145,9 @@
                             <asp:TextBox ID="txtEmailDelete" runat="server" Width="221px"></asp:TextBox>
                             <br />
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtEmailDelete" ErrorMessage="Please Enter Email Address" Font-Size="Small" ForeColor="Red"></asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtEmailDelete" ErrorMessage="Please Enter Email Address" Font-Size="Small" ForeColor="Red" ValidationGroup="btnDelete"></asp:RequiredFieldValidator>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="txtEmailDelete" ErrorMessage="Invalid email address." Font-Size="Small" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                            <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="txtEmailDelete" ErrorMessage="Invalid email address." Font-Size="Small" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGroup="btnDelete"></asp:RegularExpressionValidator>
                             <br />
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <asp:Label ID="lblPassword" runat="server" Text="Password:"></asp:Label>
@@ -155,9 +155,11 @@
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" Width="221px"></asp:TextBox>
                             <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtPassword" ErrorMessage="Please Password" Font-Size="Small" ForeColor="Red" ValidationGroup="btnDelete"></asp:RequiredFieldValidator>
                             <br />
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <asp:Button ID="btnDelete" runat="server" BackColor="#FF3300" BorderColor="#CC3300" BorderStyle="Groove" ForeColor="White" Text="Delete" Width="136px" />
+                            <asp:Button ID="btnDelete" runat="server" BackColor="#FF3300" BorderColor="#CC3300" BorderStyle="Groove" ForeColor="White" Text="Delete" Width="136px" ValidationGroup="btnDelete" />
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <asp:LinkButton ID="lnkForgotPassword" runat="server">Forgot Password?</asp:LinkButton>
                             <br />

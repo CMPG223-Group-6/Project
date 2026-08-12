@@ -78,16 +78,15 @@
                         </asp:Menu>
                     </td>
                     <td class="auto-style9" rowspan="4">
-                        <asp:Panel ID="Panel2" runat="server" Height="427px" Width="802px">
+                        <asp:Panel ID="Panel2" runat="server" Height="427px" Width="802px" GroupingText="Upcoming Events" ScrollBars="Both">
                             &nbsp;&nbsp;&nbsp;
-                            <asp:Label ID="lblInformation" runat="server" style="text-align: justify" Text="Upcoming Events"></asp:Label>
                             <br />
                             <asp:GridView ID="gdvDisplayEvents" runat="server" Height="367px" Width="790px">
                             </asp:GridView>
                         </asp:Panel>
                     </td>
                     <td>
-                        <asp:Panel ID="Panel3" runat="server" Height="121px">
+                        <asp:Panel ID="Panel3" runat="server" Height="121px" BorderColor="Black" BorderStyle="Groove">
                             <br />
                             &nbsp;<asp:Label ID="lblInformation0" runat="server" style="text-align: justify" Text="Total Visits"></asp:Label>
                             <br />
@@ -98,7 +97,7 @@
                 </tr>
                 <tr>
                     <td class="auto-style3">
-                        <asp:Panel ID="Panel4" runat="server" Height="116px">
+                        <asp:Panel ID="Panel4" runat="server" Height="116px" BorderColor="Black" BorderStyle="Groove">
                             <br />
                             &nbsp;
                             <asp:Label ID="lblInformation1" runat="server" style="text-align: justify" Text="Booked Events"></asp:Label>
@@ -121,7 +120,7 @@
                         <asp:Label ID="lblNameDisplay" runat="server" Font-Size="Small" ForeColor="#999999"></asp:Label>
                     </td>
                     <td class="auto-style7">
-                        <asp:Panel ID="Panel5" runat="server" Height="107px">
+                        <asp:Panel ID="Panel5" runat="server" Height="107px" BorderColor="Black" BorderStyle="Groove">
                             <br />
                             &nbsp;
                             <asp:Label ID="lblInformation2" runat="server" style="text-align: justify" Text="Total Spent"></asp:Label>

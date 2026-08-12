@@ -114,6 +114,15 @@ namespace Project
         protected global::System.Web.UI.WebControls.TextBox txtDate;
 
         /// <summary>
+        /// RequiredFieldValidator4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
+
+        /// <summary>
         /// TheCal control.
         /// </summary>
         /// <remarks>

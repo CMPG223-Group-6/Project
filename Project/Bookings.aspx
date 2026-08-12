@@ -77,7 +77,7 @@
                                     </asp:Menu>
                                 </td>
                                 <td class="auto-style3" rowspan="3">
-                                    <asp:Panel ID="Panel1" runat="server" Height="426px" ScrollBars="Horizontal">
+                                    <asp:Panel ID="Panel1" runat="server" Height="490px">
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                         <asp:Label ID="lblSearch" runat="server" Text="Type To Search Event:"></asp:Label>
                                         &nbsp;&nbsp;
@@ -96,12 +96,13 @@
                                         &nbsp;
                                         <br />
                                         &nbsp;&nbsp;&nbsp;&nbsp;
-                                        <asp:Label ID="lblAvailableEvents" runat="server" Text="Available Events:"></asp:Label>
+                                        <asp:Panel ID="Panel2" runat="server" GroupingText="Available Events:" Height="340px" ScrollBars="Both">
+                                            <asp:GridView ID="gdvDisplayEvents" runat="server" Height="241px" Width="1190px">
+                                            </asp:GridView>
+                                        </asp:Panel>
                                         <br />
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <asp:GridView ID="gdvDisplayEvents" runat="server" Height="241px" Width="1190px">
-                                        </asp:GridView>
-                                    </asp:Panel>
+                                        </asp:Panel>
                                 </td>
                             </tr>
                             <tr>
