@@ -18,6 +18,21 @@
         .auto-style5 {
             width: 411px;
         }
+        .auto-style7 {
+            width: 229px;
+        }
+        .auto-style8 {
+            width: 455px;
+            height: 699px;
+        }
+        .auto-style9 {
+            width: 229px;
+            height: 699px;
+        }
+        .auto-style10 {
+            width: 411px;
+            height: 699px;
+        }
     </style>
 </head>
 <body>
@@ -25,7 +40,7 @@
         <div>
             <table class="auto-style1">
                 <tr>
-                    <td class="auto-style6" rowspan="3">
+                    <td class="auto-style6" rowspan="5">
                         <asp:Image ID="Image1" runat="server" Height="158px" ImageUrl="~/Images/zims_zoo_logo.png" Width="331px" />
                         <asp:Menu ID="Menu1" runat="server" BackColor="#003300" DynamicHorizontalOffset="13" Font-Bold="True" Font-Size="13pt" ForeColor="White" Height="700px" StaticSubMenuIndent="25px" Width="330px">
                             <DynamicHoverStyle BackColor="#339933" />
@@ -46,75 +61,193 @@
                         </asp:Menu>
                     </td>
                     <td class="auto-style2"></td>
-                    <td class="auto-style5">
-                        <asp:Label ID="lblHeader" runat="server" Text="Tourist Dashboard"></asp:Label>
+                    <td class="auto-style7">
+                        <asp:Label ID="lblHeader" runat="server" Text="Tourist Dashboard" Font-Bold="True" Font-Size="25px"></asp:Label>
                         <br />
                     </td>
                     <td class="auto-style5"></td>
                 </tr>
                 <tr>
-                    <td class="auto-style2">
-                        <asp:Panel ID="pnlAdd" runat="server" GroupingText="Add Tourist">
-                            <asp:Label ID="Label8" runat="server" Text="Label"></asp:Label>
-                            <asp:TextBox ID="TextBox8" runat="server"></asp:TextBox>
+                    <td class="auto-style8">
+                        <asp:Label ID="lblAddOutput" runat="server"></asp:Label>
+                        <asp:Panel ID="pnlAdd" runat="server" GroupingText="Add Tourist" style="margin-top: 0px" Height="529px">
                             <br />
-                            <asp:Label ID="Label9" runat="server" Text="Label"></asp:Label>
-                            <asp:TextBox ID="TextBox9" runat="server"></asp:TextBox>
+                            <asp:Label ID="lblAddName" runat="server" Font-Bold="True" Font-Size="15px" Text="Enter your name:"></asp:Label>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:TextBox ID="txtAddName" runat="server"></asp:TextBox>
                             <br />
-                            <asp:Label ID="Label10" runat="server" Text="Label"></asp:Label>
-                            <asp:TextBox ID="TextBox10" runat="server"></asp:TextBox>
                             <br />
-                            <asp:Label ID="Label11" runat="server" Text="Label"></asp:Label>
-                            <asp:TextBox ID="TextBox11" runat="server"></asp:TextBox>
+                            <asp:Label ID="lblAddSurname" runat="server" Font-Bold="True" Font-Size="15px" Text="Enter your surname:"></asp:Label>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:TextBox ID="txtAddSurname" runat="server"></asp:TextBox>
                             <br />
-                            <asp:Label ID="Label12" runat="server" Text="Label"></asp:Label>
-                            <asp:TextBox ID="TextBox12" runat="server"></asp:TextBox>
                             <br />
-                            <asp:Label ID="Label13" runat="server" Text="Label"></asp:Label>
-                            <asp:TextBox ID="TextBox13" runat="server"></asp:TextBox>
+                            <asp:Label ID="lblAddNumber" runat="server" Font-Bold="True" Font-Size="14px" Text="Enter your phone number:"></asp:Label>
+                            <asp:TextBox ID="txtAddNumber" runat="server"></asp:TextBox>
                             <br />
-                            <asp:Label ID="Label14" runat="server" Text="Label"></asp:Label>
-                            <asp:TextBox ID="TextBox14" runat="server"></asp:TextBox>
+                            <br />
+                            <asp:Label ID="lblAddEmail" runat="server" Font-Bold="True" Font-Size="15px" Text="Enter your email:"></asp:Label>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:TextBox ID="txtAddEmail" runat="server" TextMode="Email"></asp:TextBox>
+                            <br />
+                            <br />
+                            <asp:Label ID="lblNoOfTickets" runat="server" Font-Bold="True" Font-Size="15px" Text="No of Tickets:"></asp:Label>
+                            <br />
+                            <asp:TextBox ID="txtNoofTickets" runat="server" TextMode="Number"></asp:TextBox>
+                            <br />
+                            <asp:Label ID="lblAddCountry" runat="server" Font-Bold="True" Font-Size="15px" Text="Country Of Origin:"></asp:Label>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:DropDownList ID="ddlAddCountry" runat="server" Height="19px" OnSelectedIndexChanged="ddlAddCountry_SelectedIndexChanged" Width="154px">
+                                <asp:ListItem>Select A Country</asp:ListItem>
+                                <asp:ListItem>South Africa</asp:ListItem>
+                                <asp:ListItem>Nigeria</asp:ListItem>
+                                <asp:ListItem>Kenya</asp:ListItem>
+                                <asp:ListItem>Democratic Republic Of Congo</asp:ListItem>
+                                <asp:ListItem>Ethiopia</asp:ListItem>
+                                <asp:ListItem>United Kingdom</asp:ListItem>
+                                <asp:ListItem>England</asp:ListItem>
+                                <asp:ListItem>France</asp:ListItem>
+                                <asp:ListItem>Germany</asp:ListItem>
+                                <asp:ListItem>Wales</asp:ListItem>
+                                <asp:ListItem>United States Of America</asp:ListItem>
+                                <asp:ListItem>Canada</asp:ListItem>
+                                <asp:ListItem>Mexico</asp:ListItem>
+                                <asp:ListItem>Netherlands</asp:ListItem>
+                                <asp:ListItem>Portugal</asp:ListItem>
+                                <asp:ListItem>China</asp:ListItem>
+                                <asp:ListItem>Japan</asp:ListItem>
+                                <asp:ListItem>Singapore</asp:ListItem>
+                                <asp:ListItem>North Macedonia</asp:ListItem>
+                                <asp:ListItem>Ukraine</asp:ListItem>
+                                <asp:ListItem>Russia</asp:ListItem>
+                                <asp:ListItem>Montenegero</asp:ListItem>
+                                <asp:ListItem>Mozambique</asp:ListItem>
+                                <asp:ListItem>Angola</asp:ListItem>
+                                <asp:ListItem>Afghanistan</asp:ListItem>
+                                <asp:ListItem>Algeria</asp:ListItem>
+                                <asp:ListItem>Argentina</asp:ListItem>
+                                <asp:ListItem></asp:ListItem>
+                                <asp:ListItem>Austria</asp:ListItem>
+                                <asp:ListItem>Armenia</asp:ListItem>
+                                <asp:ListItem>Brazil</asp:ListItem>
+                                <asp:ListItem>Cameroon</asp:ListItem>
+                                <asp:ListItem>Chile</asp:ListItem>
+                                <asp:ListItem>Cuba</asp:ListItem>
+                                <asp:ListItem>Colombia</asp:ListItem>
+                                <asp:ListItem>Comoros</asp:ListItem>
+                                <asp:ListItem>Eswatini</asp:ListItem>
+                            </asp:DropDownList>
+                            <br />
                             <br />
                             <br />
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <asp:Button ID="BtnAdd" runat="server" Height="32px" Text="Add" Width="157px" />
+                            <asp:Button ID="BtnAdd" runat="server" Height="32px" Text="Add" Width="157px" BackColor="Green" Font-Bold="True" ForeColor="White" />
                         </asp:Panel>
                     </td>
-                    <td class="auto-style5">
-                        <asp:Panel ID="pnlChange" runat="server" GroupingText="Update Tourist Info:">
-                            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-                            <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                    <td class="auto-style9">
+                        <asp:Label ID="lblUpdOutput" runat="server"></asp:Label>
+                        <asp:Panel ID="pnlChange" runat="server" GroupingText="Update Tourist Info:" Height="562px" Width="359px">
+                            <asp:Label ID="lblUpdateID" runat="server" Text="Enter your Tourist ID:" Font-Bold="True" Font-Size="15px"></asp:Label>
                             <br />
-                            <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
-                            <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                            &nbsp;<asp:TextBox ID="txtUpdID" runat="server" Height="16px" style="margin-left: 0px" Width="138px" TextMode="Number"></asp:TextBox>
                             <br />
-                            <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
-                            <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
                             <br />
-                            <asp:Label ID="Label4" runat="server" Text="Label"></asp:Label>
-                            <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+                            <asp:Label ID="lblUpdName" runat="server" Font-Bold="True" Font-Size="15px" Text="Enter your name:"></asp:Label>
+                            &nbsp;<br />
+                            <asp:TextBox ID="txtUpdName" runat="server" Height="16px" Width="148px"></asp:TextBox>
                             <br />
-                            <asp:Label ID="Label5" runat="server" Text="Label"></asp:Label>
-                            <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
                             <br />
-                            <asp:Label ID="Label6" runat="server" Text="Label"></asp:Label>
-                            <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
+                            <asp:Label ID="lblUpdSurname" runat="server" Font-Bold="True" Font-Size="15px" Text="Enter your surname:"></asp:Label>
+                            &nbsp;<br />
+                            <asp:TextBox ID="txtUpdSurname" runat="server" Height="16px" OnTextChanged="TextBox3_TextChanged" Width="140px"></asp:TextBox>
                             <br />
-                            <asp:Label ID="Label7" runat="server" Text="Label"></asp:Label>
-                            <asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
+                            <br />
+                            <asp:Label ID="lblUpdNumber" runat="server" Font-Bold="True" Font-Size="15px" Text="Enter your phone number: "></asp:Label>
+                            <br />
+                            <asp:TextBox ID="txtUpdNumber" runat="server" Height="17px" Width="152px"></asp:TextBox>
+                            <br />
+                            <br />
+                            <asp:Label ID="lblUpdEmail" runat="server" Font-Bold="True" Font-Size="15px" Text="Enter your email:"></asp:Label>
+                            <br />
+                            <asp:TextBox ID="txtUpdEmail" runat="server" Height="16px" Width="153px" TextMode="Email"></asp:TextBox>
+                            <br />
+                            <br />
+                            <asp:Label ID="lblNoOfTickets0" runat="server" Font-Bold="True" Font-Size="15px" Text="No of Tickets:"></asp:Label>
+                            <br />
+                            <asp:TextBox ID="txtNoofTickets0" runat="server" TextMode="Number"></asp:TextBox>
+                            <br />
+                            <br />
+                            <asp:Label ID="lblUpdCountry" runat="server" Font-Bold="True" Font-Size="15px" Text="Country Of Origin:"></asp:Label>
+                            <br />
+                            <asp:DropDownList ID="ddlUpdCountry" runat="server" Height="19px" OnSelectedIndexChanged="ddlAddCountry_SelectedIndexChanged" Width="154px">
+                                <asp:ListItem>Select A Country</asp:ListItem>
+                                <asp:ListItem>South Africa</asp:ListItem>
+                                <asp:ListItem>Nigeria</asp:ListItem>
+                                <asp:ListItem>Kenya</asp:ListItem>
+                                <asp:ListItem>Democratic Republic Of Congo</asp:ListItem>
+                                <asp:ListItem>Ethiopia</asp:ListItem>
+                                <asp:ListItem>United Kingdom</asp:ListItem>
+                                <asp:ListItem>England</asp:ListItem>
+                                <asp:ListItem>France</asp:ListItem>
+                                <asp:ListItem>Germany</asp:ListItem>
+                                <asp:ListItem>Wales</asp:ListItem>
+                                <asp:ListItem>United States Of America</asp:ListItem>
+                                <asp:ListItem>Canada</asp:ListItem>
+                                <asp:ListItem>Mexico</asp:ListItem>
+                                <asp:ListItem>Netherlands</asp:ListItem>
+                                <asp:ListItem>Portugal</asp:ListItem>
+                                <asp:ListItem>China</asp:ListItem>
+                                <asp:ListItem>Japan</asp:ListItem>
+                                <asp:ListItem>Singapore</asp:ListItem>
+                                <asp:ListItem>North Macedonia</asp:ListItem>
+                                <asp:ListItem>Ukraine</asp:ListItem>
+                                <asp:ListItem>Russia</asp:ListItem>
+                                <asp:ListItem>Montenegero</asp:ListItem>
+                                <asp:ListItem>Mozambique</asp:ListItem>
+                                <asp:ListItem>Angola</asp:ListItem>
+                                <asp:ListItem>Afghanistan</asp:ListItem>
+                                <asp:ListItem>Algeria</asp:ListItem>
+                                <asp:ListItem>Argentina</asp:ListItem>
+                                <asp:ListItem></asp:ListItem>
+                                <asp:ListItem>Austria</asp:ListItem>
+                                <asp:ListItem>Armenia</asp:ListItem>
+                                <asp:ListItem>Brazil</asp:ListItem>
+                                <asp:ListItem>Cameroon</asp:ListItem>
+                                <asp:ListItem>Chile</asp:ListItem>
+                                <asp:ListItem>Cuba</asp:ListItem>
+                                <asp:ListItem>Colombia</asp:ListItem>
+                                <asp:ListItem>Comoros</asp:ListItem>
+                                <asp:ListItem>Eswatini</asp:ListItem>
+                            </asp:DropDownList>
                             <br />
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <br />
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <asp:Button ID="BtnUpdate" runat="server" Height="32px" Text="Change" Width="157px" />
+                            &nbsp;&nbsp;&nbsp;<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:Button ID="BtnUpdate" runat="server" BackColor="Yellow" Font-Bold="True" ForeColor="White" Height="27px" Text="Change" Width="171px" />
+                            <br />
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </asp:Panel>
                     </td>
-                    <td class="auto-style5">
-                        <asp:Panel ID="pnlDelete" runat="server" GroupingText="Delete Tourist Info:">
-                            <asp:Label ID="Label15" runat="server" Text="Label"></asp:Label>
-                            <asp:TextBox ID="TextBox15" runat="server"></asp:TextBox>
+                    <td class="auto-style10">
+                        <asp:Label ID="lblDeleteOutput" runat="server"></asp:Label>
+                        <asp:Panel ID="pnlDelete" runat="server" GroupingText="Delete Tourist Info:" Height="552px">
                             <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <asp:Label ID="lblDeleteTourist" runat="server" Text="Enter your Tourist ID:" Font-Bold="True" Font-Size="15px"></asp:Label>
+                            <asp:TextBox ID="txtDeleteID" runat="server" TextMode="Number"></asp:TextBox>
                             <br />
                             <br />
                             <br />
@@ -125,13 +258,27 @@
                             <br />
                             <br />
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <asp:Button ID="BtnDelete" runat="server" Height="26px" Text="Delete" Width="123px" />
+                            <asp:Button ID="BtnDelete" runat="server" Height="27px" Text="Delete" Width="149px" BackColor="Green" Font-Bold="True" ForeColor="White" OnClientClick="return confirm('Are you sure you want to delete this tourist?');" />
                         </asp:Panel>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style2">&nbsp;</td>
+                    <td class="auto-style7">&nbsp;</td>
                     <td class="auto-style5">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style2">&nbsp;</td>
+                    <td class="auto-style7">
+                        <asp:GridView ID="GridView1" runat="server" ForeColor="Green" Height="155px" Width="361px">
+                            <HeaderStyle BackColor="Black" />
+                        </asp:GridView>
+                    </td>
+                    <td class="auto-style5">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style2">&nbsp;</td>
+                    <td class="auto-style7">&nbsp;</td>
                     <td class="auto-style5">&nbsp;</td>
                 </tr>
             </table>
