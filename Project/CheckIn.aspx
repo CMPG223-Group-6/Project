@@ -8,33 +8,26 @@
     <style type="text/css">
 
         .auto-style4 {
-            width: 190px;
+            width: 834px;
             height: 71px;
         }
-        .auto-style5 {
-            height: 71px;
-        text-align: left;
-    }
         .auto-style2 {
-            width: 190px;
-            height: 282px;
-        }
-        .auto-style3 {
+            width: 834px;
             height: 282px;
         }
         .auto-style6 {
-            width: 190px;
-            height: 91px;
-        }
-        .auto-style7 {
+            width: 834px;
             height: 91px;
         }
         .auto-style1 {
-            width: 190px;
+            width: 834px;
             height: 40px;
         }
+        .auto-style7 {
+            width: 1421px;
+        }
         .auto-style8 {
-            height: 40px;
+            width: 1349px;
         }
     </style>
 </head>
@@ -44,7 +37,7 @@
             <table style="width:100%;">
                 <tr>
                     <td>
-                        <table style="width:100%;">
+                        <table style="width:100%; height: 872px;">
                             <tr>
                                 <td class="auto-style4" style="border-style: inset; border-color: #006600; background-color: #006600">&nbsp;<br />
                                     <asp:Label ID="lblZooInfo" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="White" Text="ZooInfoSys"></asp:Label>
@@ -78,8 +71,29 @@
                                         <StaticHoverStyle BackColor="#669999" />
                                     </asp:Menu>
                                 </td>
-                                <td class="auto-style3">&nbsp;</td>
-                                <td class="auto-style3"></td>
+                                <td>
+                                    <asp:Panel ID="Panel1" runat="server" GroupingText="Check-in Details" Height="260px" Width="1078px">
+                                        <asp:Label ID="lblTouristIDBookingID" runat="server" Text="TouristID / BookingID :"></asp:Label>
+                                        <br />
+                                        <br />
+                                        <asp:TextBox ID="txtInput" runat="server"></asp:TextBox>
+                                        <br />
+                                        <br />
+                                        <asp:Button ID="btnCheck" runat="server" Text="Confirm Details" />
+                                        <br />
+                                        <br />
+                                        <asp:DropDownList ID="ddlBookingEvents" runat="server" Height="197px" Width="215px">
+                                        </asp:DropDownList>
+                                        <br />
+                                        <br />
+                                        <br />
+                                        <br />
+                                        <br />
+                                    </asp:Panel>
+                                </td>
+                                <td class="auto-style3">
+                                    <asp:Label ID="lblOutput" runat="server"></asp:Label>
+                                </td>
                             </tr>
                             <tr>
                                 <td class="auto-style6" style="border-style: inset; border-color: #006600; background-color: #006600">
@@ -93,7 +107,7 @@
                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     <asp:Label ID="lblNameDisplay" runat="server" Font-Size="Small" ForeColor="#999999"></asp:Label>
                                 </td>
-                                <td class="auto-style7"></td>
+                                <td rowspan="2"></td>
                                 <td class="auto-style7"></td>
                             </tr>
                             <tr>
@@ -105,7 +119,6 @@
                                         <StaticHoverStyle BorderColor="#669999" />
                                     </asp:Menu>
                                 </td>
-                                <td class="auto-style8"></td>
                                 <td class="auto-style8"></td>
                             </tr>
                         </table>

@@ -44,6 +44,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -112,7 +113,9 @@
     <Content Include="bin\roslyn\VBCSCompiler.exe" />
     <Content Include="Bookings.aspx" />
     <Content Include="CheckIn.aspx" />
+    <Content Include="CheckinStaff.aspx" />
     <Content Include="CheckInTourist.aspx" />
+    <Content Include="Checkout.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Images\Screenshot 2026-08-10 122157.png" />
     <Content Include="Images\zims_zoo_logo.png" />
@@ -206,12 +209,26 @@
     <Compile Include="CheckIn.aspx.designer.cs">
       <DependentUpon>CheckIn.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CheckinStaff.aspx.cs">
+      <DependentUpon>CheckinStaff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CheckinStaff.aspx.designer.cs">
+      <DependentUpon>CheckinStaff.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CheckInTourist.aspx.cs">
       <DependentUpon>CheckInTourist.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="CheckInTourist.aspx.designer.cs">
       <DependentUpon>CheckInTourist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Checkout.aspx.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Checkout.aspx.designer.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
