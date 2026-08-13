@@ -34,6 +34,9 @@ namespace Project
             Response.Redirect("UpdateBooking.aspx");
         }
 
+        protected void txtSearch_TextChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }

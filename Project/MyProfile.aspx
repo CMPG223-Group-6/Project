@@ -71,14 +71,14 @@
                             <asp:Label ID="lblName" runat="server" Text="Full Name"></asp:Label>
                             <br />
                             &nbsp;&nbsp;&nbsp;&nbsp;
-                            <asp:TextBox ID="txtName" runat="server" BackColor="#CCCCCC" Height="19px" ReadOnly="True" Width="252px"></asp:TextBox>
+                            <asp:TextBox ID="txtName" runat="server" BackColor="White" Height="19px" Width="252px"></asp:TextBox>
                             <br />
                             <br />
                             &nbsp;&nbsp;&nbsp;&nbsp;
                             <asp:Label ID="lblSurname" runat="server" Text="Surname"></asp:Label>
                             <br />
                             &nbsp;&nbsp;&nbsp;&nbsp;
-                            <asp:TextBox ID="txtSurname" runat="server" BackColor="#CCCCCC" Height="21px" ReadOnly="True" Width="252px"></asp:TextBox>
+                            <asp:TextBox ID="txtSurname" runat="server" BackColor="White" Height="21px" Width="252px"></asp:TextBox>
                             <br />
                             <br />
                             &nbsp;&nbsp;&nbsp;&nbsp;

@@ -69,6 +69,24 @@ namespace Project
         protected global::System.Web.UI.WebControls.Panel Panel1;
 
         /// <summary>
+        /// lblBookingID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblBookingID;
+
+        /// <summary>
+        /// txtBookingID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtBookingID;
+
+        /// <summary>
         /// lblEventID control.
         /// </summary>
         /// <remarks>
