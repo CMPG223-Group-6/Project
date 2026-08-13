@@ -33,7 +33,7 @@
             height: 26px;
         }
         .auto-style8 {
-            text-align: center;
+            text-align: right;
             width: 787px;
             height: 26px;
         }
@@ -73,7 +73,7 @@
             </tr>
             <tr>
                 <td class="auto-style5">
-                    <asp:TextBox ID="txtTouristID" runat="server" BorderStyle="Solid" Height="36px" Width="835px"></asp:TextBox>
+                    <asp:TextBox ID="txtTouristID" runat="server" BorderStyle="Solid" Height="36px" Width="240px"></asp:TextBox>
                 </td>
                 <td>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtTouristID" ErrorMessage="Please enter your tourist ID!" Font-Bold="True" ForeColor="#FF3300"></asp:RequiredFieldValidator>
@@ -134,17 +134,19 @@
                 </td>
             </tr>
             <tr>
-                <td class="auto-style8"></td>
+                <td class="auto-style8">
+                    <asp:LinkButton ID="lnkSignUp" runat="server">Sign Up</asp:LinkButton>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
                 <td class="auto-style1"></td>
                 <td class="auto-style1"></td>
             </tr>
             <tr>
                 <td class="auto-style7">
-                    <asp:Label ID="Label6" runat="server" Text="Don't have an account?"></asp:Label>
+                    &nbsp;<asp:LinkButton ID="lnkForgotPassword" runat="server">Forgot Password</asp:LinkButton>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 </td>
                 <td class="auto-style1">
-                    <asp:Button ID="BtnSignUp" runat="server" BackColor="Silver" Font-Bold="True" Height="31px" OnClick="Button1_Click" CausesValidation="false" Text="Sign up" Width="139px" />
-                </td>
+                    &nbsp;</td>
                 <td class="auto-style1"></td>
             </tr>
             <tr>

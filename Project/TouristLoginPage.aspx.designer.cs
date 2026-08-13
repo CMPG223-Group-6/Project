@@ -141,21 +141,21 @@ namespace Project
         protected global::System.Web.UI.WebControls.Button btnLoginTourist;
 
         /// <summary>
-        /// Label6 control.
+        /// lnkSignUp control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label6;
+        protected global::System.Web.UI.WebControls.LinkButton lnkSignUp;
 
         /// <summary>
-        /// BtnSignUp control.
+        /// lnkForgotPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnSignUp;
+        protected global::System.Web.UI.WebControls.LinkButton lnkForgotPassword;
     }
 }
