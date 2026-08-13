@@ -73,27 +73,24 @@
                                 </td>
                                 <td>
                                     <asp:Panel ID="Panel1" runat="server" GroupingText="Check-in Details" Height="260px" Width="1078px">
-                                        <asp:Label ID="lblTouristIDBookingID" runat="server" Text="TouristID / BookingID :"></asp:Label>
+                                        <asp:Label ID="lblBookingID" runat="server" Text="BookingID :"></asp:Label>
                                         <br />
                                         <br />
-                                        <asp:TextBox ID="txtInput" runat="server"></asp:TextBox>
-                                        <br />
-                                        <br />
-                                        <asp:Button ID="btnCheck" runat="server" Text="Confirm Details" />
-                                        <br />
-                                        <br />
-                                        <asp:DropDownList ID="ddlBookingEvents" runat="server" Height="197px" Width="215px">
+                                        <asp:DropDownList ID="ddlBookingEvents0" runat="server" Height="30px" Width="130px">
                                         </asp:DropDownList>
                                         <br />
                                         <br />
+                                        <asp:Button ID="btnCheck" runat="server" Text="Check In" BackColor="#33CC33" Height="36px" Width="140px" />
                                         <br />
+                                        <br />
+                                        <br />
+                                        <asp:Label ID="lblOutput" runat="server"></asp:Label>
                                         <br />
                                         <br />
                                     </asp:Panel>
                                 </td>
                                 <td class="auto-style3">
-                                    <asp:Label ID="lblOutput" runat="server"></asp:Label>
-                                </td>
+                                    &nbsp;</td>
                             </tr>
                             <tr>
                                 <td class="auto-style6" style="border-style: inset; border-color: #006600; background-color: #006600">
@@ -107,7 +104,10 @@
                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     <asp:Label ID="lblNameDisplay" runat="server" Font-Size="Small" ForeColor="#999999"></asp:Label>
                                 </td>
-                                <td rowspan="2"></td>
+                                <td rowspan="2">
+                                    <asp:GridView ID="GridView1" runat="server" Height="179px" Width="1069px">
+                                    </asp:GridView>
+                                </td>
                                 <td class="auto-style7"></td>
                             </tr>
                             <tr>

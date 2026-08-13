@@ -10,19 +10,17 @@
     <style type="text/css">
         .auto-style2 {
             height: 153px;
+            width: 259px;
         }
         .auto-style3 {
             height: 383px;
-        }
-        .auto-style4 {
-            width: 1094px;
+            width: 259px;
         }
         .auto-style5 {
             height: 383px;
             width: 1094px;
         }
         .auto-style6 {
-            width: 950px;
         }
         .auto-style7 {
             height: 383px;
@@ -31,6 +29,7 @@
         }
         .auto-style9 {
             height: 266px;
+            width: 259px;
         }
         .auto-style10 {
             width: 950px;
@@ -39,6 +38,9 @@
         .auto-style11 {
             width: 1094px;
             height: 266px;
+        }
+        .auto-style12 {
+            width: 259px;
         }
     </style>
 </head>
@@ -59,8 +61,7 @@
                         <asp:Label ID="lblInfo" runat="server" style="font-weight: 700; font-size: x-large" Text="Check-out"></asp:Label>
                     </td>
                     <td class="auto-style11">
-                        <asp:Image ID="Imageofzoo" runat="server" Height="258px" ImageUrl="~/Images/zims_zoo_logo.png" Width="454px" />
-                    </td>
+                        &nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style3" style="border-style: inset; border-color: #006600; background-color: #006600">
@@ -77,25 +78,15 @@
                                     </asp:Menu>
                                 </td>
                     <td class="auto-style7">
-                        <asp:Label ID="lblVerifyExit" runat="server" style="text-align: left; font-size: large" Text="Enter Booking ID or Tourist Name"></asp:Label>
+                        <asp:Label ID="lblVerifyExit" runat="server" style="text-align: left; font-size: large" Text="Enter Booking ID"></asp:Label>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="ddlDetails" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
                         <br />
-                        <br />
-                        <asp:Button ID="btnBookingId" runat="server" Height="52px" Text="Booking ID" Width="200px" />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Label ID="lblor" runat="server" style="font-size: large; text-align: center" Text="or"></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Button ID="btnTouristName" runat="server" Height="51px" Text="Tourist Name" Width="200px" />
-                        <br />
-                        <br />
-                        <asp:TextBox ID="TextBox1" runat="server" Height="46px" Width="259px"></asp:TextBox>
-                        <br />
-                        <br />
-                        <asp:DropDownList ID="ddlDetails" runat="server" Height="82px" Width="263px">
+                        <asp:DropDownList ID="ddlDetails" runat="server" Height="30px" Width="263px">
                         </asp:DropDownList>
                         <br />
                         <br />
                         <br />
-                        <asp:Button ID="btnConfirmExit" runat="server" Height="47px" Text="Confirm Exit" Width="461px" />
+                        <asp:Button ID="btnConfirmExit" runat="server" Height="47px" Text="Confirm Exit" Width="276px" BackColor="#33CC33" />
                         <br />
                         <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -125,26 +116,22 @@
                         <br />
                         <asp:Label ID="lblNameDisplay" runat="server" Font-Size="Small" ForeColor="#999999"></asp:Label>
                     </td>
-                    <td class="auto-style6" rowspan="2">
+                    <td class="auto-style6" rowspan="2" colspan="2">
                         <asp:Panel ID="Panel1" runat="server" GroupingText="Summary" Height="233px" style="margin-top: 0px">
-                            <asp:GridView ID="GridView1" runat="server">
+                            <asp:GridView ID="GridView1" runat="server" Height="159px" Width="1014px">
                             </asp:GridView>
-                            <br />
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <br />
                         </asp:Panel>
                         <br />
                         <br />
                         <br />
                         <br />
-                    </td>
-                    <td class="auto-style4" rowspan="2">
                         <br />
                         <br />
                     </td>
                 </tr>
                 <tr>
-                    <td style="border-style: inset; border-color: #006600; background-color: #006600">
+                    <td style="border-style: inset; border-color: #006600; background-color: #006600" class="auto-style12">
                         <asp:Menu ID="Menu3" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="White">
                             <Items>
                                 <asp:MenuItem Text="Sign Out"></asp:MenuItem>
