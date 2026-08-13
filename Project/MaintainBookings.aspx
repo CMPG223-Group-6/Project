@@ -80,12 +80,13 @@
                         <br />
                         <br />
                         <br />
+                        <asp:Label ID="lblAddBookingOutptut" runat="server"></asp:Label>
                         <br />
                         <br />
                         <asp:Panel ID="pnlAdd" runat="server" Height="470px" GroupingText="Add Booking" Width="344px">
                             <asp:Label ID="lblAddID" runat="server" Text="Event ID:" Font-Bold="True" Font-Size="15px"></asp:Label>
                             <br />
-                            <asp:TextBox ID="txtAddID" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txtAddID" runat="server" TextMode="Number"></asp:TextBox>
                             &nbsp;&nbsp;
                             <br />
                             <br />
@@ -132,6 +133,7 @@
                         <br />
                         <br />
                         <br />
+                        <asp:Label ID="lblUpdateBookingOutput" runat="server"></asp:Label>
                         <br />
                         <br />
                         <asp:Panel ID="pnlUpdate" runat="server" Height="386px" Width="398px" GroupingText="Update Booking">
@@ -162,7 +164,7 @@
                             <asp:DropDownList ID="DropDownList2" runat="server" Height="23px" Width="159px">
                                 <asp:ListItem>Confirmed</asp:ListItem>
                                 <asp:ListItem>Pending</asp:ListItem>
-                                <asp:ListItem>Unconfirmed</asp:ListItem>
+                                <asp:ListItem>Cancelled</asp:ListItem>
                             </asp:DropDownList>
                             <br />
                             <br />
@@ -176,6 +178,7 @@
                         <br />
                         <br />
                         <br />
+                        <asp:Label ID="lblDeleteBookingOutput" runat="server"></asp:Label>
                         <br />
                         <br />
                         <asp:Panel ID="PnlDelete" runat="server" GroupingText="Delete Booking" Height="351px" Width="360px">

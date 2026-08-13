@@ -42,6 +42,15 @@ namespace Project
         protected global::System.Web.UI.WebControls.Menu Menu1;
 
         /// <summary>
+        /// lblAddBookingOutptut control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblAddBookingOutptut;
+
+        /// <summary>
         /// pnlAdd control.
         /// </summary>
         /// <remarks>
@@ -177,6 +186,15 @@ namespace Project
         protected global::System.Web.UI.WebControls.Label lblHeader;
 
         /// <summary>
+        /// lblUpdateBookingOutput control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblUpdateBookingOutput;
+
+        /// <summary>
         /// pnlUpdate control.
         /// </summary>
         /// <remarks>
@@ -292,6 +310,15 @@ namespace Project
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnUpdate;
+
+        /// <summary>
+        /// lblDeleteBookingOutput control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblDeleteBookingOutput;
 
         /// <summary>
         /// PnlDelete control.
