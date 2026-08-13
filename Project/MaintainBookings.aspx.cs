@@ -18,5 +18,10 @@ namespace Project
         {
 
         }
+
+        protected void lblSearch_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
