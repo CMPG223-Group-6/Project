@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\maintaintourists.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|c:\\users\\hansl\\onedrive\\documents\\github\\project\\project\\maintaintourists.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:maintaintourists.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|c:\\users\\hansl\\onedrive\\documents\\github\\project\\project\\maintainbookings.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\maintainbookings.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:maintainbookings.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
@@ -113,7 +113,6 @@
               "RelativeDocumentMoniker": "MaintainBookings.aspx",
               "ToolTip": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\MaintainBookings.aspx",
               "RelativeToolTip": "MaintainBookings.aspx",
-              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2026-08-09T21:41:09.338Z",
               "EditorCaption": ""
