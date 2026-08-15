@@ -186,31 +186,58 @@ namespace Project
         protected global::System.Web.UI.WebControls.Label Label25;
 
         /// <summary>
-        /// Label26 control.
+        /// Label36 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label26;
+        protected global::System.Web.UI.WebControls.Label Label36;
 
         /// <summary>
-        /// Label27 control.
+        /// Label39 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label27;
+        protected global::System.Web.UI.WebControls.Label Label39;
 
         /// <summary>
-        /// Label28 control.
+        /// Label37 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label28;
+        protected global::System.Web.UI.WebControls.Label Label37;
+
+        /// <summary>
+        /// Label40 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label40;
+
+        /// <summary>
+        /// Label38 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label38;
+
+        /// <summary>
+        /// Label41 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label41;
 
         /// <summary>
         /// Menu2 control.
@@ -238,6 +265,15 @@ namespace Project
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnlEvents;
+
+        /// <summary>
+        /// Label35 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label35;
 
         /// <summary>
         /// Label1 control.
@@ -420,6 +456,15 @@ namespace Project
         protected global::System.Web.UI.WebControls.Panel pnlFaq;
 
         /// <summary>
+        /// Label34 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label34;
+
+        /// <summary>
         /// btnFaq1 control.
         /// </summary>
         /// <remarks>
@@ -427,15 +472,6 @@ namespace Project
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton btnFaq1;
-
-        /// <summary>
-        /// pnlFAQ1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlFAQ1;
 
         /// <summary>
         /// lblFaq1 control.
@@ -456,15 +492,6 @@ namespace Project
         protected global::System.Web.UI.WebControls.LinkButton btnFaq2;
 
         /// <summary>
-        /// pnlFAQ2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlFAQ2;
-
-        /// <summary>
         /// lblFaq2 control.
         /// </summary>
         /// <remarks>
@@ -481,15 +508,6 @@ namespace Project
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton btnFaq3;
-
-        /// <summary>
-        /// pnlFAQ3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlFAQ3;
 
         /// <summary>
         /// lblFaq3 control.
@@ -510,15 +528,6 @@ namespace Project
         protected global::System.Web.UI.WebControls.LinkButton btnFaq4;
 
         /// <summary>
-        /// pnlFAQ4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlFAQ4;
-
-        /// <summary>
         /// lblFaq4 control.
         /// </summary>
         /// <remarks>
@@ -535,15 +544,6 @@ namespace Project
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton btnFaq5;
-
-        /// <summary>
-        /// pnlFAQ5 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlFAQ5;
 
         /// <summary>
         /// lblFaq5 control.

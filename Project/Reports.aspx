@@ -33,6 +33,9 @@
         .auto-style20 {
             width: 258px;
         }
+        .auto-style21 {
+            width: 99px;
+        }
     </style>
 </head>
 <body>
@@ -93,12 +96,14 @@
                                     <td class="auto-style20">
                                         <br />
                                         <asp:TextBox ID="txtStartDate" runat="server" TextMode="Date"></asp:TextBox>
+                                        <br />
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtStartDate" ErrorMessage="Please select the start date!" ForeColor="Red"></asp:RequiredFieldValidator>
                                     </td>
-                                    <td class="auto-style19">
+                                    <td class="auto-style21">
                                         <asp:Label ID="lblEndDate" runat="server" Text="End Date:"></asp:Label>
                                     </td>
                                     <td>
+                                        <br />
                                         <br />
                                         <asp:TextBox ID="txtEndDate" runat="server" TextMode="Date"></asp:TextBox>
                                         <br />
@@ -116,7 +121,7 @@
                                             <asp:ListItem Value="Bookings">Number of Bookings</asp:ListItem>
                                         </asp:DropDownList>
                                     </td>
-                                    <td class="auto-style19">
+                                    <td class="auto-style21">
                                         <asp:Label ID="lblSortOrder" runat="server" Text="Sort Order: "></asp:Label>
                                     </td>
                                     <td>
@@ -132,7 +137,7 @@
                                     <td class="auto-style20">
                                         <asp:Button ID="btnGenerateReport" runat="server" Height="38px" Text="📊 Generate Report" />
                                     </td>
-                                    <td class="auto-style19">
+                                    <td class="auto-style21">
                                         <asp:Button ID="btnClear" runat="server" Height="42px" Text="↻ Clear" />
                                     </td>
                                     <td>&nbsp;</td>
