@@ -3,80 +3,92 @@
   "WorkspaceRootPath": "C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\processpayments.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:processpayments.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|c:\\users\\mathi\\onedrive\\documents\\github\\tutorial-1\\project\\project\\carddetails.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:carddetails.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|c:\\users\\mathi\\onedrive\\documents\\github\\tutorial-1\\project\\project\\carddetails.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:carddetails.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\payment.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:payment.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|c:\\users\\mathi\\onedrive\\documents\\github\\tutorial-1\\project\\project\\payment.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\payment.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:payment.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|c:\\users\\mathi\\onedrive\\documents\\github\\tutorial-1\\project\\project\\processpayments.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:processpayments.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\processpayments.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:processpayments.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|c:\\users\\mathi\\onedrive\\documents\\github\\tutorial-1\\project\\project\\staffloginpage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:staffloginpage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|c:\\users\\mathi\\onedrive\\documents\\github\\tutorial-1\\project\\project\\touristsignuppage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:touristsignuppage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|c:\\users\\mathi\\onedrive\\documents\\github\\tutorial-1\\project\\project\\touristloginpage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:touristloginpage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|c:\\users\\mathi\\onedrive\\documents\\github\\tutorial-1\\project\\project\\touristloginpage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:touristloginpage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|c:\\users\\mathi\\onedrive\\documents\\github\\tutorial-1\\project\\project\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\checkin.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:checkin.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|c:\\users\\mathi\\onedrive\\documents\\github\\tutorial-1\\project\\project\\paymentsummary.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:paymentsummary.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|c:\\users\\mathi\\onedrive\\documents\\github\\tutorial-1\\project\\project\\default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|c:\\users\\mathi\\onedrive\\documents\\github\\tutorial-1\\project\\project\\paymentsummary.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:paymentsummary.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\processpayments.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:processpayments.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\touristforgotpassword.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:touristforgotpassword.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\touristforgotpassword.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:touristforgotpassword.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\touristsignup.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:touristsignup.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|c:\\users\\mathi\\onedrive\\documents\\github\\tutorial-1\\project\\project\\staffloginpage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:staffloginpage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\touristsignup.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:touristsignup.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\maintaintourists.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:maintaintourists.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\bookings.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:bookings.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\touristmenu.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:touristmenu.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\checkintourist.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:checkintourist.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\zooinformation.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:zooinformation.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|c:\\users\\mathi\\onedrive\\documents\\github\\tutorial-1\\project\\project\\touristsignuppage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:touristsignuppage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\bookings.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:bookings.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|c:\\users\\mathi\\onedrive\\documents\\github\\tutorial-1\\project\\project\\reports.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\maintaineventstypes.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:maintaineventstypes.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\checkin.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:checkin.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\maintaintourists.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:maintaintourists.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\touristmenu.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:touristmenu.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\reports.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:reports.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\checkintourist.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:checkintourist.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\checkin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
@@ -91,10 +103,6 @@
       "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:myprofile.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\maintaineventstypes.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:maintaineventstypes.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\maintainbookings.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:maintainbookings.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     }
@@ -106,123 +114,149 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 19,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
+              "Title": "CardDetails.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\CardDetails.aspx.cs",
+              "RelativeDocumentMoniker": "CardDetails.aspx.cs",
+              "ToolTip": "C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\CardDetails.aspx.cs",
+              "RelativeToolTip": "CardDetails.aspx.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAADwvxIAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-15T19:12:17.715Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PaymentSummary.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\PaymentSummary.aspx.cs",
+              "RelativeDocumentMoniker": "PaymentSummary.aspx.cs",
+              "ToolTip": "C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\PaymentSummary.aspx.cs",
+              "RelativeToolTip": "PaymentSummary.aspx.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAADwvxIAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-15T19:06:23.563Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PaymentSummary.aspx",
+              "DocumentMoniker": "C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\PaymentSummary.aspx",
+              "RelativeDocumentMoniker": "PaymentSummary.aspx",
+              "ToolTip": "C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\PaymentSummary.aspx",
+              "RelativeToolTip": "PaymentSummary.aspx",
+              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-08-15T18:49:26.143Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CardDetails.aspx",
+              "DocumentMoniker": "C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\CardDetails.aspx",
+              "RelativeDocumentMoniker": "CardDetails.aspx",
+              "ToolTip": "C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\CardDetails.aspx",
+              "RelativeToolTip": "CardDetails.aspx",
+              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-08-15T18:25:30.278Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "TouristForgotPassword.aspx.designer.cs",
+              "DocumentMoniker": "C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\TouristForgotPassword.aspx.designer.cs",
+              "RelativeDocumentMoniker": "TouristForgotPassword.aspx.designer.cs",
+              "ToolTip": "C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\TouristForgotPassword.aspx.designer.cs",
+              "RelativeToolTip": "TouristForgotPassword.aspx.designer.cs",
+              "ViewState": "AgIAAIAAAAAAAAAAAAAjwI8AAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-14T19:36:44.948Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "TouristForgotPassword.aspx",
+              "DocumentMoniker": "C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\TouristForgotPassword.aspx",
+              "RelativeDocumentMoniker": "TouristForgotPassword.aspx",
+              "ToolTip": "C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\TouristForgotPassword.aspx",
+              "RelativeToolTip": "TouristForgotPassword.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-08-14T18:51:26.375Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "TouristSignUp.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\TouristSignUp.aspx.cs",
+              "RelativeDocumentMoniker": "TouristSignUp.aspx.cs",
+              "ToolTip": "C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\TouristSignUp.aspx.cs",
+              "RelativeToolTip": "TouristSignUp.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-14T17:51:46.647Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "TouristSignUp.aspx",
+              "DocumentMoniker": "C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\TouristSignUp.aspx",
+              "RelativeDocumentMoniker": "TouristSignUp.aspx",
+              "ToolTip": "C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\TouristSignUp.aspx",
+              "RelativeToolTip": "TouristSignUp.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-08-14T17:33:55.923Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "ProcessPayments.aspx.cs",
               "DocumentMoniker": "C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\ProcessPayments.aspx.cs",
               "RelativeDocumentMoniker": "ProcessPayments.aspx.cs",
               "ToolTip": "C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\ProcessPayments.aspx.cs",
               "RelativeToolTip": "ProcessPayments.aspx.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAswCMAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwBcAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-12T22:37:58.845Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Payment.aspx.cs",
               "DocumentMoniker": "C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\Payment.aspx.cs",
               "RelativeDocumentMoniker": "Payment.aspx.cs",
               "ToolTip": "C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\Payment.aspx.cs",
               "RelativeToolTip": "Payment.aspx.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAiwB4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAA9wCEAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-12T21:56:43.144Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "StaffLoginPage.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\StaffLoginPage.aspx.cs",
-              "RelativeDocumentMoniker": "StaffLoginPage.aspx.cs",
-              "ToolTip": "C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\StaffLoginPage.aspx.cs",
-              "RelativeToolTip": "StaffLoginPage.aspx.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAgwBIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-12T20:53:13.927Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "TouristSignUpPage.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\TouristSignUpPage.aspx.cs",
-              "RelativeDocumentMoniker": "TouristSignUpPage.aspx.cs",
-              "ToolTip": "C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\TouristSignUpPage.aspx.cs",
-              "RelativeToolTip": "TouristSignUpPage.aspx.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-12T20:35:40.221Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "TouristLoginPage.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\TouristLoginPage.aspx.cs",
-              "RelativeDocumentMoniker": "TouristLoginPage.aspx.cs",
-              "ToolTip": "C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\TouristLoginPage.aspx.cs",
-              "RelativeToolTip": "TouristLoginPage.aspx.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAmwBcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-12T20:31:43.41Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "Default.aspx.cs",
               "DocumentMoniker": "C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\Default.aspx.cs",
               "RelativeDocumentMoniker": "Default.aspx.cs",
               "ToolTip": "C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\Default.aspx.cs",
               "RelativeToolTip": "Default.aspx.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAmwBcAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAiwB4AAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-12T20:15:41.848Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "TouristSignUpPage.aspx",
-              "DocumentMoniker": "C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\TouristSignUpPage.aspx",
-              "RelativeDocumentMoniker": "TouristSignUpPage.aspx",
-              "ToolTip": "C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\TouristSignUpPage.aspx",
-              "RelativeToolTip": "TouristSignUpPage.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2026-08-12T20:15:11.194Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "TouristLoginPage.aspx",
-              "DocumentMoniker": "C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\TouristLoginPage.aspx",
-              "RelativeDocumentMoniker": "TouristLoginPage.aspx",
-              "ToolTip": "C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\TouristLoginPage.aspx",
-              "RelativeToolTip": "TouristLoginPage.aspx",
-              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2026-08-12T20:14:40.841Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "StaffLoginPage.aspx",
-              "DocumentMoniker": "C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\StaffLoginPage.aspx",
-              "RelativeDocumentMoniker": "StaffLoginPage.aspx",
-              "ToolTip": "C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\StaffLoginPage.aspx",
-              "RelativeToolTip": "StaffLoginPage.aspx",
-              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2026-08-12T20:14:13.065Z",
               "EditorCaption": ""
             },
             {
@@ -233,40 +267,40 @@
               "RelativeDocumentMoniker": "ZooInformation.aspx",
               "ToolTip": "C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\ZooInformation.aspx",
               "RelativeToolTip": "ZooInformation.aspx",
-              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2026-08-10T10:24:59.682Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 20,
               "Title": "TouristMenu.aspx",
               "DocumentMoniker": "C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\TouristMenu.aspx",
               "RelativeDocumentMoniker": "TouristMenu.aspx",
               "ToolTip": "C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\TouristMenu.aspx",
               "RelativeToolTip": "TouristMenu.aspx",
-              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2026-08-10T10:24:50.726Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Payment.aspx",
               "DocumentMoniker": "C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\Payment.aspx",
               "RelativeDocumentMoniker": "Payment.aspx",
               "ToolTip": "C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\Payment.aspx",
               "RelativeToolTip": "Payment.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2026-08-10T10:24:39.174Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 24,
               "Title": "MyProfile.aspx",
               "DocumentMoniker": "C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\MyProfile.aspx",
               "RelativeDocumentMoniker": "MyProfile.aspx",
@@ -279,7 +313,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 23,
               "Title": "MyOverview.aspx",
               "DocumentMoniker": "C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\MyOverview.aspx",
               "RelativeDocumentMoniker": "MyOverview.aspx",
@@ -292,20 +326,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "Bookings.aspx",
               "DocumentMoniker": "C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\Bookings.aspx",
               "RelativeDocumentMoniker": "Bookings.aspx",
               "ToolTip": "C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\Bookings.aspx",
               "RelativeToolTip": "Bookings.aspx",
-              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2026-08-10T10:24:05.002Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 22,
               "Title": "CheckIn.aspx",
               "DocumentMoniker": "C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\CheckIn.aspx",
               "RelativeDocumentMoniker": "CheckIn.aspx",
@@ -318,7 +352,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 14,
               "Title": "CheckInTourist.aspx",
               "DocumentMoniker": "C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\CheckInTourist.aspx",
               "RelativeDocumentMoniker": "CheckInTourist.aspx",
@@ -331,7 +365,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 18,
               "Title": "CheckIn.aspx.cs",
               "DocumentMoniker": "C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\CheckIn.aspx.cs",
               "RelativeDocumentMoniker": "CheckIn.aspx.cs",
@@ -344,20 +378,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 21,
               "Title": "Reports.aspx",
               "DocumentMoniker": "C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\Reports.aspx",
               "RelativeDocumentMoniker": "Reports.aspx",
               "ToolTip": "C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\Reports.aspx",
               "RelativeToolTip": "Reports.aspx",
-              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2026-08-09T21:43:45.877Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "ProcessPayments.aspx",
               "DocumentMoniker": "C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\ProcessPayments.aspx",
               "RelativeDocumentMoniker": "ProcessPayments.aspx",
@@ -370,7 +404,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "MaintainBookings.aspx",
               "DocumentMoniker": "C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\MaintainBookings.aspx",
               "RelativeDocumentMoniker": "MaintainBookings.aspx",
@@ -383,7 +417,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 19,
               "Title": "MaintainTourists.aspx",
               "DocumentMoniker": "C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\MaintainTourists.aspx",
               "RelativeDocumentMoniker": "MaintainTourists.aspx",
@@ -396,7 +430,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 17,
               "Title": "MaintainEventsTypes.aspx",
               "DocumentMoniker": "C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\MaintainEventsTypes.aspx",
               "RelativeDocumentMoniker": "MaintainEventsTypes.aspx",
@@ -409,7 +443,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 5,
               "Title": "Default.aspx",
               "DocumentMoniker": "C:\\Users\\mathi\\OneDrive\\Documents\\GitHub\\Tutorial-1\\Project\\Project\\Default.aspx",
               "RelativeDocumentMoniker": "Default.aspx",

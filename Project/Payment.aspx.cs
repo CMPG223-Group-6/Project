@@ -21,24 +21,17 @@ namespace Project
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            DateTime dateSelected = Calendar1.SelectedDate;
-
-            if(dateSelected == DateTime.MinValue)
-            {
-                lblDateErrorMessage.Text = "Please select a date!";
-                return;
-            }
-
-            if(dateSelected <= DateTime.Today)
-            {
-                lblDateErrorMessage.Text = "Please select a date in the future!";
-                return;
-            }
+            
         }
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Default.aspx");
+            
+        }
+
+        protected void btnMakePayment_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("CardDetails.aspx");
         }
     }
 }
