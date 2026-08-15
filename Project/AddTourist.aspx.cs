@@ -7,19 +7,9 @@ using System.Web.UI.WebControls;
 
 namespace Project
 {
-    public partial class MaintainBookings : System.Web.UI.Page
+    public partial class AddTourist : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void TextBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void lblSearch_Click(object sender, EventArgs e)
         {
 
         }
