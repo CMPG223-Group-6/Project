@@ -12,24 +12,8 @@
         .auto-style6 {
             width: 170px;
         }
-        .auto-style15 {
-            height: 158px;
-        }
         .auto-style18 {
-            width: 385px;
             height: 127px;
-        }
-        .auto-style19 {
-            width: 371px;
-            height: 127px;
-        }
-        .auto-style20 {
-            width: 437px;
-            height: 127px;
-        }
-        .auto-style21 {
-            width: 170px;
-            height: 101px;
         }
         .auto-style22 {
             width: 170px;
@@ -39,20 +23,11 @@
             text-align: justify;
             height: 413px;
         }
-        .auto-style24 {
-            width: 371px;
-            height: 413px;
-        }
-        .auto-style25 {
-            width: 437px;
-            height: 413px;
-        }
         .auto-style26 {
             width: 170px;
             height: 102px;
         }
         .auto-style27 {
-            width: 385px;
             text-align: justify;
             height: 102px;
         }
@@ -70,15 +45,12 @@
                         <br />
                         <br />
                         <br />
-                        <asp:Label ID="lblAddBookingOutptut" runat="server"></asp:Label>
                         <br />
                         <br />
-                        </td>
-                    <td class="auto-style19">&nbsp;<asp:Label ID="lblHeader" runat="server" Font-Size="30px" Text="Booking Management Dashboard"></asp:Label>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:Label ID="lblHeader" runat="server" Font-Size="50px" Text="Booking Management Dashboard" Font-Bold="True"></asp:Label>
                         <br />
                         <br />
-                    </td>
-                    <td class="auto-style20">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <br />
                         <br />
                         </td>
@@ -107,209 +79,38 @@
                         <br />
                         <br />
                         <br />
-                        <br />
-                        <asp:Panel ID="Panel1" runat="server">
-                        </asp:Panel>
-                        <asp:Panel ID="pnlAdd" runat="server" Height="390px" GroupingText="Add Booking" Width="344px" BorderStyle="None">
-                            <table style="width: 100%; height: 268px;">
-                                <tr>
-                                    <td>
-                                        <asp:Label ID="lblAddID" runat="server" Font-Bold="True" Font-Size="15px" Text="Event ID:"></asp:Label>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <asp:TextBox ID="txtAddID" runat="server" TextMode="Number" Width="67px"></asp:TextBox>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <asp:Label ID="lblTouristID" runat="server" Font-Bold="True" Font-Size="15px" Text="Tourist ID:"></asp:Label>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <asp:TextBox ID="txtAddTouristID" runat="server" TextMode="Number"></asp:TextBox>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <asp:Label ID="lblNoOfTickets" runat="server" Font-Bold="True" Font-Size="15px" Text="No Of Tickets:"></asp:Label>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <asp:TextBox ID="txtNoOfTickets" runat="server" OnTextChanged="TextBox3_TextChanged" TextMode="Number"></asp:TextBox>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <asp:Label ID="lblArrivalDate" runat="server" Font-Bold="True" Font-Size="15px" Text="Date Of Arrival:"></asp:Label>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <asp:TextBox ID="TextBox4" runat="server" TextMode="Date"></asp:TextBox>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <asp:Label ID="lblPaymentMethod" runat="server" Font-Bold="True" Font-Size="15px" Text="Payment Method:"></asp:Label>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <asp:DropDownList ID="DropDownList3" runat="server" Height="23px" Width="159px">
-                                            <asp:ListItem>Select A Payment Method</asp:ListItem>
-                                            <asp:ListItem>Cash</asp:ListItem>
-                                            <asp:ListItem>Card</asp:ListItem>
-                                        </asp:DropDownList>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <asp:Label ID="lblPaymentAmount" runat="server" Font-Bold="True" Font-Size="15px" Text="Amount:  R"></asp:Label>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <asp:TextBox ID="TextBox11" runat="server" ReadOnly="True"></asp:TextBox>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>&nbsp;</td>
-                                </tr>
-                                <tr>
-                                    <td style="text-align: center">
-                                        <asp:Button ID="btnAdd" runat="server" BackColor="#99FF99" Font-Bold="True" Height="28px" Text="Add" Width="147px" />
-                                        <br />
-                                    </td>
-                                </tr>
-                            </table>
-                        </asp:Panel>
-                        </td>
-                    <td class="auto-style24">
-                        <br />
-                        <br />
-                        <br />
-                        <asp:Label ID="lblUpdateBookingOutput" runat="server"></asp:Label>
-                        <br />
-                            <table style="width: 100%; height: 268px;">
-                                <tr>
-                                    <td>
-                            <asp:Label ID="Label6" runat="server" Text="Booking ID:" Font-Bold="True" Font-Size="15px"></asp:Label>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <asp:TextBox ID="TextBox5" runat="server" TextMode="Number"></asp:TextBox>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                            <asp:Label ID="Label8" runat="server" Font-Bold="True" Font-Size="15px" Text="Tourist ID:"></asp:Label>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                            <asp:TextBox ID="TextBox7" runat="server" TextMode="Number"></asp:TextBox>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                            <asp:Label ID="lblUpdNoOfTickets" runat="server" Font-Bold="True" Font-Size="15px" Text="No Of Tickets:"></asp:Label>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                            <asp:TextBox ID="TextBox8" runat="server" TextMode="Number"></asp:TextBox>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                            <asp:Label ID="lblUpdDateOfArrival" runat="server" Font-Bold="True" Font-Size="15px" Text="Date Of Arrival:"></asp:Label>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                            <asp:TextBox ID="TextBox9" runat="server" TextMode="Date"></asp:TextBox>
-                                        <br />
-                            <asp:Label ID="lblStatus" runat="server" Font-Bold="True" Font-Size="15px" Text="Status:"></asp:Label>
-                                        <br />
-                            <asp:DropDownList ID="DropDownList2" runat="server" Height="23px" Width="159px">
-                                <asp:ListItem>Confirmed</asp:ListItem>
-                                <asp:ListItem>Pending</asp:ListItem>
-                                <asp:ListItem>Cancelled</asp:ListItem>
-                            </asp:DropDownList>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <asp:Label ID="lblPaymentMethod0" runat="server" Font-Bold="True" Font-Size="15px" Text="Payment Method:"></asp:Label>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <asp:DropDownList ID="DropDownList4" runat="server" Height="23px" Width="159px">
-                                            <asp:ListItem>Select A Payment Method</asp:ListItem>
-                                            <asp:ListItem>Cash</asp:ListItem>
-                                            <asp:ListItem>Card</asp:ListItem>
-                                        </asp:DropDownList>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <asp:Label ID="lblPaymentAmount0" runat="server" Font-Bold="True" Font-Size="15px" Text="Amount:  R"></asp:Label>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <asp:TextBox ID="TextBox13" runat="server" ReadOnly="True"></asp:TextBox>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>&nbsp;</td>
-                                </tr>
-                                <tr>
-                                    <td style="text-align: center">
-                            <asp:Button ID="lblSearch" runat="server" Font-Bold="True" Height="27px" Text="Search" Width="68px" BackColor="#CCCCCC" OnClick="lblSearch_Click" />
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <asp:Button ID="btnUpdate" runat="server" Font-Bold="True" Height="33px" Text="Update" Width="127px" BackColor="#66CCFF" />
-                                        <br />
-                                    </td>
-                                </tr>
-                            </table>
-                    </td>
-                    <td class="auto-style25">
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-                        <asp:Label ID="lblDeleteBookingOutput" runat="server"></asp:Label>
-                        <br />
-                        <asp:Panel ID="PnlDelete" runat="server" GroupingText="Delete Booking" Height="201px" Width="360px">
-                            <asp:Label ID="lblDeleteID" runat="server" Text="Tourist ID:" Font-Bold="True" Font-Size="15px"></asp:Label>
-                            &nbsp;<br />
-                            <asp:TextBox ID="txtTouristID" runat="server" TextMode="Number"></asp:TextBox>
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <asp:Button ID="btnDelete" runat="server" BackColor="Red" Font-Bold="True" Height="40px" OnClientClick="return confirm('Are you sure you want to delete this booking?');" Text="Delete" Width="151px" />
-                            <br />
-                        </asp:Panel>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <table style="width: 100%; height: 314px;">
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <asp:Button ID="btnAddBooking" runat="server" Font-Bold="True" Height="61px" Text="Add New Booking" Width="225px" />
+                                </td>
+                                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <asp:Button ID="btnUpdBooking" runat="server" Font-Bold="True" Height="76px" Text="Update A Booking" Width="227px" />
+                                </td>
+                                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <asp:Button ID="btnDelete" runat="server" Font-Bold="True" Height="55px" Text="Delete A Booking" Width="216px" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                        </table>
+                        
                         </td>
                 </tr>
                 <tr>
                     <td class="auto-style22">
                         &nbsp;</td>
-                    <td class="auto-style23" colspan="3">
-                        <asp:GridView ID="GridView1" runat="server" Height="325px" Width="1104px" ForeColor="Green">
-                            <HeaderStyle BackColor="Black" />
-                        </asp:GridView>
-                        </td>
+                    <td class="auto-style23">
+                        &nbsp;</td>
                 </tr>
                 </table>
         </div>

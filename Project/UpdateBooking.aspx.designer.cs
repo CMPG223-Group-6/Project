@@ -11,17 +11,17 @@ namespace Project
 {
 
 
-    public partial class AddTourist
+    public partial class UpdateBooking
     {
 
         /// <summary>
-        /// form1 control.
+        /// form2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form2;
 
         /// <summary>
         /// Image1 control.
@@ -42,13 +42,13 @@ namespace Project
         protected global::System.Web.UI.WebControls.Menu Menu1;
 
         /// <summary>
-        /// lblAddInfo control.
+        /// lblUpdBooking control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAddInfo;
+        protected global::System.Web.UI.WebControls.Label lblUpdBooking;
 
         /// <summary>
         /// Panel1 control.
@@ -60,6 +60,60 @@ namespace Project
         protected global::System.Web.UI.WebControls.Panel Panel1;
 
         /// <summary>
+        /// lblTouristID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblTouristID;
+
+        /// <summary>
+        /// txtUpdTouristID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtUpdTouristID;
+
+        /// <summary>
+        /// rfvTouristID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvTouristID;
+
+        /// <summary>
+        /// lblEventID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblEventID;
+
+        /// <summary>
+        /// ddlEventID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlEventID;
+
+        /// <summary>
+        /// rfvEventID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvEventID;
+
+        /// <summary>
         /// lblName control.
         /// </summary>
         /// <remarks>
@@ -69,13 +123,13 @@ namespace Project
         protected global::System.Web.UI.WebControls.Label lblName;
 
         /// <summary>
-        /// txtName control.
+        /// txtUpdName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtName;
+        protected global::System.Web.UI.WebControls.TextBox txtUpdName;
 
         /// <summary>
         /// rfvName control.
@@ -87,49 +141,22 @@ namespace Project
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvName;
 
         /// <summary>
-        /// lblSurname control.
+        /// lblNoOfTickets control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSurname;
+        protected global::System.Web.UI.WebControls.Label lblNoOfTickets;
 
         /// <summary>
-        /// txtSurname control.
+        /// txtNoOfTickets control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSurname;
-
-        /// <summary>
-        /// rfvSurname control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvSurname;
-
-        /// <summary>
-        /// lblPhoneNo control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPhoneNo;
-
-        /// <summary>
-        /// txtPhoneNo control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPhoneNo;
+        protected global::System.Web.UI.WebControls.TextBox txtNoOfTickets;
 
         /// <summary>
         /// rfvPhoneNo control.
@@ -141,33 +168,6 @@ namespace Project
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPhoneNo;
 
         /// <summary>
-        /// lblEmail control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEmail;
-
-        /// <summary>
-        /// txtEmail control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEmail;
-
-        /// <summary>
-        /// revEmail control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator revEmail;
-
-        /// <summary>
         /// lblDate control.
         /// </summary>
         /// <remarks>
@@ -177,13 +177,13 @@ namespace Project
         protected global::System.Web.UI.WebControls.Label lblDate;
 
         /// <summary>
-        /// txtDate control.
+        /// txtUpdDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDate;
+        protected global::System.Web.UI.WebControls.TextBox txtUpdDate;
 
         /// <summary>
         /// rfvDate control.
@@ -195,31 +195,49 @@ namespace Project
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvDate;
 
         /// <summary>
-        /// lblCountry control.
+        /// lblPaymentMethod control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCountry;
+        protected global::System.Web.UI.WebControls.Label lblPaymentMethod;
 
         /// <summary>
-        /// ddlCountries control.
+        /// ddlEventID0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlCountries;
+        protected global::System.Web.UI.WebControls.DropDownList ddlEventID0;
 
         /// <summary>
-        /// BtnAdd control.
+        /// lblAmount control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnAdd;
+        protected global::System.Web.UI.WebControls.Label lblAmount;
+
+        /// <summary>
+        /// lblAmountOutput control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblAmountOutput;
+
+        /// <summary>
+        /// BtnUpdBooking control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnUpdBooking;
 
         /// <summary>
         /// btnContinue control.

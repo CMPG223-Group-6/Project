@@ -11,17 +11,17 @@ namespace Project
 {
 
 
-    public partial class AddTourist
+    public partial class UpdateTourist
     {
 
         /// <summary>
-        /// form1 control.
+        /// form2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form2;
 
         /// <summary>
         /// Image1 control.
@@ -42,13 +42,13 @@ namespace Project
         protected global::System.Web.UI.WebControls.Menu Menu1;
 
         /// <summary>
-        /// lblAddInfo control.
+        /// lblUpdateInfo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAddInfo;
+        protected global::System.Web.UI.WebControls.Label lblUpdateInfo;
 
         /// <summary>
         /// Panel1 control.
@@ -60,6 +60,60 @@ namespace Project
         protected global::System.Web.UI.WebControls.Panel Panel1;
 
         /// <summary>
+        /// lblTouristID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblTouristID;
+
+        /// <summary>
+        /// txtUpdTouristID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtUpdTouristID;
+
+        /// <summary>
+        /// rfvTouristID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvTouristID;
+
+        /// <summary>
+        /// lblEventID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblEventID;
+
+        /// <summary>
+        /// ddlEventID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlEventID;
+
+        /// <summary>
+        /// rfvEventID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvEventID;
+
+        /// <summary>
         /// lblName control.
         /// </summary>
         /// <remarks>
@@ -69,13 +123,13 @@ namespace Project
         protected global::System.Web.UI.WebControls.Label lblName;
 
         /// <summary>
-        /// txtName control.
+        /// txtUpdName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtName;
+        protected global::System.Web.UI.WebControls.TextBox txtUpdName;
 
         /// <summary>
         /// rfvName control.
@@ -96,13 +150,13 @@ namespace Project
         protected global::System.Web.UI.WebControls.Label lblSurname;
 
         /// <summary>
-        /// txtSurname control.
+        /// txtUpdSurname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSurname;
+        protected global::System.Web.UI.WebControls.TextBox txtUpdSurname;
 
         /// <summary>
         /// rfvSurname control.
@@ -123,13 +177,13 @@ namespace Project
         protected global::System.Web.UI.WebControls.Label lblPhoneNo;
 
         /// <summary>
-        /// txtPhoneNo control.
+        /// txtUpdPhoneNo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPhoneNo;
+        protected global::System.Web.UI.WebControls.TextBox txtUpdPhoneNo;
 
         /// <summary>
         /// rfvPhoneNo control.
@@ -150,13 +204,13 @@ namespace Project
         protected global::System.Web.UI.WebControls.Label lblEmail;
 
         /// <summary>
-        /// txtEmail control.
+        /// txtUpdEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEmail;
+        protected global::System.Web.UI.WebControls.TextBox txtUpdEmail;
 
         /// <summary>
         /// revEmail control.
@@ -177,13 +231,13 @@ namespace Project
         protected global::System.Web.UI.WebControls.Label lblDate;
 
         /// <summary>
-        /// txtDate control.
+        /// txtUpdDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDate;
+        protected global::System.Web.UI.WebControls.TextBox txtUpdDate;
 
         /// <summary>
         /// rfvDate control.
@@ -195,6 +249,24 @@ namespace Project
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvDate;
 
         /// <summary>
+        /// lblStatus control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblStatus;
+
+        /// <summary>
+        /// ddlUpdStatus control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlUpdStatus;
+
+        /// <summary>
         /// lblCountry control.
         /// </summary>
         /// <remarks>
@@ -204,22 +276,22 @@ namespace Project
         protected global::System.Web.UI.WebControls.Label lblCountry;
 
         /// <summary>
-        /// ddlCountries control.
+        /// ddlUpdCountries control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlCountries;
+        protected global::System.Web.UI.WebControls.DropDownList ddlUpdCountries;
 
         /// <summary>
-        /// BtnAdd control.
+        /// BtnUpdate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnAdd;
+        protected global::System.Web.UI.WebControls.Button BtnUpdate;
 
         /// <summary>
         /// btnContinue control.

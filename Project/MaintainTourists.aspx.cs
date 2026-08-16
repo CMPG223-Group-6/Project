@@ -23,5 +23,20 @@ namespace Project
         {
 
         }
+
+        protected void btnAdd_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AddTourist.aspx");
+        }
+
+        protected void btnUpdate_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("UpdateTourist.aspx");
+        }
+
+        protected void btnDelete_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
