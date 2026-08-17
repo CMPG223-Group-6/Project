@@ -321,9 +321,9 @@
                                 </tr>
                                 <tr>
                                     <td class="auto-style17">&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <asp:Button ID="BtnAdd" runat="server" Height="28px" Text="Add" Width="145px" />
+                                        <asp:Button ID="BtnAdd" runat="server" Height="28px" Text="Add" Width="145px" BackColor="Green" Font-Bold="True" ForeColor="White" />
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <asp:Button ID="btnContinue" runat="server" Height="27px" Text="Continue" Width="128px" />
+                                        <asp:Button ID="btnContinue" runat="server" Height="27px" Text="Continue" Width="128px" BackColor="Yellow" Font-Bold="True" ForeColor="White" />
                                     </td>
                                 </tr>
                             </table>

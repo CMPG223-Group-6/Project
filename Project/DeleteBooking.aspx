@@ -112,9 +112,9 @@
                                 </tr>
                                 <tr>
                                     <td class="auto-style17">
-                                        <asp:Button ID="BtnDelete" runat="server" Height="28px" Text="Delete" Width="145px" />
+                                        <asp:Button ID="BtnDelete" runat="server" Height="28px" Text="Delete" Width="145px" BackColor="Green" Font-Bold="True" ForeColor="White" />
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <asp:Button ID="btnContinue" runat="server" Height="27px" Text="Continue" Width="128px" />
+                                        <asp:Button ID="btnContinue" runat="server" Height="27px" Text="Continue" Width="128px" BackColor="Yellow" Font-Bold="True" ForeColor="White" />
                                         <br />
                                     </td>
                                 </tr>
