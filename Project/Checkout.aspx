@@ -8,38 +8,33 @@
 <head runat="server">
     <title></title>
     <style type="text/css">
-        .auto-style2 {
-            height: 153px;
-            width: 259px;
-        }
         .auto-style3 {
-            height: 383px;
+            height: 309px;
             width: 259px;
         }
         .auto-style5 {
-            height: 383px;
-            width: 1094px;
+            height: 309px;
+            width: 934px;
         }
         .auto-style6 {
         }
         .auto-style7 {
-            height: 383px;
-            width: 950px;
-            text-align: left;
-        }
+            height: 309px;
+            width: 743px;
+            }
         .auto-style9 {
-            height: 266px;
+            height: 53px;
             width: 259px;
         }
         .auto-style10 {
-            width: 950px;
-            height: 266px;
+            width: 743px;
+            height: 53px;
         }
         .auto-style11 {
-            width: 1094px;
-            height: 266px;
+            width: 934px;
+            height: 53px;
         }
-        .auto-style12 {
+        .auto-style13 {
             width: 259px;
         }
     </style>
@@ -47,7 +42,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <table>
+            <table style="height: 640px; width: 1378px">
                 <tr>
                     <td class="auto-style9" style="border-style: inset; border-color: #006600; background-color: #006600">
                         <asp:Label ID="lblZooInfo" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="White" Text="ZooInfoSys"></asp:Label>
@@ -61,7 +56,7 @@
                         <asp:Label ID="lblInfo" runat="server" style="font-weight: 700; font-size: x-large" Text="Check-out"></asp:Label>
                     </td>
                     <td class="auto-style11">
-                        &nbsp;</td>
+                        </td>
                 </tr>
                 <tr>
                     <td class="auto-style3" style="border-style: inset; border-color: #006600; background-color: #006600">
@@ -79,33 +74,48 @@
                                 </td>
                     <td class="auto-style7">
                         <asp:Label ID="lblVerifyExit" runat="server" style="text-align: left; font-size: large" Text="Enter Booking ID"></asp:Label>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="ddlDetails" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtBookingIDInput" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
                         <br />
-                        <asp:DropDownList ID="ddlDetails" runat="server" Height="30px" Width="263px">
+                        <br />
+                        <asp:TextBox ID="txtBookingIDInput" runat="server" Height="32px" Width="232px"></asp:TextBox>
+                        <br />
+                        <br />
+                        <asp:DropDownList ID="ddlBookingIDDetails" runat="server" Height="31px" Width="242px">
                         </asp:DropDownList>
                         <br />
                         <br />
+                        <asp:Button ID="btnConfirmExit" runat="server" Height="47px" Text="Confirm Exit" Width="276px" BackColor="#33CC33" OnClick="btnConfirmExit_Click" />
                         <br />
-                        <asp:Button ID="btnConfirmExit" runat="server" Height="47px" Text="Confirm Exit" Width="276px" BackColor="#33CC33" />
                         <br />
-                        <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <asp:Label ID="lblConfirmMessage" runat="server"></asp:Label>
+                        <br />
                     </td>
                     <td class="auto-style5">
-                        <asp:Label ID="lblFAQ" runat="server" Text="Related FAQ's"></asp:Label>
+                        <asp:Label ID="lblOptional" runat="server" Text="Optional"></asp:Label>
                         <br />
                         <br />
-                        <asp:HyperLink ID="HyperLink1" runat="server">HyperLink</asp:HyperLink>
+                        <asp:HyperLink ID="hlExitForm" runat="server">Fill in zoo review</asp:HyperLink>
                         <br />
                         <br />
-                        <asp:HyperLink ID="HyperLink2" runat="server">HyperLink</asp:HyperLink>
+                        <asp:Label ID="lblRating" runat="server" Text="Rate us:"></asp:Label>
                         <br />
+                        <br />
+                        <asp:RadioButton ID="rbStar1" runat="server" GroupName="Rating" Text="★" />
+                        <asp:RadioButton ID="rbStar2" runat="server" GroupName="Rating" Text="★" />
+                        <asp:RadioButton ID="rbStar3" runat="server" GroupName="Rating" Text="★" />
+                        <asp:RadioButton ID="rbStar4" runat="server" GroupName="Rating" Text="★" />
+                        <asp:RadioButton ID="rbStar5" runat="server" GroupName="Rating" Text="★" />
+                        <br />
+                        <br />
+                        &nbsp;<asp:Button ID="btnSubmitRating" runat="server" BackColor="#33CC33" Height="45px" OnClick="btnSubmitRating_Click" Text="Submit rating" Width="211px" />
+                        <br />
+                        <br />
+                        <asp:Label ID="lblResults" runat="server"></asp:Label>
                         <br />
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style2" style="border-style: inset; border-color: #006600; background-color: #006600">
+                    <td class="auto-style13" style="border-style: inset; border-color: #006600; background-color: #006600">
                         <asp:Menu ID="Menu2" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="White">
                             <Items>
                                 <asp:MenuItem NavigateUrl="~/MyProfile.aspx" Text="My Profile"></asp:MenuItem>
@@ -117,8 +127,8 @@
                         <asp:Label ID="lblNameDisplay" runat="server" Font-Size="Small" ForeColor="#999999"></asp:Label>
                     </td>
                     <td class="auto-style6" rowspan="2" colspan="2">
-                        <asp:Panel ID="Panel1" runat="server" GroupingText="Summary" Height="233px" style="margin-top: 0px">
-                            <asp:GridView ID="GridView1" runat="server" Height="159px" Width="1014px">
+                        <asp:Panel ID="Panel1" runat="server" GroupingText="Summary" Height="136px" style="margin-top: 0px" Width="1140px">
+                            <asp:GridView ID="gvTouristActivitySummary" runat="server" Height="229px" Width="1116px">
                             </asp:GridView>
                             <br />
                         </asp:Panel>
@@ -131,7 +141,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td style="border-style: inset; border-color: #006600; background-color: #006600" class="auto-style12">
+                    <td style="border-style: inset; border-color: #006600; background-color: #006600" class="auto-style13">
                         <asp:Menu ID="Menu3" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="White">
                             <Items>
                                 <asp:MenuItem Text="Sign Out"></asp:MenuItem>

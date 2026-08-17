@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CheckIn.aspx.cs" Inherits="Project.CheckIn" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CheckinTouristside.aspx.cs" Inherits="Project.CheckIn" %>
 
 <!DOCTYPE html>
 
@@ -7,10 +7,6 @@
     <title></title>
     <style type="text/css">
 
-        .auto-style4 {
-            width: 834px;
-            height: 71px;
-        }
         .auto-style2 {
             width: 834px;
             height: 282px;
@@ -29,6 +25,13 @@
         .auto-style8 {
             width: 1349px;
         }
+        .auto-style9 {
+            height: 86px;
+        }
+        .auto-style10 {
+            width: 834px;
+            height: 86px;
+        }
     </style>
 </head>
 <body>
@@ -39,7 +42,7 @@
                     <td>
                         <table style="width:100%; height: 872px;">
                             <tr>
-                                <td class="auto-style4" style="border-style: inset; border-color: #006600; background-color: #006600">&nbsp;<br />
+                                <td class="auto-style10" style="border-style: inset; border-color: #006600; background-color: #006600">&nbsp;<br />
                                     <asp:Label ID="lblZooInfo" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="White" Text="ZooInfoSys"></asp:Label>
                                     &nbsp;&nbsp;&nbsp;
                                     <asp:Image ID="Image2" runat="server" ImageUrl="~/Images/Screenshot 2026-08-10 122157.png" />
@@ -47,7 +50,7 @@
                                     &nbsp;&nbsp;&nbsp;&nbsp;
                                     <asp:Label ID="lblZooInfo0" runat="server" Font-Size="Small" ForeColor="#999999" Text="Operations"></asp:Label>
                                 </td>
-                                <td class="auto-style5" colspan="2" style="border-style: double">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <td class="auto-style9" colspan="2" style="border-style: double">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     <asp:Label ID="lblInfo" runat="server" Font-Bold="True" Font-Size="X-Large" Text="Check - In"></asp:Label>
                                     <br />
                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
@@ -64,7 +67,7 @@
                                             <asp:MenuItem NavigateUrl="~/Payment.aspx" Text="Payment" Value="2"></asp:MenuItem>
                                             <asp:MenuItem NavigateUrl="~/CheckIn.aspx" Text="Check - In" Value="3"></asp:MenuItem>
                                             <asp:MenuItem NavigateUrl="~/ZooInformation.aspx" Text="Zoo Information" Value="4"></asp:MenuItem>
-                                            <asp:MenuItem></asp:MenuItem>
+                                            <asp:MenuItem Text="Check - out" Value="5"></asp:MenuItem>
                                             <asp:MenuItem></asp:MenuItem>
                                             <asp:MenuItem></asp:MenuItem>
                                         </Items>
@@ -73,15 +76,15 @@
                                 </td>
                                 <td>
                                     <asp:Panel ID="Panel1" runat="server" GroupingText="Check-in Details" Height="260px" Width="1078px">
-                                        <asp:Label ID="lblBookingID" runat="server" Text="BookingID :"></asp:Label>
+                                        <asp:Label ID="lblBookingID" runat="server" Text="Enter booking ID"></asp:Label>
+                                        <asp:RequiredFieldValidator ID="rfvBookingIDTourist" runat="server" ControlToValidate="ddlBookingEvents0" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
                                         <br />
                                         <br />
                                         <asp:DropDownList ID="ddlBookingEvents0" runat="server" Height="30px" Width="130px">
                                         </asp:DropDownList>
                                         <br />
                                         <br />
-                                        <asp:Button ID="btnCheck" runat="server" Text="Check In" BackColor="#33CC33" Height="36px" Width="140px" />
-                                        <br />
+                                        <asp:Button ID="btnCheck" runat="server" Text="Check In" BackColor="#33CC33" Height="36px" Width="140px" OnClick="btnCheck_Click" />
                                         <br />
                                         <br />
                                         <asp:Label ID="lblOutput" runat="server"></asp:Label>
@@ -105,8 +108,7 @@
                                     <asp:Label ID="lblNameDisplay" runat="server" Font-Size="Small" ForeColor="#999999"></asp:Label>
                                 </td>
                                 <td rowspan="2">
-                                    <asp:GridView ID="GridView1" runat="server" Height="179px" Width="1069px">
-                                    </asp:GridView>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:Image ID="ImgZoo" runat="server" Height="303px" ImageUrl="~/Vector_zoo_map_layout_202608130700.jpeg" Width="525px" />
                                 </td>
                                 <td class="auto-style7"></td>
                             </tr>

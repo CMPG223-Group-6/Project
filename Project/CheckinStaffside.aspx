@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CheckInTourist.aspx.cs" Inherits="Project.CheckInTourist" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CheckinStaffside.aspx.cs" Inherits="Project.CheckInTourist" %>
 
 <!DOCTYPE html>
 
@@ -10,14 +10,15 @@
         .auto-style6 {
             width: 170px;
         }
-        .auto-style2 {
-            width: 455px;
-        }
         .auto-style5 {
             width: 456px;
         }
         .auto-style1 {
-            width: 1368px;
+            width: 1363px;
+            height: 808px;
+        }
+        .auto-style9 {
+            height: 77px;
         }
         </style>
 </head>
@@ -25,7 +26,7 @@
     <form id="form1" runat="server">
             <table class="auto-style1">
                 <tr>
-                    <td class="auto-style6" rowspan="3">
+                    <td class="auto-style6" rowspan="4">
                         <asp:Image ID="Image1" runat="server" Height="158px" ImageUrl="~/Images/zims_zoo_logo.png" Width="331px" />
                         <asp:Menu ID="Menu1" runat="server" BackColor="#003300" DynamicHorizontalOffset="13" Font-Bold="True" Font-Size="13pt" ForeColor="White" Height="700px" StaticSubMenuIndent="25px" Width="330px">
                             <DynamicHoverStyle BackColor="#339933" />
@@ -45,16 +46,41 @@
                             <StaticSelectedStyle BackColor="#66FF33" />
                         </asp:Menu>
                     </td>
-                    <td class="auto-style2">&nbsp;</td>
-                    <td class="auto-style5">&nbsp;</td>
+                    <td>
+                        <asp:Label ID="lblHeading" runat="server" style="font-size: xx-large; font-weight: 700" Text="Check-in"></asp:Label>
+                    </td>
+                    <td class="auto-style5"></td>
                 </tr>
                 <tr>
-                    <td class="auto-style2">&nbsp;</td>
-                    <td class="auto-style5">&nbsp;</td>
+                    <td colspan="2">
+                                    <asp:Panel ID="Panel1" runat="server" GroupingText="Check-in Details" Height="315px" Width="910px">
+                                        <asp:Label ID="lblBookingID" runat="server" Text="BookingID :"></asp:Label>
+                                        <asp:RequiredFieldValidator ID="rfvBookingIDStaff" runat="server" ControlToValidate="TextBox1" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                                        <br />
+                                        <br />
+                                        <asp:TextBox ID="txtBookingIDinputstaff" runat="server"></asp:TextBox>
+                                        <br />
+                                        <br />
+                                        <asp:DropDownList ID="ddlBookingEventsStaffcheckin" runat="server" Height="28px" Width="189px">
+                                        </asp:DropDownList>
+                                        <br />
+                                        <br />
+                                        <asp:Button ID="btnCheck" runat="server" Text="Check In" BackColor="#33CC33" Height="43px" Width="186px" OnClick="btnCheck_Click" />
+                                        <br />
+                                        <br />
+                                        <asp:Label ID="lblOutput" runat="server"></asp:Label>
+                                        <br />
+                                        <br />
+                                    </asp:Panel>
+                                </td>
+                </tr>
+                <tr>
+                    <td class="auto-style9" colspan="2">
+                                    <asp:GridView ID="GridView1" runat="server" Height="179px" Width="1069px">
+                                    </asp:GridView>
+                                </td>
                 </tr>
             </table>
-        <div>
-        </div>
     </form>
 </body>
 </html>

@@ -112,9 +112,9 @@
     <Content Include="bin\roslyn\vbc.exe" />
     <Content Include="bin\roslyn\VBCSCompiler.exe" />
     <Content Include="Bookings.aspx" />
-    <Content Include="CheckIn.aspx" />
+    <Content Include="CheckinTouristside.aspx" />
     <Content Include="CheckinStaff.aspx" />
-    <Content Include="CheckInTourist.aspx" />
+    <Content Include="CheckinStaffside.aspx" />
     <Content Include="Checkout.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Images\Screenshot 2026-08-10 122157.png" />
@@ -202,12 +202,12 @@
     <Compile Include="Bookings.aspx.designer.cs">
       <DependentUpon>Bookings.aspx</DependentUpon>
     </Compile>
-    <Compile Include="CheckIn.aspx.cs">
-      <DependentUpon>CheckIn.aspx</DependentUpon>
+    <Compile Include="CheckinTouristside.aspx.cs">
+      <DependentUpon>CheckinTouristside.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CheckIn.aspx.designer.cs">
-      <DependentUpon>CheckIn.aspx</DependentUpon>
+    <Compile Include="CheckinTouristside.aspx.designer.cs">
+      <DependentUpon>CheckinTouristside.aspx</DependentUpon>
     </Compile>
     <Compile Include="CheckinStaff.aspx.cs">
       <DependentUpon>CheckinStaff.aspx</DependentUpon>
@@ -216,12 +216,12 @@
     <Compile Include="CheckinStaff.aspx.designer.cs">
       <DependentUpon>CheckinStaff.aspx</DependentUpon>
     </Compile>
-    <Compile Include="CheckInTourist.aspx.cs">
-      <DependentUpon>CheckInTourist.aspx</DependentUpon>
+    <Compile Include="CheckinStaffside.aspx.cs">
+      <DependentUpon>CheckinStaffside.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CheckInTourist.aspx.designer.cs">
-      <DependentUpon>CheckInTourist.aspx</DependentUpon>
+    <Compile Include="CheckinStaffside.aspx.designer.cs">
+      <DependentUpon>CheckinStaffside.aspx</DependentUpon>
     </Compile>
     <Compile Include="Checkout.aspx.cs">
       <DependentUpon>Checkout.aspx</DependentUpon>

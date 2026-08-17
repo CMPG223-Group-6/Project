@@ -96,6 +96,15 @@ namespace Project
         protected global::System.Web.UI.WebControls.Label lblBookingID;
 
         /// <summary>
+        /// rfvBookingIDTourist control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvBookingIDTourist;
+
+        /// <summary>
         /// ddlBookingEvents0 control.
         /// </summary>
         /// <remarks>
@@ -141,13 +150,13 @@ namespace Project
         protected global::System.Web.UI.WebControls.Label lblNameDisplay;
 
         /// <summary>
-        /// GridView1 control.
+        /// ImgZoo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.Image ImgZoo;
 
         /// <summary>
         /// Menu3 control.
