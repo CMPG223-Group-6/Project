@@ -186,24 +186,6 @@ namespace Project
         protected global::System.Web.UI.WebControls.TextBox txtArrivalDate;
 
         /// <summary>
-        /// Menu2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Menu Menu2;
-
-        /// <summary>
-        /// lblNameDisplay control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNameDisplay;
-
-        /// <summary>
         /// lblHeading2 control.
         /// </summary>
         /// <remarks>
@@ -328,6 +310,24 @@ namespace Project
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnMakePayment;
+
+        /// <summary>
+        /// Menu2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Menu Menu2;
+
+        /// <summary>
+        /// lblNameDisplay control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblNameDisplay;
 
         /// <summary>
         /// Menu3 control.

@@ -69,138 +69,138 @@ namespace Project
         protected global::System.Web.UI.WebControls.TextBox txtTouristID;
 
         /// <summary>
-        /// lblEventID control.
+        /// lblEventID0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEventID;
+        protected global::System.Web.UI.WebControls.Label lblEventID0;
 
         /// <summary>
-        /// txtEventID control.
+        /// txtEventID0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEventID;
+        protected global::System.Web.UI.WebControls.TextBox txtEventID0;
 
         /// <summary>
-        /// lblEventName control.
+        /// lblEventName0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEventName;
+        protected global::System.Web.UI.WebControls.Label lblEventName0;
 
         /// <summary>
-        /// txtEventName control.
+        /// txtEventName0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEventName;
+        protected global::System.Web.UI.WebControls.TextBox txtEventName0;
 
         /// <summary>
-        /// lblNumberTickets control.
+        /// lblNumberTickets0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNumberTickets;
+        protected global::System.Web.UI.WebControls.Label lblNumberTickets0;
 
         /// <summary>
-        /// txtNumberTickets control.
+        /// txtNumberTickets0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNumberTickets;
+        protected global::System.Web.UI.WebControls.TextBox txtNumberTickets0;
 
         /// <summary>
-        /// lblArrivalDate control.
+        /// lblArrivalDate0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblArrivalDate;
+        protected global::System.Web.UI.WebControls.Label lblArrivalDate0;
 
         /// <summary>
-        /// txtArrivalDate control.
+        /// txtArrivalDate0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtArrivalDate;
+        protected global::System.Web.UI.WebControls.TextBox txtArrivalDate0;
 
         /// <summary>
-        /// lblPaymentDate control.
+        /// lblPaymentDate0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPaymentDate;
+        protected global::System.Web.UI.WebControls.Label lblPaymentDate0;
 
         /// <summary>
-        /// txtPaymentDate control.
+        /// txtPaymentDate0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPaymentDate;
+        protected global::System.Web.UI.WebControls.TextBox txtPaymentDate0;
 
         /// <summary>
-        /// lblPaymentMethod control.
+        /// lblPaymentMethod0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPaymentMethod;
+        protected global::System.Web.UI.WebControls.Label lblPaymentMethod0;
 
         /// <summary>
-        /// txtPaymentMethod control.
+        /// txtPaymentMethod0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPaymentMethod;
+        protected global::System.Web.UI.WebControls.TextBox txtPaymentMethod0;
 
         /// <summary>
-        /// lblToatlPaid control.
+        /// lblToatlPaid0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblToatlPaid;
+        protected global::System.Web.UI.WebControls.Label lblToatlPaid0;
 
         /// <summary>
-        /// txtTotalPaid control.
+        /// txtTotalPaid0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTotalPaid;
+        protected global::System.Web.UI.WebControls.TextBox txtTotalPaid0;
 
         /// <summary>
-        /// Button1 control.
+        /// Button2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button Button2;
     }
 }

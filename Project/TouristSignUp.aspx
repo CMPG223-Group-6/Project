@@ -23,6 +23,17 @@
         .auto-style5 {
             height: 26px;
         }
+        .auto-style6 {
+            width: 426px;
+        }
+        .auto-style7 {
+            height: 29px;
+            width: 426px;
+        }
+        .auto-style8 {
+            width: 426px;
+            height: 26px;
+        }
     </style>
 </head>
 <body>
@@ -31,7 +42,7 @@
         </div>
         <table style="width:100%;">
             <tr>
-                <td class="auto-style2">
+                <td class="auto-style6">
                     &nbsp;</td>
                 <td class="auto-style2">
                     <asp:Label ID="lblHeading" runat="server" Font-Bold="True" style="font-size: xx-large" Text="Sign Up"></asp:Label>
@@ -39,12 +50,12 @@
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style2">&nbsp;</td>
+                <td class="auto-style6">&nbsp;</td>
                 <td class="auto-style2">&nbsp;</td>
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style2">
+                <td class="auto-style6">
                     &nbsp;</td>
                 <td class="auto-style2">
                     <asp:Label ID="lblSubheading" runat="server" style="font-size: large" Text="Enter details"></asp:Label>
@@ -52,101 +63,103 @@
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style2">&nbsp;</td>
+                <td class="auto-style6">&nbsp;</td>
                 <td class="auto-style2">&nbsp;</td>
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style2">
+                <td class="auto-style6">
                     &nbsp;</td>
                 <td class="auto-style2">
                     <asp:Label ID="lblName" runat="server" Text="Name:"></asp:Label>
                 </td>
-                <td>&nbsp;</td>
+                <td rowspan="11">
+                    <asp:Panel ID="Panel1" runat="server" GroupingText="Successful Sign up" Height="280px" Visible="False">
+                        <br />
+                        <br />
+                        <asp:Label ID="lblTouristID0" runat="server" style="font-size: large" Text="You have sucessfully signed up, you can proceed to log in."></asp:Label>
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <asp:Label ID="lblTouristID" runat="server" style="font-size: large" Text="Tourist ID:"></asp:Label>
+                        <asp:Label ID="lblTouristIDDisplay" runat="server"></asp:Label>
+                    </asp:Panel>
+                </td>
             </tr>
             <tr>
-                <td class="auto-style2">
+                <td class="auto-style6">
                     &nbsp;</td>
                 <td class="auto-style2">
                     <asp:TextBox ID="txtName" runat="server" Width="147px"></asp:TextBox>
                 </td>
-                <td>&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style2">
+                <td class="auto-style6">
                     &nbsp;</td>
                 <td class="auto-style2">
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtName" ErrorMessage="Please enter your name!" Font-Bold="True" ForeColor="#FF3300"></asp:RequiredFieldValidator>
                 </td>
-                <td>&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style2">
+                <td class="auto-style6">
                     &nbsp;</td>
                 <td class="auto-style2">
                     <asp:Label ID="lblSurname" runat="server" Text="Surname:"></asp:Label>
                 </td>
-                <td>&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style2">
+                <td class="auto-style6">
                     &nbsp;</td>
                 <td class="auto-style2">
                     <asp:TextBox ID="txtSurname" runat="server" Width="148px"></asp:TextBox>
                 </td>
-                <td>&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style2">
+                <td class="auto-style6">
                     &nbsp;</td>
                 <td class="auto-style2">
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtSurname" ErrorMessage="Please enter your surname!" Font-Bold="True" ForeColor="#FF3300"></asp:RequiredFieldValidator>
                 </td>
-                <td>&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style2">
+                <td class="auto-style6">
                     &nbsp;</td>
                 <td class="auto-style2">
                     <asp:Label ID="lblEmail" runat="server" Text="Email:"></asp:Label>
                 </td>
-                <td>&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style3">
+                <td class="auto-style7">
                     &nbsp;</td>
                 <td class="auto-style3">
                     <asp:TextBox ID="txtEmail" runat="server" Width="200px"></asp:TextBox>
                 </td>
-                <td class="auto-style1"></td>
             </tr>
             <tr>
-                <td class="auto-style2">
+                <td class="auto-style6">
                     &nbsp;</td>
                 <td class="auto-style2">
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtEmail" ErrorMessage="Please enter your email!" Font-Bold="True" ForeColor="#FF3300"></asp:RequiredFieldValidator>
                     <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtEmail" ErrorMessage="Please enter correct format email!" Font-Bold="True" ForeColor="#FF3300" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
                 </td>
-                <td>&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style2">
+                <td class="auto-style6">
                     &nbsp;</td>
                 <td class="auto-style2">
                     <asp:Label ID="lblCountry" runat="server" Text="Country:"></asp:Label>
                 </td>
-                <td>&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style2">
+                <td class="auto-style6">
                     &nbsp;</td>
                 <td class="auto-style2">
                     <asp:TextBox ID="txtCountry" runat="server" Width="199px"></asp:TextBox>
                 </td>
-                <td>&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style2">
+                <td class="auto-style6">
                     &nbsp;</td>
                 <td class="auto-style2">
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtCountry" ErrorMessage="Please enter your country!" Font-Bold="True" ForeColor="#FF3300"></asp:RequiredFieldValidator>
@@ -154,7 +167,7 @@
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style4">
+                <td class="auto-style8">
                 </td>
                 <td class="auto-style4">
                     <asp:Label ID="lblPhoneNumber" runat="server" Text="Phone Number:"></asp:Label>
@@ -162,7 +175,7 @@
                 <td class="auto-style5"></td>
             </tr>
             <tr>
-                <td class="auto-style2">
+                <td class="auto-style6">
                     &nbsp;</td>
                 <td class="auto-style2">
                     <asp:TextBox ID="txtPhoneNumber" runat="server"></asp:TextBox>
@@ -170,7 +183,7 @@
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style2">
+                <td class="auto-style6">
                     &nbsp;</td>
                 <td class="auto-style2">
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtPhoneNumber" ErrorMessage="Please enter your phone number!" Font-Bold="True" ForeColor="#FF3300"></asp:RequiredFieldValidator>
@@ -178,7 +191,7 @@
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style2">
+                <td class="auto-style6">
                     &nbsp;</td>
                 <td class="auto-style2">
                     <asp:Label ID="lblPassword" runat="server" Text="Password:"></asp:Label>
@@ -186,15 +199,15 @@
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style2">
+                <td class="auto-style6">
                     &nbsp;</td>
                 <td class="auto-style2">
-                    <asp:TextBox ID="txtPassword" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox>
                 </td>
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style2">
+                <td class="auto-style6">
                     &nbsp;</td>
                 <td class="auto-style2">
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtPassword" ErrorMessage="Please enter your password!" Font-Bold="True" ForeColor="#FF3300"></asp:RequiredFieldValidator>
@@ -202,15 +215,15 @@
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style2">
+                <td class="auto-style6">
                     &nbsp;</td>
                 <td class="auto-style2">
-                    <asp:Button ID="btnSignUp" runat="server" BackColor="#CCCCCC" Font-Bold="True" Text="Sign Up" Width="146px" />
+                    <asp:Button ID="btnSignUp" runat="server" BackColor="#CCCCCC" Font-Bold="True" Text="Sign Up" Width="146px" OnClick="btnSignUp_Click" />
                 </td>
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style2">
+                <td class="auto-style6">
                     &nbsp;</td>
                 <td class="auto-style2">
                     <asp:Label ID="lblAlreadyHaveAccount" runat="server" Text="Already have an account?"></asp:Label>
@@ -220,27 +233,27 @@
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style2">&nbsp;</td>
+                <td class="auto-style6">&nbsp;</td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style2">&nbsp;</td>
+                <td class="auto-style6">&nbsp;</td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style2">&nbsp;</td>
+                <td class="auto-style6">&nbsp;</td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style2">&nbsp;</td>
+                <td class="auto-style6">&nbsp;</td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style2">&nbsp;</td>
+                <td class="auto-style6">&nbsp;</td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
             </tr>

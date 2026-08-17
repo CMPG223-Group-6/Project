@@ -18,5 +18,10 @@ namespace Project
         {
             Response.Redirect("Default.aspx");
         }
+
+        protected void btnSignUp_Click(object sender, EventArgs e)
+        {
+            Panel1.Visible = true;
+        }
     }
 }
