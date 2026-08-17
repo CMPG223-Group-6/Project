@@ -1,32 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\thand\\OneDrive\\Documents\\GitHub\\CMPG223 Project\\Project\\Project\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|c:\\users\\thand\\onedrive\\documents\\github\\cmpg223 project\\project\\project\\checkout.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:checkout.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|c:\\users\\thand\\onedrive\\documents\\github\\cmpg223 project\\project\\project\\checkintouristside.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:checkintouristside.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|c:\\users\\thand\\onedrive\\documents\\github\\cmpg223 project\\project\\project\\checkinstaffside.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:checkinstaffside.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|c:\\users\\thand\\onedrive\\documents\\github\\cmpg223 project\\project\\project\\checkout.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:checkout.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|c:\\users\\thand\\onedrive\\documents\\github\\cmpg223 project\\project\\project\\checkintouristside.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:checkintouristside.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|c:\\users\\thand\\onedrive\\documents\\github\\cmpg223 project\\project\\project\\checkinstaffside.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:checkinstaffside.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -34,89 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CheckinStaffside.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\thand\\OneDrive\\Documents\\GitHub\\CMPG223 Project\\Project\\Project\\CheckinStaffside.aspx.cs",
-              "RelativeDocumentMoniker": "CheckinStaffside.aspx.cs",
-              "ToolTip": "C:\\Users\\thand\\OneDrive\\Documents\\GitHub\\CMPG223 Project\\Project\\Project\\CheckinStaffside.aspx.cs",
-              "RelativeToolTip": "CheckinStaffside.aspx.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAArwBAAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-17T00:57:27.033Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CheckinTouristside.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\thand\\OneDrive\\Documents\\GitHub\\CMPG223 Project\\Project\\Project\\CheckinTouristside.aspx.cs",
-              "RelativeDocumentMoniker": "CheckinTouristside.aspx.cs",
-              "ToolTip": "C:\\Users\\thand\\OneDrive\\Documents\\GitHub\\CMPG223 Project\\Project\\Project\\CheckinTouristside.aspx.cs",
-              "RelativeToolTip": "CheckinTouristside.aspx.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAArwBQAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-17T00:44:53.892Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Checkout.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\thand\\OneDrive\\Documents\\GitHub\\CMPG223 Project\\Project\\Project\\Checkout.aspx.cs",
-              "RelativeDocumentMoniker": "Checkout.aspx.cs",
-              "ToolTip": "C:\\Users\\thand\\OneDrive\\Documents\\GitHub\\CMPG223 Project\\Project\\Project\\Checkout.aspx.cs",
-              "RelativeToolTip": "Checkout.aspx.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-16T22:57:52.898Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CheckinStaffside.aspx",
-              "DocumentMoniker": "C:\\Users\\thand\\OneDrive\\Documents\\GitHub\\CMPG223 Project\\Project\\Project\\CheckinStaffside.aspx",
-              "RelativeDocumentMoniker": "CheckinStaffside.aspx",
-              "ToolTip": "C:\\Users\\thand\\OneDrive\\Documents\\GitHub\\CMPG223 Project\\Project\\Project\\CheckinStaffside.aspx",
-              "RelativeToolTip": "CheckinStaffside.aspx",
-              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2026-08-15T15:59:01.273Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CheckinTouristside.aspx",
-              "DocumentMoniker": "C:\\Users\\thand\\OneDrive\\Documents\\GitHub\\CMPG223 Project\\Project\\Project\\CheckinTouristside.aspx",
-              "RelativeDocumentMoniker": "CheckinTouristside.aspx",
-              "ToolTip": "C:\\Users\\thand\\OneDrive\\Documents\\GitHub\\CMPG223 Project\\Project\\Project\\CheckinTouristside.aspx",
-              "RelativeToolTip": "CheckinTouristside.aspx",
-              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2026-08-15T15:58:55.241Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Checkout.aspx",
-              "DocumentMoniker": "C:\\Users\\thand\\OneDrive\\Documents\\GitHub\\CMPG223 Project\\Project\\Project\\Checkout.aspx",
-              "RelativeDocumentMoniker": "Checkout.aspx",
-              "ToolTip": "C:\\Users\\thand\\OneDrive\\Documents\\GitHub\\CMPG223 Project\\Project\\Project\\Checkout.aspx",
-              "RelativeToolTip": "Checkout.aspx",
-              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2026-08-15T15:59:02.813Z",
-              "EditorCaption": ""
             }
           ]
         }

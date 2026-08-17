@@ -108,7 +108,7 @@
                                     <asp:Label ID="lblNameDisplay" runat="server" Font-Size="Small" ForeColor="#999999"></asp:Label>
                                 </td>
                                 <td rowspan="2">
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:Image ID="ImgZoo" runat="server" Height="303px" ImageUrl="~/Vector_zoo_map_layout_202608130700.jpeg" Width="525px" />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:Image ID="ImgZoo" runat="server" Height="366px" ImageUrl="~/C:\Users\thand\OneDrive\Documents\GitHub\CMPG223 Project\Project\Project\Images\Zoo map.png" Width="706px" />
                                 </td>
                                 <td class="auto-style7"></td>
                             </tr>
