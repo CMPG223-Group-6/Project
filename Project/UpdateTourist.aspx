@@ -62,8 +62,13 @@
                 </tr>
                 <tr>
                     <td class="auto-style2" rowspan="2">
-                        <asp:Panel ID="Panel1" runat="server" Height="391px">
+                        <asp:Panel ID="Panel1" runat="server" Height="583px">
                             <table style="width:100%; height: 389px;">
+                                <tr>
+                                    <td class="auto-style16">
+                                        <asp:Label ID="lblUpdMessage" runat="server"></asp:Label>
+                                    </td>
+                                </tr>
                                 <tr>
                                     <td class="auto-style16">
                                         <asp:Label ID="lblTouristID" runat="server" Text="Enter your Tourist ID:"></asp:Label>

@@ -103,6 +103,7 @@
                                 <tr>
                                     <td class="auto-style17">
                                         <br />
+                                        <asp:Label ID="lblDeleteMessage" runat="server"></asp:Label>
                                     </td>
                                 </tr>
                                 <tr>
@@ -112,7 +113,7 @@
                                 </tr>
                                 <tr>
                                     <td class="auto-style17">
-                                        <asp:Button ID="BtnDelete" runat="server" Height="28px" Text="Delete" Width="145px" BackColor="Green" Font-Bold="True" ForeColor="White" />
+                                        <asp:Button ID="BtnDelete" runat="server" Height="28px" Text="Delete" Width="145px" BackColor="Green" Font-Bold="True" ForeColor="White" OnClientClick="return confirm('Are you sure you want to delete this booking?');" />
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                         <asp:Button ID="btnContinue" runat="server" Height="27px" Text="Continue" Width="128px" BackColor="Yellow" Font-Bold="True" ForeColor="White" />
                                         <br />

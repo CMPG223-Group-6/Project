@@ -88,13 +88,13 @@
                             </tr>
                             <tr>
                                 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <asp:Button ID="btnAddBooking" runat="server" Font-Bold="True" Height="61px" Text="Add New Booking" Width="225px" BackColor="Green" ForeColor="White" />
+                                    <asp:Button ID="btnAddBooking" runat="server" Font-Bold="True" Height="61px" Text="Add New Booking" Width="225px" BackColor="Green" ForeColor="White" OnClick="btnAddBooking_Click" />
                                 </td>
                                 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <asp:Button ID="btnUpdBooking" runat="server" Font-Bold="True" Height="76px" Text="Update A Booking" Width="227px" BackColor="Yellow" ForeColor="White" />
+                                    <asp:Button ID="btnUpdBooking" runat="server" Font-Bold="True" Height="76px" Text="Update A Booking" Width="227px" BackColor="Yellow" ForeColor="White" OnClick="btnUpdBooking_Click" />
                                 </td>
                                 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <asp:Button ID="btnDelete" runat="server" Font-Bold="True" Height="55px" Text="Delete A Booking" Width="216px" BackColor="Green" ForeColor="White" />
+                                    <asp:Button ID="btnDelete" runat="server" Font-Bold="True" Height="55px" Text="Delete A Booking" Width="216px" BackColor="Green" ForeColor="White" OnClick="btnDelete_Click" />
                                 </td>
                             </tr>
                             <tr>
