@@ -59,6 +59,12 @@ namespace Project
                 lbtnSignUp.Visible = false;
                 txtTouristID.Visible = false;
                 lbtnForgotPassword.Visible = false;
+                lblTouristEmail.Visible = false;
+                lblTouristHeading.Visible = false;
+                lblTouristPassword.Visible = false;
+                btnTouristLogin.Visible = false;
+                txtTouristEmail.Visible = false;
+                txtTouristPassword.Visible = false;
             }
 
         }
@@ -84,6 +90,7 @@ namespace Project
                 btnStaffLogin.Visible = false;
                 txtStaffEmail.Visible = false;
                 txtStaffPassword.Visible = false;
+                
             }
         }
 

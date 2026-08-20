@@ -10,18 +10,18 @@
             height: 26px;
         }
         .auto-style2 {
-            width: 508px;
+            text-align: center;
         }
         .auto-style3 {
             height: 26px;
             width: 508px;
         }
         .auto-style4 {
-            width: 606px;
+            width: 399px;
         }
         .auto-style5 {
             height: 26px;
-            width: 606px;
+            width: 399px;
         }
     </style>
 </head>
@@ -31,12 +31,9 @@
         </div>
         <table style="width:100%;">
             <tr>
-                <td class="auto-style2">
-                    &nbsp;</td>
-                <td class="auto-style4">
+                <td class="auto-style2" colspan="3">
                     <asp:Label ID="lblHeading" runat="server" style="font-size: xx-large; font-weight: 700" Text="Payment Summary"></asp:Label>
                 </td>
-                <td>&nbsp;</td>
             </tr>
             <tr>
                 <td class="auto-style3"></td>
@@ -48,14 +45,7 @@
                     &nbsp;</td>
                 <td class="auto-style4">
                     <asp:Label ID="lblBookingID" runat="server" Font-Bold="True" Text="Booking ID:"></asp:Label>
-                </td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style2">
-                    &nbsp;</td>
-                <td class="auto-style4">
-                    <asp:TextBox ID="txtBookingID" runat="server" ReadOnly="True" Width="59px"></asp:TextBox>
+                &nbsp;<asp:Label ID="lblBookingIDOutput" runat="server"></asp:Label>
                 </td>
                 <td>&nbsp;</td>
             </tr>
@@ -69,14 +59,7 @@
                     &nbsp;</td>
                 <td class="auto-style4">
                     <asp:Label ID="lblTouristID" runat="server" Font-Bold="True" Text="Tourist ID:"></asp:Label>
-                </td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style2">
-                    &nbsp;</td>
-                <td class="auto-style4">
-                    <asp:TextBox ID="txtTouristID" runat="server" ReadOnly="True" Width="62px"></asp:TextBox>
+                &nbsp;<asp:Label ID="lblTouristIDOutput" runat="server"></asp:Label>
                 </td>
                 <td>&nbsp;</td>
             </tr>
@@ -90,14 +73,7 @@
                     &nbsp;</td>
                 <td class="auto-style4">
                     <asp:Label ID="lblEventID0" runat="server" Font-Bold="True" Text="Event ID:"></asp:Label>
-                </td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style2">
-                    &nbsp;</td>
-                <td class="auto-style4">
-                    <asp:TextBox ID="txtEventID0" runat="server" ReadOnly="True" Width="59px"></asp:TextBox>
+                &nbsp;<asp:Label ID="lblEventIDOutput" runat="server"></asp:Label>
                 </td>
                 <td>&nbsp;</td>
             </tr>
@@ -111,14 +87,7 @@
                     &nbsp;</td>
                 <td class="auto-style4">
                     <asp:Label ID="lblEventName0" runat="server" Font-Bold="True" Text="Event Name:"></asp:Label>
-                </td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style2">
-                    &nbsp;</td>
-                <td class="auto-style4">
-                    <asp:TextBox ID="txtEventName0" runat="server" ReadOnly="True" Width="141px"></asp:TextBox>
+                &nbsp;<asp:Label ID="lblEventNameOutput" runat="server"></asp:Label>
                 </td>
                 <td>&nbsp;</td>
             </tr>
@@ -132,14 +101,7 @@
                     &nbsp;</td>
                 <td class="auto-style4">
                     <asp:Label ID="lblNumberTickets0" runat="server" Font-Bold="True" Text="Number of Tickets:"></asp:Label>
-                </td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style2">
-                    &nbsp;</td>
-                <td class="auto-style4">
-                    <asp:TextBox ID="txtNumberTickets0" runat="server" ReadOnly="True" Width="42px"></asp:TextBox>
+                &nbsp;<asp:Label ID="lblNumTicketsOutput" runat="server"></asp:Label>
                 </td>
                 <td>&nbsp;</td>
             </tr>
@@ -153,14 +115,7 @@
                     &nbsp;</td>
                 <td class="auto-style4">
                     <asp:Label ID="lblArrivalDate0" runat="server" Font-Bold="True" Text="Arrival Date:"></asp:Label>
-                </td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style2">
-                    &nbsp;</td>
-                <td class="auto-style4">
-                    <asp:TextBox ID="txtArrivalDate0" runat="server" ReadOnly="True" Width="127px"></asp:TextBox>
+                    <asp:Label ID="lblArrivalDateOutput" runat="server"></asp:Label>
                 </td>
                 <td>&nbsp;</td>
             </tr>
@@ -174,14 +129,7 @@
                     &nbsp;</td>
                 <td class="auto-style4">
                     <asp:Label ID="lblPaymentDate0" runat="server" Font-Bold="True" Text="Payment Date:"></asp:Label>
-                </td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style2">
-                    &nbsp;</td>
-                <td class="auto-style4">
-                    <asp:TextBox ID="txtPaymentDate0" runat="server" ReadOnly="True" Width="113px"></asp:TextBox>
+                &nbsp;<asp:Label ID="lblPaymentDateOutput" runat="server"></asp:Label>
                 </td>
                 <td>&nbsp;</td>
             </tr>
@@ -195,14 +143,7 @@
                     &nbsp;</td>
                 <td class="auto-style4">
                     <asp:Label ID="lblPaymentMethod0" runat="server" Font-Bold="True" Text="Payment Method:"></asp:Label>
-                </td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style2">
-                    &nbsp;</td>
-                <td class="auto-style4">
-                    <asp:TextBox ID="txtPaymentMethod0" runat="server" ReadOnly="True" Width="71px"></asp:TextBox>
+                &nbsp;<asp:Label ID="lblPaymentMethodOutput" runat="server"></asp:Label>
                 </td>
                 <td>&nbsp;</td>
             </tr>
@@ -216,14 +157,7 @@
                     &nbsp;</td>
                 <td class="auto-style4">
                     <asp:Label ID="lblToatlPaid0" runat="server" Font-Bold="True" Text="Total Paid:"></asp:Label>
-                </td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style2">
-                    &nbsp;</td>
-                <td class="auto-style4">
-                    <asp:TextBox ID="txtTotalPaid0" runat="server" ReadOnly="True" Width="90px"></asp:TextBox>
+                &nbsp;<asp:Label ID="lblTotalPaidOutput" runat="server"></asp:Label>
                 </td>
                 <td>&nbsp;</td>
             </tr>

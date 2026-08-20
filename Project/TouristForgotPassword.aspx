@@ -23,6 +23,10 @@
             height: 27px;
             width: 418px;
         }
+        .auto-style7 {
+            width: 418px;
+            height: 26px;
+        }
     </style>
 </head>
 <body>
@@ -39,28 +43,8 @@
             </tr>
             <tr>
                 <td class="auto-style1">&nbsp;</td>
-                <td class="auto-style4">&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style1">&nbsp;</td>
                 <td class="auto-style4">
-                    <asp:Label ID="lblTouristID" runat="server" Text="Tourist ID:"></asp:Label>
-                </td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style1">&nbsp;</td>
-                <td class="auto-style4">
-                    <asp:TextBox ID="txtTouristID" runat="server" Width="57px"></asp:TextBox>
-                </td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style1">&nbsp;</td>
-                <td class="auto-style4">
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtTouristID" ErrorMessage="Please enter your tourist ID!" Font-Bold="True" ForeColor="#FF3300"></asp:RequiredFieldValidator>
-                </td>
+                    &nbsp;</td>
                 <td>&nbsp;</td>
             </tr>
             <tr>
@@ -109,23 +93,29 @@
             </tr>
             <tr>
                 <td class="auto-style1">&nbsp;</td>
-                <td class="auto-style4">&nbsp;<asp:Button ID="btnDone" runat="server" BackColor="#CCCCCC" Font-Bold="True" Text="Done" Width="115px" />
+                <td class="auto-style7">
+                    <asp:Label ID="lblConfirmPassword" runat="server" Text="Confirm password:"></asp:Label>
                 </td>
                 <td>&nbsp;</td>
             </tr>
             <tr>
                 <td class="auto-style1">&nbsp;</td>
-                <td class="auto-style4">&nbsp;</td>
+                <td class="auto-style4">
+                    <asp:TextBox ID="txtConfirmPassword" runat="server" Width="157px"></asp:TextBox>
+                </td>
                 <td>&nbsp;</td>
             </tr>
             <tr>
                 <td class="auto-style1">&nbsp;</td>
-                <td class="auto-style4">&nbsp;</td>
+                <td class="auto-style4">
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtConfirmPassword" ErrorMessage="Please confirm your password!" Font-Bold="True" ForeColor="#FF3300"></asp:RequiredFieldValidator>
+                </td>
                 <td>&nbsp;</td>
             </tr>
             <tr>
                 <td class="auto-style1">&nbsp;</td>
-                <td class="auto-style4">&nbsp;</td>
+                <td class="auto-style4"><asp:Button ID="btnDone" runat="server" BackColor="#CCCCCC" Font-Bold="True" Text="Done" Width="115px" />
+                </td>
                 <td>&nbsp;</td>
             </tr>
         </table>

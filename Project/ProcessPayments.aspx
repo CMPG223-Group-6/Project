@@ -18,27 +18,16 @@
             width: 223px;
             height: 29px;
         }
-        .auto-style10 {
-            width: 204px;
-            height: 29px;
-        }
-        .auto-style11 {
-            height: 29px;
-        }
         .auto-style12 {
             width: 666px;
-            height: 529px;
+            height: 480px;
         }
         .auto-style13 {
             width: 343px;
-            height: 529px;
+            height: 480px;
         }
         .auto-style14 {
             width: 223px;
-            height: 26px;
-        }
-        .auto-style15 {
-            width: 204px;
             height: 26px;
         }
         .auto-style16 {
@@ -59,13 +48,6 @@
             width: 223px;
             height: 33px;
         }
-        .auto-style21 {
-            width: 204px;
-            height: 33px;
-        }
-        .auto-style22 {
-            height: 33px;
-        }
         .auto-style23 {
             width: 666px;
             height: 72px;
@@ -75,7 +57,14 @@
             height: 72px;
         }
         .auto-style25 {
-            width: 223px;
+        }
+        .auto-style26 {
+            width: 170px;
+            height: 480px;
+        }
+        .auto-style27 {
+            width: 170px;
+            height: 216px;
         }
     </style>
 </head>
@@ -84,110 +73,11 @@
         <div>
             <table class="auto-style1">
                 <tr>
-                    <td class="auto-style6" rowspan="2">
-                        <asp:Image ID="Image1" runat="server" Height="261px" ImageUrl="~/Images/zims_zoo_logo.png" Width="331px" />
-                        <asp:Menu ID="Menu1" runat="server" BackColor="#003300" DynamicHorizontalOffset="13" Font-Bold="True" Font-Size="13pt" ForeColor="White" Height="700px" StaticSubMenuIndent="25px" Width="330px">
-                            <DynamicHoverStyle BackColor="#339933" />
-                            <Items>
-                                <asp:MenuItem Text="Maintain" Value="Maintain">
-                                    <asp:MenuItem NavigateUrl="~/MaintainTourists.aspx" Text="Maintain Tourists" Value="Maintain Tourists"></asp:MenuItem>
-                                    <asp:MenuItem NavigateUrl="~/MaintainEventsTypes.aspx" Text="Maintain Event Types" Value="Maintain Event Types"></asp:MenuItem>
-                                    <asp:MenuItem NavigateUrl="~/MaintainBookings.aspx" Text="Maintain Bookings" Value="Maintain Bookings"></asp:MenuItem>
-                                </asp:MenuItem>
-                                <asp:MenuItem NavigateUrl="~/ProcessPayments.aspx" Text="Process Payments" Value="Process Payments"></asp:MenuItem>
-                                <asp:MenuItem NavigateUrl="~/CheckInTourist.aspx" Text="Check-In" Value="Check-In"></asp:MenuItem>
-                                <asp:MenuItem NavigateUrl="~/Reports.aspx" Text="Reports" Value="Reports"></asp:MenuItem>
-                                <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Log Out" Value="Log Out"></asp:MenuItem>
-                            </Items>
-                            <StaticHoverStyle BackColor="#339933" />
-                            <StaticMenuStyle Height="40px" HorizontalPadding="10px" VerticalPadding="40px" />
-                            <StaticSelectedStyle BackColor="#66FF33" />
-                        </asp:Menu>
+                    <td class="auto-style27">
+                        <asp:Image ID="Image1" runat="server" Height="218px" ImageUrl="~/Images/zims_zoo_logo.png" Width="331px" />
                     </td>
-                    <td class="auto-style12">
+                    <td class="auto-style12" rowspan="2">
                         <table style="width:164%;">
-                            <tr>
-                                <td class="auto-style25">
-                                    &nbsp;</td>
-                                <td class="auto-style8">&nbsp;</td>
-                                <td>&nbsp;</td>
-                            </tr>
-                            <tr>
-                                <td class="auto-style25">&nbsp;</td>
-                                <td class="auto-style8">&nbsp;</td>
-                                <td>&nbsp;</td>
-                            </tr>
-                            <tr>
-                                <td class="auto-style25">
-                                    &nbsp;</td>
-                                <td class="auto-style8">
-                                    &nbsp;</td>
-                                <td>
-                                    &nbsp;</td>
-                            </tr>
-                            <tr>
-                                <td class="auto-style25">
-                                    &nbsp;</td>
-                                <td class="auto-style8">
-                                    &nbsp;</td>
-                                <td>
-                                    &nbsp;</td>
-                            </tr>
-                            <tr>
-                                <td class="auto-style14">
-                                    &nbsp;</td>
-                                <td class="auto-style15"></td>
-                                <td class="auto-style16"></td>
-                            </tr>
-                            <tr>
-                                <td class="auto-style25">
-                                    &nbsp;</td>
-                                <td class="auto-style8">
-                                    &nbsp;</td>
-                                <td>
-                                    &nbsp;</td>
-                            </tr>
-                            <tr>
-                                <td class="auto-style25">
-                                    &nbsp;</td>
-                                <td class="auto-style8">
-                                    &nbsp;</td>
-                                <td>
-                                    &nbsp;</td>
-                            </tr>
-                            <tr>
-                                <td class="auto-style9">
-                                    &nbsp;</td>
-                                <td class="auto-style10"></td>
-                                <td class="auto-style11"></td>
-                            </tr>
-                            <tr>
-                                <td class="auto-style14">
-                                    </td>
-                                <td class="auto-style15">
-                                    </td>
-                                <td class="auto-style16">
-                                    </td>
-                            </tr>
-                            <tr>
-                                <td class="auto-style25">
-                                    &nbsp;</td>
-                                <td class="auto-style8">
-                                    &nbsp;</td>
-                                <td>
-                                    &nbsp;</td>
-                            </tr>
-                            <tr>
-                                <td class="auto-style14">
-                                </td>
-                                <td class="auto-style15"></td>
-                                <td class="auto-style16"></td>
-                            </tr>
-                            <tr>
-                                <td class="auto-style17">&nbsp;</td>
-                                <td class="auto-style18">&nbsp;</td>
-                                <td class="auto-style19">&nbsp;</td>
-                            </tr>
                             <tr>
                                 <td class="auto-style17">
                                     &nbsp;</td>
@@ -212,11 +102,9 @@
                                 <td>&nbsp;</td>
                             </tr>
                             <tr>
-                                <td class="auto-style25">
-                                    <asp:Label ID="lblHeadings" runat="server" Font-Bold="True" ForeColor="#009933" style="text-decoration: underline" Text="Payment Details"></asp:Label>
+                                <td class="auto-style25" colspan="3">
+                                    <asp:Label ID="lblHeadings" runat="server" Font-Bold="True" ForeColor="#009933" style="text-decoration: underline" Text="Payment Details" Font-Size="25pt"></asp:Label>
                                 </td>
-                                <td class="auto-style8">&nbsp;</td>
-                                <td>&nbsp;</td>
                             </tr>
                             <tr>
                                 <td class="auto-style25">&nbsp;</td>
@@ -224,10 +112,10 @@
                                 <td>&nbsp;</td>
                             </tr>
                             <tr>
-                                <td class="auto-style25">
-                                    &nbsp;</td>
-                                <td class="auto-style8">&nbsp;</td>
-                                <td>&nbsp;</td>
+                                <td class="auto-style14">
+                                    </td>
+                                <td class="auto-style16"></td>
+                                <td class="auto-style16"></td>
                             </tr>
                             <tr>
                                 <td class="auto-style25">
@@ -363,9 +251,32 @@
                             </tr>
                         </table>
 </td>
-                    <td class="auto-style13"></td>
+                    <td class="auto-style13" rowspan="2"></td>
                 </tr>
                 <tr>
+                    <td class="auto-style26">
+                        <asp:Menu ID="Menu1" runat="server" BackColor="#003300" DynamicHorizontalOffset="13" Font-Bold="True" Font-Size="13pt" ForeColor="White" Height="700px" StaticSubMenuIndent="25px" Width="330px">
+                            <DynamicHoverStyle BackColor="#339933" />
+                            <Items>
+                                <asp:MenuItem Text="Maintain" Value="Maintain">
+                                    <asp:MenuItem NavigateUrl="~/MaintainTourists.aspx" Text="Maintain Tourists" Value="Maintain Tourists"></asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="~/MaintainEventsTypes.aspx" Text="Maintain Event Types" Value="Maintain Event Types"></asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="~/MaintainBookings.aspx" Text="Maintain Bookings" Value="Maintain Bookings"></asp:MenuItem>
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/ProcessPayments.aspx" Text="Process Payments" Value="Process Payments"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/CheckInTourist.aspx" Text="Check-In" Value="Check-In"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Reports.aspx" Text="Reports" Value="Reports"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Log Out" Value="Log Out"></asp:MenuItem>
+                            </Items>
+                            <StaticHoverStyle BackColor="#339933" />
+                            <StaticMenuStyle Height="40px" HorizontalPadding="10px" VerticalPadding="40px" />
+                            <StaticSelectedStyle BackColor="#66FF33" />
+                        </asp:Menu>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style6">
+                        &nbsp;</td>
                     <td class="auto-style23">
                     </td>
                     <td class="auto-style24">
