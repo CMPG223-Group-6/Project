@@ -113,7 +113,6 @@ C:\Users\siveg\OneDrive\Documents\GitHub\Project\Project\bin\roslyn\vbc.exe.conf
 C:\Users\siveg\OneDrive\Documents\GitHub\Project\Project\bin\roslyn\vbc.rsp
 C:\Users\siveg\OneDrive\Documents\GitHub\Project\Project\bin\roslyn\VBCSCompiler.exe
 C:\Users\siveg\OneDrive\Documents\GitHub\Project\Project\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\siveg\OneDrive\Documents\GitHub\Project\Project\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\siveg\OneDrive\Documents\GitHub\Project\Project\obj\Debug\Project.csproj.Up2Date
 C:\Users\thand\OneDrive\Documents\GitHub\CMPG223 Project\Project\Project\bin\Project.dll.config
 C:\Users\thand\OneDrive\Documents\GitHub\CMPG223 Project\Project\Project\bin\Project.dll

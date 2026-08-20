@@ -16,6 +16,7 @@ namespace Project
 
         protected void btnConfirmExit_Click(object sender, EventArgs e)
         {
+            /*
             if (ddlBookingIDDetails.SelectedIndex == -1)
             {
                 lblConfirmMessage.Text = "Choose an option";
@@ -24,11 +25,13 @@ namespace Project
             {
                 lblConfirmMessage.Text = "You have successfully checked out of Zims.Have a good day";
             }
+            */
             
         }
 
         protected void btnSubmitRating_Click(object sender, EventArgs e)
-        {             
+        {     
+            /*
             int rating = 0;
             string rating_word = " ";
 
@@ -66,6 +69,7 @@ namespace Project
             {
                 lblResults.Text = "You rated us " + rating + " out of 5 stars.Your day with us was " + rating_word ;
             }
+            */
         }
     }
 }
