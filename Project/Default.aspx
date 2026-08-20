@@ -215,7 +215,7 @@
             </tr>
             <tr>
                 <td class="auto-style17">
-                    <asp:Button ID="btnStaffLogin" runat="server" BackColor="#CCCCCC" Font-Bold="True" ValidationGroup="StaffValidation" Height="25px" Text="Login" Width="109px" />
+                    <asp:Button ID="btnStaffLogin" runat="server" BackColor="#CCCCCC" Font-Bold="True" ValidationGroup="StaffValidation" Height="25px" Text="Login" Width="109px" OnClick="btnStaffLogin_Click" />
                 </td>
                 <td class="auto-style10"></td>
                 <td class="auto-style18">
@@ -240,7 +240,7 @@
                 <td class="auto-style1">&nbsp;</td>
                 <td class="auto-style20">&nbsp;</td>
                 <td class="auto-style19">
-                    <asp:Button ID="btnTouristLogin" runat="server" BackColor="#CCCCCC" Font-Bold="True" ValidationGroup="TouristValidation" Text="Login" Width="131px" />
+                    <asp:Button ID="btnTouristLogin" runat="server" BackColor="#CCCCCC" Font-Bold="True" ValidationGroup="TouristValidation" Text="Login" Width="131px" OnClick="btnTouristLogin_Click" />
                 </td>
             </tr>
             <tr>

@@ -201,6 +201,7 @@
     <Content Include="Project.slnx" />
     <Content Include="Reports.aspx" />
     <Content Include="ResetPassword.aspx" />
+    <Content Include="StaffMenu.aspx" />
     <Content Include="TouristForgotPassword.aspx" />
     <Content Include="TouristLoginPage.aspx" />
     <Content Include="TouristMenu.aspx" />
@@ -208,6 +209,7 @@
     <Content Include="UpdateBooking.aspx" />
     <Content Include="UpdateTourist.aspx" />
     <Content Include="Web.config" />
+    <Content Include="zims.sql" />
     <Content Include="ZooInformation.aspx" />
   </ItemGroup>
   <ItemGroup>
@@ -394,6 +396,13 @@
     </Compile>
     <Compile Include="ResetPassword.aspx.designer.cs">
       <DependentUpon>ResetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StaffMenu.aspx.cs">
+      <DependentUpon>StaffMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaffMenu.aspx.designer.cs">
+      <DependentUpon>StaffMenu.aspx</DependentUpon>
     </Compile>
     <Compile Include="TouristForgotPassword.aspx.cs">
       <DependentUpon>TouristForgotPassword.aspx</DependentUpon>

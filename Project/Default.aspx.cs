@@ -103,5 +103,15 @@ namespace Project
         {
             Response.Redirect("TouristForgotPassword.aspx");
         }
+
+        protected void btnTouristLogin_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("TouristMenu.aspx");
+        }
+
+        protected void btnStaffLogin_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("StaffMenu.aspx");
+        }
     }
 }
