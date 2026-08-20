@@ -6,46 +6,26 @@
 <head runat="server">
     <title></title>
     <style type="text/css">
-        .auto-style9 {
-            text-align: left;
-        }
-        .auto-style11 {
-            width: 100%;
-            height: 284px;
-        }
-        .auto-style13 {
-            height: 62px;
-        }
-        .auto-style15 {
-            width: 100%;
-            height: 185px;
-        }
-        .auto-style16 {
-            width: 378px;
-        }
-        .auto-style18 {
-            text-align: center;
-            width: 98px;
-        }
-        .auto-style19 {
-            width: 102px;
-        }
-        .auto-style20 {
-            width: 258px;
-        }
-        .auto-style21 {
-            width: 99px;
+        .auto-style22 {
+            width: 310px;
         }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
-            <table class="auto-style1">
+            <table style="width:100%;">
                 <tr>
-                    <td class="auto-style8" rowspan="4">
-                        <asp:Image ID="Image1" runat="server" Height="161px" ImageUrl="~/Images/zims_zoo_logo.png" Width="330px" />
-                        <asp:Menu ID="Menu1" runat="server" BackColor="#003300" DynamicHorizontalOffset="13" Font-Bold="True" Font-Size="13pt" ForeColor="White" Height="700px" StaticSubMenuIndent="25px" Width="330px">
+                    <td class="auto-style22">
+                        <asp:Image ID="Image1" runat="server" Height="168px" ImageUrl="~/Images/zims_zoo_logo.png" Width="330px" />
+                        </td>
+                    <td colspan="2" style="border-style: double">
+                        <asp:Label ID="txtReports" runat="server" Font-Bold="True" Font-Size="XX-Large" Text="REPORTS"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style22">
+                        <asp:Menu ID="Menu4" runat="server" BackColor="#003300" DynamicHorizontalOffset="13" Font-Bold="True" Font-Size="13pt" ForeColor="White" Height="700px" StaticSubMenuIndent="25px" Width="330px">
                             <DynamicHoverStyle BackColor="#339933" />
                             <Items>
                                 <asp:MenuItem Text="Maintain" Value="Maintain">
@@ -63,47 +43,38 @@
                             <StaticSelectedStyle BackColor="#66FF33" />
                         </asp:Menu>
                     </td>
-                    <td class="auto-style12">
-                        <asp:Label ID="txtReports" runat="server" Font-Bold="True" Font-Size="XX-Large" Text="REPORTS"></asp:Label>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="auto-style9">
-                        <asp:Panel ID="pnlReportParameter" runat="server" BorderColor="#D6D6D6" BorderStyle="Solid" BorderWidth="1px" Height="311px">
-                            <table class="auto-style11">
+                    <td colspan="2">
+                        <asp:Panel ID="pnlReports" runat="server" GroupingText="Report Parameters" Height="678px">
+                            <table style="width:100%;">
                                 <tr>
-                                    <td class="auto-style13" colspan="4">
-                                        <asp:Label ID="Label2" runat="server" Font-Bold="True" Text="REPORT PARAMETERS"></asp:Label>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="auto-style18">
+                                    <td>
                                         <asp:Label ID="lblReportType" runat="server" Text="Report type:"></asp:Label>
                                     </td>
-                                    <td colspan="3">
+                                    <td colspan="2">
                                         <asp:DropDownList ID="ddReportType" runat="server">
                                             <asp:ListItem Value="&quot;&quot;">Select Report</asp:ListItem>
                                             <asp:ListItem>Number of Bookings per Time Period</asp:ListItem>
                                             <asp:ListItem>Top 5 Event Types per Time Period</asp:ListItem>
                                         </asp:DropDownList>
+                                    </td>
+                                    <td>
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="ddReportType" ErrorMessage="Please select the report you want!" ForeColor="Red"></asp:RequiredFieldValidator>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="auto-style18">
+                                    <td>
                                         <asp:Label ID="lblStartDate" runat="server" Text="Start Date:"></asp:Label>
                                     </td>
-                                    <td class="auto-style20">
+                                    <td>
                                         <br />
                                         <asp:TextBox ID="txtStartDate" runat="server" TextMode="Date"></asp:TextBox>
                                         <br />
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtStartDate" ErrorMessage="Please select the start date!" ForeColor="Red"></asp:RequiredFieldValidator>
                                     </td>
-                                    <td class="auto-style21">
+                                    <td>
                                         <asp:Label ID="lblEndDate" runat="server" Text="End Date:"></asp:Label>
                                     </td>
                                     <td>
-                                        <br />
                                         <br />
                                         <asp:TextBox ID="txtEndDate" runat="server" TextMode="Date"></asp:TextBox>
                                         <br />
@@ -111,17 +82,19 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="auto-style18">
+                                    <td>
                                         <asp:Label ID="lblSortBy" runat="server" Text="Sort By:"></asp:Label>
                                     </td>
-                                    <td class="auto-style20">
+                                    <td>
+                                        <br />
                                         <asp:DropDownList ID="ddSortBy" runat="server">
                                             <asp:ListItem></asp:ListItem>
                                             <asp:ListItem Value="EventType">Event Type</asp:ListItem>
                                             <asp:ListItem Value="Bookings">Number of Bookings</asp:ListItem>
                                         </asp:DropDownList>
+                                        <br />
                                     </td>
-                                    <td class="auto-style21">
+                                    <td>
                                         <asp:Label ID="lblSortOrder" runat="server" Text="Sort Order: "></asp:Label>
                                     </td>
                                     <td>
@@ -133,54 +106,55 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="auto-style18">&nbsp;</td>
-                                    <td class="auto-style20">
+                                    <td>&nbsp;</td>
+                                    <td>
+                                        <br />
+                                        <br />
                                         <asp:Button ID="btnGenerateReport" runat="server" Height="38px" Text="📊 Generate Report" />
                                     </td>
-                                    <td class="auto-style21">
-                                        <asp:Button ID="btnClear" runat="server" Height="42px" Text="↻ Clear" />
+                                    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <br />
+                                        <br />
+                                        <asp:Button ID="btnExportReport" runat="server" Text="Export Report" Visible="False" />
                                     </td>
+                                    <td>
+                                        <br />
+                                        <br />
+                                        <asp:Button ID="btnClear0" runat="server" Height="42px" Text="↻ Clear" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
                                     <td>&nbsp;</td>
                                 </tr>
-                            </table>
-                        </asp:Panel>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="auto-style10">
-                        <asp:Panel ID="pnlReportResults" runat="server" BorderColor="#D6D6D6" BorderStyle="Solid" BorderWidth="1px" Height="397px">
-                            <table class="auto-style15">
                                 <tr>
-                                    <td class="auto-style9" colspan="2">
-                                        <asp:Label ID="lblReportResults" runat="server" Text="REPORT RESULTS"></asp:Label>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2">
-                                        <asp:Label ID="lblDisplay1" runat="server"></asp:Label>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="auto-style16">
-                                        <asp:GridView ID="GridView1" runat="server">
-                                        </asp:GridView>
-                                    </td>
-                                    <td rowspan="2">
-                                        <asp:Chart ID="Chart1" runat="server">
-                                            <series>
-                                                <asp:Series Name="Series1">
-                                                </asp:Series>
-                                            </series>
-                                            <chartareas>
-                                                <asp:ChartArea Name="ChartArea1">
-                                                </asp:ChartArea>
-                                            </chartareas>
-                                        </asp:Chart>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="auto-style16">
-                                        <asp:Label ID="lblDisplay2" runat="server"></asp:Label>
+                                    <td colspan="4">
+                                        <asp:Panel ID="pnlCharts" runat="server" GroupingText="Reports Results" Height="340px" Visible="False">
+                                            <table style="width:100%;">
+                                                <tr>
+                                                    <td>
+                                                        <asp:GridView ID="GridView2" runat="server" Height="205px" Width="530px">
+                                                        </asp:GridView>
+                                                    </td>
+                                                    <td>
+                                                        <asp:Chart ID="Chart1" runat="server" Width="435px">
+                                                            <Series>
+                                                                <asp:Series Name="Series1">
+                                                                </asp:Series>
+                                                            </Series>
+                                                            <ChartAreas>
+                                                                <asp:ChartArea Name="ChartArea1">
+                                                                </asp:ChartArea>
+                                                            </ChartAreas>
+                                                        </asp:Chart>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <br />
+                                            <br />
+                                        </asp:Panel>
                                     </td>
                                 </tr>
                             </table>
@@ -188,11 +162,11 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style10">
-                        <asp:Button ID="btnExportReport" runat="server" Text="Export Report" />
-                    </td>
+                    <td class="auto-style22">&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
                 </tr>
-                </table>
+            </table>
         </div>
     </form>
 </body>
