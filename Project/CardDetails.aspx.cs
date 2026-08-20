@@ -7,21 +7,21 @@ using System.Web.UI.WebControls;
 
 namespace Project
 {
-    public partial class ProcessPayments : System.Web.UI.Page
+    public partial class CardDetails : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void btnPay_Click(object sender, EventArgs e)
         {
-            
+            Response.Redirect("PaymentSummary.aspx");
         }
 
-        protected void Button2_Click(object sender, EventArgs e)
+        protected void txtCVV_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
     }
 }

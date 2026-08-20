@@ -11,7 +11,7 @@ namespace Project
 {
 
 
-    public partial class ProcessPayments
+    public partial class PaymentSummary
     {
 
         /// <summary>
@@ -24,85 +24,31 @@ namespace Project
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Image1 control.
+        /// lblHeading control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image1;
+        protected global::System.Web.UI.WebControls.Label lblHeading;
 
         /// <summary>
-        /// lblHeadings control.
+        /// lblBookingID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblHeadings;
+        protected global::System.Web.UI.WebControls.Label lblBookingID;
 
         /// <summary>
-        /// Label4 control.
+        /// lblBookingIDOutput control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label4;
-
-        /// <summary>
-        /// Panel1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel Panel1;
-
-        /// <summary>
-        /// GridView1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
-
-        /// <summary>
-        /// ddlBookingID control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlBookingID;
-
-        /// <summary>
-        /// RequiredFieldValidator3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
-
-        /// <summary>
-        /// lblEventID control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEventID;
-
-        /// <summary>
-        /// txtEventID control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEventID;
+        protected global::System.Web.UI.WebControls.Label lblBookingIDOutput;
 
         /// <summary>
         /// lblTouristID control.
@@ -114,111 +60,147 @@ namespace Project
         protected global::System.Web.UI.WebControls.Label lblTouristID;
 
         /// <summary>
-        /// txtTouristID control.
+        /// lblTouristIDOutput control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTouristID;
+        protected global::System.Web.UI.WebControls.Label lblTouristIDOutput;
 
         /// <summary>
-        /// lblNumberTickets control.
+        /// lblEventID0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNumberTickets;
+        protected global::System.Web.UI.WebControls.Label lblEventID0;
 
         /// <summary>
-        /// txtNumberTickets control.
+        /// lblEventIDOutput control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNumberTickets;
+        protected global::System.Web.UI.WebControls.Label lblEventIDOutput;
 
         /// <summary>
-        /// lblArrivalDate control.
+        /// lblEventName0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblArrivalDate;
+        protected global::System.Web.UI.WebControls.Label lblEventName0;
 
         /// <summary>
-        /// txtArrivalDate control.
+        /// lblEventNameOutput control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtArrivalDate;
+        protected global::System.Web.UI.WebControls.Label lblEventNameOutput;
 
         /// <summary>
-        /// lblPaymentMethod control.
+        /// lblNumberTickets0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPaymentMethod;
+        protected global::System.Web.UI.WebControls.Label lblNumberTickets0;
 
         /// <summary>
-        /// txtPaymentMethod control.
+        /// lblNumTicketsOutput control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPaymentMethod;
+        protected global::System.Web.UI.WebControls.Label lblNumTicketsOutput;
 
         /// <summary>
-        /// lblPaymentAmount control.
+        /// lblArrivalDate0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPaymentAmount;
+        protected global::System.Web.UI.WebControls.Label lblArrivalDate0;
 
         /// <summary>
-        /// txtPaymentAmount control.
+        /// lblArrivalDateOutput control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPaymentAmount;
+        protected global::System.Web.UI.WebControls.Label lblArrivalDateOutput;
 
         /// <summary>
-        /// btnProcessPayment control.
+        /// lblPaymentDate0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnProcessPayment;
+        protected global::System.Web.UI.WebControls.Label lblPaymentDate0;
 
         /// <summary>
-        /// lblPaymentProcessedOutput control.
+        /// lblPaymentDateOutput control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPaymentProcessedOutput;
+        protected global::System.Web.UI.WebControls.Label lblPaymentDateOutput;
 
         /// <summary>
-        /// Menu1 control.
+        /// lblPaymentMethod0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Menu Menu1;
+        protected global::System.Web.UI.WebControls.Label lblPaymentMethod0;
+
+        /// <summary>
+        /// lblPaymentMethodOutput control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblPaymentMethodOutput;
+
+        /// <summary>
+        /// lblToatlPaid0 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblToatlPaid0;
+
+        /// <summary>
+        /// lblTotalPaidOutput control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblTotalPaidOutput;
+
+        /// <summary>
+        /// Button2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button2;
     }
 }

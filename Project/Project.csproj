@@ -111,11 +111,10 @@
     <Content Include="bin\roslyn\vbc.exe" />
     <Content Include="bin\roslyn\VBCSCompiler.exe" />
     <Content Include="Bookings.aspx" />
+    <Content Include="CardDetails.aspx" />
     <Content Include="CheckIn.aspx" />
     <Content Include="CheckInTourist.aspx" />
     <Content Include="Default.aspx" />
-    <Content Include="TouristLoginPage.aspx" />
-    <Content Include="TouristSignUpPage.aspx" />
     <Content Include="Images\Screenshot 2026-08-10 122157.png" />
     <Content Include="Images\zims_zoo_logo.png" />
     <Content Include="MaintainBookings.aspx" />
@@ -186,11 +185,13 @@
     <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\vbc.exe" />
     <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\VBCSCompiler.exe" />
     <Content Include="Payment.aspx" />
+    <Content Include="PaymentSummary.aspx" />
     <Content Include="ProcessPayments.aspx" />
     <Content Include="Project.slnx" />
     <Content Include="Reports.aspx" />
-    <Content Include="StaffLoginPage.aspx" />
+    <Content Include="TouristForgotPassword.aspx" />
     <Content Include="TouristMenu.aspx" />
+    <Content Include="TouristSignUp.aspx" />
     <Content Include="Web.config" />
     <Content Include="ZooInformation.aspx" />
   </ItemGroup>
@@ -201,6 +202,13 @@
     </Compile>
     <Compile Include="Bookings.aspx.designer.cs">
       <DependentUpon>Bookings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CardDetails.aspx.cs">
+      <DependentUpon>CardDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CardDetails.aspx.designer.cs">
+      <DependentUpon>CardDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="CheckIn.aspx.cs">
       <DependentUpon>CheckIn.aspx</DependentUpon>
@@ -222,20 +230,6 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="TouristLoginPage.aspx.cs">
-      <DependentUpon>TouristLoginPage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="TouristLoginPage.aspx.designer.cs">
-      <DependentUpon>TouristLoginPage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="TouristSignUpPage.aspx.cs">
-      <DependentUpon>TouristSignUpPage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="TouristSignUpPage.aspx.designer.cs">
-      <DependentUpon>TouristSignUpPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="MaintainBookings.aspx.cs">
       <DependentUpon>MaintainBookings.aspx</DependentUpon>
@@ -280,6 +274,13 @@
     <Compile Include="Payment.aspx.designer.cs">
       <DependentUpon>Payment.aspx</DependentUpon>
     </Compile>
+    <Compile Include="PaymentSummary.aspx.cs">
+      <DependentUpon>PaymentSummary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaymentSummary.aspx.designer.cs">
+      <DependentUpon>PaymentSummary.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ProcessPayments.aspx.cs">
       <DependentUpon>ProcessPayments.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -295,12 +296,12 @@
     <Compile Include="Reports.aspx.designer.cs">
       <DependentUpon>Reports.aspx</DependentUpon>
     </Compile>
-    <Compile Include="StaffLoginPage.aspx.cs">
-      <DependentUpon>StaffLoginPage.aspx</DependentUpon>
+    <Compile Include="TouristForgotPassword.aspx.cs">
+      <DependentUpon>TouristForgotPassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="StaffLoginPage.aspx.designer.cs">
-      <DependentUpon>StaffLoginPage.aspx</DependentUpon>
+    <Compile Include="TouristForgotPassword.aspx.designer.cs">
+      <DependentUpon>TouristForgotPassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="TouristMenu.aspx.cs">
       <DependentUpon>TouristMenu.aspx</DependentUpon>
@@ -308,6 +309,13 @@
     </Compile>
     <Compile Include="TouristMenu.aspx.designer.cs">
       <DependentUpon>TouristMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TouristSignUp.aspx.cs">
+      <DependentUpon>TouristSignUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TouristSignUp.aspx.designer.cs">
+      <DependentUpon>TouristSignUp.aspx</DependentUpon>
     </Compile>
     <Compile Include="ZooInformation.aspx.cs">
       <DependentUpon>ZooInformation.aspx</DependentUpon>

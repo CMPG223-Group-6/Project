@@ -26,7 +26,12 @@ namespace Project
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Default.aspx");
+            
+        }
+
+        protected void btnMakePayment_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("CardDetails.aspx");
         }
     }
 }
