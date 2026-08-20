@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Project
 {
-    public partial class CheckinStaff : System.Web.UI.Page
+    public partial class QuestionnaireForm : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

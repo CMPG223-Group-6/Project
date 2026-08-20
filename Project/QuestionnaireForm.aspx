@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CheckinStaff.aspx.cs" Inherits="Project.CheckinStaff" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="QuestionnaireForm.aspx.cs" Inherits="Project.QuestionnaireForm" %>
 
 <!DOCTYPE html>
 

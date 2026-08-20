@@ -27,11 +27,6 @@
             width: 259px;
         }
         .auto-style10 {
-            width: 743px;
-            height: 53px;
-        }
-        .auto-style11 {
-            width: 934px;
             height: 53px;
         }
         .auto-style13 {
@@ -42,7 +37,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <table style="height: 640px; width: 1378px">
+            <table style="height: 640px; width: 1541px">
                 <tr>
                     <td class="auto-style9" style="border-style: inset; border-color: #006600; background-color: #006600">
                         <asp:Label ID="lblZooInfo" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="White" Text="ZooInfoSys"></asp:Label>
@@ -52,11 +47,9 @@
                         <asp:Label ID="lblZooInfo0" runat="server" Font-Size="Small" ForeColor="#999999" Text="Operations"></asp:Label>
                         <br />
                     </td>
-                    <td class="auto-style10">
+                    <td class="auto-style10" colspan="2" style="border-style: double">
                         <asp:Label ID="lblInfo" runat="server" style="font-weight: 700; font-size: x-large" Text="Check-out"></asp:Label>
                     </td>
-                    <td class="auto-style11">
-                        </td>
                 </tr>
                 <tr>
                     <td class="auto-style3" style="border-style: inset; border-color: #006600; background-color: #006600">
@@ -98,10 +91,14 @@
                         <br />
                         <br />
                         <asp:RadioButton ID="rbStar1" runat="server" GroupName="Rating" Text="★" />
-                        <asp:RadioButton ID="rbStar2" runat="server" GroupName="Rating" Text="★" />
-                        <asp:RadioButton ID="rbStar3" runat="server" GroupName="Rating" Text="★" />
-                        <asp:RadioButton ID="rbStar4" runat="server" GroupName="Rating" Text="★" />
-                        <asp:RadioButton ID="rbStar5" runat="server" GroupName="Rating" Text="★" />
+                        &nbsp;
+                        <asp:RadioButton ID="rbStar2" runat="server" GroupName="Rating" Text="★★" />
+                        &nbsp;
+                        <asp:RadioButton ID="rbStar3" runat="server" GroupName="Rating" Text="★★★" />
+                        &nbsp;
+                        <asp:RadioButton ID="rbStar4" runat="server" GroupName="Rating" Text="★★★★" />
+                        &nbsp;
+                        <asp:RadioButton ID="rbStar5" runat="server" GroupName="Rating" Text="★★★★★" />
                         <br />
                         <br />
                         &nbsp;<asp:Button ID="btnSubmitRating" runat="server" BackColor="#33CC33" Height="45px" OnClick="btnSubmitRating_Click" Text="Submit rating" Width="211px" />
@@ -125,7 +122,7 @@
                     </td>
                     <td class="auto-style6" rowspan="2" colspan="2">
                         <asp:Panel ID="Panel1" runat="server" GroupingText="Summary" Height="136px" style="margin-top: 0px" Width="1140px">
-                            <asp:GridView ID="gvTouristActivitySummary" runat="server" Height="229px" Width="1116px">
+                            <asp:GridView ID="gvTouristActivitySummary" runat="server" Height="229px" Width="1323px">
                             </asp:GridView>
                             <br />
                         </asp:Panel>

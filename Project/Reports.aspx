@@ -18,6 +18,41 @@
         .auto-style5 {
             width: 456px;
         }
+        .auto-style38 {
+            height: 32px;
+            width: 307px;
+        }
+        .auto-style33 {
+            height: 32px;
+        }
+        .auto-style39 {
+            height: 35px;
+            width: 307px;
+        }
+        .auto-style34 {
+            height: 35px;
+        }
+        .auto-style40 {
+            height: 27px;
+            width: 307px;
+        }
+        .auto-style35 {
+            height: 27px;
+        }
+        .auto-style41 {
+            height: 41px;
+            width: 307px;
+        }
+        .auto-style37 {
+            height: 41px;
+        }
+        .auto-style42 {
+            height: 52px;
+            width: 307px;
+        }
+        .auto-style36 {
+            height: 52px;
+        }
     </style>
 </head>
 <body>
@@ -45,11 +80,14 @@
                             <StaticSelectedStyle BackColor="#66FF33" />
                         </asp:Menu>
                     </td>
-                    <td class="auto-style2">&nbsp;</td>
+                    <td class="auto-style2">
+                        <asp:Label ID="lblHeading" runat="server" style="font-size: xx-large; font-weight: 700" Text="Check-in" ForeColor="Black"></asp:Label>
+                    </td>
                     <td class="auto-style5">&nbsp;</td>
                 </tr>
                 <tr>
-                    <td class="auto-style2">&nbsp;</td>
+                    <td class="auto-style2"><asp:Image ID="ImgZoo" runat="server" Height="366px" ImageUrl="~/Images/New zoo image.png" Width="706px" />
+                                </td>
                     <td class="auto-style5">&nbsp;</td>
                 </tr>
                 <tr>

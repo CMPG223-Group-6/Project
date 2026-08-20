@@ -11,7 +11,7 @@ namespace Project
 {
 
 
-    public partial class CheckinStaff
+    public partial class QuestionnaireForm
     {
 
         /// <summary>

@@ -33,15 +33,6 @@ namespace Project
         protected global::System.Web.UI.WebControls.Image Image1;
 
         /// <summary>
-        /// Menu1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Menu Menu1;
-
-        /// <summary>
         /// lblHeading control.
         /// </summary>
         /// <remarks>
@@ -51,31 +42,58 @@ namespace Project
         protected global::System.Web.UI.WebControls.Label lblHeading;
 
         /// <summary>
-        /// Panel1 control.
+        /// Menu1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel Panel1;
+        protected global::System.Web.UI.WebControls.Menu Menu1;
 
         /// <summary>
-        /// lblBookingID0 control.
+        /// pnlCheckingDetails control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblBookingID0;
+        protected global::System.Web.UI.WebControls.Panel pnlCheckingDetails;
 
         /// <summary>
-        /// rfvBookingIDStaff0 control.
+        /// lblTouristID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvBookingIDStaff0;
+        protected global::System.Web.UI.WebControls.Label lblTouristID;
+
+        /// <summary>
+        /// txtTouristID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtTouristID;
+
+        /// <summary>
+        /// btnEnter control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnEnter;
+
+        /// <summary>
+        /// lblBookingID2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblBookingID2;
 
         /// <summary>
         /// ddlBookingEventsStaffcheckin control.
@@ -105,21 +123,21 @@ namespace Project
         protected global::System.Web.UI.WebControls.Label lblOutput;
 
         /// <summary>
-        /// lblBookings control.
+        /// pnlBookings control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblBookings;
+        protected global::System.Web.UI.WebControls.Panel pnlBookings;
 
         /// <summary>
-        /// GridView1 control.
+        /// GridView2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.GridView GridView2;
     }
 }

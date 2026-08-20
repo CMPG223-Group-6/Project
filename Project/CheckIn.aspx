@@ -8,19 +8,16 @@
     <style type="text/css">
 
         .auto-style2 {
-            width: 834px;
+            width: 327px;
             height: 282px;
         }
         .auto-style6 {
-            width: 834px;
+            width: 327px;
             height: 91px;
         }
         .auto-style1 {
-            width: 834px;
+            width: 327px;
             height: 40px;
-        }
-        .auto-style7 {
-            width: 1421px;
         }
         .auto-style8 {
             width: 1349px;
@@ -29,7 +26,7 @@
             height: 86px;
         }
         .auto-style10 {
-            width: 834px;
+            width: 327px;
             height: 86px;
         }
     </style>
@@ -74,29 +71,86 @@
                                         <StaticHoverStyle BackColor="#669999" />
                                     </asp:Menu>
                                 </td>
-                                <td>
-                                    <asp:Panel ID="Panel1" runat="server" GroupingText="Check-in Details" Height="260px" Width="1078px">
-                                        <asp:Label ID="lblBookingID" runat="server" Text="Enter booking ID"></asp:Label>
-                                        <asp:RequiredFieldValidator ID="rfvBookingIDTourist" runat="server" ControlToValidate="ddlBookingEvents0" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                                <td colspan="2">
+                                    &nbsp;<asp:Panel ID="pnlCheckDetails" runat="server" GroupingText="Checking Details" Height="579px" Width="1326px">
                                         <br />
                                         <br />
-                                        <asp:DropDownList ID="ddlBookingEvents0" runat="server" Height="30px" Width="130px">
-                                            <asp:ListItem>1</asp:ListItem>
-                                            <asp:ListItem>2</asp:ListItem>
-                                            <asp:ListItem>3</asp:ListItem>
-                                        </asp:DropDownList>
+                                        <table style="width: 100%; height: 172px;">
+                                            <tr>
+                                                <td>
+                                                    <asp:Label ID="lblBookingID" runat="server" Text="Enter booking ID"></asp:Label>
+                                                    <br />
+                                                </td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <br />
+                                                    <asp:DropDownList ID="ddlBookingEvents0" runat="server" Height="30px" Width="130px">
+                                                        <asp:ListItem>1</asp:ListItem>
+                                                        <asp:ListItem>2</asp:ListItem>
+                                                        <asp:ListItem>3</asp:ListItem>
+                                                    </asp:DropDownList>
+                                                    <asp:RequiredFieldValidator ID="rfvBookingIDTourist0" runat="server" ControlToValidate="ddlBookingEvents0" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                                                </td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <br />
+                                                    <asp:Button ID="btnCheck" runat="server" BackColor="#33CC33" Height="36px" OnClick="btnCheck_Click" Text="Check In" Width="140px" />
+                                                    <br />
+                                                </td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <asp:Label ID="lblOutput" runat="server"></asp:Label>
+                                                </td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3">
+                                                    <asp:Panel ID="pnlCurrentBookings" runat="server" GroupingText="Current Bookings">
+                                                        <br />
+                                                        <asp:GridView ID="gdvDisplay" runat="server" Width="1313px">
+                                                        </asp:GridView>
+                                                    </asp:Panel>
+                                                </td>
+                                            </tr>
+                                        </table>
                                         <br />
                                         <br />
-                                        <asp:Button ID="btnCheck" runat="server" Text="Check In" BackColor="#33CC33" Height="36px" Width="140px" OnClick="btnCheck_Click" />
                                         <br />
                                         <br />
-                                        <asp:Label ID="lblOutput" runat="server"></asp:Label>
+                                        <br />
+                                        <br />
+                                        <br />
+                                        <br />
+                                        <br />
+                                        <br />
+                                        <br />
+                                        <br />
+                                        <br />
+                                        <br />
+                                        <br />
+                                        <br />
+                                        <br />
+                                        <br />
+                                        <br />
                                         <br />
                                         <br />
                                     </asp:Panel>
-                                </td>
-                                <td class="auto-style3">
-                                    &nbsp;</td>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;</td>
                             </tr>
                             <tr>
                                 <td class="auto-style6" style="border-style: inset; border-color: #006600; background-color: #006600">
@@ -110,10 +164,8 @@
                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     <asp:Label ID="lblNameDisplay" runat="server" Font-Size="Small" ForeColor="#999999"></asp:Label>
                                 </td>
-                                <td rowspan="2">
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:Image ID="ImgZoo" runat="server" Height="366px" ImageUrl="~/Images/New zoo image.png" Width="706px" />
-                                </td>
-                                <td class="auto-style7"></td>
+                                <td colspan="2">
+                                    &nbsp;</td>
                             </tr>
                             <tr>
                                 <td class="auto-style1" style="border-style: inset; border-color: #006600; background-color: #006600">
@@ -124,6 +176,8 @@
                                         <StaticHoverStyle BorderColor="#669999" />
                                     </asp:Menu>
                                 </td>
+                                <td>
+                                    &nbsp;</td>
                                 <td class="auto-style8"></td>
                             </tr>
                         </table>
