@@ -8,162 +8,155 @@
     <style type="text/css">
 
 
-
-        .auto-style1 {
-            width: 1368px;
-        }
-        .auto-style6 {
-            width: 170px;
-        }
-        .auto-style15 {
-            width: 450px;
-            height: 706px;
-        }
+        .auto-style4 {
+            width: 195px;
+            }
         .auto-style5 {
-            width: 450px;
+            text-align: left;
+    }
+        .auto-style9 {
+            width: 573px;
         }
-        .auto-style16 {
-            height: 26px;
+        .auto-style1 {
+            width: 195px;
+            height: 3px;
         }
-        </style>
+        .auto-style12 {
+            height: 3px;
+        }
+    </style>
 </head>
 <body>
-    <form id="form2" runat="server">
+    <form id="form1" runat="server">
         <div>
-        <div>
-            <table class="auto-style1">
+            <table style="width: 100%; height: 601px;">
                 <tr>
-                    <td class="auto-style6" rowspan="3">
-                        <asp:Image ID="Image1" runat="server" Height="158px" ImageUrl="~/Images/zims_zoo_logo.png" Width="331px" />
-                        <asp:Menu ID="Menu1" runat="server" BackColor="#003300" DynamicHorizontalOffset="13" Font-Bold="True" Font-Size="13pt" ForeColor="White" Height="700px" StaticSubMenuIndent="25px" Width="330px">
-                            <DynamicHoverStyle BackColor="#339933" />
+                    <td class="auto-style4" style="border-style: inset; border-color: #006600; background-color: #006600">&nbsp;<br />
+                        <asp:Label ID="lblZooInfo" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="White" Text="ZooInfoSys"></asp:Label>
+                        &nbsp;&nbsp;&nbsp;
+                        <asp:Image ID="Image2" runat="server" ImageUrl="~/Images/Screenshot 2026-08-10 122157.png" />
+                        <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:Label ID="lblZooInfo0" runat="server" Font-Size="Small" ForeColor="#999999" Text="Operations"></asp:Label>
+                    </td>
+                    <td class="auto-style5" colspan="2" style="border-style: double">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:Label ID="lblInfo" runat="server" Font-Bold="True" Font-Size="Large" Text="Update Booking"></asp:Label>
+                        <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+                </tr>
+                <tr>
+                    <td class="auto-style4" style="border-style: inset; border-color: #006600; background-color: #006600">
+                        <br />
+                        <br />
+                        <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </td>
+                    <td class="auto-style9">
+                        <asp:Panel ID="Panel1" runat="server" Height="464px" Width="566px" BorderColor="Black" BorderStyle="Groove">
+                            &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;<asp:Label ID="lblBookingID" runat="server" Text="Booking ID:"></asp:Label>
+                            &nbsp; &nbsp;&nbsp;<asp:TextBox ID="txtBookingID" runat="server" Width="142px"></asp:TextBox>
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="lblEventID" runat="server" Text="Event ID:"></asp:Label>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                            <asp:DropDownList ID="ddrlEventID" runat="server" AutoPostBack="True" style="text-align: center" Width="149px">
+                                <asp:ListItem>1</asp:ListItem>
+                                <asp:ListItem>2</asp:ListItem>
+                                <asp:ListItem>3</asp:ListItem>
+                            </asp:DropDownList>
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="ddrlEventID" ErrorMessage="Please select event id" Font-Size="Small" ForeColor="Red" ValidationGroup="btnUpdate"></asp:RequiredFieldValidator>
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:Label ID="lblEventType" runat="server" Text="Event Type:"></asp:Label>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:TextBox ID="txtDisplayEventType" runat="server" AutoPostBack="True" ReadOnly="True" Width="230px"></asp:TextBox>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="lblArrivalDate" runat="server" Text="Arrival Date:"></asp:Label>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:TextBox ID="txtDate" runat="server" AutoPostBack="True" TextMode="Date" Width="156px"></asp:TextBox>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtDate" ErrorMessage="Please select date" Font-Size="Small" ForeColor="Red" ValidationGroup="btnUpdate"></asp:RequiredFieldValidator>
+                            <br />
+                            &nbsp;&nbsp;&nbsp;
+                            <asp:Label ID="lblTickets" runat="server" Text="Number of Tickets:"></asp:Label>
+                            &nbsp;&nbsp;&nbsp;
+                            <asp:TextBox ID="txtNumberTickets" runat="server" AutoPostBack="True" Width="60px" TextMode="Number"></asp:TextBox>
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtNumberTickets" ErrorMessage="Please number of tickets" Font-Size="Small" ForeColor="Red" ValidationGroup="btnUpdate"></asp:RequiredFieldValidator>
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:Label ID="lblAmount" runat="server" Text="Payment Amount:"></asp:Label>
+                            &nbsp;&nbsp;&nbsp;
+                            <asp:TextBox ID="txtAmount0" runat="server" AutoPostBack="True" ReadOnly="True" Width="172px"></asp:TextBox>
+                            <br />
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:Label ID="lblPaymentMethod" runat="server" Text="Payment Method:"></asp:Label>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:DropDownList ID="ddrlMethod" runat="server" Width="189px">
+                                <asp:ListItem></asp:ListItem>
+                                <asp:ListItem Value="1">Cash</asp:ListItem>
+                                <asp:ListItem Value="2">Card</asp:ListItem>
+                            </asp:DropDownList>
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="ddrlMethod" ErrorMessage="Please select payment method" Font-Size="Small" ForeColor="Red" ValidationGroup="btnUpdate"></asp:RequiredFieldValidator>
+                            &nbsp;&nbsp;
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:Button ID="btnCancel" runat="server" OnClick="btnCancel_Click" Text="Cancel" Width="131px" />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:Button ID="btnUpdate" runat="server" OnClick="btnUpdate_Click" Text="Update" ValidationGroup="btnUpdate" Width="136px" />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <br />
+                        </asp:Panel>
+                    </td>
+                    <td>
+                        <asp:Panel ID="Panel2" runat="server" Height="300px" BorderColor="Black" BorderStyle="Groove" GroupingText="Confirmation Of Update" Visible="False">
+                            <br />
+                            &nbsp;&nbsp;&nbsp; &nbsp;<asp:Label ID="lblConfirmation" runat="server" Visible="False"></asp:Label>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <br />
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <br />
+                            &nbsp;&nbsp;&nbsp;
+                            <br />
+                            &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:Button ID="btnDone" runat="server" OnClick="btnDone_Click" Text="Done" Width="123px" />
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </asp:Panel>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style1" style="border-style: inset; border-color: #006600; background-color: #006600">
+                        <asp:Menu ID="Menu3" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="White">
                             <Items>
-                                <asp:MenuItem Text="Maintain" Value="Maintain">
-                                    <asp:MenuItem NavigateUrl="~/MaintainTourists.aspx" Text="Maintain Tourists" Value="Maintain Tourists"></asp:MenuItem>
-                                    <asp:MenuItem NavigateUrl="~/MaintainEventsTypes.aspx" Text="Maintain Event Types" Value="Maintain Event Types"></asp:MenuItem>
-                                    <asp:MenuItem NavigateUrl="~/MaintainBookings.aspx" Text="Maintain Bookings" Value="Maintain Bookings"></asp:MenuItem>
-                                </asp:MenuItem>
-                                <asp:MenuItem NavigateUrl="~/ProcessPayments.aspx" Text="Process Payments" Value="Process Payments"></asp:MenuItem>
-                                <asp:MenuItem NavigateUrl="~/CheckInTourist.aspx" Text="Check-In" Value="Check-In"></asp:MenuItem>
-                                <asp:MenuItem NavigateUrl="~/Reports.aspx" Text="Reports" Value="Reports"></asp:MenuItem>
-                                <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Log Out" Value="Log Out"></asp:MenuItem>
+                                <asp:MenuItem Text="Back" NavigateUrl="~/Bookings.aspx" Value="Back"></asp:MenuItem>
                             </Items>
-                            <StaticHoverStyle BackColor="#339933" />
-                            <StaticMenuStyle Height="40px" HorizontalPadding="10px" VerticalPadding="40px" />
-                            <StaticSelectedStyle BackColor="#66FF33" />
+                            <StaticHoverStyle BorderColor="#669999" />
                         </asp:Menu>
                     </td>
-                    <td class="auto-style2" colspan="2" style="border-style: double">
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Label ID="lblUpdBooking" runat="server" Text="Update Booking Dashboard:" Font-Bold="True" Font-Size="45px" style="text-align: center"></asp:Label>
+                    <td class="auto-style12" colspan="2" style="border-style: groove; border-color: #000000">
                         <br />
+                        <asp:Label ID="lblError" runat="server" ForeColor="Red"></asp:Label>
                         <br />
                         <br />
                     </td>
-                </tr>
-                <tr>
-                    <td class="auto-style2" rowspan="2">
-                            <table style="width:100%; height: 653px;">
-                                <tr>
-                                    <td class="auto-style16">
-                                        <asp:Label ID="lblUpdMessage" runat="server"></asp:Label>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="auto-style16">
-                                        <asp:Label ID="lblTouristID" runat="server" Text="Enter your Tourist ID:"></asp:Label>
-                                        <br />
-                                        <asp:TextBox ID="txtUpdTouristID" runat="server" TextMode="Number"></asp:TextBox>
-                                        <asp:RequiredFieldValidator ID="rfvTouristID" runat="server" ControlToValidate="txtUpdTouristID" ErrorMessage="Please enter your Tourist ID!" ForeColor="Red"></asp:RequiredFieldValidator>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="auto-style16">
-                                        <asp:Label ID="lblEventID" runat="server" Text="Event ID:"></asp:Label>
-                                        <br />
-                                        <asp:DropDownList ID="ddlEventID" runat="server" Height="25px" Width="138px">
-                                            <asp:ListItem>1</asp:ListItem>
-                                            <asp:ListItem>2</asp:ListItem>
-                                            <asp:ListItem>3</asp:ListItem>
-                                        </asp:DropDownList>
-                                        <asp:RequiredFieldValidator ID="rfvEventID" runat="server" ControlToValidate="ddlEventID" ErrorMessage="Please select an Event!" ForeColor="Red"></asp:RequiredFieldValidator>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="auto-style16">
-                                        <asp:Label ID="lblName" runat="server" Text="Enter your name:"></asp:Label>
-                                        <br />
-                                        <asp:TextBox ID="txtUpdName" runat="server"></asp:TextBox>
-                                        <asp:RequiredFieldValidator ID="rfvName" runat="server" ControlToValidate="txtUpdName" ErrorMessage="Please enter a name!" ForeColor="Red"></asp:RequiredFieldValidator>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="auto-style17">
-                                        <asp:Label ID="lblNoOfTickets" runat="server" Text="No Of Tickets:"></asp:Label>
-                                        <br />
-                                        <asp:TextBox ID="txtNoOfTickets" runat="server" TextMode="Number"></asp:TextBox>
-                                        <asp:RequiredFieldValidator ID="rfvPhoneNo" runat="server" ControlToValidate="txtNoOfTickets" ErrorMessage="Please select a number of tickets!" ForeColor="Red"></asp:RequiredFieldValidator>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="auto-style17">
-                                        <asp:Label ID="lblDate" runat="server" Text="Check In Date:"></asp:Label>
-                                        <br />
-                                        <asp:TextBox ID="txtUpdDate" runat="server" Height="16px" TextMode="Date"></asp:TextBox>
-                                        <asp:RequiredFieldValidator ID="rfvDate" runat="server" ControlToValidate="txtUpdDate" ErrorMessage="Please select a Check-In Date!" ForeColor="Red"></asp:RequiredFieldValidator>
-                                        <br />
-                                        <asp:Label ID="lblPaymentMethod" runat="server" Text="Payment Method:"></asp:Label>
-                                        <br />
-                                        <asp:DropDownList ID="ddlEventID0" runat="server" Height="26px" Width="221px">
-                                            <asp:ListItem>Select a Payment Method</asp:ListItem>
-                                            <asp:ListItem>Cash</asp:ListItem>
-                                            <asp:ListItem>Card</asp:ListItem>
-                                        </asp:DropDownList>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="auto-style17">
-                                        <asp:Label ID="lblAmount" runat="server" Text="Amount   R:"></asp:Label>
-                                        &nbsp;
-                                        <asp:Label ID="lblAmountOutput" runat="server"></asp:Label>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="auto-style17">
-                                        &nbsp;</td>
-                                </tr>
-                                <tr>
-                                    <td class="auto-style17">
-                                        <br />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="auto-style17">&nbsp;</td>
-                                </tr>
-                                <tr>
-                                    <td class="auto-style17">&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <asp:Button ID="BtnUpdBooking" runat="server" Height="28px" Text="Update" Width="145px" Font-Bold="True" BackColor="Green" ForeColor="White" />
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <asp:Button ID="btnContinue" runat="server" Height="27px" Text="Continue" Width="128px" Font-Bold="True" BackColor="Yellow" ForeColor="White" />
-                                    </td>
-                                </tr>
-                            </table>
-                    </td>
-                    <td class="auto-style15">
-                        <asp:GridView ID="GridView1" runat="server" Height="379px" Width="603px">
-                        </asp:GridView>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="auto-style5">&nbsp;</td>
                 </tr>
             </table>
         </div>
-        </div>
     </form>
-   
-    
+</body>
+</html>

@@ -67,8 +67,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AddBooking.aspx" />
-    <Content Include="AddTourist.aspx" />
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
     <Content Include="bin\Project.dll" />
@@ -112,17 +110,19 @@
     <Content Include="bin\roslyn\System.Xml.XPath.XDocument.dll" />
     <Content Include="bin\roslyn\vbc.exe" />
     <Content Include="bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="NewBooking.aspx" />
     <Content Include="Bookings.aspx" />
+    <Content Include="CancelBooking.aspx" />
     <Content Include="CheckIn.aspx" />
     <Content Include="CheckInTourist.aspx" />
     <Content Include="Default.aspx" />
-    <Content Include="DeleteBooking.aspx" />
-    <Content Include="DeleteTourist.aspx" />
+    <Content Include="DeleteAccount.aspx" />
     <Content Include="Images\Screenshot 2026-08-10 122157.png" />
     <Content Include="Images\zims_zoo_logo.png" />
     <Content Include="MaintainBookings.aspx" />
     <Content Include="MaintainEventsTypes.aspx" />
     <Content Include="MaintainTourists.aspx" />
+    <Content Include="MyBookings.aspx" />
     <Content Include="MyOverview.aspx" />
     <Content Include="MyProfile.aspx" />
     <Content Include="obj\Debug\Project.csproj.FileListAbsolute.txt" />
@@ -191,26 +191,20 @@
     <Content Include="ProcessPayments.aspx" />
     <Content Include="Project.slnx" />
     <Content Include="Reports.aspx" />
+    <Content Include="ResetPassword.aspx" />
+    <Content Include="SQLQuery2.sql" />
     <Content Include="TouristMenu.aspx" />
     <Content Include="UpdateBooking.aspx" />
-    <Content Include="UpdateTourist.aspx" />
     <Content Include="Web.config" />
     <Content Include="ZooInformation.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddBooking.aspx.cs">
-      <DependentUpon>AddBooking.aspx</DependentUpon>
+    <Compile Include="NewBooking.aspx.cs">
+      <DependentUpon>NewBooking.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AddBooking.aspx.designer.cs">
-      <DependentUpon>AddBooking.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="AddTourist.aspx.cs">
-      <DependentUpon>AddTourist.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AddTourist.aspx.designer.cs">
-      <DependentUpon>AddTourist.aspx</DependentUpon>
+    <Compile Include="NewBooking.aspx.designer.cs">
+      <DependentUpon>NewBooking.aspx</DependentUpon>
     </Compile>
     <Compile Include="Bookings.aspx.cs">
       <DependentUpon>Bookings.aspx</DependentUpon>
@@ -218,6 +212,13 @@
     </Compile>
     <Compile Include="Bookings.aspx.designer.cs">
       <DependentUpon>Bookings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CancelBooking.aspx.cs">
+      <DependentUpon>CancelBooking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CancelBooking.aspx.designer.cs">
+      <DependentUpon>CancelBooking.aspx</DependentUpon>
     </Compile>
     <Compile Include="CheckIn.aspx.cs">
       <DependentUpon>CheckIn.aspx</DependentUpon>
@@ -240,19 +241,12 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="DeleteBooking.aspx.cs">
-      <DependentUpon>DeleteBooking.aspx</DependentUpon>
+    <Compile Include="DeleteAccount.aspx.cs">
+      <DependentUpon>DeleteAccount.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="DeleteBooking.aspx.designer.cs">
-      <DependentUpon>DeleteBooking.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="DeleteTourist.aspx.cs">
-      <DependentUpon>DeleteTourist.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="DeleteTourist.aspx.designer.cs">
-      <DependentUpon>DeleteTourist.aspx</DependentUpon>
+    <Compile Include="DeleteAccount.aspx.designer.cs">
+      <DependentUpon>DeleteAccount.aspx</DependentUpon>
     </Compile>
     <Compile Include="MaintainBookings.aspx.cs">
       <DependentUpon>MaintainBookings.aspx</DependentUpon>
@@ -274,6 +268,13 @@
     </Compile>
     <Compile Include="MaintainTourists.aspx.designer.cs">
       <DependentUpon>MaintainTourists.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyBookings.aspx.cs">
+      <DependentUpon>MyBookings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyBookings.aspx.designer.cs">
+      <DependentUpon>MyBookings.aspx</DependentUpon>
     </Compile>
     <Compile Include="MyOverview.aspx.cs">
       <DependentUpon>MyOverview.aspx</DependentUpon>
@@ -312,6 +313,13 @@
     <Compile Include="Reports.aspx.designer.cs">
       <DependentUpon>Reports.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ResetPassword.aspx.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResetPassword.aspx.designer.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+    </Compile>
     <Compile Include="TouristMenu.aspx.cs">
       <DependentUpon>TouristMenu.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -325,13 +333,6 @@
     </Compile>
     <Compile Include="UpdateBooking.aspx.designer.cs">
       <DependentUpon>UpdateBooking.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="UpdateTourist.aspx.cs">
-      <DependentUpon>UpdateTourist.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="UpdateTourist.aspx.designer.cs">
-      <DependentUpon>UpdateTourist.aspx</DependentUpon>
     </Compile>
     <Compile Include="ZooInformation.aspx.cs">
       <DependentUpon>ZooInformation.aspx</DependentUpon>
