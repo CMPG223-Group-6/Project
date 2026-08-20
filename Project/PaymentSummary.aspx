@@ -23,6 +23,10 @@
             height: 26px;
             width: 399px;
         }
+        .auto-style6 {
+            text-align: center;
+            height: 26px;
+        }
     </style>
 </head>
 <body>
@@ -106,16 +110,16 @@
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style2">&nbsp;</td>
-                <td class="auto-style4">&nbsp;</td>
-                <td>&nbsp;</td>
+                <td class="auto-style6"></td>
+                <td class="auto-style5"></td>
+                <td class="auto-style1"></td>
             </tr>
             <tr>
                 <td class="auto-style2">
                     &nbsp;</td>
                 <td class="auto-style4">
                     <asp:Label ID="lblArrivalDate0" runat="server" Font-Bold="True" Text="Arrival Date:"></asp:Label>
-                    <asp:Label ID="lblArrivalDateOutput" runat="server"></asp:Label>
+                    &nbsp;<asp:Label ID="lblArrivalDateOutput" runat="server"></asp:Label>
                 </td>
                 <td>&nbsp;</td>
             </tr>
