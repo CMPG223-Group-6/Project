@@ -60,22 +60,22 @@ namespace Project
         protected global::System.Web.UI.WebControls.Panel Panel1;
 
         /// <summary>
-        /// lblBookingID control.
+        /// lblBookingID0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblBookingID;
+        protected global::System.Web.UI.WebControls.Label lblBookingID0;
 
         /// <summary>
-        /// rfvBookingIDStaff control.
+        /// rfvBookingIDStaff0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvBookingIDStaff;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvBookingIDStaff0;
 
         /// <summary>
         /// ddlBookingEventsStaffcheckin control.
@@ -87,13 +87,13 @@ namespace Project
         protected global::System.Web.UI.WebControls.DropDownList ddlBookingEventsStaffcheckin;
 
         /// <summary>
-        /// btnCheck control.
+        /// btnCheck0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCheck;
+        protected global::System.Web.UI.WebControls.Button btnCheck0;
 
         /// <summary>
         /// lblOutput control.
@@ -103,6 +103,15 @@ namespace Project
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblOutput;
+
+        /// <summary>
+        /// lblBookings control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblBookings;
 
         /// <summary>
         /// GridView1 control.

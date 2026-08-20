@@ -30,26 +30,32 @@ namespace Project
         protected void btnSubmitRating_Click(object sender, EventArgs e)
         {             
             int rating = 0;
+            string rating_word = " ";
 
             if (rbStar1.Checked)
             {
                 rating = 1;
+                rating_word = "Poor";
             }
             else if (rbStar2.Checked)
             {
                 rating = 2;
+                rating_word = "Bad";
             }
             else if (rbStar3.Checked)
             {
                 rating = 3;
+                rating_word = "Average";
             }
             else if (rbStar4.Checked)
             {
                 rating = 4;
+                rating_word = "Good";
             }
             else if (rbStar5.Checked)
             {
                 rating = 5;
+                rating_word = "Great";
             }
 
             if (rating == 0)
@@ -58,7 +64,7 @@ namespace Project
             }
             else
             {
-                lblResults.Text = "You rated us " + rating + " out of 5 stars.";
+                lblResults.Text = "You rated us " + rating + " out of 5 stars.Your day with us was " + rating_word ;
             }
         }
     }
