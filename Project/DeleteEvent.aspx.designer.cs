@@ -11,7 +11,7 @@ namespace Project
 {
 
 
-    public partial class MaintainEventsTypes
+    public partial class DeleteEvent
     {
 
         /// <summary>
@@ -42,102 +42,102 @@ namespace Project
         protected global::System.Web.UI.WebControls.Menu Menu1;
 
         /// <summary>
-        /// lblHeading control.
+        /// lblChangeEvent control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblHeading;
+        protected global::System.Web.UI.WebControls.Label lblChangeEvent;
 
         /// <summary>
-        /// lblSearchEvent control.
+        /// lblEventName0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSearchEvent;
+        protected global::System.Web.UI.WebControls.Label lblEventName0;
 
         /// <summary>
-        /// txtSearchEvent control.
+        /// RequiredFieldValidator6 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSearchEvent;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator6;
 
         /// <summary>
-        /// ddlStatus control.
+        /// ddlEventID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlStatus;
+        protected global::System.Web.UI.WebControls.DropDownList ddlEventID;
 
         /// <summary>
-        /// btnSearch control.
+        /// lblMessage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSearch;
+        protected global::System.Web.UI.WebControls.Label lblMessage;
 
         /// <summary>
-        /// btnReload control.
+        /// lblConfirmM control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnReload;
+        protected global::System.Web.UI.WebControls.Label lblConfirmM;
 
         /// <summary>
-        /// btnAddEvent control.
+        /// btnNo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAddEvent;
+        protected global::System.Web.UI.WebControls.Button btnNo;
 
         /// <summary>
-        /// btnChangeEvent control.
+        /// btnYes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnChangeEvent;
+        protected global::System.Web.UI.WebControls.Button btnYes;
 
         /// <summary>
-        /// btnDeleteEvent control.
+        /// btnCancel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnDeleteEvent;
+        protected global::System.Web.UI.WebControls.Button btnCancel;
 
         /// <summary>
-        /// lblEventsHeading control.
+        /// btnDelete control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEventsHeading;
+        protected global::System.Web.UI.WebControls.Button btnDelete;
 
         /// <summary>
-        /// gvEventTypes control.
+        /// GridView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvEventTypes;
+        protected global::System.Web.UI.WebControls.GridView GridView1;
     }
 }
