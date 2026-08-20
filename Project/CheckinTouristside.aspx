@@ -65,7 +65,7 @@
                                             <asp:MenuItem NavigateUrl="~/MyOverview.aspx" Text="My Overview" Value="0"></asp:MenuItem>
                                             <asp:MenuItem NavigateUrl="~/Bookings.aspx" Text="Bookings" Value="1"></asp:MenuItem>
                                             <asp:MenuItem NavigateUrl="~/Payment.aspx" Text="Payment" Value="2"></asp:MenuItem>
-                                            <asp:MenuItem NavigateUrl="~/CheckIn.aspx" Text="Check - In" Value="3"></asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/CheckinTouristside.aspx" Text="Check - In" Value="3"></asp:MenuItem>
                                             <asp:MenuItem NavigateUrl="~/ZooInformation.aspx" Text="Zoo Information" Value="4"></asp:MenuItem>
                                             <asp:MenuItem Text="Check - out" Value="5"></asp:MenuItem>
                                             <asp:MenuItem></asp:MenuItem>
@@ -81,6 +81,9 @@
                                         <br />
                                         <br />
                                         <asp:DropDownList ID="ddlBookingEvents0" runat="server" Height="30px" Width="130px">
+                                            <asp:ListItem>1</asp:ListItem>
+                                            <asp:ListItem>2</asp:ListItem>
+                                            <asp:ListItem>3</asp:ListItem>
                                         </asp:DropDownList>
                                         <br />
                                         <br />
@@ -108,7 +111,7 @@
                                     <asp:Label ID="lblNameDisplay" runat="server" Font-Size="Small" ForeColor="#999999"></asp:Label>
                                 </td>
                                 <td rowspan="2">
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:Image ID="ImgZoo" runat="server" Height="366px" ImageUrl="~/C:\Users\thand\OneDrive\Documents\GitHub\CMPG223 Project\Project\Project\Images\Zoo map.png" Width="706px" />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:Image ID="ImgZoo" runat="server" Height="366px" ImageUrl="~/C:\Users\thand\OneDrive\Documents\GitHub\CMPG223 Project\Project\Project\Images\New zoo image.png" Width="706px" />
                                 </td>
                                 <td class="auto-style7"></td>
                             </tr>

@@ -16,7 +16,15 @@ namespace Project
 
         protected void btnConfirmExit_Click(object sender, EventArgs e)
         {
-            lblConfirmMessage.Text = "You have successfully checked out of Zims.Have a good day";
+            if (ddlBookingIDDetails.SelectedIndex == -1)
+            {
+                lblConfirmMessage.Text = "Choose an option";
+            }
+            else
+            {
+                lblConfirmMessage.Text = "You have successfully checked out of Zims.Have a good day";
+            }
+            
         }
 
         protected void btnSubmitRating_Click(object sender, EventArgs e)

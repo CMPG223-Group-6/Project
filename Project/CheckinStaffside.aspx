@@ -20,6 +20,9 @@
         .auto-style9 {
             height: 77px;
         }
+        .auto-style10 {
+            height: 273px;
+        }
         </style>
 </head>
 <body>
@@ -28,7 +31,7 @@
                 <tr>
                     <td class="auto-style6" rowspan="4">
                         <asp:Image ID="Image1" runat="server" Height="158px" ImageUrl="~/Images/zims_zoo_logo.png" Width="331px" />
-                        <asp:Menu ID="Menu1" runat="server" BackColor="#003300" DynamicHorizontalOffset="13" Font-Bold="True" Font-Size="13pt" ForeColor="White" Height="700px" StaticSubMenuIndent="25px" Width="330px">
+                        <asp:Menu ID="Menu1" runat="server" BackColor="#003300" DynamicHorizontalOffset="13" Font-Bold="True" Font-Size="13pt" ForeColor="White" Height="700px" StaticSubMenuIndent="25px" Width="330px" OnMenuItemClick="Menu1_MenuItemClick">
                             <DynamicHoverStyle BackColor="#339933" />
                             <Items>
                                 <asp:MenuItem Text="Maintain" Value="Maintain">
@@ -37,7 +40,7 @@
                                     <asp:MenuItem NavigateUrl="~/MaintainBookings.aspx" Text="Maintain Bookings" Value="Maintain Bookings"></asp:MenuItem>
                                 </asp:MenuItem>
                                 <asp:MenuItem NavigateUrl="~/ProcessPayments.aspx" Text="Process Payments" Value="Process Payments"></asp:MenuItem>
-                                <asp:MenuItem NavigateUrl="~/CheckInTourist.aspx" Text="Check-In" Value="Check-In"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/CheckInStaffside.aspx" Text="Check-In" Value="Check-In"></asp:MenuItem>
                                 <asp:MenuItem NavigateUrl="~/Reports.aspx" Text="Reports" Value="Reports"></asp:MenuItem>
                                 <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Log Out" Value="Log Out"></asp:MenuItem>
                             </Items>
@@ -52,16 +55,16 @@
                     <td class="auto-style5"></td>
                 </tr>
                 <tr>
-                    <td colspan="2">
+                    <td colspan="2" class="auto-style10">
                                     <asp:Panel ID="Panel1" runat="server" GroupingText="Check-in Details" Height="315px" Width="910px">
                                         <asp:Label ID="lblBookingID" runat="server" Text="BookingID :"></asp:Label>
-                                        <asp:RequiredFieldValidator ID="rfvBookingIDStaff" runat="server" ControlToValidate="TextBox1" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
-                                        <br />
-                                        <br />
-                                        <asp:TextBox ID="txtBookingIDinputstaff" runat="server"></asp:TextBox>
+                                        <asp:RequiredFieldValidator ID="rfvBookingIDStaff" runat="server" ControlToValidate="ddlBookingEventsStaffcheckin" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
                                         <br />
                                         <br />
                                         <asp:DropDownList ID="ddlBookingEventsStaffcheckin" runat="server" Height="28px" Width="189px">
+                                            <asp:ListItem>1</asp:ListItem>
+                                            <asp:ListItem>2</asp:ListItem>
+                                            <asp:ListItem>3</asp:ListItem>
                                         </asp:DropDownList>
                                         <br />
                                         <br />

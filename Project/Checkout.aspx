@@ -67,20 +67,20 @@
                                             <asp:MenuItem NavigateUrl="~/Payment.aspx" Text="Payment" Value="2"></asp:MenuItem>
                                             <asp:MenuItem NavigateUrl="~/CheckIn.aspx" Text="Check - In" Value="3"></asp:MenuItem>
                                             <asp:MenuItem NavigateUrl="~/ZooInformation.aspx" Text="Zoo Information" Value="4"></asp:MenuItem>
-                                            <asp:MenuItem Text="Check out" Value="5"></asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/Checkout.aspx" Text="Check out" Value="5"></asp:MenuItem>
                                         </Items>
                                         <StaticHoverStyle BackColor="#669999" />
                                     </asp:Menu>
                                 </td>
                     <td class="auto-style7">
                         <asp:Label ID="lblVerifyExit" runat="server" style="text-align: left; font-size: large" Text="Enter Booking ID"></asp:Label>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtBookingIDInput" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
-                        <br />
-                        <br />
-                        <asp:TextBox ID="txtBookingIDInput" runat="server" Height="32px" Width="232px"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="ddlBookingIDDetails" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
                         <br />
                         <br />
                         <asp:DropDownList ID="ddlBookingIDDetails" runat="server" Height="31px" Width="242px">
+                            <asp:ListItem>1</asp:ListItem>
+                            <asp:ListItem>2</asp:ListItem>
+                            <asp:ListItem>3</asp:ListItem>
                         </asp:DropDownList>
                         <br />
                         <br />
@@ -92,9 +92,6 @@
                     </td>
                     <td class="auto-style5">
                         <asp:Label ID="lblOptional" runat="server" Text="Optional"></asp:Label>
-                        <br />
-                        <br />
-                        <asp:HyperLink ID="hlExitForm" runat="server">Fill in zoo review</asp:HyperLink>
                         <br />
                         <br />
                         <asp:Label ID="lblRating" runat="server" Text="Rate us:"></asp:Label>

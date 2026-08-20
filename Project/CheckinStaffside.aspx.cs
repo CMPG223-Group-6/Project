@@ -13,13 +13,27 @@ namespace Project
         {
             //fill in person booking id
             // ddl shows bookings
-
         }
 
         protected void btnCheck_Click(object sender, EventArgs e)
         {
             //if person cant be found take to maintain tourist and create a new profile
             //gridview shows bookings
+
+            if (ddlBookingEventsStaffcheckin.SelectedIndex == -1)
+            {
+                lblOutput.Text = "Choose an option";
+            }
+            else
+            {
+                lblOutput.Text = "You have successfully checked in.Enjoy!";
+            }
+        }
+
+        protected void Menu1_MenuItemClick(object sender, MenuEventArgs e)
+        {
+
         }
     }
 }
+        

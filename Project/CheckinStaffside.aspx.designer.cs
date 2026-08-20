@@ -78,15 +78,6 @@ namespace Project
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvBookingIDStaff;
 
         /// <summary>
-        /// txtBookingIDinputstaff control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtBookingIDinputstaff;
-
-        /// <summary>
         /// ddlBookingEventsStaffcheckin control.
         /// </summary>
         /// <remarks>
