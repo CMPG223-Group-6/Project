@@ -14,15 +14,15 @@
         .auto-style6 {
             width: 170px;
         }
-        .auto-style16 {
-            height: 26px;
-        }
         .auto-style15 {
             width: 450px;
             height: 706px;
         }
         .auto-style5 {
             width: 450px;
+        }
+        .auto-style16 {
+            height: 26px;
         }
         </style>
 </head>
@@ -52,7 +52,7 @@
                             <StaticSelectedStyle BackColor="#66FF33" />
                         </asp:Menu>
                     </td>
-                    <td class="auto-style2" colspan="2">
+                    <td class="auto-style2" colspan="2" style="border-style: double">
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <asp:Label ID="lblUpdateInfo" runat="server" Text="Update Tourist Dashboard:" Font-Bold="True" Font-Size="45px" style="text-align: center"></asp:Label>
                         <br />
@@ -62,8 +62,7 @@
                 </tr>
                 <tr>
                     <td class="auto-style2" rowspan="2">
-                        <asp:Panel ID="Panel1" runat="server" Height="583px">
-                            <table style="width:100%; height: 389px;">
+                            <table style="width:100%; height: 645px;">
                                 <tr>
                                     <td class="auto-style16">
                                         <asp:Label ID="lblUpdMessage" runat="server"></asp:Label>
@@ -71,10 +70,12 @@
                                 </tr>
                                 <tr>
                                     <td class="auto-style16">
-                                        <asp:Label ID="lblTouristID" runat="server" Text="Enter your Tourist ID:"></asp:Label>
+                                        <asp:Label ID="lblTouristID" runat="server" Text="Enter Tourist ID:"></asp:Label>
                                         <br />
                                         <asp:TextBox ID="txtUpdTouristID" runat="server"></asp:TextBox>
                                         <asp:RequiredFieldValidator ID="rfvTouristID" runat="server" ControlToValidate="txtUpdTouristID" ErrorMessage="Please enter your Tourist ID!" ForeColor="Red"></asp:RequiredFieldValidator>
+                                        <br />
+                                        <br />
                                     </td>
                                 </tr>
                                 <tr>
@@ -82,43 +83,50 @@
                                         <asp:Label ID="lblEventID" runat="server" Text="Event ID:"></asp:Label>
                                         <br />
                                         <asp:DropDownList ID="ddlEventID" runat="server" Height="25px" Width="138px">
+                                            <asp:ListItem Value="0">Select Event ID</asp:ListItem>
                                             <asp:ListItem>1</asp:ListItem>
                                             <asp:ListItem>2</asp:ListItem>
                                             <asp:ListItem>3</asp:ListItem>
                                         </asp:DropDownList>
-                                        <asp:RequiredFieldValidator ID="rfvEventID" runat="server" ControlToValidate="ddlEventID" ErrorMessage="Please select an Event!" ForeColor="Red"></asp:RequiredFieldValidator>
+                                        <asp:RequiredFieldValidator ID="rfvEventID" runat="server" ControlToValidate="ddlEventID" ErrorMessage="Please select an Event!" ForeColor="Red" InitialValue="0"></asp:RequiredFieldValidator>
+                                        <br />
+                                        <br />
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="auto-style16">
-                                        <asp:Label ID="lblName" runat="server" Text="Enter your name:"></asp:Label>
+                                        <asp:Label ID="lblName" runat="server" Text="Enter Name:"></asp:Label>
                                         <br />
                                         <asp:TextBox ID="txtUpdName" runat="server"></asp:TextBox>
                                         <asp:RequiredFieldValidator ID="rfvName" runat="server" ControlToValidate="txtUpdName" ErrorMessage="Please enter a name!" ForeColor="Red"></asp:RequiredFieldValidator>
+                                        <br />
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <asp:Label ID="lblSurname" runat="server" Text="Enter your surname:"></asp:Label>
+                                        <asp:Label ID="lblSurname" runat="server" Text="Enter Surname:"></asp:Label>
                                         <br />
                                         <asp:TextBox ID="txtUpdSurname" runat="server"></asp:TextBox>
                                         <asp:RequiredFieldValidator ID="rfvSurname" runat="server" ErrorMessage="Please enter a surname!" ForeColor="Red" ControlToValidate="txtUpdSurname"></asp:RequiredFieldValidator>
+                                        <br />
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="auto-style17">
-                                        <asp:Label ID="lblPhoneNo" runat="server" Text="Enter your phone number:"></asp:Label>
+                                        <asp:Label ID="lblPhoneNo" runat="server" Text="Enter phone number:"></asp:Label>
                                         <br />
                                         <asp:TextBox ID="txtUpdPhoneNo" runat="server"></asp:TextBox>
                                         <asp:RequiredFieldValidator ID="rfvPhoneNo" runat="server" ControlToValidate="txtUpdPhoneNo" ErrorMessage="Please enter a phone number!" ForeColor="Red"></asp:RequiredFieldValidator>
+                                        <br />
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="auto-style17">
-                                        <asp:Label ID="lblEmail" runat="server" Text="Enter your email:"></asp:Label>
+                                        <asp:Label ID="lblEmail" runat="server" Text="Enter Email:"></asp:Label>
                                         <br />
                                         <asp:TextBox ID="txtUpdEmail" runat="server"></asp:TextBox>
                                         <asp:RegularExpressionValidator ID="revEmail" runat="server" ControlToValidate="txtUpdEmail" ErrorMessage="Please enter a email!" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                                        <br />
                                     </td>
                                 </tr>
                                 <tr>
@@ -127,6 +135,7 @@
                                         <br />
                                         <asp:TextBox ID="txtUpdDate" runat="server" TextMode="Date"></asp:TextBox>
                                         <asp:RequiredFieldValidator ID="rfvDate" runat="server" ErrorMessage="Please select a Check-In Date!" ForeColor="Red" ControlToValidate="txtUpdDate"></asp:RequiredFieldValidator>
+                                        <br />
                                     </td>
                                 </tr>
                                 <tr>
@@ -138,6 +147,7 @@
                                             <asp:ListItem>Pending</asp:ListItem>
                                             <asp:ListItem>Cancelled</asp:ListItem>
                                         </asp:DropDownList>
+                                        <br />
                                     </td>
                                 </tr>
                                 <tr>
@@ -347,6 +357,7 @@
                                             <asp:ListItem>Tuvalu</asp:ListItem>
                                             <asp:ListItem>Vanuatu</asp:ListItem>
                                         </asp:DropDownList>
+                                        <br />
                                     </td>
                                 </tr>
                                 <tr>
@@ -356,11 +367,10 @@
                                     <td class="auto-style17">&nbsp;&nbsp;&nbsp;&nbsp;
                                         <asp:Button ID="BtnUpdate" runat="server" Height="28px" Text="Update" Width="145px" BackColor="Green" Font-Bold="True" ForeColor="White" />
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <asp:Button ID="btnContinue" runat="server" Height="27px" Text="Continue" Width="128px" BackColor="Yellow" Font-Bold="True" ForeColor="White" />
+                                        <asp:Button ID="btnContinue" runat="server" Height="27px" Text="Continue" Width="128px" BackColor="#009900" Font-Bold="True" ForeColor="White" />
                                     </td>
                                 </tr>
                             </table>
-                        </asp:Panel>
                     </td>
                     <td class="auto-style15">
                         <asp:GridView ID="GridView1" runat="server" Height="379px" Width="603px">

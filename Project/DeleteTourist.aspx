@@ -15,15 +15,18 @@
         .auto-style6 {
             width: 170px;
         }
-        .auto-style16 {
-            height: 26px;
-        }
         .auto-style15 {
             width: 450px;
             height: 706px;
         }
         .auto-style5 {
             width: 450px;
+        }
+        .auto-style16 {
+            height: 26px;
+        }
+        .auto-style17 {
+            height: 30px;
         }
         </style>
 </head>
@@ -55,7 +58,7 @@
                             <StaticSelectedStyle BackColor="#66FF33" />
                         </asp:Menu>
                     </td>
-                    <td class="auto-style2" colspan="2">
+                    <td class="auto-style2" colspan="2" style="border-style: double">
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <asp:Label ID="lblDeleteInfo" runat="server" Text="Delete Tourist Dashboard:" Font-Bold="True" Font-Size="45px" style="text-align: center"></asp:Label>
                         <br />
@@ -65,8 +68,7 @@
                 </tr>
                 <tr>
                     <td class="auto-style2" rowspan="2">
-                        <asp:Panel ID="pnlDelete" runat="server" Height="391px">
-                            <table style="width:100%; height: 389px;">
+                            <table style="width:100%; height: 626px;">
                                 <tr>
                                     <td class="auto-style16">
                                         <asp:Label ID="lblTouristID" runat="server" Text="Enter your Tourist ID:"></asp:Label>
@@ -86,6 +88,25 @@
                                     </td>
                                 </tr>
                                 <tr>
+                                    <td class="auto-style17">
+                                        <br />
+                                        <asp:Label ID="lblDeleteMessage" runat="server"></asp:Label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="auto-style17">
+                                        <br />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="auto-style17">
+                                        <asp:Button ID="BtnDelete" runat="server" Height="28px" Text="Delete" Width="145px" BackColor="Red" Font-Bold="True" ForeColor="White" OnClientClick="return confirm('Are you sure you want to delete this booking?');" />
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <asp:Button ID="btnContinue" runat="server" Height="27px" Text="Continue" Width="128px" BackColor="#009900" Font-Bold="True" ForeColor="White" />
+                                        <br />
+                                    </td>
+                                </tr>
+                                <tr>
                                     <td>
                                         <br />
                                     </td>
@@ -101,32 +122,12 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="auto-style17">
-                                        <br />
-                                        <asp:Label ID="lblDeleteMessage" runat="server"></asp:Label>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="auto-style17">
-                                        <br />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="auto-style17">
-                                        <asp:Button ID="BtnDelete" runat="server" Height="28px" Text="Delete" Width="145px" BackColor="Green" Font-Bold="True" ForeColor="White" OnClientClick="return confirm('Are you sure you want to delete this booking?');" />
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <asp:Button ID="btnContinue" runat="server" Height="27px" Text="Continue" Width="128px" BackColor="Yellow" Font-Bold="True" ForeColor="White" />
-                                        <br />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="auto-style17">&nbsp;</td>
+                                    <td class="auto-style17"></td>
                                 </tr>
                                 <tr>
                                     <td class="auto-style17">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
                                 </tr>
                             </table>
-                        </asp:Panel>
                     </td>
                     <td class="auto-style15">
                         <asp:GridView ID="GridView1" runat="server" Height="379px" Width="603px">

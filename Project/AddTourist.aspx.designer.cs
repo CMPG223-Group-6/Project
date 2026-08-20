@@ -33,15 +33,6 @@ namespace Project
         protected global::System.Web.UI.WebControls.Image Image1;
 
         /// <summary>
-        /// Menu1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Menu Menu1;
-
-        /// <summary>
         /// lblAddInfo control.
         /// </summary>
         /// <remarks>
@@ -49,15 +40,6 @@ namespace Project
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblAddInfo;
-
-        /// <summary>
-        /// Panel1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel Panel1;
 
         /// <summary>
         /// lblName control.
@@ -231,12 +213,21 @@ namespace Project
         protected global::System.Web.UI.WebControls.Button btnContinue;
 
         /// <summary>
-        /// GridView1 control.
+        /// Menu1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.Menu Menu1;
+
+        /// <summary>
+        /// gvTourist control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvTourist;
     }
 }

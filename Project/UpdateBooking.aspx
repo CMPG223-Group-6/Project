@@ -15,15 +15,15 @@
         .auto-style6 {
             width: 170px;
         }
-        .auto-style16 {
-            height: 26px;
-        }
         .auto-style15 {
             width: 450px;
             height: 706px;
         }
         .auto-style5 {
             width: 450px;
+        }
+        .auto-style16 {
+            height: 26px;
         }
         </style>
 </head>
@@ -53,7 +53,7 @@
                             <StaticSelectedStyle BackColor="#66FF33" />
                         </asp:Menu>
                     </td>
-                    <td class="auto-style2" colspan="2">
+                    <td class="auto-style2" colspan="2" style="border-style: double">
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <asp:Label ID="lblUpdBooking" runat="server" Text="Update Booking Dashboard:" Font-Bold="True" Font-Size="45px" style="text-align: center"></asp:Label>
                         <br />
@@ -63,8 +63,7 @@
                 </tr>
                 <tr>
                     <td class="auto-style2" rowspan="2">
-                        <asp:Panel ID="Panel1" runat="server" Height="510px">
-                            <table style="width:100%; height: 389px;">
+                            <table style="width:100%; height: 653px;">
                                 <tr>
                                     <td class="auto-style16">
                                         <asp:Label ID="lblUpdMessage" runat="server"></asp:Label>
@@ -153,7 +152,6 @@
                                     </td>
                                 </tr>
                             </table>
-                        </asp:Panel>
                     </td>
                     <td class="auto-style15">
                         <asp:GridView ID="GridView1" runat="server" Height="379px" Width="603px">

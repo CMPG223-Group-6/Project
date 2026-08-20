@@ -13,5 +13,10 @@ namespace Project
         {
 
         }
+
+        protected void gvTourist_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

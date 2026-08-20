@@ -33,15 +33,6 @@ namespace Project
         protected global::System.Web.UI.WebControls.Image Image1;
 
         /// <summary>
-        /// Menu1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Menu Menu1;
-
-        /// <summary>
         /// lblDeleteInfo control.
         /// </summary>
         /// <remarks>
@@ -51,13 +42,13 @@ namespace Project
         protected global::System.Web.UI.WebControls.Label lblDeleteInfo;
 
         /// <summary>
-        /// pnlDelete control.
+        /// Menu1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlDelete;
+        protected global::System.Web.UI.WebControls.Menu Menu1;
 
         /// <summary>
         /// lblTouristID control.
@@ -78,13 +69,13 @@ namespace Project
         protected global::System.Web.UI.WebControls.TextBox txtDeleteTouristID;
 
         /// <summary>
-        /// rfvTouristID control.
+        /// RequiredFieldValidator1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvTouristID;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
 
         /// <summary>
         /// lblDeleteMessage control.
