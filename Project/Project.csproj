@@ -67,6 +67,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AddBooking.aspx" />
+    <Content Include="AddTourist.aspx" />
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
     <Content Include="bin\Project.dll" />
@@ -114,6 +116,8 @@
     <Content Include="CheckIn.aspx" />
     <Content Include="CheckInTourist.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="DeleteBooking.aspx" />
+    <Content Include="DeleteTourist.aspx" />
     <Content Include="Images\Screenshot 2026-08-10 122157.png" />
     <Content Include="Images\zims_zoo_logo.png" />
     <Content Include="MaintainBookings.aspx" />
@@ -188,10 +192,26 @@
     <Content Include="Project.slnx" />
     <Content Include="Reports.aspx" />
     <Content Include="TouristMenu.aspx" />
+    <Content Include="UpdateBooking.aspx" />
+    <Content Include="UpdateTourist.aspx" />
     <Content Include="Web.config" />
     <Content Include="ZooInformation.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddBooking.aspx.cs">
+      <DependentUpon>AddBooking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddBooking.aspx.designer.cs">
+      <DependentUpon>AddBooking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddTourist.aspx.cs">
+      <DependentUpon>AddTourist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddTourist.aspx.designer.cs">
+      <DependentUpon>AddTourist.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Bookings.aspx.cs">
       <DependentUpon>Bookings.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -219,6 +239,20 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteBooking.aspx.cs">
+      <DependentUpon>DeleteBooking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeleteBooking.aspx.designer.cs">
+      <DependentUpon>DeleteBooking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteTourist.aspx.cs">
+      <DependentUpon>DeleteTourist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeleteTourist.aspx.designer.cs">
+      <DependentUpon>DeleteTourist.aspx</DependentUpon>
     </Compile>
     <Compile Include="MaintainBookings.aspx.cs">
       <DependentUpon>MaintainBookings.aspx</DependentUpon>
@@ -284,6 +318,20 @@
     </Compile>
     <Compile Include="TouristMenu.aspx.designer.cs">
       <DependentUpon>TouristMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateBooking.aspx.cs">
+      <DependentUpon>UpdateBooking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdateBooking.aspx.designer.cs">
+      <DependentUpon>UpdateBooking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateTourist.aspx.cs">
+      <DependentUpon>UpdateTourist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdateTourist.aspx.designer.cs">
+      <DependentUpon>UpdateTourist.aspx</DependentUpon>
     </Compile>
     <Compile Include="ZooInformation.aspx.cs">
       <DependentUpon>ZooInformation.aspx</DependentUpon>

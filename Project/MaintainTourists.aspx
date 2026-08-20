@@ -13,10 +13,18 @@
             width: 170px;
         }
         .auto-style2 {
-            width: 455px;
         }
-        .auto-style5 {
-            width: 456px;
+        .auto-style8 {
+            height: 699px;
+        }
+        .auto-style9 {
+            width: 278px;
+        }
+        .auto-style10 {
+            width: 390px;
+        }
+        .auto-style11 {
+            height: 28px;
         }
     </style>
 </head>
@@ -45,18 +53,43 @@
                             <StaticSelectedStyle BackColor="#66FF33" />
                         </asp:Menu>
                     </td>
-                    <td class="auto-style2">&nbsp;</td>
-                    <td class="auto-style5">&nbsp;</td>
+                    <td class="auto-style11">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:Label ID="lblHeader" runat="server" Text="Tourist Dashboard" Font-Bold="True" Font-Size="50px"></asp:Label>
+                        <br />
+                    </td>
                 </tr>
                 <tr>
-                    <td class="auto-style2">&nbsp;</td>
-                    <td class="auto-style5">&nbsp;</td>
+                    <td class="auto-style8">
+                        <table style="width: 100%; height: 195px;">
+                            <tr>
+                                <td class="auto-style9">&nbsp;</td>
+                                <td class="auto-style10">&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="auto-style9">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <asp:Button ID="btnAdd" runat="server" Height="48px" OnClick="btnAdd_Click" Text="Add a Tourist" Width="190px" />
+                                </td>
+                                <td class="auto-style10">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <asp:Button ID="btnUpdate" runat="server" Height="61px" OnClick="btnUpdate_Click" Text="Update Tourist Details" />
+                                    &nbsp;</td>
+                                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <asp:Button ID="btnDelete" runat="server" Height="53px" OnClick="btnDelete_Click" Text="Delete Tourist Details" />
+                                    &nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="auto-style9">&nbsp;</td>
+                                <td class="auto-style10">&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                        </table>
+                    </td>
                 </tr>
                 <tr>
-                    <td class="auto-style2">&nbsp;</td>
-                    <td class="auto-style5">&nbsp;</td>
+                    <td class="auto-style2">
+                        &nbsp;</td>
                 </tr>
-            </table>
+                </table>
         </div>
     </form>
 </body>
