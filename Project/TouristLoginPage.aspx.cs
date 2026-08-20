@@ -7,26 +7,21 @@ using System.Web.UI.WebControls;
 
 namespace Project
 {
-    public partial class Payment : System.Web.UI.Page
+    public partial class EmployeeLoginPage : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
-        protected void btnSignOut_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         protected void Button1_Click(object sender, EventArgs e)
         {
-            
+            Response.Redirect("TouristSignUpPage.aspx");
         }
 
-        protected void Button2_Click(object sender, EventArgs e)
+        protected void btnLoginTourist_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Default.aspx");
+
         }
     }
 }
