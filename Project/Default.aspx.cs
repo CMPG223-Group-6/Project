@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Data.SqlClient;
 using System.Linq;
+using System.Runtime.Remoting.Lifetime;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -11,87 +14,16 @@ namespace Project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!IsPostBack)
-            {
-                lblTouristEmail.Visible = false;
-                lblStaffHeadingLogin.Visible = false;
-                lblTouristPassword.Visible = false;
-                lblStaffEmail.Visible = false;
-                lblTouristHeading.Visible = false;
-                lblTouristID.Visible = false;
-                txtStaffPassword.Visible = false;
-                txtTouristPassword.Visible = false;
-                txtTouristID.Visible = false;
-                btnStaffLogin.Visible = false;
-                btnTouristLogin.Visible = false;
-                lbtnSignUp.Visible = false;
-                lbtnForgotPassword.Visible = false;
-                lblStaffPassword.Visible = false;
-                txtStaffEmail.Visible = false;
-                txtTouristEmail.Visible = false;
-            }
-        }
 
-        protected void btnLoginStaff_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        protected void btnLoginTourist_Click(object sender, EventArgs e)
-        {
-            
         }
 
         protected void rdoStaff_CheckedChanged(object sender, EventArgs e)
         {
-            if(rdoStaff.Checked)
-            {
-                lblStaffEmail.Visible = true;
-                lblStaffHeadingLogin.Visible = true;
-                lblStaffPassword.Visible = true;
-                btnStaffLogin.Visible = true;
-                txtStaffEmail.Visible = true;
-                txtStaffPassword.Visible = true;
-
-                lblTouristID.Visible = false;
-                lblTouristHeading.Visible = false;
-                btnTouristLogin.Visible = false;
-                lbtnSignUp.Visible = false;
-                txtTouristID.Visible = false;
-                lbtnForgotPassword.Visible = false;
-                lblTouristEmail.Visible = false;
-                lblTouristHeading.Visible = false;
-                lblTouristPassword.Visible = false;
-                btnTouristLogin.Visible = false;
-                txtTouristEmail.Visible = false;
-                txtTouristPassword.Visible = false;
-            }
 
         }
 
         protected void rdoTourist_CheckedChanged(object sender, EventArgs e)
         {
-            if(rdoTourist.Checked)
-            {
-                lblTouristID.Visible = true;
-                lblTouristEmail.Visible = true;
-                lblTouristHeading.Visible = true;
-                lblTouristPassword.Visible = true;
-                btnTouristLogin.Visible = true;
-                lbtnSignUp.Visible = true;
-                txtTouristEmail.Visible = true;
-                txtTouristPassword.Visible = true;
-                txtTouristID.Visible = true;
-                lbtnForgotPassword.Visible = true;
-
-                lblStaffEmail.Visible = false;
-                lblStaffHeadingLogin.Visible = false;
-                lblStaffPassword.Visible = false;
-                btnStaffLogin.Visible = false;
-                txtStaffEmail.Visible = false;
-                txtStaffPassword.Visible = false;
-                
-            }
         }
 
         protected void lbtnSignUp_Click(object sender, EventArgs e)
@@ -104,14 +36,41 @@ namespace Project
             Response.Redirect("TouristForgotPassword.aspx");
         }
 
-        protected void btnTouristLogin_Click(object sender, EventArgs e)
+        protected void txtPassword_TextChanged(object sender, EventArgs e)
         {
-            Response.Redirect("TouristMenu.aspx");
+
         }
 
-        protected void btnStaffLogin_Click(object sender, EventArgs e)
+        protected void btnLoginValid_Click(object sender, EventArgs e)
         {
-            Response.Redirect("StaffMenu.aspx");
+            string email = txtEmail.Text.Trim();
+            string domain = "@zims.com";
+            string Gmail = "gmail.com";
+            string acza = "ac.za";
+            string outlook = "outlook.com";
+            string yahoo = "yahoo.com";
+            // Check if the email contains the domain (case-insensitive)
+            if (email.ToLower().EndsWith(domain.ToLower()))
+            {
+                //Valid if the entered password matches the hardcoded password.
+                //before you redirect
+                Response.Redirect("StaffMenu.aspx");
+            }
+            else if (email.ToLower().EndsWith(Gmail.ToLower()) || email.ToLower().EndsWith(acza.ToLower()) || email.ToLower().EndsWith(outlook.ToLower()) || email.ToLower().EndsWith(yahoo.ToLower()))
+            {
+                //When email domain is correct:
+                //1. Check email exists in table(database)
+                //2. Check password at that email
+                //3. If both are correct you can redirect to tourist form
+
+                Response.Redirect("TouristMenu.aspx");
+            }
+            else
+            {
+                lblInvalid.Text = "Incorrect Email address or Password.";
+                txtPassword.Text = "";
+                txtEmail.Text = "";
+            }
         }
     }
 }
