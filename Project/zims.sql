@@ -2,7 +2,7 @@ CREATE TABLE EVENTTYPE
 (
 	EventType_ID					int IDENTITY(1,1) PRIMARY KEY,
 	Event_Name						varchar(100),
-	Event_Dscription				varchar(100)
+	Event_Description				varchar(100)
 );
 
 CREATE TABLE EVENT 
@@ -27,7 +27,7 @@ CREATE TABLE TOURIST (
 	Tourist_LastName				varchar(35),
 	Tourist_FirstName				varchar(35),
 	Contact_Number					char(10),
-	Email_Address					varchar(20),
+	Email_Address					varchar(35),
 	User_Password					varchar(25),
 	Country_ID						int
 	CONSTRAINT FK_TOURIST_COUNTRY FOREIGN KEY(Country_ID) REFERENCES COUNTRY(Country_ID)
@@ -39,7 +39,7 @@ CREATE TABLE BOOKING
 	Event_ID						int,
 	Tourist_ID						int,
 	Number_Tickets					int,
-	Arrive_Date						int,
+	Arrive_Date						date,
 	Questionnaires					varchar(100),
 	Payment_method					varchar(20),
 	Payment_Amount					money,
