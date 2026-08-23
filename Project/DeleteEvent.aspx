@@ -26,7 +26,7 @@
             <table style="width:100%;">
                 <tr>
                     <td class="auto-style1" rowspan="11">
-                        <asp:Image ID="imgLogo" runat="server" Height="182px" ImageUrl="~/Images/zims_zoo_logo.png" Width="331px" />
+                        <asp:Image ID="imgLogo" runat="server" Height="171px" ImageUrl="~/Images/zims_zoo_logo.png" Width="331px" />
                         <asp:Menu ID="Menu1" runat="server" BackColor="#003300" DynamicHorizontalOffset="13" Font-Bold="True" Font-Size="13pt" ForeColor="White" Height="700px" StaticSubMenuIndent="25px" Width="330px">
                             <DynamicHoverStyle BackColor="#339933" />
                             <Items>
@@ -39,18 +39,16 @@
                         </asp:Menu>
                     </td>
                     <td class="auto-style2" colspan="3" style="border-style: hidden; background-color: #003300">
-                            <asp:Label ID="lblChangeEvent" runat="server" Text="Change New Event Type Details" BackColor="#003300" Font-Bold="True" Font-Size="20pt" ForeColor="White"></asp:Label>
+                            <asp:Label ID="lblChangeEvent" runat="server" Text="Delete Event Type Details" BackColor="#003300" Font-Bold="True" Font-Size="20pt" ForeColor="White"></asp:Label>
                             </td>
                 </tr>
                 <tr>
                     <td class="auto-style4" colspan="2">
                             <asp:Label ID="lblEventName0" runat="server" Text="Event ID"></asp:Label>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="ddlEventID" ErrorMessage="*" ForeColor="Red" ValidationGroup="UpdateEvent"></asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="ddlEventID" ErrorMessage="*" ForeColor="Red" ValidationGroup="UpdateEvent" InitialValue="0"></asp:RequiredFieldValidator>
                             <br />
                             <asp:DropDownList ID="ddlEventID" runat="server" Width="290px" Height="30px">
-                                <asp:ListItem></asp:ListItem>
-                                <asp:ListItem>1</asp:ListItem>
-                                <asp:ListItem>2</asp:ListItem>
+                                <asp:ListItem Value="0">Select Event ID</asp:ListItem>
                             </asp:DropDownList>
                             </td>
                     <td class="auto-style4">&nbsp;</td>
@@ -70,7 +68,7 @@
                     <td style="text-align: right">
                             <asp:Button ID="btnNo" runat="server" Text="No" Height="31px" Width="83px" OnClick="btnCancel_Click" Visible="False" />
                             &nbsp;
-                        <asp:Button ID="btnYes" runat="server" BackColor="Red" Height="32px" style="margin-top: 0px" Text="Yes" Visible="False" Width="104px" />
+                        <asp:Button ID="btnYes" runat="server" BackColor="Red" Height="32px" style="margin-top: 0px" Text="Yes" Visible="False" Width="104px" OnClick="btnYes_Click" />
 &nbsp;&nbsp;&nbsp;
                         <br />
                     </td>
@@ -85,7 +83,7 @@
                 </tr>
                 <tr>
                     <td colspan="3">
-                        <asp:GridView ID="GridView1" runat="server" Width="967px">
+                        <asp:GridView ID="gvEvents" runat="server" Width="967px">
                         </asp:GridView>
                     </td>
                 </tr>

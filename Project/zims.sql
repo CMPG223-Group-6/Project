@@ -9,7 +9,7 @@ CREATE TABLE EVENT
 (
 	Event_ID						int IDENTITY(1,1) PRIMARY KEY,
 	EventType_ID					int,
-	Event_Price						int,
+	Event_Price						money,
 	Max_Visitors					int,
 	Spaces_Available				int,
 	CONSTRAINT FK_EVENT_EVENTTYPE FOREIGN KEY(EventType_ID) REFERENCES EVENTTYPE(EventType_ID)

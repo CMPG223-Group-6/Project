@@ -9,22 +9,6 @@
 
 
 
-        .auto-style1 {
-            width: 1368px;
-        }
-        .auto-style6 {
-            width: 170px;
-        }
-        .auto-style15 {
-            width: 450px;
-            height: 706px;
-        }
-        .auto-style5 {
-            width: 450px;
-        }
-        .auto-style16 {
-            height: 111px;
-        }
         .auto-style18 {
             width: 1368px;
             height: 892px;
@@ -32,10 +16,6 @@
         .auto-style19 {
             width: 331px;
             height: 158px;
-        }
-        .auto-style20 {
-            height: 158px;
-            width: 516px;
         }
         .auto-style25 {
             height: 158px;
@@ -122,10 +102,10 @@
                         </asp:Menu>
                     </td>
                     <td class="auto-style39">
-                                        <asp:Label ID="lblTouristID" runat="server" Text="Enter Tourist ID:"></asp:Label>
+                                        <asp:Label ID="lblBookingID" runat="server" Text="Enter Booking ID:"></asp:Label>
                                         <br />
-                                        <asp:TextBox ID="txtDeleteTouristID" runat="server"></asp:TextBox>
-                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtDeleteTouristID" ErrorMessage="Enter Tourist ID" ForeColor="Red"></asp:RequiredFieldValidator>
+                                        <asp:TextBox ID="txtBookingID" runat="server"></asp:TextBox>
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtBookingID" ErrorMessage="Enter Booking ID" ForeColor="Red"></asp:RequiredFieldValidator>
                     </td>
                     <td class="auto-style40">
                                         <asp:Label ID="lblDeleteMessage" runat="server"></asp:Label>
@@ -133,15 +113,19 @@
                 </tr>
                 <tr>
                     <td class="auto-style39">
-                                        <asp:Button ID="BtnDelete" runat="server" Height="28px" Text="Delete" Width="145px" BackColor="Red" Font-Bold="True" ForeColor="White" OnClientClick="return confirm('Are you sure you want to delete this booking?');" />
+                                        <asp:Button ID="BtnDelete" runat="server" Height="28px" Text="Delete" Width="145px" BackColor="Red" Font-Bold="True" ForeColor="White" OnClientClick="return confirm('Are you sure you want to delete this booking?');" OnClick="BtnDelete_Click" />
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <asp:Button ID="btnContinue" runat="server" Height="27px" Text="Close" Width="128px" BackColor="#999999" Font-Bold="True" ForeColor="White" />
+                                        <asp:Button ID="btnCancel" runat="server" Height="27px" Text="Close" Width="128px" BackColor="#999999" Font-Bold="True" ForeColor="White" />
                                         </td>
-                    <td class="auto-style40">&nbsp;</td>
+                    <td class="auto-style40">
+                        <asp:Button ID="btnYes" runat="server" OnClick="btnYes_Click" Text="Yes" Visible="False" Width="93px" />
+&nbsp;&nbsp;
+                        <asp:Button ID="btnNo" runat="server" OnClick="btnNo_Click" Text="No" Visible="False" Width="89px" />
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style37" colspan="2">
-                        <asp:GridView ID="GridView1" runat="server" Height="379px" Width="1022px">
+                        <asp:GridView ID="gvBookings" runat="server" Height="379px" Width="1022px">
                         </asp:GridView>
                     </td>
                 </tr>

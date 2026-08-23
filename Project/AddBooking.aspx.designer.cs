@@ -69,13 +69,13 @@ namespace Project
         protected global::System.Web.UI.WebControls.Label lblTouristID;
 
         /// <summary>
-        /// txtUpdTouristID control.
+        /// txtTouristID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUpdTouristID;
+        protected global::System.Web.UI.WebControls.TextBox txtTouristID;
 
         /// <summary>
         /// rfvTouristID control.
@@ -114,60 +114,6 @@ namespace Project
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvEventID;
 
         /// <summary>
-        /// lblName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblName;
-
-        /// <summary>
-        /// txtUpdName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUpdName;
-
-        /// <summary>
-        /// rfvName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvName;
-
-        /// <summary>
-        /// lblLName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblLName;
-
-        /// <summary>
-        /// txtLName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtLName;
-
-        /// <summary>
-        /// rfvName0 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvName0;
-
-        /// <summary>
         /// lblNoOfTickets control.
         /// </summary>
         /// <remarks>
@@ -204,13 +150,22 @@ namespace Project
         protected global::System.Web.UI.WebControls.Label lblDate;
 
         /// <summary>
-        /// txtUpdDate control.
+        /// txtArriveDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUpdDate;
+        protected global::System.Web.UI.WebControls.TextBox txtArriveDate;
+
+        /// <summary>
+        /// lblMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMessage;
 
         /// <summary>
         /// rfvDate control.
@@ -231,13 +186,13 @@ namespace Project
         protected global::System.Web.UI.WebControls.Label lblPaymentMethod;
 
         /// <summary>
-        /// ddlEventID0 control.
+        /// ddlPaymentMethod control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlEventID0;
+        protected global::System.Web.UI.WebControls.DropDownList ddlPaymentMethod;
 
         /// <summary>
         /// lblAmount control.
@@ -258,13 +213,13 @@ namespace Project
         protected global::System.Web.UI.WebControls.Label lblAmountOutput;
 
         /// <summary>
-        /// GridView1 control.
+        /// gvEvents control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.GridView gvEvents;
 
         /// <summary>
         /// BtnAddBooking control.

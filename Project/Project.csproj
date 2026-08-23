@@ -214,6 +214,7 @@
     <Content Include="UpdateTourist.aspx" />
     <Content Include="Web.config" />
     <Content Include="zims.sql" />
+    <Content Include="zims_data_setup.sql" />
     <Content Include="ZooInformation.aspx" />
   </ItemGroup>
   <ItemGroup>

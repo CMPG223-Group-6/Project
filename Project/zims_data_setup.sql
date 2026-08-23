@@ -15,9 +15,9 @@ INSERT INTO EVENTTYPE (Event_Name, Event_Description) VALUES
 -- EVENT (3 rows) - EventType_ID 1,2,3 correspond to rows above
 -- ---------------------------------------------------------
 INSERT INTO EVENT (EventType_ID, Event_Price, Max_Visitors, Spaces_Available) VALUES
-(1, 150, 50, 50),
-(2, 100, 30, 30),
-(3, 200, 20, 20);
+(1, 150.00, 50, 50),
+(2, 100.00, 30, 30),
+(3, 200.00, 20, 20);
 
 -- ---------------------------------------------------------
 -- COUNTRY (all countries)
