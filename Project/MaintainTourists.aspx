@@ -6,36 +6,36 @@
 <head runat="server">
     <title></title>
     <style type="text/css">
-        .auto-style1 {
-            width: 1368px;
-        }
-        .auto-style6 {
-            width: 170px;
+        #Menu1 ul.static { height:40px;padding:40px 10px 40px 10px; }
+	#Menu1 ul { list-style:none;margin:0;padding:0;width:auto; }
+	#Menu1 a.popout { background-image:url("mvwres://System.Web,%20Version=4.0.0.0,%20Culture=neutral,%20PublicKeyToken=b03f5f7f11d50a3a/Menu_Popout.gif");background-repeat:no-repeat;background-position:right center;padding-right:14px; }
+	#Menu1 a { color:White;font-size:13pt;font-weight:bold;text-decoration:none;white-space:nowrap;display:block; }
+	    .auto-style1 {
+            width: 262px;
         }
         .auto-style2 {
+            height: 125px;
         }
-        .auto-style8 {
-            height: 699px;
-        }
-        .auto-style9 {
-            width: 278px;
-        }
-        .auto-style10 {
-            width: 390px;
-        }
-        .auto-style11 {
-            height: 28px;
+        .auto-style3 {
+            height: 13px;
         }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
-            <table class="auto-style1">
+            <table style="width: 100%; height: 400px;">
                 <tr>
-                    <td class="auto-style6" rowspan="3">
-                        <asp:Image ID="Image1" runat="server" Height="158px" ImageUrl="~/Images/zims_zoo_logo.png" Width="331px" />
-                        <asp:Menu ID="Menu1" runat="server" BackColor="#003300" DynamicHorizontalOffset="13" Font-Bold="True" Font-Size="13pt" ForeColor="White" Height="700px" StaticSubMenuIndent="25px" Width="330px">
+                    <td class="auto-style1">
+                        <asp:Image ID="Image2" runat="server" Height="158px" ImageUrl="~/Images/zims_zoo_logo.png" Width="331px" />
+                        </td>
+                    <td colspan="3" style="border-style: double">
+                        <asp:Label ID="lblHeader" runat="server" Text="Tourist Dashboard" Font-Bold="True" Font-Size="50px"></asp:Label>
+                        </td>
+                </tr>
+                <tr>
+                    <td class="auto-style1" rowspan="8" style="background-color: #003300">
+                        <asp:Menu ID="Menu2" runat="server" BackColor="#003300" DynamicHorizontalOffset="13" Font-Bold="True" Font-Size="13pt" ForeColor="White" Height="700px" StaticSubMenuIndent="25px" Width="330px">
                             <DynamicHoverStyle BackColor="#339933" />
                             <Items>
                                 <asp:MenuItem Text="Maintain" Value="Maintain">
@@ -53,43 +53,47 @@
                             <StaticSelectedStyle BackColor="#66FF33" />
                         </asp:Menu>
                     </td>
-                    <td class="auto-style11">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Label ID="lblHeader" runat="server" Text="Tourist Dashboard" Font-Bold="True" Font-Size="50px"></asp:Label>
+                    <td>
+                                    <asp:Button ID="btnAdd" runat="server" Height="32px" OnClick="btnAdd_Click" Text="Add a Tourist" Width="220px" BackColor="#00CC00" />
+                                </td>
+                    <td>
+                                    <asp:Button ID="btnUpdate" runat="server" Height="36px" OnClick="btnUpdate_Click" Text="Update Tourist Details" BackColor="#999999" Width="220px" />
+                                    </td>
+                    <td>
+                                    <asp:Button ID="btnDelete" runat="server" Height="40px" OnClick="btnDelete_Click" Text="Delete Tourist" BackColor="Red" Width="220px" />
+                                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:Label ID="lblTourists" runat="server" Font-Bold="True" Font-Size="15pt" Text="Current Tourists:"></asp:Label>
+                    </td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <asp:GridView ID="gvTourists" runat="server" Width="1009px">
+                        </asp:GridView>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style3" colspan="3">
                         <br />
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style8">
-                        <table style="width: 100%; height: 195px;">
-                            <tr>
-                                <td class="auto-style9">&nbsp;</td>
-                                <td class="auto-style10">&nbsp;</td>
-                                <td>&nbsp;</td>
-                            </tr>
-                            <tr>
-                                <td class="auto-style9">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <asp:Button ID="btnAdd" runat="server" Height="48px" OnClick="btnAdd_Click" Text="Add a Tourist" Width="190px" />
-                                </td>
-                                <td class="auto-style10">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <asp:Button ID="btnUpdate" runat="server" Height="61px" OnClick="btnUpdate_Click" Text="Update Tourist Details" />
-                                    &nbsp;</td>
-                                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <asp:Button ID="btnDelete" runat="server" Height="53px" OnClick="btnDelete_Click" Text="Delete Tourist Details" />
-                                    &nbsp;</td>
-                            </tr>
-                            <tr>
-                                <td class="auto-style9">&nbsp;</td>
-                                <td class="auto-style10">&nbsp;</td>
-                                <td>&nbsp;</td>
-                            </tr>
-                        </table>
-                    </td>
+                    <td colspan="3">&nbsp;</td>
                 </tr>
                 <tr>
-                    <td class="auto-style2">
-                        &nbsp;</td>
+                    <td class="auto-style2" colspan="3"></td>
                 </tr>
-                </table>
+                <tr>
+                    <td colspan="3">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td colspan="3"></td>
+                </tr>
+            </table>
         </div>
     </form>
 </body>

@@ -20,31 +20,24 @@
             height: 282px;
         }
         .auto-style3 {
-            height: 282px;
         }
         .auto-style6 {
             width: 193px;
-            height: 91px;
-        }
-        .auto-style7 {
             height: 91px;
         }
         .auto-style1 {
             width: 193px;
             height: 40px;
         }
-        .auto-style8 {
-            height: 40px;
-        }
-    </style>
+        </style>
 </head>
-<body>
+<body style="height: 622px">
     <form id="form1" runat="server">
-        <div>
-            <table style="width:100%;">
+        <div style="height: 621px; margin-top: 0px;">
+            <table style="width:100%; height: 637px;">
                 <tr>
                     <td>
-                        <table style="width:100%;">
+                        <table style="width:100%; height: 377px;">
                             <tr>
                                 <td class="auto-style4" style="border-style: inset; border-color: #006600; background-color: #006600">&nbsp;<br />
                                     <asp:Label ID="lblZooInfo" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="White" Text="ZooInfoSys"></asp:Label>
@@ -54,10 +47,15 @@
                                     &nbsp;&nbsp;&nbsp;&nbsp;
                                     <asp:Label ID="lblZooInfo0" runat="server" Font-Size="Small" ForeColor="#999999" Text="Operations"></asp:Label>
                                 </td>
-                                <td class="auto-style5" colspan="2" style="border-style: double">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <td class="auto-style5" style="border-style: double">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     <asp:Label ID="lblInfo" runat="server" Font-Bold="True" Font-Size="X-Large" Text="Bookings"></asp:Label>
                                     <br />
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                                    <br />
+                                    <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
                             </tr>
                             <tr>
                                 <td class="auto-style2" style="border-style: inset; border-color: #006600; background-color: #006600">
@@ -78,8 +76,39 @@
                                         <StaticHoverStyle BackColor="#669999" />
                                     </asp:Menu>
                                 </td>
-                                <td class="auto-style3">&nbsp;</td>
-                                <td class="auto-style3"></td>
+                                <td class="auto-style3" rowspan="3">
+                                    <asp:Panel ID="Panel1" runat="server" Height="490px">
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <asp:Label ID="lblSearch" runat="server" Text="Type To Search Event:"></asp:Label>
+                                        &nbsp;&nbsp;
+                                        <asp:TextBox ID="txtSearch" runat="server" Width="396px" OnTextChanged="txtSearch_TextChanged" TextMode="Search"></asp:TextBox>
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtSearch" ErrorMessage="*" ForeColor="Red" ValidationGroup="btnSearch"></asp:RequiredFieldValidator>
+                                        <br />
+                                        <br />
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <asp:Button ID="btnSearch" runat="server" BackColor="#CCCCCC" Text="Search" ValidationGroup="btnSearch" Width="81px" />
+                                        &nbsp;&nbsp;&nbsp;
+                                        <asp:Button ID="btnReload" runat="server" BackColor="#CCFFFF" Text="Reload" />
+                                        <br />
+                                        <br />
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <asp:Button ID="btnMyBookings" runat="server" BackColor="#669999" ForeColor="White" OnClick="btnMyBookings_Click" Text="My Bookings" Width="192px" Height="29px" />
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <asp:Button ID="btnNewBooking" runat="server" BackColor="#006600" BorderColor="#003300" BorderStyle="Groove" ForeColor="White" Height="28px" OnClick="btnNewBooking_Click" Text="+ New Booking" Width="161px" />
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <asp:Button ID="btnUpdateBooking" runat="server" Height="28px" OnClick="btnUpdateBooking_Click" Text="Update Booking" Width="163px" />
+                                        &nbsp;&nbsp;&nbsp;
+                                        <asp:Button ID="btnCancelBooking" runat="server" BackColor="#FF3300" BorderColor="Red" BorderStyle="Groove" ForeColor="White" Height="27px" OnClick="btnCancelBooking_Click" style="margin-left: 18px" Text="Cancel Booking" Width="146px" />
+                                        <br />
+                                        &nbsp;&nbsp;
+                                        <asp:Panel ID="Panel2" runat="server" GroupingText="Available Events:" Height="362px" ScrollBars="Both">
+                                            <asp:GridView ID="gdvDisplayEvents" runat="server" Height="241px" Width="1190px">
+                                            </asp:GridView>
+                                        </asp:Panel>
+                                        <br />
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        </asp:Panel>
+                                </td>
                             </tr>
                             <tr>
                                 <td class="auto-style6" style="border-style: inset; border-color: #006600; background-color: #006600">
@@ -93,8 +122,6 @@
                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     <asp:Label ID="lblNameDisplay" runat="server" Font-Size="Small" ForeColor="#999999"></asp:Label>
                                 </td>
-                                <td class="auto-style7"></td>
-                                <td class="auto-style7"></td>
                             </tr>
                             <tr>
                                 <td class="auto-style1" style="border-style: inset; border-color: #006600; background-color: #006600">
@@ -105,8 +132,6 @@
                                         <StaticHoverStyle BorderColor="#669999" />
                                     </asp:Menu>
                                 </td>
-                                <td class="auto-style8"></td>
-                                <td class="auto-style8"></td>
                             </tr>
                         </table>
                     </td>

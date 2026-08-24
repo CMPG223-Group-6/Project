@@ -11,21 +11,35 @@
             width: 1368px;
         }
         .auto-style6 {
-            width: 170px;
+            width: 455px;
         }
-        .auto-style2 {
+        .auto-style2 {            height: 118px;
         }
         .auto-style5 {
-            width: 450px;
-        }
-        .auto-style15 {
-            width: 450px;
-            height: 706px;
-        }
-        .auto-style16 {
-            height: 26px;
+            width: 456px;
         }
         .auto-style17 {
+        }
+        .auto-style18 {
+            width: 216px;
+        }
+        .auto-style19 {
+            height: 70px;
+        }
+        .auto-style20 {
+            height: 69px;
+        }
+        .auto-style21 {
+            height: 84px;
+        }
+        .auto-style22 {
+            height: 79px;
+        }
+        .auto-style23 {
+            height: 80px;
+        }
+        .auto-style24 {
+            height: 52px;
         }
         </style>
 </head>
@@ -35,27 +49,10 @@
         <div>
             <table class="auto-style1">
                 <tr>
-                    <td class="auto-style6" rowspan="3">
-                        <asp:Image ID="Image1" runat="server" Height="158px" ImageUrl="~/Images/zims_zoo_logo.png" Width="331px" />
-                        <asp:Menu ID="Menu1" runat="server" BackColor="#003300" DynamicHorizontalOffset="13" Font-Bold="True" Font-Size="13pt" ForeColor="White" Height="700px" StaticSubMenuIndent="25px" Width="330px">
-                            <DynamicHoverStyle BackColor="#339933" />
-                            <Items>
-                                <asp:MenuItem Text="Maintain" Value="Maintain">
-                                    <asp:MenuItem NavigateUrl="~/MaintainTourists.aspx" Text="Maintain Tourists" Value="Maintain Tourists"></asp:MenuItem>
-                                    <asp:MenuItem NavigateUrl="~/MaintainEventsTypes.aspx" Text="Maintain Event Types" Value="Maintain Event Types"></asp:MenuItem>
-                                    <asp:MenuItem NavigateUrl="~/MaintainBookings.aspx" Text="Maintain Bookings" Value="Maintain Bookings"></asp:MenuItem>
-                                </asp:MenuItem>
-                                <asp:MenuItem NavigateUrl="~/ProcessPayments.aspx" Text="Process Payments" Value="Process Payments"></asp:MenuItem>
-                                <asp:MenuItem NavigateUrl="~/CheckInTourist.aspx" Text="Check-In" Value="Check-In"></asp:MenuItem>
-                                <asp:MenuItem NavigateUrl="~/Reports.aspx" Text="Reports" Value="Reports"></asp:MenuItem>
-                                <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Log Out" Value="Log Out"></asp:MenuItem>
-                            </Items>
-                            <StaticHoverStyle BackColor="#339933" />
-                            <StaticMenuStyle Height="40px" HorizontalPadding="10px" VerticalPadding="40px" />
-                            <StaticSelectedStyle BackColor="#66FF33" />
-                        </asp:Menu>
+                    <td class="auto-style18" rowspan="2">
+                        <asp:Image ID="Image1" runat="server" Height="166px" ImageUrl="~/Images/zims_zoo_logo.png" Width="331px" />
                     </td>
-                    <td class="auto-style2" colspan="2">
+                    <td class="auto-style2" colspan="2" style="border-style: double">
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <asp:Label ID="lblAddInfo" runat="server" Text="Add Tourist Dashboard:" Font-Bold="True" Font-Size="45px" style="text-align: center"></asp:Label>
                         <br />
@@ -64,43 +61,42 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style2" rowspan="2">
-                        <asp:Panel ID="Panel1" runat="server" Height="391px">
-                            <table style="width:100%; height: 389px;">
+                    <td class="auto-style6" rowspan="2">
+                            <table style="width:100%; height: 698px;">
                                 <tr>
-                                    <td class="auto-style16">
-                                        <asp:Label ID="lblName" runat="server" Text="Enter your name:"></asp:Label>
+                                    <td class="auto-style19">
+                                        <asp:Label ID="lblName" runat="server" Text="Enter Tourist name:"></asp:Label>
                                         <br />
                                         <asp:TextBox ID="txtName" runat="server"></asp:TextBox>
                                         <asp:RequiredFieldValidator ID="rfvName" runat="server" ControlToValidate="txtName" ErrorMessage="Please enter a name!" ForeColor="Red"></asp:RequiredFieldValidator>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>
-                                        <asp:Label ID="lblSurname" runat="server" Text="Enter your surname:"></asp:Label>
+                                    <td class="auto-style20">
+                                        <asp:Label ID="lblSurname" runat="server" Text="Enter Tourist surname:"></asp:Label>
                                         <br />
                                         <asp:TextBox ID="txtSurname" runat="server"></asp:TextBox>
                                         <asp:RequiredFieldValidator ID="rfvSurname" runat="server" ErrorMessage="Please enter a surname!" ForeColor="Red" ControlToValidate="txtSurname"></asp:RequiredFieldValidator>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="auto-style17">
-                                        <asp:Label ID="lblPhoneNo" runat="server" Text="Enter your phone number:"></asp:Label>
+                                    <td class="auto-style21">
+                                        <asp:Label ID="lblPhoneNo" runat="server" Text="Enter Tourist phone number:"></asp:Label>
                                         <br />
                                         <asp:TextBox ID="txtPhoneNo" runat="server"></asp:TextBox>
                                         <asp:RequiredFieldValidator ID="rfvPhoneNo" runat="server" ControlToValidate="txtPhoneNo" ErrorMessage="Please enter a phone number!" ForeColor="Red"></asp:RequiredFieldValidator>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="auto-style17">
-                                        <asp:Label ID="lblEmail" runat="server" Text="Enter your email:"></asp:Label>
+                                    <td class="auto-style22">
+                                        <asp:Label ID="lblEmail" runat="server" Text="Enter Tourist email:"></asp:Label>
                                         <br />
                                         <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
                                         <asp:RegularExpressionValidator ID="revEmail" runat="server" ControlToValidate="txtEmail" ErrorMessage="Please enter a email!" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="auto-style17">
+                                    <td class="auto-style23">
                                         <asp:Label ID="lblDate" runat="server" Text="Check In Date:"></asp:Label>
                                         <br />
                                         <asp:TextBox ID="txtDate" runat="server" TextMode="Date"></asp:TextBox>
@@ -108,7 +104,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="auto-style17">
+                                    <td class="auto-style23">
                                         <asp:Label ID="lblCountry" runat="server" Text="Country of Origin:"></asp:Label>
                                         <br />
                                         <asp:DropDownList ID="ddlCountries" runat="server" Height="16px" Width="161px">
@@ -317,25 +313,51 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="auto-style17">&nbsp;</td>
-                                </tr>
-                                <tr>
-                                    <td class="auto-style17">&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <asp:Button ID="BtnAdd" runat="server" Height="28px" Text="Add" Width="145px" BackColor="Green" Font-Bold="True" ForeColor="White" OnClick="BtnAdd_Click" />
+                                    <td class="auto-style17">
+                                        <br />
+                                        <asp:Button ID="BtnAdd" runat="server" Height="28px" Text="Add" Width="147px" BackColor="Green" Font-Bold="True" ForeColor="White" />
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <asp:Button ID="btnContinue" runat="server" Height="27px" Text="Continue" Width="128px" BackColor="Yellow" Font-Bold="True" ForeColor="White" OnClick="btnContinue_Click" />
+                                        <asp:Button ID="btnContinue" runat="server" Height="27px" Text="Continue" Width="128px" BackColor="White" Font-Bold="True" ForeColor="Black" BorderStyle="Solid" />
                                     </td>
                                 </tr>
+                                <tr>
+                                    <td class="auto-style24">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="auto-style17">
+                                        &nbsp;</td>
+                                </tr>
                             </table>
-                        </asp:Panel>
-                    </td>
-                    <td class="auto-style15">
-                        <asp:GridView ID="GridView1" runat="server" Height="379px" Width="603px">
-                        </asp:GridView>
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style5">&nbsp;</td>
+                    <td class="auto-style18" style="background-color: #FFFFFF">
+                        <asp:Menu ID="Menu1" runat="server" BackColor="#003300" DynamicHorizontalOffset="13" Font-Bold="True" Font-Size="13pt" ForeColor="White" Height="700px" StaticSubMenuIndent="25px" Width="330px">
+                            <DynamicHoverStyle BackColor="#339933" />
+                            <Items>
+                                <asp:MenuItem Text="Maintain" Value="Maintain">
+                                    <asp:MenuItem NavigateUrl="~/MaintainTourists.aspx" Text="Maintain Tourists" Value="Maintain Tourists"></asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="~/MaintainEventsTypes.aspx" Text="Maintain Event Types" Value="Maintain Event Types"></asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="~/MaintainBookings.aspx" Text="Maintain Bookings" Value="Maintain Bookings"></asp:MenuItem>
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/ProcessPayments.aspx" Text="Process Payments" Value="Process Payments"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/CheckInTourist.aspx" Text="Check-In" Value="Check-In"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Reports.aspx" Text="Reports" Value="Reports"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Log Out" Value="Log Out"></asp:MenuItem>
+                            </Items>
+                            <StaticHoverStyle BackColor="#339933" />
+                            <StaticMenuStyle Height="40px" HorizontalPadding="10px" VerticalPadding="40px" />
+                            <StaticSelectedStyle BackColor="#66FF33" />
+                        </asp:Menu>
+                    </td>
+                    <td class="auto-style5">
+                        <asp:GridView ID="gvTourist" runat="server" Height="379px" Width="603px" OnSelectedIndexChanged="gvTourist_SelectedIndexChanged">
+                            <Columns>
+                                <asp:ButtonField ButtonType="Button" Text="Select" />
+                            </Columns>
+                        </asp:GridView>
+                    </td>
                 </tr>
             </table>
         </div>
