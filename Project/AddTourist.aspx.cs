@@ -15,7 +15,7 @@ namespace Project
         SqlConnection conn;
         SqlDataAdapter ap;
         SqlDataReader reader;
-        string ConString = @"Data Source=localhost;Initial Catalog=zims.db;Integrated Security=True;Trust Server Certificate=True";
+        string ConString = @"Data Source=localhost;Initial Catalog=zims.db;Integrated Security=True";
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -34,7 +34,27 @@ namespace Project
 
         protected void BtnAdd_Click(object sender, EventArgs e)
         {
+            string Name = txtName.Text;
+            string Surname = txtSurname.Text;
+            string Country = ddlCountries.SelectedValue;
+            string Number = txtPhoneNo.Text;
+            string Email = txtEmail.Text;
+            string date = txtDate.Text;
 
+            using (conn = new SqlConnection(ConString))
+            {
+                string sql = "INSERT INTO Tourist (Tourist_FirstName,Tourist_LastName,Contact_Number,Email_Address, Date) VALUES (@LastName, @FirstName, @Country, @PhoneNo, @Email, @Date)";
+                cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@FirstName", Name);
+                cmd.Parameters.AddWithValue("@LastName", Surname);
+                cmd.Parameters.AddWithValue("@Country", Country);
+                cmd.Parameters.AddWithValue("@PhoneNo", Number);
+                cmd.Parameters.AddWithValue("@Email", Email);
+                cmd.Parameters.AddWithValue("@Date", date);
+               
+                cmd.ExecuteNonQuery();
+
+            }
         }
 
         private void LoadTourists()

@@ -15,7 +15,7 @@ namespace Project
         SqlConnection conn;
         SqlDataAdapter ap;
         SqlDataReader reader;
-        string ConString = @"Data Source=localhost;Initial Catalog=zims.db;Integrated Security=True;Trust Server Certificate=True";
+        string ConString = @"Data Source=localhost;Initial Catalog=zims.db;Integrated Security=True";
         protected void Page_Load(object sender, EventArgs e)
         {
             LoadTourists();
