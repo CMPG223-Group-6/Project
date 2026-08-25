@@ -190,11 +190,8 @@
     <Content Include="Reports.aspx" />
     <Content Include="TouristMenu.aspx" />
     <Content Include="Web.config" />
-<<<<<<< Updated upstream
-=======
     <Content Include="WebForm1.aspx" />
     <Content Include="zims.sql" />
->>>>>>> Stashed changes
     <Content Include="ZooInformation.aspx" />
   </ItemGroup>
   <ItemGroup>
@@ -291,8 +288,6 @@
     <Compile Include="TouristMenu.aspx.designer.cs">
       <DependentUpon>TouristMenu.aspx</DependentUpon>
     </Compile>
-<<<<<<< Updated upstream
-=======
     <Compile Include="TouristSignUp.aspx.cs">
       <DependentUpon>TouristSignUp.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -321,7 +316,6 @@
     <Compile Include="WebForm1.aspx.designer.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
->>>>>>> Stashed changes
     <Compile Include="ZooInformation.aspx.cs">
       <DependentUpon>ZooInformation.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
