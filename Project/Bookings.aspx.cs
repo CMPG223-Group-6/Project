@@ -13,5 +13,30 @@ namespace Project
         {
 
         }
+
+        protected void btnMyBookings_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("MyBookings.aspx");
+        }
+
+        protected void btnNewBooking_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("NewBooking.aspx");
+        }
+
+        protected void btnCancelBooking_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("CancelBooking.aspx");
+        }
+
+        protected void btnUpdateBooking_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("UpdateBooking.aspx");
+        }
+
+        protected void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

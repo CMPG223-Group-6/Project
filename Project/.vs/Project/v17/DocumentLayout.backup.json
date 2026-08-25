@@ -1,43 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\mapho\\OneDrive\\Documents\\GitHub\\Project\\Project\\",
+  "WorkspaceRootPath": "C:\\Users\\mapho\\Downloads\\Project\\",
   "Documents": [
     {
-<<<<<<< Updated upstream
-      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\mapho\\OneDrive\\Documents\\GitHub\\Project\\Project\\zooinformation.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:zooinformation.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\mapho\\OneDrive\\Documents\\GitHub\\Project\\Project\\zooinformation.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:zooinformation.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|c:\\users\\mapho\\onedrive\\documents\\github\\project\\project\\reports.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:reports.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\mapho\\OneDrive\\Documents\\GitHub\\Project\\Project\\reports.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|c:\\users\\mapho\\downloads\\project\\reports.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:reports.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\mapho\\OneDrive\\Documents\\GitHub\\Project\\Project\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\mapho\\OneDrive\\Documents\\GitHub\\Project\\Project\\touristmenu.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:touristmenu.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-=======
-      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|c:\\users\\mapho\\onedrive\\documents\\github\\project\\project\\reports.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:reports.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\mapho\\OneDrive\\Documents\\GitHub\\Project\\Project\\reports.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\mapho\\Downloads\\Project\\reports.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:reports.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\mapho\\OneDrive\\Documents\\GitHub\\Project\\Project\\zooinformation.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\mapho\\Downloads\\Project\\zooinformation.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:zooinformation.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
->>>>>>> Stashed changes
     }
   ],
   "DocumentGroupContainers": [
@@ -47,51 +22,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-<<<<<<< Updated upstream
-          "SelectedChildIndex": 2,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "TouristMenu.aspx",
-              "DocumentMoniker": "C:\\Users\\mapho\\OneDrive\\Documents\\GitHub\\Project\\Project\\TouristMenu.aspx",
-              "RelativeDocumentMoniker": "TouristMenu.aspx",
-              "ToolTip": "C:\\Users\\mapho\\OneDrive\\Documents\\GitHub\\Project\\Project\\TouristMenu.aspx",
-              "RelativeToolTip": "TouristMenu.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2026-08-10T10:24:50.726Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ZooInformation.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\mapho\\OneDrive\\Documents\\GitHub\\Project\\Project\\ZooInformation.aspx.cs",
-              "RelativeDocumentMoniker": "ZooInformation.aspx.cs",
-              "ToolTip": "C:\\Users\\mapho\\OneDrive\\Documents\\GitHub\\Project\\Project\\ZooInformation.aspx.cs",
-              "RelativeToolTip": "ZooInformation.aspx.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEUAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-12T19:25:53.618Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-=======
           "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Reports.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\mapho\\OneDrive\\Documents\\GitHub\\Project\\Project\\Reports.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\mapho\\Downloads\\Project\\Reports.aspx.cs",
               "RelativeDocumentMoniker": "Reports.aspx.cs",
-              "ToolTip": "C:\\Users\\mapho\\OneDrive\\Documents\\GitHub\\Project\\Project\\Reports.aspx.cs",
+              "ToolTip": "C:\\Users\\mapho\\Downloads\\Project\\Reports.aspx.cs",
               "RelativeToolTip": "Reports.aspx.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAABTAAAAAAAAAA==",
+              "ViewState": "AgIAAI4BAAAAAAAAAAAmwKgBAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-22T21:45:34.412Z",
               "EditorCaption": ""
@@ -99,67 +40,26 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
->>>>>>> Stashed changes
               "Title": "ZooInformation.aspx",
-              "DocumentMoniker": "C:\\Users\\mapho\\OneDrive\\Documents\\GitHub\\Project\\Project\\ZooInformation.aspx",
+              "DocumentMoniker": "C:\\Users\\mapho\\Downloads\\Project\\ZooInformation.aspx",
               "RelativeDocumentMoniker": "ZooInformation.aspx",
-              "ToolTip": "C:\\Users\\mapho\\OneDrive\\Documents\\GitHub\\Project\\Project\\ZooInformation.aspx",
+              "ToolTip": "C:\\Users\\mapho\\Downloads\\Project\\ZooInformation.aspx",
               "RelativeToolTip": "ZooInformation.aspx",
               "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-<<<<<<< Updated upstream
-              "WhenOpened": "2026-08-12T15:10:34.257Z",
-=======
-              "WhenOpened": "2026-08-10T10:24:59.682Z",
->>>>>>> Stashed changes
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-10T10:24:59.682Z"
             },
             {
               "$type": "Document",
-<<<<<<< Updated upstream
-              "DocumentIndex": 4,
-              "Title": "Web.config",
-              "DocumentMoniker": "C:\\Users\\mapho\\OneDrive\\Documents\\GitHub\\Project\\Project\\Web.config",
-              "RelativeDocumentMoniker": "Web.config",
-              "ToolTip": "C:\\Users\\mapho\\OneDrive\\Documents\\GitHub\\Project\\Project\\Web.config",
-              "RelativeToolTip": "Web.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2026-08-12T13:57:38.553Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Reports.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\mapho\\OneDrive\\Documents\\GitHub\\Project\\Project\\Reports.aspx.cs",
-              "RelativeDocumentMoniker": "Reports.aspx.cs",
-              "ToolTip": "C:\\Users\\mapho\\OneDrive\\Documents\\GitHub\\Project\\Project\\Reports.aspx.cs",
-              "RelativeToolTip": "Reports.aspx.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-12T06:22:41.398Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-=======
               "DocumentIndex": 1,
->>>>>>> Stashed changes
               "Title": "Reports.aspx",
-              "DocumentMoniker": "C:\\Users\\mapho\\OneDrive\\Documents\\GitHub\\Project\\Project\\Reports.aspx",
+              "DocumentMoniker": "C:\\Users\\mapho\\Downloads\\Project\\Reports.aspx",
               "RelativeDocumentMoniker": "Reports.aspx",
-              "ToolTip": "C:\\Users\\mapho\\OneDrive\\Documents\\GitHub\\Project\\Project\\Reports.aspx",
+              "ToolTip": "C:\\Users\\mapho\\Downloads\\Project\\Reports.aspx",
               "RelativeToolTip": "Reports.aspx",
-<<<<<<< Updated upstream
-              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
-=======
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
->>>>>>> Stashed changes
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2026-08-09T21:43:45.877Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-09T21:43:45.877Z"
             }
           ]
         }

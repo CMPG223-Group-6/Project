@@ -13,5 +13,30 @@ namespace Project
         {
 
         }
+
+        protected void TextBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnSubmit_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        protected void btnAddEvent_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AddEventType.aspx");
+        }
+
+        protected void btnChangeEvent_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ChangeEventType.aspx");
+        }
+
+        protected void btnDeleteEvent_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("DeleteEvent.aspx");
+        }
     }
 }

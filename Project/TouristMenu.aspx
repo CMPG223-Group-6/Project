@@ -77,29 +77,8 @@
                             <StaticHoverStyle BackColor="#669999" />
                         </asp:Menu>
                     </td>
-                    <td class="auto-style3">
-                        <br />
-                    </td>
-                    <td class="auto-style3">
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-                    </td>
+                    <td class="auto-style3">&nbsp;</td>
+                    <td class="auto-style3"></td>
                 </tr>
                 <tr>
                     <td class="auto-style6" style="border-style: inset; border-color: #006600; background-color: #006600">
@@ -113,26 +92,19 @@
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <asp:Label ID="lblNameDisplay" runat="server" Font-Size="Small" ForeColor="#999999"></asp:Label>
                     </td>
-                    <td class="auto-style7">
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-&nbsp;&nbsp; </td>
-                    <td class="auto-style7">
-                        <br />
-                    </td>
+                    <td class="auto-style7"></td>
+                    <td class="auto-style7">&nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style1" style="border-style: inset; border-color: #006600; background-color: #006600">
                         <asp:Menu ID="Menu3" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="White">
                             <Items>
-                                <asp:MenuItem Text="Sign Out"></asp:MenuItem>
+                                <asp:MenuItem Text="Sign Out" NavigateUrl="~/Default.aspx"></asp:MenuItem>
                             </Items>
                             <StaticHoverStyle BorderColor="#669999" />
                         </asp:Menu>
                     </td>
-                    <td class="auto-style8">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+                    <td class="auto-style8"></td>
                     <td class="auto-style8"></td>
                 </tr>
             </table>

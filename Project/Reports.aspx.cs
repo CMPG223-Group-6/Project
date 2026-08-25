@@ -423,7 +423,7 @@ namespace Project
             // Format the chart labels so each event name is displayed clearly.
             Chart1.ChartAreas["ChartArea1"].AxisX.Interval = 1;
             Chart1.ChartAreas["ChartArea1"].AxisX.IsLabelAutoFit = false;
-            Chart1.ChartAreas["ChartArea1"].AxisX.LabelStyle.Angle = -15;
+            Chart1.ChartAreas["ChartArea1"].AxisX.LabelStyle.Angle = -35;
         }
 
         private string GetUserHeading(string columnName)

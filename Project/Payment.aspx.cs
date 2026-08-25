@@ -13,5 +13,25 @@ namespace Project
         {
 
         }
+
+        protected void btnSignOut_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        protected void btnMakePayment_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("CardDetails.aspx");
+        }
     }
 }
