@@ -97,14 +97,7 @@
                                 </tr>
                                 <tr>
                                     <td class="auto-style23">
-                                        <asp:Label ID="lblDate" runat="server" Text="Check In Date:"></asp:Label>
                                         <br />
-                                        <asp:TextBox ID="txtDate" runat="server" TextMode="Date"></asp:TextBox>
-                                        <asp:RequiredFieldValidator ID="rfvDate" runat="server" ErrorMessage="Please select a Check-In Date!" ForeColor="Red" ControlToValidate="txtDate"></asp:RequiredFieldValidator>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="auto-style23">
                                         <asp:Label ID="lblCountry" runat="server" Text="Country of Origin:"></asp:Label>
                                         <br />
                                         <asp:DropDownList ID="ddlCountries" runat="server" Height="16px" Width="161px" OnSelectedIndexChanged="ddlCountries_SelectedIndexChanged">
@@ -112,12 +105,18 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="auto-style17">
+                                    <td class="auto-style23">
                                         <br />
                                         <asp:Button ID="BtnAdd" runat="server" Height="28px" Text="Add" Width="147px" BackColor="Green" Font-Bold="True" ForeColor="White" OnClick="BtnAdd_Click" />
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        &nbsp;&nbsp;
                                         <asp:Button ID="btnContinue" runat="server" Height="27px" Text="Continue" Width="128px" BackColor="White" Font-Bold="True" ForeColor="Black" BorderStyle="Solid" />
                                     </td>
+                                </tr>
+                                <tr>
+                                    <td class="auto-style17">
+                                        <br />
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        </td>
                                 </tr>
                                 <tr>
                                     <td class="auto-style24">

@@ -19,7 +19,11 @@ namespace Project
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            LoadTourists();
+            if (!IsPostBack)
+            {
+                LoadCountries();
+                LoadTourists();
+            }
         }
 
         protected void gvTourist_SelectedIndexChanged(object sender, EventArgs e)
@@ -39,18 +43,20 @@ namespace Project
             string Country = ddlCountries.SelectedValue;
             string Number = txtPhoneNo.Text;
             string Email = txtEmail.Text;
-            string date = txtDate.Text;
+            string Password = Name + Surname;
+
 
             using (conn = new SqlConnection(ConString))
             {
-                string sql = "INSERT INTO Tourist (Tourist_FirstName,Tourist_LastName,Contact_Number,Email_Address, Date) VALUES (@LastName, @FirstName, @Country, @PhoneNo, @Email, @Date)";
+                string sql = "INSERT INTO Tourist (Tourist_FirstName,Tourist_LastName,Contact_Number,Email_Address,User_Password,Country_ID) VALUES (@LastName, @FirstName, @Country, @PhoneNo, @Email)";
                 cmd = new SqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@FirstName", Name);
                 cmd.Parameters.AddWithValue("@LastName", Surname);
                 cmd.Parameters.AddWithValue("@Country", Country);
+                cmd.Parameters.AddWithValue("@Password", Password);
                 cmd.Parameters.AddWithValue("@PhoneNo", Number);
                 cmd.Parameters.AddWithValue("@Email", Email);
-                cmd.Parameters.AddWithValue("@Date", date);
+               
                
                 cmd.ExecuteNonQuery();
 
@@ -64,11 +70,35 @@ namespace Project
                string sql = "SELECT * FROM Tourist";
                 cmd = new SqlCommand(sql, conn);
                 ap = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                ap.Fill(dt);
-                gvTourist.DataSource = dt;
+                DataSet ds = new DataSet();
+                ap.Fill(ds);
+                gvTourist.DataSource = ds;
                 gvTourist.DataBind();
                 
+            }
+        }
+        private void LoadCountries()
+        {
+            using (conn = new SqlConnection(ConString))
+            {
+                string sql = "SELECT Country_ID FROM COUNTRY";
+
+                cmd = new SqlCommand(sql, conn);
+
+                ap = new SqlDataAdapter(cmd);
+
+                DataSet ds = new DataSet();
+
+                ap.Fill(ds);
+
+                ddlCountries.DataSource = ds;
+
+                ddlCountries.DataTextField = "Country_ID";
+                ddlCountries.DataValueField = "Country_ID";
+
+                ddlCountries.DataBind();
+
+                ddlCountries.Items.Insert(0, new ListItem("Select a Country", "0"));
             }
         }
     }

@@ -82,21 +82,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 4,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Reports.aspx",
-              "DocumentMoniker": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\Reports.aspx",
-              "RelativeDocumentMoniker": "Reports.aspx",
-              "ToolTip": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\Reports.aspx",
-              "RelativeToolTip": "Reports.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2026-08-09T21:43:45.877Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 5,
@@ -151,19 +138,6 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Checkout.aspx",
-              "DocumentMoniker": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\Checkout.aspx",
-              "RelativeDocumentMoniker": "Checkout.aspx",
-              "ToolTip": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\Checkout.aspx",
-              "RelativeToolTip": "Checkout.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2026-08-13T13:32:13.944Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "MaintainTourists.aspx",
               "DocumentMoniker": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\MaintainTourists.aspx",
@@ -173,6 +147,32 @@
               "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2026-08-09T21:24:43.689Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Reports.aspx",
+              "DocumentMoniker": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\Reports.aspx",
+              "RelativeDocumentMoniker": "Reports.aspx",
+              "ToolTip": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\Reports.aspx",
+              "RelativeToolTip": "Reports.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-08-09T21:43:45.877Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Checkout.aspx",
+              "DocumentMoniker": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\Checkout.aspx",
+              "RelativeDocumentMoniker": "Checkout.aspx",
+              "ToolTip": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\Checkout.aspx",
+              "RelativeToolTip": "Checkout.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-08-13T13:32:13.944Z",
               "EditorCaption": ""
             },
             {
