@@ -15,7 +15,7 @@
     <AssemblyName>Project</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
-    <Use64BitIISExpress />
+    <Use64BitIISExpress>false</Use64BitIISExpress>
     <IISExpressSSLPort>44328</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -190,6 +190,11 @@
     <Content Include="Reports.aspx" />
     <Content Include="TouristMenu.aspx" />
     <Content Include="Web.config" />
+<<<<<<< Updated upstream
+=======
+    <Content Include="WebForm1.aspx" />
+    <Content Include="zims.sql" />
+>>>>>>> Stashed changes
     <Content Include="ZooInformation.aspx" />
   </ItemGroup>
   <ItemGroup>
@@ -286,6 +291,37 @@
     <Compile Include="TouristMenu.aspx.designer.cs">
       <DependentUpon>TouristMenu.aspx</DependentUpon>
     </Compile>
+<<<<<<< Updated upstream
+=======
+    <Compile Include="TouristSignUp.aspx.cs">
+      <DependentUpon>TouristSignUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TouristSignUp.aspx.designer.cs">
+      <DependentUpon>TouristSignUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateBooking.aspx.cs">
+      <DependentUpon>UpdateBooking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdateBooking.aspx.designer.cs">
+      <DependentUpon>UpdateBooking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateTourist.aspx.cs">
+      <DependentUpon>UpdateTourist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdateTourist.aspx.designer.cs">
+      <DependentUpon>UpdateTourist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+>>>>>>> Stashed changes
     <Compile Include="ZooInformation.aspx.cs">
       <DependentUpon>ZooInformation.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

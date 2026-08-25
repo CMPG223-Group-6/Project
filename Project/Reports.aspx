@@ -9,22 +9,32 @@
         .auto-style22 {
             width: 310px;
         }
+        .auto-style23 {
+            height: 35px;
+        }
+        .auto-style24 {
+            height: 63px;
+        }
+        .auto-style25 {
+            width: 100%;
+            height: 896px;
+        }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
-            <table style="width:100%;">
+            <table class="auto-style25">
                 <tr>
                     <td class="auto-style22">
                         <asp:Image ID="Image1" runat="server" Height="168px" ImageUrl="~/Images/zims_zoo_logo.png" Width="330px" />
                         </td>
-                    <td colspan="2" style="border-style: double">
+                    <td style="border-style: double">
                         <asp:Label ID="txtReports" runat="server" Font-Bold="True" Font-Size="XX-Large" Text="REPORTS"></asp:Label>
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style22">
+                    <td class="auto-style22" rowspan="3">
                         <asp:Menu ID="Menu4" runat="server" BackColor="#003300" DynamicHorizontalOffset="13" Font-Bold="True" Font-Size="13pt" ForeColor="White" Height="700px" StaticSubMenuIndent="25px" Width="330px">
                             <DynamicHoverStyle BackColor="#339933" />
                             <Items>
@@ -43,16 +53,16 @@
                             <StaticSelectedStyle BackColor="#66FF33" />
                         </asp:Menu>
                     </td>
-                    <td colspan="2">
-                        <asp:Panel ID="pnlReports" runat="server" GroupingText="Report Parameters" Height="678px">
+                    <td>
+                        <asp:Panel ID="pnlParameters" runat="server" GroupingText="Report Parameters" Height="310px">
                             <table style="width:100%;">
                                 <tr>
                                     <td>
                                         <asp:Label ID="lblReportType" runat="server" Text="Report type:"></asp:Label>
                                     </td>
                                     <td colspan="2">
-                                        <asp:DropDownList ID="ddReportType" runat="server">
-                                            <asp:ListItem Value="&quot;&quot;">Select Report</asp:ListItem>
+                                        <asp:DropDownList ID="ddReportType" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddReportType_SelectedIndexChanged">
+                                            <asp:ListItem Value=" ">Select Report</asp:ListItem>
                                             <asp:ListItem>Number of Bookings per Time Period</asp:ListItem>
                                             <asp:ListItem>Top 5 Event Types per Time Period</asp:ListItem>
                                         </asp:DropDownList>
@@ -67,60 +77,50 @@
                                     </td>
                                     <td>
                                         <br />
-                                        <asp:TextBox ID="txtStartDate" runat="server" TextMode="Date"></asp:TextBox>
+                                        <asp:TextBox ID="calStartDate" runat="server" TextMode="Date"></asp:TextBox>
                                         <br />
-                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtStartDate" ErrorMessage="Please select the start date!" ForeColor="Red"></asp:RequiredFieldValidator>
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="calStartDate" ErrorMessage="Please select the start date!" ForeColor="Red"></asp:RequiredFieldValidator>
                                     </td>
                                     <td>
                                         <asp:Label ID="lblEndDate" runat="server" Text="End Date:"></asp:Label>
                                     </td>
                                     <td>
                                         <br />
-                                        <asp:TextBox ID="txtEndDate" runat="server" TextMode="Date"></asp:TextBox>
+                                        <asp:TextBox ID="calEndDate" runat="server" TextMode="Date"></asp:TextBox>
                                         <br />
-                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtEndDate" ErrorMessage="Please select the end date!" ForeColor="Red"></asp:RequiredFieldValidator>
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="calEndDate" ErrorMessage="Please select the end date!" ForeColor="Red"></asp:RequiredFieldValidator>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>
+                                    <td class="auto-style24">
                                         <asp:Label ID="lblSortBy" runat="server" Text="Sort By:"></asp:Label>
                                     </td>
-                                    <td>
+                                    <td class="auto-style24">
                                         <br />
-                                        <asp:DropDownList ID="ddSortBy" runat="server">
-                                            <asp:ListItem></asp:ListItem>
-                                            <asp:ListItem Value="EventType">Event Type</asp:ListItem>
-                                            <asp:ListItem Value="Bookings">Number of Bookings</asp:ListItem>
+                                        <asp:DropDownList ID="ddSortBy" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddSortBy_SelectedIndexChanged" Height="25px" Width="117px">
                                         </asp:DropDownList>
                                         <br />
+                                        <br />
                                     </td>
-                                    <td>
+                                    <td class="auto-style24">
                                         <asp:Label ID="lblSortOrder" runat="server" Text="Sort Order: "></asp:Label>
                                     </td>
-                                    <td>
-                                        <asp:DropDownList ID="ddSortOrder" runat="server">
+                                    <td class="auto-style24">
+                                        <asp:DropDownList ID="ddSortOrder" runat="server" Height="25px" Width="146px">
                                             <asp:ListItem></asp:ListItem>
-                                            <asp:ListItem Value="DESC">Highest to Lowest</asp:ListItem>
-                                            <asp:ListItem Value="ASC">Lowest to Highest</asp:ListItem>
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>&nbsp;</td>
-                                    <td>
-                                        <br />
-                                        <br />
-                                        <asp:Button ID="btnGenerateReport" runat="server" Height="38px" Text="📊 Generate Report" />
+                                    <td class="auto-style23"></td>
+                                    <td class="auto-style23">
+                                        <asp:Button ID="btnGenerateReport" runat="server" Height="38px" Text="📊 Generate Report" OnClick="btnGenerateReport_Click" />
                                     </td>
-                                    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <br />
-                                        <br />
-                                        <asp:Button ID="btnExportReport" runat="server" Text="Export Report" Visible="False" />
+                                    <td class="auto-style23">
+                                        <asp:Button ID="btnExportReport" runat="server" Text="Export Report" Visible="False" Height="38px" OnClick="btnExportReport_Click" />
                                     </td>
-                                    <td>
-                                        <br />
-                                        <br />
-                                        <asp:Button ID="btnClear0" runat="server" Height="42px" Text="↻ Clear" />
+                                    <td class="auto-style23">
+                                        <asp:Button ID="btnClear" runat="server" Height="38px" Text="↻ Clear" OnClick="btnClear0_Click" />
                                     </td>
                                 </tr>
                                 <tr>
@@ -131,21 +131,45 @@
                                 </tr>
                                 <tr>
                                     <td colspan="4">
-                                        <asp:Panel ID="pnlCharts" runat="server" GroupingText="Reports Results" Height="340px" Visible="False">
+                                        <asp:Label ID="lblDisplay1" runat="server"></asp:Label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4">
+                                        &nbsp;</td>
+                                </tr>
+                            </table>
+                        </asp:Panel>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                                        <asp:Panel ID="pnlResults" runat="server" GroupingText="Reports Results" Height="404px" Visible="False">
                                             <table style="width:100%;">
                                                 <tr>
-                                                    <td>
-                                                        <asp:GridView ID="GridView2" runat="server" Height="205px" Width="530px">
+                                                    <td rowspan="2">
+                                                        <asp:GridView ID="gvReport" runat="server"
+                                                            Height="205px"
+                                                            Width="530px"
+                                                            AutoGenerateColumns="True">
                                                         </asp:GridView>
                                                     </td>
                                                     <td>
-                                                        <asp:Chart ID="Chart1" runat="server" Width="435px">
+                                                        &nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <asp:Chart ID="Chart1" runat="server" Height="300px" Width="550px">
                                                             <Series>
-                                                                <asp:Series Name="Series1">
+                                                                <asp:Series ChartType="Column" Name="Series1">
                                                                 </asp:Series>
                                                             </Series>
                                                             <ChartAreas>
                                                                 <asp:ChartArea Name="ChartArea1">
+                                                                    <AxisX Title="Event Name">
+                                                                    </AxisX>
+                                                                    <AxisY Title="Number of Bookings">
+                                                                    </AxisY>
                                                                 </asp:ChartArea>
                                                             </ChartAreas>
                                                         </asp:Chart>
@@ -155,18 +179,13 @@
                                             <br />
                                             <br />
                                         </asp:Panel>
-                                    </td>
-                                </tr>
-                            </table>
-                        </asp:Panel>
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style22">&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td>
+                        &nbsp;</td>
                 </tr>
-            </table>
+                </table>
         </div>
     </form>
 </body>
