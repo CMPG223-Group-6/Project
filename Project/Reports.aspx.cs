@@ -34,6 +34,12 @@ namespace Project
                 DateTime startDate = Convert.ToDateTime(calStartDate.Text);
                 DateTime endDate = Convert.ToDateTime(calEndDate.Text);
 
+                if (startDate.Date > DateTime.Today || endDate.Date > DateTime.Today)
+                {
+                    lblDisplay1.Text = "Start and end dates cannot be in the future.";
+                    return;
+                }
+
                 if (endDate < startDate)
                 {
                     lblDisplay1.Text = "End date cannot be before the start date.";
