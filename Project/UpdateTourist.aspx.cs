@@ -104,5 +104,10 @@ namespace Project
                 ddlUpdCountries.Items.Insert(0, new ListItem("Select a Country", "0"));
             }
         }
+
+        protected void txtUpdPhoneNo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

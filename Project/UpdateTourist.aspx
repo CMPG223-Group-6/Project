@@ -80,30 +80,16 @@
                                 </tr>
                                 <tr>
                                     <td class="auto-style16">
-                                        <asp:Label ID="lblEventID" runat="server" Text="Event ID:"></asp:Label>
+                                        <asp:Label ID="lblName" runat="server" Text="Enter Name:"></asp:Label>
                                         <br />
-                                        <asp:DropDownList ID="ddlEventID" runat="server" Height="25px" Width="138px">
-                                            <asp:ListItem Value="0">Select Event ID</asp:ListItem>
-                                            <asp:ListItem>1</asp:ListItem>
-                                            <asp:ListItem>2</asp:ListItem>
-                                            <asp:ListItem>3</asp:ListItem>
-                                        </asp:DropDownList>
-                                        <asp:RequiredFieldValidator ID="rfvEventID" runat="server" ControlToValidate="ddlEventID" ErrorMessage="Please select an Event!" ForeColor="Red" InitialValue="0"></asp:RequiredFieldValidator>
+                                        <asp:TextBox ID="txtUpdName" runat="server"></asp:TextBox>
+                                        <asp:RequiredFieldValidator ID="rfvName" runat="server" ControlToValidate="txtUpdName" ErrorMessage="Please enter a name!" ForeColor="Red"></asp:RequiredFieldValidator>
                                         <br />
                                         <br />
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="auto-style16">
-                                        <asp:Label ID="lblName" runat="server" Text="Enter Name:"></asp:Label>
-                                        <br />
-                                        <asp:TextBox ID="txtUpdName" runat="server"></asp:TextBox>
-                                        <asp:RequiredFieldValidator ID="rfvName" runat="server" ControlToValidate="txtUpdName" ErrorMessage="Please enter a name!" ForeColor="Red"></asp:RequiredFieldValidator>
-                                        <br />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
                                         <asp:Label ID="lblSurname" runat="server" Text="Enter Surname:"></asp:Label>
                                         <br />
                                         <asp:TextBox ID="txtUpdSurname" runat="server"></asp:TextBox>
@@ -112,10 +98,10 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="auto-style17">
+                                    <td>
                                         <asp:Label ID="lblPhoneNo" runat="server" Text="Enter phone number:"></asp:Label>
                                         <br />
-                                        <asp:TextBox ID="txtUpdPhoneNo" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="txtUpdPhoneNo" runat="server" OnTextChanged="txtUpdPhoneNo_TextChanged"></asp:TextBox>
                                         <asp:RequiredFieldValidator ID="rfvPhoneNo" runat="server" ControlToValidate="txtUpdPhoneNo" ErrorMessage="Please enter a phone number!" ForeColor="Red"></asp:RequiredFieldValidator>
                                         <br />
                                     </td>
@@ -136,6 +122,12 @@
                                         <asp:DropDownList ID="ddlUpdCountries" runat="server" Height="16px" Width="161px" OnSelectedIndexChanged="ddlUpdCountries_SelectedIndexChanged">
                                             <asp:ListItem>Select a Country</asp:ListItem>
                                         </asp:DropDownList>
+                                        <br />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="auto-style17">
+                                        <br />
                                     </td>
                                 </tr>
                                 <tr>

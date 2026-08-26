@@ -30,8 +30,9 @@ namespace Project
                 string sql = "DELETE FROM Tourist WHERE Tourist_ID = @TouristID";
                 cmd = new SqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@TouristID", TouristID);
-               
+                conn.Open();
                 cmd.ExecuteNonQuery();
+                LoadTourists();
                 lblDeleteMessage.Text = "Tourist deleted successfully!";
             }
         }

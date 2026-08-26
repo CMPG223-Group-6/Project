@@ -87,33 +87,6 @@ namespace Project
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvTouristID;
 
         /// <summary>
-        /// lblEventID control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEventID;
-
-        /// <summary>
-        /// ddlEventID control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlEventID;
-
-        /// <summary>
-        /// rfvEventID control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvEventID;
-
-        /// <summary>
         /// lblName control.
         /// </summary>
         /// <remarks>

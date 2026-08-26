@@ -65,6 +65,11 @@
                             <table style="width:100%; height: 698px;">
                                 <tr>
                                     <td class="auto-style19">
+                                        <asp:Label ID="lblAddMessage" runat="server"></asp:Label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="auto-style19">
                                         <asp:Label ID="lblName" runat="server" Text="Enter Tourist name:"></asp:Label>
                                         <br />
                                         <asp:TextBox ID="txtName" runat="server"></asp:TextBox>

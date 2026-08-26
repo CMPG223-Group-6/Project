@@ -48,7 +48,7 @@ namespace Project
 
             using (conn = new SqlConnection(ConString))
             {
-                string sql = "INSERT INTO Tourist (Tourist_FirstName,Tourist_LastName,Contact_Number,Email_Address,User_Password,Country_ID) VALUES (@LastName, @FirstName, @Country, @PhoneNo, @Email)";
+                string sql = "INSERT INTO Tourist (Tourist_FirstName, Tourist_LastName, Contact_Number, Email_Address, User_Password, Country_ID) VALUES (@FirstName, @LastName, @PhoneNo, @Email, @Password, @Country)";
                 cmd = new SqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@FirstName", Name);
                 cmd.Parameters.AddWithValue("@LastName", Surname);
@@ -57,8 +57,15 @@ namespace Project
                 cmd.Parameters.AddWithValue("@PhoneNo", Number);
                 cmd.Parameters.AddWithValue("@Email", Email);
                
-               
+                conn.Open();
+                
                 cmd.ExecuteNonQuery();
+
+                LoadTourists();
+
+                lblAddMessage.Text = "Tourist added successfully!";
+
+
 
             }
         }
