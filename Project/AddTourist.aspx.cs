@@ -108,5 +108,10 @@ namespace Project
                 ddlCountries.Items.Insert(0, new ListItem("Select a Country", "0"));
             }
         }
+
+        protected void btnContinue_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("MaintainTourists.aspx");
+        }
     }
 }

@@ -114,7 +114,7 @@
                                         <br />
                                         <asp:Button ID="BtnAdd" runat="server" Height="28px" Text="Add" Width="147px" BackColor="Green" Font-Bold="True" ForeColor="White" OnClick="BtnAdd_Click" />
                                         &nbsp;&nbsp;
-                                        <asp:Button ID="btnContinue" runat="server" Height="27px" Text="Continue" Width="128px" BackColor="White" Font-Bold="True" ForeColor="Black" BorderStyle="Solid" />
+                                        <asp:Button ID="btnContinue" runat="server" Height="27px" Text="Continue" Width="128px" BackColor="White" Font-Bold="True" ForeColor="Black" BorderStyle="Solid" OnClick="btnContinue_Click" OnClientClick="return confirm('Are you sure you want to return the maintain tourist dashboard?');" />
                                     </td>
                                 </tr>
                                 <tr>

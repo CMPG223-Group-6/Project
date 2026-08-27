@@ -135,7 +135,7 @@
                     <td class="auto-style39">
                                         <asp:Button ID="BtnDelete" runat="server" Height="28px" Text="Delete" Width="145px" BackColor="Red" Font-Bold="True" ForeColor="White" OnClientClick="return confirm('Are you sure you want to delete this booking?');" />
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <asp:Button ID="btnContinue" runat="server" Height="27px" Text="Close" Width="128px" BackColor="#999999" Font-Bold="True" ForeColor="White" />
+                                        <asp:Button ID="btnContinue" runat="server" Height="27px" Text="Close" Width="128px" BackColor="#999999" Font-Bold="True" ForeColor="White" OnClick="btnContinue_Click" />
                                         </td>
                     <td class="auto-style40">&nbsp;</td>
                 </tr>

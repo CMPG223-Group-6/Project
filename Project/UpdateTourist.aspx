@@ -154,7 +154,7 @@
                                     <td class="auto-style17">&nbsp;&nbsp;&nbsp;&nbsp;
                                         <asp:Button ID="BtnUpdate" runat="server" Height="28px" Text="Update" Width="145px" BackColor="Green" Font-Bold="True" ForeColor="White" OnClick="BtnUpdate_Click" />
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <asp:Button ID="btnContinue" runat="server" Height="27px" Text="Continue" Width="128px" BackColor="#009900" Font-Bold="True" ForeColor="White" />
+                                        <asp:Button ID="btnContinue" runat="server" Height="27px" Text="Continue" Width="128px" BackColor="#009900" Font-Bold="True" ForeColor="White" OnClick="btnContinue_Click" OnClientClick="return confirm('Are you sure you want to return the Maintain Tourist dashboard?');" />
                                     </td>
                                 </tr>
                             </table>
