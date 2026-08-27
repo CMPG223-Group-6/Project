@@ -55,7 +55,7 @@ namespace Project
                 cmd.Parameters.AddWithValue("@Password", Password);
                 cmd.Parameters.AddWithValue("@Country", Country);
                 cmd.Parameters.AddWithValue("@TouristID", ID);
-
+                conn.Open();
                 cmd.ExecuteNonQuery();
                 lblUpdMessage.Text = "Tourist details updated successfully!";
                 LoadTourists();
