@@ -117,6 +117,7 @@
     <Content Include="Bookings.aspx" />
     <Content Include="CancelBooking.aspx" />
     <Content Include="CardDetails.aspx" />
+    <Content Include="ChangeBooking.aspx" />
     <Content Include="ChangeEventType.aspx" />
     <Content Include="CheckIn.aspx" />
     <Content Include="CheckInTourist.aspx" />
@@ -259,6 +260,13 @@
     </Compile>
     <Compile Include="CardDetails.aspx.designer.cs">
       <DependentUpon>CardDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeBooking.aspx.cs">
+      <DependentUpon>ChangeBooking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangeBooking.aspx.designer.cs">
+      <DependentUpon>ChangeBooking.aspx</DependentUpon>
     </Compile>
     <Compile Include="ChangeEventType.aspx.cs">
       <DependentUpon>ChangeEventType.aspx</DependentUpon>

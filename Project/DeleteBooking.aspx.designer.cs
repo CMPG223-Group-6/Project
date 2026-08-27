@@ -60,13 +60,13 @@ namespace Project
         protected global::System.Web.UI.WebControls.Label lblBookingID;
 
         /// <summary>
-        /// txtBookingID control.
+        /// ddlBookingID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtBookingID;
+        protected global::System.Web.UI.WebControls.DropDownList ddlBookingID;
 
         /// <summary>
         /// RequiredFieldValidator1 control.
