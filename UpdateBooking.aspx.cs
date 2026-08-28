@@ -13,7 +13,7 @@ namespace Project
     
     public partial class UpdateBooking : System.Web.UI.Page
     {
-        int Tourist_ID = 3; //Temp have to use sessions
+        int Tourist_ID; 
         private decimal NewTotalPrice = 0.0m;
         private bool isPaymentMade = false;
         private string StatusOfEvent = "";
@@ -21,7 +21,7 @@ namespace Project
         private int TicketsBefore = 0;
         private int MAX_Visitors = 0;
 
-        string conStr = @"Data Source=localhost;Initial Catalog=zims.db;Integrated Security=True;";
+        string conStr = @"Data Source=localhost;Initial Catalog=zims.db;Integrated Security=True";
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -38,7 +38,7 @@ namespace Project
 
                 if (Session["Tourist_ID"] != null)
                 {
-                    Tourist_ID = (int)Session["Tourist_ID"];
+                    Tourist_ID = int.Parse(Session["Tourist_ID"].ToString());
                 }
             }
 

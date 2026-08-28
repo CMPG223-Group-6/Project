@@ -10,9 +10,9 @@ namespace Project
 {
     public partial class TouristMenu : System.Web.UI.Page
     {
-        private string name = "";
-        private string surname = "";
-        private int touristID = 0;
+        private string name;
+        private string surname;
+        private int Tourist_ID;
 
         string conStr = @"Data Source=localhost;Initial Catalog=zims.db;Integrated Security=True;";
         protected void Page_Load(object sender, EventArgs e)
@@ -25,7 +25,7 @@ namespace Project
 
                 using (SqlCommand cmd = new SqlCommand(sql, conn))
                 {
-                    cmd.Parameters.AddWithValue("@touristID", touristID);
+                    cmd.Parameters.AddWithValue("@touristID", Tourist_ID);
                     SqlDataReader reader = cmd.ExecuteReader();
 
                     while (reader.Read())
@@ -34,13 +34,23 @@ namespace Project
                         name = reader["Tourist_FirstName"].ToString();
                     }
                 }
+
+                if (Session["Tourist_ID"] != null)
+                {
+                    Tourist_ID = int.Parse(Session["Tourist_ID"].ToString());
+                }
+                if(Session["Tourist_LastName"] != null)
+                {
+                    surname = Session["Tourist_LastName"].ToString();
+                }
+                if(Session["Tourist_FirstName"] != null)
+                {
+                    name = Session["Tourist_FirstName"].ToString();
+                }
             }
 
-            lblNameDisplay0.Text = "Welcome, " + name + " " + surname;
+            lblNameDisplay0.Text = "Welcome back, " + name + " " + surname;
             lblNameDisplay.Text = name + " " + surname;
-
-            Session["name"] = name;
-            Session["surname"] = surname;
         }
 
         protected void Menu3_MenuItemClick(object sender, MenuEventArgs e)

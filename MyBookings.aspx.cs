@@ -1,30 +1,43 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Data;
+using System.Xml.Linq;
 
 namespace Project
 {
     public partial class MyBookings : System.Web.UI.Page
     {
+        int Tourist_ID;
+        string surname;
+        string name;
         string conStr = @"Data Source=localhost;Initial Catalog=zims.db;Integrated Security=True;";
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!IsPostBack)
+            if (Session["Tourist_ID"] != null)
+            {
+                Tourist_ID = int.Parse(Session["Tourist_ID"].ToString());
+            }
+            if (Session["Tourist_LastName"] != null)
+            {
+                surname = Session["Tourist_LastName"].ToString();
+            }
+            if (Session["Tourist_FirstName"] != null)
+            {
+                name = Session["Tourist_FirstName"].ToString();
+            }
+            if (!IsPostBack)
             {
                 //Load all the data the tourist booked to grid view 
-                int Tourist_ID = 3;
                 LoadDataBooking(Tourist_ID);
             }
-            if (Session["name"] != null && Session["surname"] != null)
-            {
-                lblNameDisplay.Text = Session["name"] + " " + Session["surname"];
-            }
+
+            lblNameDisplay.Text = name + " " + surname;
         }
 
         protected void btnAvailableEvents_Click(object sender, EventArgs e)
