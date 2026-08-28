@@ -131,10 +131,6 @@
                             <tr>
                                 <td class="auto-style14">
                                     <asp:DropDownList ID="ddlBookingID" runat="server" Height="26px" Width="154px" AutoPostBack="True" OnSelectedIndexChanged="ddlBookingID_SelectedIndexChanged">
-                                        <asp:ListItem></asp:ListItem>
-                                        <asp:ListItem>1</asp:ListItem>
-                                        <asp:ListItem>2</asp:ListItem>
-                                        <asp:ListItem>3</asp:ListItem>
                                     </asp:DropDownList>
                                 </td>
                             </tr>
