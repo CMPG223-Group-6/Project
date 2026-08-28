@@ -1,26 +1,44 @@
-
 -- =========================================================
--- STEP 1: DATA INSERTION
+-- ZIMS DATA SETUP
+-- Updated to match current zims.sql schema:
+--   EVENT now has Tickets_Available + Status (not Spaces_Available)
+-- 10 rows inserted per table (COUNTRY keeps the full reference list,
+-- sorted alphabetically by Country_Name)
 -- =========================================================
 
 -- ---------------------------------------------------------
--- EVENTTYPE (3 rows)
+-- EVENTTYPE (10 rows)
 -- ---------------------------------------------------------
 INSERT INTO EVENTTYPE (Event_Name, Event_Description) VALUES
 ('Safari Tour', 'Guided tour through the wildlife safari zone'),
 ('Bird Show', 'Live bird show featuring exotic and rare species'),
-('Night Zoo Experience', 'After-hours guided tour of nocturnal animals');
+('Night Zoo Experience', 'After-hours guided tour of nocturnal animals'),
+('Reptile Encounter', 'Up-close encounter with snakes and reptiles'),
+('Big Cat Feeding', 'Watch keepers feed lions and tigers'),
+('Primate Walk', 'Walking tour through the primate enclosures'),
+('Aquarium Tour', 'Guided tour of the marine and freshwater aquarium'),
+('Elephant Interaction', 'Supervised interaction with the resident elephant herd'),
+('Behind the Scenes Tour', 'Access to keeper areas and animal care facilities'),
+('Kids Petting Zoo', 'Hands-on petting zoo experience for children');
 
 -- ---------------------------------------------------------
--- EVENT (3 rows) - EventType_ID 1,2,3 correspond to rows above
+-- EVENT (10 rows) - EventType_ID 1-10 correspond to rows above
+-- Status: Active, Inactive, Full
 -- ---------------------------------------------------------
-INSERT INTO EVENT (EventType_ID, Event_Price, Max_Visitors, Spaces_Available) VALUES
-(1, 150.00, 50, 50),
-(2, 100.00, 30, 30),
-(3, 200.00, 20, 20);
+INSERT INTO EVENT (EventType_ID, Event_Price, Max_Visitors, Tickets_Available, Status) VALUES
+(1, 150.00, 50, 50, 'Active'),
+(2, 100.00, 30, 0,  'Full'),
+(3, 200.00, 20, 12, 'Active'),
+(4, 120.00, 25, 25, 'Active'),
+(5, 180.00, 40, 0,  'Full'),
+(6, 90.00,  35, 20, 'Active'),
+(7, 110.00, 45, 45, 'Active'),
+(8, 250.00, 15, 5,  'Active'),
+(9, 300.00, 10, 10, 'Inactive'),
+(10, 80.00, 60, 30, 'Active');
 
 -- ---------------------------------------------------------
--- COUNTRY (all countries)
+-- COUNTRY (full reference list, alphabetical by Country_Name)
 -- ---------------------------------------------------------
 INSERT INTO COUNTRY (Country_Name, Country_PhoneNumber, Country_Domains) VALUES
 ('Afghanistan', '93', '.af'),
@@ -215,20 +233,33 @@ INSERT INTO COUNTRY (Country_Name, Country_PhoneNumber, Country_Domains) VALUES
 ('Yemen', '967', '.ye'),
 ('Zambia', '260', '.zm'),
 ('Zimbabwe', '263', '.zw');
+
 -- ---------------------------------------------------------
--- TOURIST (3 rows) - Country_ID references COUNTRY table above
--- Using 1 = Afghanistan, 8 = Australia, 200(approx) = United States
--- Adjust Country_ID values below to match actual generated IDs if needed
+-- TOURIST (10 rows) - Country_ID resolved via subquery on Country_Name
 -- ---------------------------------------------------------
 INSERT INTO TOURIST (Tourist_LastName, Tourist_FirstName, Contact_Number, Email_Address, User_Password, Country_ID) VALUES
 ('Smith', 'John', '0123456789', 'john.smith@mail.com', 'Passw0rd1', (SELECT Country_ID FROM COUNTRY WHERE Country_Name = 'United States')),
 ('Nkosi', 'Thandi', '0731234567', 'thandi.n@mail.com', 'Passw0rd2', (SELECT Country_ID FROM COUNTRY WHERE Country_Name = 'South Africa')),
-('Tanaka', 'Yuki', '0819876543', 'yuki.tanaka@mail.com', 'Passw0rd3', (SELECT Country_ID FROM COUNTRY WHERE Country_Name = 'Japan'));
+('Tanaka', 'Yuki', '0819876543', 'yuki.tanaka@mail.com', 'Passw0rd3', (SELECT Country_ID FROM COUNTRY WHERE Country_Name = 'Japan')),
+('Muller', 'Hans', '0827654321', 'hans.muller@mail.com', 'Passw0rd4', (SELECT Country_ID FROM COUNTRY WHERE Country_Name = 'Germany')),
+('Dubois', 'Claire', '0839988776', 'claire.dubois@mail.com', 'Passw0rd5', (SELECT Country_ID FROM COUNTRY WHERE Country_Name = 'France')),
+('Rossi', 'Marco', '0845566778', 'marco.rossi@mail.com', 'Passw0rd6', (SELECT Country_ID FROM COUNTRY WHERE Country_Name = 'Italy')),
+('Silva', 'Ana', '0851122334', 'ana.silva@mail.com', 'Passw0rd7', (SELECT Country_ID FROM COUNTRY WHERE Country_Name = 'Brazil')),
+('Kim', 'Ji-woo', '0863344556', 'jiwoo.kim@mail.com', 'Passw0rd8', (SELECT Country_ID FROM COUNTRY WHERE Country_Name = 'South Korea')),
+('Patel', 'Raj', '0874455667', 'raj.patel@mail.com', 'Passw0rd9', (SELECT Country_ID FROM COUNTRY WHERE Country_Name = 'India')),
+('Van Wyk', 'Marie', '0885566778', 'marie.vanwyk@mail.com', 'Passw0rd10', (SELECT Country_ID FROM COUNTRY WHERE Country_Name = 'South Africa'));
 
 -- ---------------------------------------------------------
--- BOOKING (3 rows) - Event_ID 1,2,3 and Tourist_ID 1,2,3 from above
+-- BOOKING (10 rows) - Event_ID 1-10 and Tourist_ID 1-10 from above
 -- ---------------------------------------------------------
 INSERT INTO BOOKING (Event_ID, Tourist_ID, Number_Tickets, Arrive_Date, Questionnaires, Payment_method, Payment_Amount, Payment_Made) VALUES
 (1, 1, 2, '2026-09-10', 'None', 'Credit Card', 300.00, 1),
 (2, 2, 4, '2026-09-15', 'Allergic to peanuts', 'Cash', 400.00, 0),
-(3, 3, 1, '2026-09-20', 'None', 'Debit Card', 200.00, 1);
+(3, 3, 1, '2026-09-20', 'None', 'Debit Card', 200.00, 1),
+(4, 4, 3, '2026-09-12', 'None', 'Credit Card', 360.00, 1),
+(5, 5, 2, '2026-09-18', 'Wheelchair access needed', 'EFT', 360.00, 1),
+(6, 6, 5, '2026-09-22', 'None', 'Cash', 450.00, 0),
+(7, 7, 1, '2026-09-25', 'None', 'Credit Card', 110.00, 1),
+(8, 8, 2, '2026-09-14', 'Vegetarian meal request', 'Debit Card', 500.00, 1),
+(9, 9, 4, '2026-09-30', 'None', 'EFT', 1200.00, 0),
+(10, 10, 3, '2026-09-28', 'None', 'Cash', 240.00, 1);

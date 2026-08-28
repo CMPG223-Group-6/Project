@@ -13,13 +13,15 @@
             height: 181px;
         }
         .auto-style4 {
-            height: 50px;
         }
-        .auto-style6 {
-            height: 60px;
+        .auto-style13 {
+            height: 61px;
         }
-        .auto-style7 {
-            height: 75px;
+        .auto-style14 {
+            height: 40px;
+        }
+        .auto-style15 {
+            height: 65px;
         }
     </style>
 </head>
@@ -42,68 +44,77 @@
                         </asp:Menu>
                     </td>
                     <td class="auto-style2" colspan="2" style="border-style: hidden; background-color: #003300">
-                            <asp:Label ID="lblAddEvent0" runat="server" Text="Add New Event Type" BackColor="#003300" Font-Bold="True" Font-Size="20pt" ForeColor="White"></asp:Label>
+                            <asp:Label ID="lblAddEvent0" runat="server" Text="Add New Event " BackColor="#003300" Font-Bold="True" Font-Size="20pt" ForeColor="White"></asp:Label>
                             </td>
                 </tr>
                 <tr>
-                    <td class="auto-style4">
-                            <asp:Label ID="lblEventName" runat="server" Text="Event Name"></asp:Label>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtEventType" ErrorMessage="*" ForeColor="Red" ValidationGroup="CreateEvent"></asp:RequiredFieldValidator>
+                    <td class="auto-style14">
+                            <asp:Label ID="lblEventName" runat="server" Text="Event Type ID"></asp:Label>
+                            <asp:RequiredFieldValidator ID="rfvID" runat="server" ControlToValidate="ddlEventTypeID" ErrorMessage="*" ForeColor="Red" ValidationGroup="CreateEvent" InitialValue="0"></asp:RequiredFieldValidator>
                             <br />
-                            <asp:TextBox ID="txtEventType" runat="server" BackColor="White" Height="27px" OnTextChanged="txtEventType_TextChanged" Width="427px"></asp:TextBox>
-                            </td>
-                    <td class="auto-style4">
-                            <asp:Label ID="lblCategory" runat="server" Text="Category"></asp:Label>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="*" ForeColor="Red" ValidationGroup="CreateEvent" ControlToValidate="ddlCategory" InitialValue="0"></asp:RequiredFieldValidator>
-                            <br />
-                            <asp:DropDownList ID="ddlCategory" runat="server" Height="30px" Width="292px" OnSelectedIndexChanged="ddlCategory_SelectedIndexChanged">
-                                <asp:ListItem Value="0">Select Category</asp:ListItem>
-                                <asp:ListItem Value="1">Wildlife tour</asp:ListItem>
-                                <asp:ListItem Value="2">Aquatic</asp:ListItem>
+                            <asp:DropDownList ID="ddlEventTypeID" runat="server" Height="26px" Width="163px">
+                                <asp:ListItem Value="0">Select Event Type</asp:ListItem>
                             </asp:DropDownList>
+                            <br />
+                            </td>
+                    <td class="auto-style4" rowspan="6">
+                            <br />
+                            <br />
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:GridView ID="gvEventTypes" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Height="192px" Width="369px">
+                                <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+                                <EditRowStyle BackColor="#999999" />
+                                <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                                <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                                <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                                <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+                                <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+                                <SortedAscendingCellStyle BackColor="#E9E7E2" />
+                                <SortedAscendingHeaderStyle BackColor="#506C8C" />
+                                <SortedDescendingCellStyle BackColor="#FFFDF8" />
+                                <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
+                            </asp:GridView>
                             </td>
                 </tr>
                 <tr>
-                    <td class="auto-style7">
+                    <td class="auto-style15">
                             <asp:Label ID="lblCapacity" runat="server" Text="Capacity"></asp:Label>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtCapacity" ErrorMessage="*" ForeColor="Red" ValidationGroup="CreateEvent"></asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator ID="rfvCapacity" runat="server" ControlToValidate="txtCapacity" ErrorMessage="*" ForeColor="Red" ValidationGroup="CreateEvent"></asp:RequiredFieldValidator>
                             <br />
-                            <asp:TextBox ID="txtCapacity" runat="server" Height="27px" TextMode="Number" Width="127px"></asp:TextBox>
+                            <asp:TextBox ID="txtCapacity" runat="server" Height="27px" TextMode="Number" Width="127px" AutoPostBack="True" CausesValidation="True" OnTextChanged="txtCapacity_TextChanged"></asp:TextBox>
                             </td>
-                    <td class="auto-style7">
+                </tr>
+                <tr>
+                    <td class="auto-style15">
+                            <asp:Label ID="lblPrice" runat="server" Text="Price"></asp:Label>
+                            <asp:RequiredFieldValidator ID="rfvPrice" runat="server" ControlToValidate="txtPrice" ErrorMessage="*" ForeColor="Red" ValidationGroup="CreateEvent"></asp:RequiredFieldValidator>
+                            <br />
+                            <asp:TextBox ID="txtPrice" runat="server" Height="27px" Width="125px" TextMode="Number"></asp:TextBox>
+                            </td>
+                </tr>
+                <tr>
+                    <td class="auto-style15">
                             <asp:Label ID="lblStatus" runat="server" Text="Status"></asp:Label>
                             <br />
-                            <asp:DropDownList ID="ddlSetStatus" runat="server" Width="290px" Height="30px">
-                                <asp:ListItem Value="1">Active</asp:ListItem>
-                                <asp:ListItem Value="2">Inactive</asp:ListItem>
-                                <asp:ListItem Value="3">Full</asp:ListItem>
+                            <asp:DropDownList ID="ddlSetStatus" runat="server" Width="193px" Height="35px">
+                                <asp:ListItem Value="0">Active</asp:ListItem>
+                                <asp:ListItem Value="1">Inactive</asp:ListItem>
+                                <asp:ListItem Value="2">Full</asp:ListItem>
                             </asp:DropDownList>
                             </td>
                 </tr>
                 <tr>
-                    <td class="auto-style6">
-                            <asp:Label ID="lblPrice" runat="server" Text="Price"></asp:Label>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtPrice" ErrorMessage="*" ForeColor="Red" ValidationGroup="CreateEvent"></asp:RequiredFieldValidator>
-                            <br />
-                            <asp:TextBox ID="txtPrice" runat="server" Height="27px" Width="125px"></asp:TextBox>
-                            </td>
-                    <td class="auto-style6"></td>
-                </tr>
-                <tr>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td style="text-align: right">
-                            <asp:Button ID="btnCancel" runat="server" Text="Cancel" Height="31px" Width="83px" OnClick="btnCancel_Click" />
-                            </td>
-                    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <td style="text-align: left" class="auto-style13">
                             <asp:Button ID="btnSubmit" runat="server" Text="Create Event Type" BackColor="#33CC33" ForeColor="White" Height="32px" ValidationGroup="CreateEvent" Width="171px" OnClick="btnSubmit_Click" />
+                            &nbsp;&nbsp;&nbsp;
+                            <asp:Button ID="btnCancel" runat="server" Text="Cancel" Height="32px" Width="120px" OnClick="btnCancel_Click" />
                             </td>
                 </tr>
                 <tr>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td>&nbsp;&nbsp;
+                        <asp:Label ID="lblMessage" runat="server" Font-Size="15pt"></asp:Label>
+                    </td>
                 </tr>
                 <tr>
                     <td style="text-align: right">
