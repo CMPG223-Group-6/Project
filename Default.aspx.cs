@@ -63,7 +63,7 @@ namespace Project
         {
             string hashedPassword = HashPassword(password);
 
-            return hashedPassword == storedPassword;
+            return hashedPassword.Equals(storedPassword);
         }
 
         protected void btnLoginValid_Click(object sender, EventArgs e)

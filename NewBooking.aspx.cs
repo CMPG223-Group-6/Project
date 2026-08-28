@@ -27,6 +27,7 @@ namespace Project
         {
             if (!IsPostBack)
             {
+                
                 //read all available events from database
                 LoadData();
                 //Read event ids to the dropdown list
@@ -37,8 +38,9 @@ namespace Project
 
                 if (Session["Tourist_ID"] != null)
                 {
-                    touristID = (int)Session["Tourist_ID"];
+                    touristID = int.Parse(Session["Tourist_ID"].ToString());
                 }
+                lblError.Text = touristID.ToString();
             }
         }
 

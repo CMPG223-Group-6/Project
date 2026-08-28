@@ -3,12 +3,42 @@
   "WorkspaceRootPath": "C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|c:\\users\\abe kumari\\onedrive\\desktop\\github\\backend_code\\project\\myoverview.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:myoverview.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|c:\\users\\abe kumari\\onedrive\\desktop\\github\\backend_code\\project\\maintaineventstypes.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:maintaineventstypes.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\myoverview.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:myoverview.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|c:\\users\\abe kumari\\onedrive\\desktop\\github\\backend_code\\project\\addtourist.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:addtourist.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|c:\\users\\abe kumari\\onedrive\\desktop\\github\\backend_code\\project\\addtourist.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:addtourist.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|c:\\users\\abe kumari\\onedrive\\desktop\\github\\backend_code\\project\\addeventtype.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:addeventtype.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|c:\\users\\abe kumari\\onedrive\\desktop\\github\\backend_code\\project\\addeventtype.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:addeventtype.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|c:\\users\\abe kumari\\onedrive\\desktop\\github\\backend_code\\project\\maintaineventstypes.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:maintaineventstypes.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/localhost/zims.db/True/SqlTable/dbo.TOURIST.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|c:\\users\\abe kumari\\onedrive\\desktop\\github\\backend_code\\project\\default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/localhost/zims.db/True/SqlTable/dbo.BOOKING.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|c:\\users\\abe kumari\\onedrive\\desktop\\github\\backend_code\\project\\newbooking.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,24 +49,16 @@
       "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:newbooking.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\bookingconfirmation.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:bookingconfirmation.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\resetpassword.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:resetpassword.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\myprofile.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:myprofile.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\myprofile.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:myprofile.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\touristforgotpassword.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:touristforgotpassword.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\deleteaccount.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:deleteaccount.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\myprofile.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:myprofile.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\cancelbooking.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
@@ -51,28 +73,24 @@
       "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:mybookings.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\myoverview.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:myoverview.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\bookings.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:bookings.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\touristmenu.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:touristmenu.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\touristmenu.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:touristmenu.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\touristforgotpassword.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:touristforgotpassword.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\bookingconfirmation.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:bookingconfirmation.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\resetpassword.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:resetpassword.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     }
   ],
   "DocumentGroupContainers": [
@@ -82,11 +100,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 14,
+          "SelectedChildIndex": 17,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 6,
               "Title": "Default.aspx",
               "DocumentMoniker": "C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\Default.aspx",
               "RelativeDocumentMoniker": "Default.aspx",
@@ -100,7 +118,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 20,
               "Title": "TouristMenu.aspx",
               "DocumentMoniker": "C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\TouristMenu.aspx",
               "RelativeDocumentMoniker": "TouristMenu.aspx",
@@ -114,7 +132,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 18,
               "Title": "MyOverview.aspx",
               "DocumentMoniker": "C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\MyOverview.aspx",
               "RelativeDocumentMoniker": "MyOverview.aspx",
@@ -128,13 +146,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 19,
               "Title": "Bookings.aspx",
               "DocumentMoniker": "C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\Bookings.aspx",
               "RelativeDocumentMoniker": "Bookings.aspx",
               "ToolTip": "C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\Bookings.aspx",
               "RelativeToolTip": "Bookings.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2026-08-22T20:15:05.456Z",
               "IsPinned": true,
@@ -142,13 +160,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 17,
               "Title": "MyBookings.aspx",
               "DocumentMoniker": "C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\MyBookings.aspx",
               "RelativeDocumentMoniker": "MyBookings.aspx",
               "ToolTip": "C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\MyBookings.aspx",
               "RelativeToolTip": "MyBookings.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2026-08-22T20:19:07.572Z",
               "IsPinned": true,
@@ -156,13 +174,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 11,
               "Title": "NewBooking.aspx",
               "DocumentMoniker": "C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\NewBooking.aspx",
               "RelativeDocumentMoniker": "NewBooking.aspx",
               "ToolTip": "C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\NewBooking.aspx",
               "RelativeToolTip": "NewBooking.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2026-08-22T20:16:04.894Z",
               "IsPinned": true,
@@ -170,13 +188,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 16,
               "Title": "UpdateBooking.aspx",
               "DocumentMoniker": "C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\UpdateBooking.aspx",
               "RelativeDocumentMoniker": "UpdateBooking.aspx",
               "ToolTip": "C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\UpdateBooking.aspx",
               "RelativeToolTip": "UpdateBooking.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2026-08-22T20:16:27.14Z",
               "IsPinned": true,
@@ -184,13 +202,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 15,
               "Title": "CancelBooking.aspx",
               "DocumentMoniker": "C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\CancelBooking.aspx",
               "RelativeDocumentMoniker": "CancelBooking.aspx",
               "ToolTip": "C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\CancelBooking.aspx",
               "RelativeToolTip": "CancelBooking.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2026-08-22T20:15:10.791Z",
               "IsPinned": true,
@@ -198,13 +216,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 14,
               "Title": "MyProfile.aspx",
               "DocumentMoniker": "C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\MyProfile.aspx",
               "RelativeDocumentMoniker": "MyProfile.aspx",
               "ToolTip": "C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\MyProfile.aspx",
               "RelativeToolTip": "MyProfile.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2026-08-22T20:16:01.783Z",
               "IsPinned": true,
@@ -212,13 +230,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 13,
               "Title": "DeleteAccount.aspx",
               "DocumentMoniker": "C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\DeleteAccount.aspx",
               "RelativeDocumentMoniker": "DeleteAccount.aspx",
               "ToolTip": "C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\DeleteAccount.aspx",
               "RelativeToolTip": "DeleteAccount.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2026-08-22T20:15:27.565Z",
               "IsPinned": true,
@@ -226,13 +244,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 12,
               "Title": "TouristForgotPassword.aspx",
               "DocumentMoniker": "C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\TouristForgotPassword.aspx",
               "RelativeDocumentMoniker": "TouristForgotPassword.aspx",
               "ToolTip": "C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\TouristForgotPassword.aspx",
               "RelativeToolTip": "TouristForgotPassword.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2026-08-22T20:20:47.292Z",
               "IsPinned": true,
@@ -240,7 +258,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 22,
               "Title": "ResetPassword.aspx",
               "DocumentMoniker": "C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\ResetPassword.aspx",
               "RelativeDocumentMoniker": "ResetPassword.aspx",
@@ -254,7 +272,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 21,
               "Title": "BookingConfirmation.aspx",
               "DocumentMoniker": "C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\BookingConfirmation.aspx",
               "RelativeDocumentMoniker": "BookingConfirmation.aspx",
@@ -268,68 +286,126 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "NewBooking.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\NewBooking.aspx.cs",
-              "RelativeDocumentMoniker": "NewBooking.aspx.cs",
-              "ToolTip": "C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\NewBooking.aspx.cs",
-              "RelativeToolTip": "NewBooking.aspx.cs",
-              "ViewState": "AgIAAGUAAAAAAAAAAAAuwG0AAAAMAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "AddTourist.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\AddTourist.aspx.cs",
+              "RelativeDocumentMoniker": "AddTourist.aspx.cs",
+              "ToolTip": "C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\AddTourist.aspx.cs",
+              "RelativeToolTip": "AddTourist.aspx.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-28T13:58:39.947Z",
-              "IsPinned": true,
+              "WhenOpened": "2026-08-28T15:40:47.352Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AddTourist.aspx",
+              "DocumentMoniker": "C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\AddTourist.aspx",
+              "RelativeDocumentMoniker": "AddTourist.aspx",
+              "ToolTip": "C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\AddTourist.aspx",
+              "RelativeToolTip": "AddTourist.aspx",
+              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-08-28T15:33:45.333Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AddEventType.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\AddEventType.aspx.cs",
+              "RelativeDocumentMoniker": "AddEventType.aspx.cs",
+              "ToolTip": "C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\AddEventType.aspx.cs",
+              "RelativeToolTip": "AddEventType.aspx.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA0AAABuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-28T15:32:08.102Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AddEventType.aspx",
+              "DocumentMoniker": "C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\AddEventType.aspx",
+              "RelativeDocumentMoniker": "AddEventType.aspx",
+              "ToolTip": "C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\AddEventType.aspx",
+              "RelativeToolTip": "AddEventType.aspx",
+              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-08-28T15:31:57.566Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MyOverview.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\MyOverview.aspx.cs",
-              "RelativeDocumentMoniker": "MyOverview.aspx.cs",
-              "ToolTip": "C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\MyOverview.aspx.cs",
-              "RelativeToolTip": "MyOverview.aspx.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAjwBAAAABmAAAAAAAAAA==",
+              "Title": "MaintainEventsTypes.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\MaintainEventsTypes.aspx.cs",
+              "RelativeDocumentMoniker": "MaintainEventsTypes.aspx.cs",
+              "ToolTip": "C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\MaintainEventsTypes.aspx.cs",
+              "RelativeToolTip": "MaintainEventsTypes.aspx.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAYwA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-28T14:02:52.382Z",
+              "WhenOpened": "2026-08-28T15:29:13.824Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MyProfile.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\MyProfile.aspx.cs",
-              "RelativeDocumentMoniker": "MyProfile.aspx.cs",
-              "ToolTip": "C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\MyProfile.aspx.cs",
-              "RelativeToolTip": "MyProfile.aspx.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAjwBoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-28T14:00:55.24Z",
+              "DocumentIndex": 5,
+              "Title": "MaintainEventsTypes.aspx",
+              "DocumentMoniker": "C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\MaintainEventsTypes.aspx",
+              "RelativeDocumentMoniker": "MaintainEventsTypes.aspx",
+              "ToolTip": "C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\MaintainEventsTypes.aspx",
+              "RelativeToolTip": "MaintainEventsTypes.aspx",
+              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-08-28T15:28:31.512Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 9,
+              "Title": "dbo.BOOKING [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/localhost/zims.db/True/SqlTable/dbo.BOOKING.sql",
+              "ToolTip": "dbo.BOOKING [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-08-28T15:20:30.005Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Default.aspx.cs",
               "DocumentMoniker": "C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\Default.aspx.cs",
               "RelativeDocumentMoniker": "Default.aspx.cs",
               "ToolTip": "C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\Default.aspx.cs",
               "RelativeToolTip": "Default.aspx.cs",
-              "ViewState": "AgIAAHIAAAAAAAAAAAArwJkAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAwwEYAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-28T13:51:34.118Z",
+              "WhenOpened": "2026-08-28T15:15:24.607Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "TouristMenu.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\TouristMenu.aspx.cs",
-              "RelativeDocumentMoniker": "TouristMenu.aspx.cs",
-              "ToolTip": "C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\TouristMenu.aspx.cs",
-              "RelativeToolTip": "TouristMenu.aspx.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAQwCsAAAA3AAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "NewBooking.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\NewBooking.aspx.cs",
+              "RelativeDocumentMoniker": "NewBooking.aspx.cs",
+              "ToolTip": "C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Backend_Code\\Project\\NewBooking.aspx.cs",
+              "RelativeToolTip": "NewBooking.aspx.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAQwFUAAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-28T13:50:19.552Z",
+              "WhenOpened": "2026-08-28T15:02:20.399Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "dbo.TOURIST [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/localhost/zims.db/True/SqlTable/dbo.TOURIST.sql",
+              "ToolTip": "dbo.TOURIST [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-08-28T15:09:25.278Z",
               "EditorCaption": ""
             }
           ]

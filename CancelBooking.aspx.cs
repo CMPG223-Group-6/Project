@@ -28,7 +28,7 @@ namespace Project
 
                 if (Session["Tourist_ID"] != null)
                 {
-                    Tourist_ID = (int)Session["Tourist_ID"];
+                    Tourist_ID = int.Parse(Session["Tourist_ID"].ToString());
                 }
             }
         }

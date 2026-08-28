@@ -9,11 +9,16 @@ namespace Project
 {
     public partial class MyProfile : System.Web.UI.Page
     {
+        int Tourist_ID;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["Tourist_FirstName"] != null && Session["Tourist_LastName"] != null)
             {
                 lblNameDisplay0.Text = Session["Tourist_FirstName"] + " " + Session["Tourist_LastName"];
+            }
+            if (Session["Tourist_ID"] != null)
+            {
+                Tourist_ID = int.Parse(Session["Tourist_ID"].ToString());
             }
         }
 

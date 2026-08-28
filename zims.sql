@@ -37,8 +37,8 @@ CREATE TABLE TOURIST (
 CREATE TABLE BOOKING
 (
 	Booking_ID						int IDENTITY(1,1) PRIMARY KEY,
-	Event_ID						int,
-	Tourist_ID						int,
+	Event_ID						int FOREIGN KEY(Event_ID) REFERENCES EVENT(Event_ID),
+	Tourist_ID						int FOREIGN KEY(Tourist_ID) REFERENCES TOURIST(Tourist_ID),
 	Number_Tickets					int,
 	Arrive_Date						date,
 	Questionnaires					varchar(100),
@@ -48,6 +48,4 @@ CREATE TABLE BOOKING
 	Payment_Made					bit,
 	Checked_In						bit,
 	Checked_Out						bit
-	CONSTRAINT FK_BOOKING_EVENT FOREIGN KEY(Event_ID) REFERENCES EVENT(Event_ID),
-	CONSTRAINT FK_BOOKING_TOURIST FOREIGN KEY(Tourist_ID) REFERENCES TOURIST(Tourist_ID)
 );

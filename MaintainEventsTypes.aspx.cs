@@ -12,6 +12,7 @@ namespace Project
     public partial class MaintainEventsTypes : System.Web.UI.Page
     {
         string conStr = @"Data Source=localhost;Initial Catalog=zims.db;Integrated Security=True;Encrypt=False";
+
         protected void Page_Load(object sender, EventArgs e)
         {
             loadEvents();
@@ -25,7 +26,8 @@ namespace Project
                 conn.Open();
 
                 string sql = "SELECT e.Event_ID, e.EVENTTYPE_ID, et.Event_Name, et.Event_Description, e.Event_Price, e.Max_Visitors, " +
-                             "e.Tickets_Available, e.Status FROM EVENT e, EVENTTYPE et " +
+                             "e.Tickets_Available, e.Status " +
+                             "FROM EVENT e, EVENTTYPE et " +
                              "WHERE e.EVENTTYPE_ID = et.EVENTTYPE_ID ";
 
 
