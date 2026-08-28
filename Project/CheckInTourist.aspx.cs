@@ -84,7 +84,7 @@ namespace Project
                 {
 
 
-                    string query = @"SELECT paymeny_made, checkin FROM Booking WHERE Booking_ID = @Booking_Id ";
+                    string query = @"SELECT Payment_Made, Checked_In FROM Booking WHERE Booking_ID = @Booking_Id ";
 
 
                     using (SqlCommand cmd = new SqlCommand(query, con))

@@ -47,7 +47,7 @@ namespace Project
 
             using (SqlConnection con = new SqlConnection(connectionString))
             {
-                string query = "SELECT Booking_ID FROM Booking ORDER BY Booking_ID";
+                string query = "SELECT Booking_ID FROM BOOKING ORDER BY Booking_ID";
 
                 SqlDataAdapter da = new SqlDataAdapter(query, con);
 
