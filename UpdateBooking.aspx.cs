@@ -13,5 +13,22 @@ namespace Project
         {
 
         }
+
+        protected void btnCancel_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("UpdateBooking.aspx");
+        }
+
+        protected void btnDone_Click(object sender, EventArgs e)
+        {
+            Panel2.Visible = false;
+            lblConfirmation.Visible = false;
+        }
+
+        protected void btnUpdate_Click(object sender, EventArgs e)
+        {
+            Panel2.Visible = true;
+            lblConfirmation.Visible = true;
+        }
     }
 }
