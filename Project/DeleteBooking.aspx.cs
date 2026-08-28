@@ -177,5 +177,10 @@ namespace Project
         {
             ddlBookingID.SelectedIndex = 0;
         }
+
+        protected void btnContinue_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
