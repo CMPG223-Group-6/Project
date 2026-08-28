@@ -3,6 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Project\\Project\\Project\\",
   "Documents": [
     {
+<<<<<<< HEAD:.vs/Project/v17/DocumentLayout.json
       "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|c:\\users\\abe kumari\\onedrive\\desktop\\github\\project\\project\\project\\questionnaireform.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:questionnaireform.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
@@ -61,18 +62,91 @@
     {
       "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Project\\Project\\Project\\processpayments.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:processpayments.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+=======
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\deleteevent.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:deleteevent.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\deletebooking.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:deletebooking.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\deleteevent.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:deleteevent.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\changeeventtype.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:changeeventtype.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\changeeventtype.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:changeeventtype.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\addeventtype.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:addeventtype.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\addeventtype.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:addeventtype.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|c:\\users\\siveg\\onedrive\\documents\\github\\project\\project\\maintainbookings.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:maintainbookings.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+>>>>>>> origin/Sive:Project/.vs/Project/v17/DocumentLayout.backup.json
     },
     {
       "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Project\\Project\\Project\\maintaineventstypes.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:maintaineventstypes.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
+<<<<<<< HEAD:.vs/Project/v17/DocumentLayout.json
       "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Project\\Project\\Project\\maintaintourists.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:maintaintourists.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Project\\Project\\Project\\maintainbookings.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:maintainbookings.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+=======
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\changebooking.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:changebooking.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\changebooking.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:changebooking.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\addbooking.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:addbooking.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|c:\\users\\siveg\\onedrive\\documents\\github\\project\\project\\validateuser.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:validateuser.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\maintaineventstypes.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:maintaineventstypes.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|c:\\users\\siveg\\onedrive\\documents\\github\\project\\project\\validateuser.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:validateuser.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\staffmenu.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:staffmenu.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\deletebooking.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:deletebooking.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\addbooking.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:addbooking.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\maintainbookings.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:maintainbookings.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> origin/Sive:Project/.vs/Project/v17/DocumentLayout.backup.json
     }
   ],
   "DocumentGroupContainers": [
@@ -82,6 +156,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< HEAD:.vs/Project/v17/DocumentLayout.json
           "SelectedChildIndex": 5,
           "Children": [
             {
@@ -228,10 +303,31 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-10T10:14:01.899Z"
+=======
+          "SelectedChildIndex": 18,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ValidateUser.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\ValidateUser.aspx.cs",
+              "RelativeDocumentMoniker": "ValidateUser.aspx.cs",
+              "ToolTip": "C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\ValidateUser.aspx.cs",
+              "RelativeToolTip": "ValidateUser.aspx.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAuwCMAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-28T07:44:25.133Z",
+              "EditorCaption": ""
+>>>>>>> origin/Sive:Project/.vs/Project/v17/DocumentLayout.backup.json
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
+<<<<<<< HEAD:.vs/Project/v17/DocumentLayout.json
               "Title": "TouristMenu.aspx",
               "DocumentMoniker": "C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Project\\Project\\Project\\TouristMenu.aspx",
               "RelativeDocumentMoniker": "TouristMenu.aspx",
@@ -240,10 +336,22 @@
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2026-08-10T10:24:50.726Z"
+=======
+              "Title": "ValidateUser.aspx",
+              "DocumentMoniker": "C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\ValidateUser.aspx",
+              "RelativeDocumentMoniker": "ValidateUser.aspx",
+              "ToolTip": "C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\ValidateUser.aspx",
+              "RelativeToolTip": "ValidateUser.aspx",
+              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-08-28T07:40:58.023Z",
+              "EditorCaption": ""
+>>>>>>> origin/Sive:Project/.vs/Project/v17/DocumentLayout.backup.json
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
+<<<<<<< HEAD:.vs/Project/v17/DocumentLayout.json
               "Title": "ZooInformation.aspx",
               "DocumentMoniker": "C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Project\\Project\\Project\\ZooInformation.aspx",
               "RelativeDocumentMoniker": "ZooInformation.aspx",
@@ -264,21 +372,111 @@
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2026-08-09T21:40:54.731Z"
+=======
+              "Title": "MaintainEventsTypes.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\MaintainEventsTypes.aspx.cs",
+              "RelativeDocumentMoniker": "MaintainEventsTypes.aspx.cs",
+              "ToolTip": "C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\MaintainEventsTypes.aspx.cs",
+              "RelativeToolTip": "MaintainEventsTypes.aspx.cs",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAqwEQAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-26T07:03:51.916Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AddBooking.aspx",
+              "DocumentMoniker": "C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\AddBooking.aspx",
+              "RelativeDocumentMoniker": "AddBooking.aspx",
+              "ToolTip": "C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\AddBooking.aspx",
+              "RelativeToolTip": "AddBooking.aspx",
+              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-08-23T08:47:59.445Z",
+              "EditorCaption": ""
+>>>>>>> origin/Sive:Project/.vs/Project/v17/DocumentLayout.backup.json
             },
             {
               "$type": "Document",
               "DocumentIndex": 17,
+              "Title": "AddBooking.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\AddBooking.aspx.cs",
+              "RelativeDocumentMoniker": "AddBooking.aspx.cs",
+              "ToolTip": "C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\AddBooking.aspx.cs",
+              "RelativeToolTip": "AddBooking.aspx.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAmwEEAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-23T11:43:47.421Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ChangeBooking.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\ChangeBooking.aspx.cs",
+              "RelativeDocumentMoniker": "ChangeBooking.aspx.cs",
+              "ToolTip": "C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\ChangeBooking.aspx.cs",
+              "RelativeToolTip": "ChangeBooking.aspx.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAiwEUAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-27T10:52:18.938Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ChangeBooking.aspx",
+              "DocumentMoniker": "C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\ChangeBooking.aspx",
+              "RelativeDocumentMoniker": "ChangeBooking.aspx",
+              "ToolTip": "C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\ChangeBooking.aspx",
+              "RelativeToolTip": "ChangeBooking.aspx",
+              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-08-27T10:44:18.644Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "DeleteBooking.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\DeleteBooking.aspx.cs",
+              "RelativeDocumentMoniker": "DeleteBooking.aspx.cs",
+              "ToolTip": "C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\DeleteBooking.aspx.cs",
+              "RelativeToolTip": "DeleteBooking.aspx.cs",
+              "ViewState": "AgIAAIgAAAAAAAAAAAAwwLEAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-23T13:38:24.774Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MaintainEventsTypes.aspx",
+              "DocumentMoniker": "C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\MaintainEventsTypes.aspx",
+              "RelativeDocumentMoniker": "MaintainEventsTypes.aspx",
+              "ToolTip": "C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\MaintainEventsTypes.aspx",
+              "RelativeToolTip": "MaintainEventsTypes.aspx",
+              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-08-09T21:41:42.066Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "MaintainBookings.aspx",
               "DocumentMoniker": "C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Project\\Project\\Project\\MaintainBookings.aspx",
               "RelativeDocumentMoniker": "MaintainBookings.aspx",
               "ToolTip": "C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Project\\Project\\Project\\MaintainBookings.aspx",
               "RelativeToolTip": "MaintainBookings.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2026-08-09T21:41:09.338Z"
             },
             {
               "$type": "Document",
+<<<<<<< HEAD:.vs/Project/v17/DocumentLayout.json
               "DocumentIndex": 16,
               "Title": "MaintainTourists.aspx",
               "DocumentMoniker": "C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Project\\Project\\Project\\MaintainTourists.aspx",
@@ -288,10 +486,114 @@
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2026-08-09T21:24:43.689Z"
+=======
+              "DocumentIndex": 18,
+              "Title": "MaintainBookings.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\MaintainBookings.aspx.cs",
+              "RelativeDocumentMoniker": "MaintainBookings.aspx.cs",
+              "ToolTip": "C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\MaintainBookings.aspx.cs",
+              "RelativeToolTip": "MaintainBookings.aspx.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAgwDYAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-27T10:36:43.898Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AddEventType.aspx",
+              "DocumentMoniker": "C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\AddEventType.aspx",
+              "RelativeDocumentMoniker": "AddEventType.aspx",
+              "ToolTip": "C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\AddEventType.aspx",
+              "RelativeToolTip": "AddEventType.aspx",
+              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-08-23T08:48:01.963Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AddEventType.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\AddEventType.aspx.cs",
+              "RelativeDocumentMoniker": "AddEventType.aspx.cs",
+              "ToolTip": "C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\AddEventType.aspx.cs",
+              "RelativeToolTip": "AddEventType.aspx.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAqwFwAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-24T11:47:59.021Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ChangeEventType.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\ChangeEventType.aspx.cs",
+              "RelativeDocumentMoniker": "ChangeEventType.aspx.cs",
+              "ToolTip": "C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\ChangeEventType.aspx.cs",
+              "RelativeToolTip": "ChangeEventType.aspx.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAuwDoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-24T11:26:31.649Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ChangeEventType.aspx",
+              "DocumentMoniker": "C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\ChangeEventType.aspx",
+              "RelativeDocumentMoniker": "ChangeEventType.aspx",
+              "ToolTip": "C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\ChangeEventType.aspx",
+              "RelativeToolTip": "ChangeEventType.aspx",
+              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-08-23T08:48:06.857Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DeleteBooking.aspx",
+              "DocumentMoniker": "C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\DeleteBooking.aspx",
+              "RelativeDocumentMoniker": "DeleteBooking.aspx",
+              "ToolTip": "C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\DeleteBooking.aspx",
+              "RelativeToolTip": "DeleteBooking.aspx",
+              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-08-23T08:49:05.159Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DeleteEvent.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\DeleteEvent.aspx.cs",
+              "RelativeDocumentMoniker": "DeleteEvent.aspx.cs",
+              "ToolTip": "C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\DeleteEvent.aspx.cs",
+              "RelativeToolTip": "DeleteEvent.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-23T11:06:59.92Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DeleteEvent.aspx",
+              "DocumentMoniker": "C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\DeleteEvent.aspx",
+              "RelativeDocumentMoniker": "DeleteEvent.aspx",
+              "ToolTip": "C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\DeleteEvent.aspx",
+              "RelativeToolTip": "DeleteEvent.aspx",
+              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-08-23T08:49:00.69Z",
+              "EditorCaption": ""
+>>>>>>> origin/Sive:Project/.vs/Project/v17/DocumentLayout.backup.json
             },
             {
               "$type": "Document",
               "DocumentIndex": 15,
+<<<<<<< HEAD:.vs/Project/v17/DocumentLayout.json
               "Title": "MaintainEventsTypes.aspx",
               "DocumentMoniker": "C:\\Users\\Abe Kumari\\OneDrive\\Desktop\\Github\\Project\\Project\\Project\\MaintainEventsTypes.aspx",
               "RelativeDocumentMoniker": "MaintainEventsTypes.aspx",
@@ -300,6 +602,17 @@
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2026-08-09T21:41:42.066Z"
+=======
+              "Title": "StaffMenu.aspx",
+              "DocumentMoniker": "C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\StaffMenu.aspx",
+              "RelativeDocumentMoniker": "StaffMenu.aspx",
+              "ToolTip": "C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\StaffMenu.aspx",
+              "RelativeToolTip": "StaffMenu.aspx",
+              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-08-23T08:48:15.202Z",
+              "EditorCaption": ""
+>>>>>>> origin/Sive:Project/.vs/Project/v17/DocumentLayout.backup.json
             }
           ]
         }

@@ -47,7 +47,7 @@
                             <Items>
                                 <asp:MenuItem Text="Maintain" Value="Maintain">
                                     <asp:MenuItem NavigateUrl="~/MaintainTourists.aspx" Text="Maintain Tourists" Value="Maintain Tourists"></asp:MenuItem>
-                                    <asp:MenuItem NavigateUrl="~/MaintainEventsTypes.aspx" Text="Maintain Event Types" Value="Maintain Event Types"></asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="~/ValidateUser.aspx" Text="Maintain Event Types" Value="Maintain Event Types"></asp:MenuItem>
                                     <asp:MenuItem NavigateUrl="~/MaintainBookings.aspx" Text="Maintain Bookings" Value="Maintain Bookings"></asp:MenuItem>
                                 </asp:MenuItem>
                                 <asp:MenuItem NavigateUrl="~/ProcessPayments.aspx" Text="Process Payments" Value="Process Payments"></asp:MenuItem>

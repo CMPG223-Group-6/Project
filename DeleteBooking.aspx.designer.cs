@@ -51,22 +51,22 @@ namespace Project
         protected global::System.Web.UI.WebControls.Menu Menu1;
 
         /// <summary>
-        /// lblTouristID control.
+        /// lblBookingID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTouristID;
+        protected global::System.Web.UI.WebControls.Label lblBookingID;
 
         /// <summary>
-        /// txtDeleteTouristID control.
+        /// ddlBookingID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDeleteTouristID;
+        protected global::System.Web.UI.WebControls.DropDownList ddlBookingID;
 
         /// <summary>
         /// RequiredFieldValidator1 control.
@@ -96,21 +96,39 @@ namespace Project
         protected global::System.Web.UI.WebControls.Button BtnDelete;
 
         /// <summary>
-        /// btnContinue control.
+        /// btnCancel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnContinue;
+        protected global::System.Web.UI.WebControls.Button btnCancel;
 
         /// <summary>
-        /// GridView1 control.
+        /// btnYes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.Button btnYes;
+
+        /// <summary>
+        /// btnNo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnNo;
+
+        /// <summary>
+        /// gvBookings control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvBookings;
     }
 }
