@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:maintaintourists.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|c:\\users\\hansl\\onedrive\\documents\\github\\project\\project\\maintaintourists.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\maintaintourists.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:maintaintourists.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -122,6 +122,7 @@
               "RelativeDocumentMoniker": "Bookings.aspx",
               "ToolTip": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Bookings.aspx",
               "RelativeToolTip": "Bookings.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2026-08-10T10:24:05.002Z",
               "EditorCaption": ""
@@ -134,6 +135,7 @@
               "RelativeDocumentMoniker": "MyOverview.aspx",
               "ToolTip": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\MyOverview.aspx",
               "RelativeToolTip": "MyOverview.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2026-08-10T10:24:21.707Z",
               "EditorCaption": ""
@@ -146,6 +148,7 @@
               "RelativeDocumentMoniker": "QuestionnaireForm.aspx",
               "ToolTip": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\QuestionnaireForm.aspx",
               "RelativeToolTip": "QuestionnaireForm.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2026-08-20T15:50:53.128Z",
               "EditorCaption": ""
@@ -171,6 +174,7 @@
               "RelativeDocumentMoniker": "Reports.aspx",
               "ToolTip": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Reports.aspx",
               "RelativeToolTip": "Reports.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2026-08-09T21:43:45.877Z",
               "EditorCaption": ""
@@ -183,6 +187,7 @@
               "RelativeDocumentMoniker": "Checkout.aspx",
               "ToolTip": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Checkout.aspx",
               "RelativeToolTip": "Checkout.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2026-08-13T13:32:13.944Z",
               "EditorCaption": ""
@@ -195,6 +200,7 @@
               "RelativeDocumentMoniker": "MyProfile.aspx",
               "ToolTip": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\MyProfile.aspx",
               "RelativeToolTip": "MyProfile.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2026-08-10T10:24:29.307Z",
               "EditorCaption": ""
@@ -207,6 +213,7 @@
               "RelativeDocumentMoniker": "CheckInTourist.aspx",
               "ToolTip": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\CheckInTourist.aspx",
               "RelativeToolTip": "CheckInTourist.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2026-08-10T10:18:53.9Z",
               "EditorCaption": ""
@@ -219,6 +226,7 @@
               "RelativeDocumentMoniker": "Default.aspx",
               "ToolTip": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Default.aspx",
               "RelativeToolTip": "Default.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2026-08-09T21:24:20.362Z",
               "EditorCaption": ""
@@ -231,6 +239,7 @@
               "RelativeDocumentMoniker": "CheckIn.aspx",
               "ToolTip": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\CheckIn.aspx",
               "RelativeToolTip": "CheckIn.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2026-08-10T10:19:55.318Z",
               "EditorCaption": ""
@@ -243,6 +252,7 @@
               "RelativeDocumentMoniker": "Payment.aspx",
               "ToolTip": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Payment.aspx",
               "RelativeToolTip": "Payment.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2026-08-10T10:24:39.174Z",
               "EditorCaption": ""
@@ -268,6 +278,7 @@
               "RelativeDocumentMoniker": "TouristMenu.aspx",
               "ToolTip": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\TouristMenu.aspx",
               "RelativeToolTip": "TouristMenu.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2026-08-10T10:24:50.726Z",
               "EditorCaption": ""
@@ -280,6 +291,7 @@
               "RelativeDocumentMoniker": "ZooInformation.aspx",
               "ToolTip": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\ZooInformation.aspx",
               "RelativeToolTip": "ZooInformation.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2026-08-10T10:24:59.682Z",
               "EditorCaption": ""
@@ -292,6 +304,7 @@
               "RelativeDocumentMoniker": "ProcessPayments.aspx",
               "ToolTip": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\ProcessPayments.aspx",
               "RelativeToolTip": "ProcessPayments.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2026-08-09T21:40:54.731Z",
               "EditorCaption": ""
@@ -304,6 +317,7 @@
               "RelativeDocumentMoniker": "MaintainBookings.aspx",
               "ToolTip": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\MaintainBookings.aspx",
               "RelativeToolTip": "MaintainBookings.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2026-08-09T21:41:09.338Z",
               "EditorCaption": ""
@@ -316,6 +330,7 @@
               "RelativeDocumentMoniker": "MaintainEventsTypes.aspx",
               "ToolTip": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\MaintainEventsTypes.aspx",
               "RelativeToolTip": "MaintainEventsTypes.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2026-08-09T21:41:42.066Z",
               "EditorCaption": ""
