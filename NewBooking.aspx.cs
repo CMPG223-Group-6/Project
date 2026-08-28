@@ -16,7 +16,7 @@ namespace Project
     public partial class BookEvent : System.Web.UI.Page
     {
         //Temporary Have to use sessions
-        int touristID = 3;
+        int touristID;
         private string StatusOfEvent = "";
         private int TicketsAvailable = 0;
         private double priceEvent = 0.0;

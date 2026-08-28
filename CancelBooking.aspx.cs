@@ -12,7 +12,7 @@ namespace Project
 {
     public partial class Cancel : System.Web.UI.Page
     {
-        int Tourist_ID = 3; //Temp have to use sessions
+        int Tourist_ID; 
         private int TicketsAvailable = 0;
         private string StatusOfEvent = "";
         private int numberTicketsBooked = 0;

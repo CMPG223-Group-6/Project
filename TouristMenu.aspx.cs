@@ -12,11 +12,15 @@ namespace Project
     {
         private string name = "";
         private string surname = "";
-        private int touristID = 0;
+        private int Tourist_ID;
 
         string conStr = @"Data Source=localhost;Initial Catalog=zims.db;Integrated Security=True;";
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["Tourist_ID"] != null)
+            {
+                Tourist_ID = (int)Session["Tourist_ID"];
+            }
             using (SqlConnection conn = new SqlConnection(conStr))
             {
                 conn.Open();
@@ -25,7 +29,7 @@ namespace Project
 
                 using (SqlCommand cmd = new SqlCommand(sql, conn))
                 {
-                    cmd.Parameters.AddWithValue("@touristID", touristID);
+                    cmd.Parameters.AddWithValue("@touristID", Tourist_ID);
                     SqlDataReader reader = cmd.ExecuteReader();
 
                     while (reader.Read())
@@ -38,12 +42,14 @@ namespace Project
 
             lblNameDisplay0.Text = "Welcome, " + name + " " + surname;
             lblNameDisplay.Text = name + " " + surname;
-
-            Session["name"] = name;
-            Session["surname"] = surname;
         }
 
         protected void Menu3_MenuItemClick(object sender, MenuEventArgs e)
+        {
+
+        }
+
+        protected void Menu1_MenuItemClick(object sender, MenuEventArgs e)
         {
 
         }

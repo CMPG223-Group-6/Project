@@ -11,15 +11,20 @@ namespace Project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["name"] != null && Session["surname"] != null)
+            if (Session["Tourist_FirstName"] != null && Session["Tourist_LastName"] != null)
             {
-                lblNameDisplay0.Text = Session["name"] + " " + Session["surname"];
+                lblNameDisplay0.Text = Session["Tourist_FirstName"] + " " + Session["Tourist_LastName"];
             }
         }
 
         protected void btnDelete_Click(object sender, EventArgs e)
         {
             Response.Redirect("DeleteAccount.aspx");
+        }
+
+        protected void btnUpdateProfile_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

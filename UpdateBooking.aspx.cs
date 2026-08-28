@@ -13,7 +13,7 @@ namespace Project
     
     public partial class UpdateBooking : System.Web.UI.Page
     {
-        int Tourist_ID = 3; //Temp have to use sessions
+        int Tourist_ID;
         private decimal NewTotalPrice = 0.0m;
         private bool isPaymentMade = false;
         private string StatusOfEvent = "";

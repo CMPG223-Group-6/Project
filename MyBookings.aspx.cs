@@ -12,18 +12,23 @@ namespace Project
 {
     public partial class MyBookings : System.Web.UI.Page
     {
+        int Tourist_ID;
         string conStr = @"Data Source=localhost;Initial Catalog=zims.db;Integrated Security=True;";
         protected void Page_Load(object sender, EventArgs e)
         {
             if(!IsPostBack)
             {
                 //Load all the data the tourist booked to grid view 
-                int Tourist_ID = 3;
                 LoadDataBooking(Tourist_ID);
             }
-            if (Session["name"] != null && Session["surname"] != null)
+
+            if (Session["Tourist_FirstName"] != null && Session["Tourist_LastName"] != null)
             {
-                lblNameDisplay.Text = Session["name"] + " " + Session["surname"];
+                lblNameDisplay.Text = Session["Tourist_FirstName"] + " " + Session["Tourist_LastName"];
+            }
+            if(Session["Tourist_ID"] != null)
+            {
+                Tourist_ID = (int)Session["Tourist_ID"];
             }
         }
 

@@ -15,9 +15,9 @@ namespace Project
         protected void Page_Load(object sender, EventArgs e)
         {
             LoadData();
-            if (Session["name"] != null && Session["surname"] != null)
+            if (Session["Tourist_FirstName"] != null && Session["Tourist_LastName"] != null)
             {
-                lblNameDisplay.Text = Session["name"] + " " + Session["surname"];
+                lblNameDisplay.Text = Session["Tourist_FirstName"] + " " + Session["Tourist_LastName"];
             }
            
         }
@@ -103,6 +103,11 @@ namespace Project
         {
             txtSearch.Text = "";
             LoadData();
+        }
+
+        protected void Menu3_MenuItemClick(object sender, MenuEventArgs e)
+        {
+
         }
     }
 }

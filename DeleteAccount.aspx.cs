@@ -9,9 +9,13 @@ namespace Project
 {
     public partial class DeleteAccount : System.Web.UI.Page
     {
+        int Tourist_ID;
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["Tourist_ID"] != null)
+            {
+                Tourist_ID = (int)Session["Tourist_ID"];
+            }
         }
 
         protected void btnProceed_Click(object sender, EventArgs e)

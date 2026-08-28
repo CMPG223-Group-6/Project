@@ -125,7 +125,7 @@
                             </tr>
                             <tr>
                                 <td class="auto-style1" style="border-style: inset; border-color: #006600; background-color: #006600">
-                                    <asp:Menu ID="Menu3" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="White">
+                                    <asp:Menu ID="Menu3" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="White" OnMenuItemClick="Menu3_MenuItemClick">
                                         <Items>
                                             <asp:MenuItem Text="Sign Out"></asp:MenuItem>
                                         </Items>
