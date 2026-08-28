@@ -1,0 +1,25 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace Project
+{
+    public partial class MyOverview : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (Session["name"] != null && Session["surname"] != null)
+            {
+                lblNameDisplay.Text = Session["name"] + " " + Session["surname"];
+            }
+        }
+
+        protected void gdvDisplayEvents_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
