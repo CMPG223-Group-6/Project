@@ -239,7 +239,7 @@ namespace Project
 
                             if (reader["Payment_method"] != DBNull.Value)
                             {
-                                paymentMethod = reader["Payment_Method"].ToString();
+                                paymentMethod = reader["Payment_method"].ToString();
                             }
 
                             if (paymentMade)
