@@ -68,7 +68,7 @@
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="ddlBookingIDDetails" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
                         <br />
                         <br />
-                        <asp:DropDownList ID="ddlBookingIDDetails" runat="server" Height="31px" Width="242px">
+                        <asp:DropDownList ID="ddlBookingIDDetails" runat="server" Height="31px" Width="242px" OnSelectedIndexChanged="ddlBookingIDDetails_SelectedIndexChanged">
                             <asp:ListItem>1</asp:ListItem>
                             <asp:ListItem>2</asp:ListItem>
                             <asp:ListItem>3</asp:ListItem>

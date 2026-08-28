@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -11,27 +14,93 @@ namespace Project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //check for name everthing's good
+ 
+                if (!IsPostBack)
+                {
+
+                    LoadBookings();
+       
+                    DisplayTouristSummary();
+                }
+
+
         }
 
         protected void btnConfirmExit_Click(object sender, EventArgs e)
         {
-            /*
+
             if (ddlBookingIDDetails.SelectedIndex == -1)
             {
                 lblConfirmMessage.Text = "Choose an option";
             }
             else
             {
-                lblConfirmMessage.Text = "You have successfully checked out of Zims.Have a good day";
+                Response.Redirect("QuestionnaireForm.aspx");
             }
-            */
-            
+
+           
         }
 
+        private void LoadBookings()
+        {
+            string connectionString = @"Data Source= localhost;Initial Catalog=zims.db;Integrated Security=True";
+
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                string query = "SELECT Booking_ID FROM Booking ORDER BY Booking_ID";
+
+                SqlDataAdapter da = new SqlDataAdapter(query, con);
+
+                DataTable dt = new DataTable();
+
+                da.Fill(dt);
+
+                ddlBookingIDDetails.DataSource = dt;
+                ddlBookingIDDetails.DataTextField = "Booking_ID";
+                ddlBookingIDDetails.DataValueField = "Booking_ID";
+                ddlBookingIDDetails.DataBind();
+            }
+        }
+
+
+        private void DisplayTouristSummary()
+        {
+            string ConnectionString = @"Data Source= localhost;Initial Catalog=zims.db;Integrated Security=True";
+            string sql_query = @" SELECT Booking_ID, Checked_In, Checked_Out FROM BOOKING";
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(ConnectionString))
+                {
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(sql_query, conn))
+                    {
+                        SqlCommand cmd = new SqlCommand(sql_query, conn);
+
+                        conn.Open();
+                        SqlDataReader reader = cmd.ExecuteReader();
+                        DataTable dt = new DataTable();
+                        reader.Close();
+
+                        adapter.Fill(dt);
+                        gvTouristActivitySummary.DataSource = dt;
+                        gvTouristActivitySummary.DataBind();
+
+                        conn.Close();
+
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                lblConfirmMessage.Text = "Database error: " + ex.Message;
+            }
+        }
+
+
+
         protected void btnSubmitRating_Click(object sender, EventArgs e)
-        {     
-            /*
+        {
+
             int rating = 0;
             string rating_word = " ";
 
@@ -67,9 +136,14 @@ namespace Project
             }
             else
             {
-                lblResults.Text = "You rated us " + rating + " out of 5 stars.Your day with us was " + rating_word ;
+                lblResults.Text = "You rated us " + rating + " out of 5 stars.Your day with us was " + rating_word;
             }
-            */
+
+        }
+
+        protected void ddlBookingIDDetails_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

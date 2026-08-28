@@ -60,30 +60,33 @@
                                     <tr>
                                         <td class="auto-style46">
                                             <asp:Label ID="lblTouristID" runat="server" Text="Tourist ID:"></asp:Label>
+                                            <asp:RequiredFieldValidator ID="rfvTouristId" runat="server" ControlToValidate="txtTouristID" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                                            &nbsp;<asp:Label ID="lblerror" runat="server" ForeColor="Red"></asp:Label>
                                         </td>
                                         <td>&nbsp;</td>
                                     </tr>
                                     <tr>
                                         <td class="auto-style46">
-                                            <asp:TextBox ID="txtTouristID" runat="server" Width="87px"></asp:TextBox>
+                                            <asp:TextBox ID="txtTouristID" runat="server" Width="87px" CausesValidation="True"></asp:TextBox>
                                         </td>
                                         <td>&nbsp;</td>
                                     </tr>
                                     <tr>
                                         <td class="auto-style46">
-                                            <asp:Button ID="btnEnter" runat="server" BackColor="#999999" Height="36px" Text="Enter" Width="194px" />
+                                            <asp:Button ID="btnEnter" runat="server" BackColor="#999999" Height="36px" Text="Enter" Width="194px" OnClick="btnEnter_Click" />
                                         </td>
                                         <td>&nbsp;</td>
                                     </tr>
                                     <tr>
                                         <td class="auto-style46">
                                             <asp:Label ID="lblBookingID2" runat="server" Text="BookingID :"></asp:Label>
+                                            <asp:RequiredFieldValidator ID="rfvBookingID" runat="server" ControlToValidate="ddlBookingEventsStaffcheckin" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
                                         </td>
                                         <td>&nbsp;</td>
                                     </tr>
                                     <tr>
                                         <td class="auto-style46">
-                                            <asp:DropDownList ID="ddlBookingEventsStaffcheckin" runat="server" Height="23px" Width="134px">
+                                            <asp:DropDownList ID="ddlBookingEventsStaffcheckin" runat="server" Height="23px" Width="134px" OnSelectedIndexChanged="ddlBookingEventsStaffcheckin_SelectedIndexChanged">
                                                 <asp:ListItem>1</asp:ListItem>
                                                 <asp:ListItem>2</asp:ListItem>
                                                 <asp:ListItem>3</asp:ListItem>
@@ -115,7 +118,7 @@
                                                 <table style="width:100%;">
                                                     <tr>
                                                         <td>
-                                                            <asp:GridView ID="GridView2" runat="server" Height="167px" Width="1162px">
+                                                            <asp:GridView ID="gvBookingsStaffside" runat="server" Height="167px" Width="1162px">
                                                             </asp:GridView>
                                                         </td>
                                                     </tr>

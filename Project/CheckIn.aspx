@@ -87,7 +87,7 @@
                                             <tr>
                                                 <td>
                                                     <br />
-                                                    <asp:DropDownList ID="ddlBookingEvents0" runat="server" Height="30px" Width="130px">
+                                                    <asp:DropDownList ID="ddlBookingEvents0" runat="server" Height="30px" Width="130px" OnSelectedIndexChanged="ddlBookingEvents0_SelectedIndexChanged">
                                                         <asp:ListItem>1</asp:ListItem>
                                                         <asp:ListItem>2</asp:ListItem>
                                                         <asp:ListItem>3</asp:ListItem>
@@ -110,7 +110,9 @@
                                                 <td>
                                                     <asp:Label ID="lblOutput" runat="server"></asp:Label>
                                                 </td>
-                                                <td>&nbsp;</td>
+                                                <td>
+                                                    <asp:Button ID="btnpayment" runat="server" OnClick="btnpayment_Click" Text="Payment" Visible="False" />
+                                                </td>
                                                 <td>&nbsp;</td>
                                             </tr>
                                             <tr>
@@ -122,7 +124,7 @@
                                                 <td colspan="3">
                                                     <asp:Panel ID="pnlCurrentBookings" runat="server" GroupingText="Current Bookings">
                                                         <br />
-                                                        <asp:GridView ID="gdvDisplay" runat="server" Width="1313px">
+                                                        <asp:GridView ID="gvCurrentbookings" runat="server" Width="1313px">
                                                         </asp:GridView>
                                                     </asp:Panel>
                                                 </td>

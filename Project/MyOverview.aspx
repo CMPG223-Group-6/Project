@@ -81,7 +81,7 @@
                         <asp:Panel ID="Panel2" runat="server" Height="427px" Width="802px" GroupingText="Upcoming Events" ScrollBars="Both">
                             &nbsp;&nbsp;&nbsp;
                             <br />
-                            <asp:GridView ID="gdvDisplayEvents" runat="server" Height="367px" Width="790px">
+                            <asp:GridView ID="gdvDisplayEvents" runat="server" Height="367px" Width="790px" OnSelectedIndexChanged="gdvDisplayEvents_SelectedIndexChanged">
                             </asp:GridView>
                         </asp:Panel>
                     </td>
