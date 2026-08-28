@@ -213,6 +213,7 @@
     <Content Include="TouristSignUp.aspx" />
     <Content Include="UpdateBooking.aspx" />
     <Content Include="UpdateTourist.aspx" />
+    <Content Include="ValidateUser.aspx" />
     <Content Include="Web.config" />
     <Content Include="zims.sql" />
     <Content Include="zims_data_setup.sql" />
@@ -465,6 +466,13 @@
     </Compile>
     <Compile Include="UpdateTourist.aspx.designer.cs">
       <DependentUpon>UpdateTourist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ValidateUser.aspx.cs">
+      <DependentUpon>ValidateUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ValidateUser.aspx.designer.cs">
+      <DependentUpon>ValidateUser.aspx</DependentUpon>
     </Compile>
     <Compile Include="ZooInformation.aspx.cs">
       <DependentUpon>ZooInformation.aspx</DependentUpon>
