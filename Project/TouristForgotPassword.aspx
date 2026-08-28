@@ -17,14 +17,14 @@
             height: 27px;
         }
         .auto-style4 {
-            width: 418px;
+            width: 322px;
         }
         .auto-style5 {
             height: 27px;
-            width: 418px;
+            width: 322px;
         }
         .auto-style7 {
-            width: 418px;
+            width: 322px;
             height: 26px;
         }
     </style>
@@ -59,7 +59,9 @@
                 <td class="auto-style4">
                     <asp:TextBox ID="txtEmailAddress" runat="server"></asp:TextBox>
                 </td>
-                <td>&nbsp;</td>
+                <td>
+                    <asp:Label ID="lblEmailNoExists" runat="server" Font-Bold="True" ForeColor="#FF3300"></asp:Label>
+                </td>
             </tr>
             <tr>
                 <td class="auto-style1">&nbsp;</td>
@@ -110,11 +112,25 @@
                 <td class="auto-style4">
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtConfirmPassword" ErrorMessage="Please confirm your password!" Font-Bold="True" ForeColor="#FF3300"></asp:RequiredFieldValidator>
                 </td>
+                <td>
+                    <asp:Label ID="lblOutputPasswords" runat="server" Font-Bold="True" ForeColor="#FF3300"></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style1">&nbsp;</td>
+                <td class="auto-style4"><asp:Button ID="btnDone" runat="server" BackColor="#CCCCCC" Font-Bold="True" Text="Done" Width="115px" OnClick="btnDone_Click" />
+                </td>
                 <td>&nbsp;</td>
             </tr>
             <tr>
                 <td class="auto-style1">&nbsp;</td>
-                <td class="auto-style4"><asp:Button ID="btnDone" runat="server" BackColor="#CCCCCC" Font-Bold="True" Text="Done" Width="115px" />
+                <td class="auto-style4">&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style1">&nbsp;</td>
+                <td class="auto-style4">
+                    <asp:Label ID="lblOutput" runat="server" Font-Bold="True"></asp:Label>
                 </td>
                 <td>&nbsp;</td>
             </tr>
