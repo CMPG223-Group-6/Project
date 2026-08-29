@@ -40,6 +40,7 @@
         .auto-style33 {
             text-align: justify;
             height: 65px;
+            width: 307px;
         }
         .auto-style34 {
             text-align: justify;
@@ -49,6 +50,7 @@
         .auto-style35 {
             text-align: justify;
             height: 35px;
+            width: 307px;
         }
         .auto-style36 {
             text-align: justify;
@@ -58,11 +60,17 @@
         .auto-style37 {
             text-align: justify;
             height: 41px;
+            width: 307px;
         }
         .auto-style38 {
             text-align: justify;
             height: 41px;
             width: 344px;
+        }
+        .auto-style39 {
+            text-align: justify;
+            height: 102px;
+            width: 307px;
         }
     </style>
 </head>
@@ -85,13 +93,13 @@
                         </td>
                 </tr>
                 <tr>
-                    <td class="auto-style26" rowspan="7" style="background-color: #003300">
+                    <td class="auto-style26" rowspan="5" style="background-color: #003300">
                         <asp:Menu ID="Menu1" runat="server" BackColor="#003300" DynamicHorizontalOffset="13" Font-Bold="True" Font-Size="13pt" ForeColor="White" Height="700px" StaticSubMenuIndent="25px" Width="330px">
                             <DynamicHoverStyle BackColor="#339933" />
                             <Items>
                                 <asp:MenuItem Text="Maintain" Value="Maintain">
                                     <asp:MenuItem NavigateUrl="~/MaintainTourists.aspx" Text="Maintain Tourists" Value="Maintain Tourists"></asp:MenuItem>
-                                    <asp:MenuItem NavigateUrl="~/MaintainEventsTypes.aspx" Text="Maintain Event Types" Value="Maintain Event Types"></asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="~/ValidateUser.aspx" Text="Maintain Event Types" Value="Maintain Event Types"></asp:MenuItem>
                                     <asp:MenuItem NavigateUrl="~/MaintainBookings.aspx" Text="Maintain Bookings" Value="Maintain Bookings"></asp:MenuItem>
                                 </asp:MenuItem>
                                 <asp:MenuItem NavigateUrl="~/ProcessPayments.aspx" Text="Process Payments" Value="Process Payments"></asp:MenuItem>
@@ -106,6 +114,7 @@
                     </td>
                     <td class="auto-style33">
                         <br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     <asp:Button ID="btnAddBooking" runat="server" Font-Bold="True" Height="54px" Text="Add New Booking" Width="217px" BackColor="#009933" ForeColor="White" OnClick="btnAddBooking_Click" BorderColor="#00FF99" BorderStyle="Groove" />
                                 <br />
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -121,37 +130,10 @@
                         </td>
                 </tr>
                 <tr>
-                    <td class="auto-style35">
-                        <asp:Label ID="Label1" runat="server" Text="Search for event:"></asp:Label>
-                        
-                        </td>
-                    <td class="auto-style36">
-                        
-                        </td>
-                    <td class="auto-style36">
-                        
-                        </td>
-                </tr>
-                <tr>
-                    <td class="auto-style37">
-                        <asp:TextBox ID="TextBox1" runat="server" Height="31px" Width="331px"></asp:TextBox>
-                        
-                        </td>
-                    <td class="auto-style38">
-                        <asp:Button ID="btnSearch" runat="server" Height="38px" Text="Search" Width="120px" />
-&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Button ID="btnReload" runat="server" Height="39px" Text="Reload Table" Width="132px" />
-                        
-                        </td>
-                    <td class="auto-style38">
-                        
-                        </td>
-                </tr>
-                <tr>
-                    <td class="auto-style31">
+                    <td class="auto-style39">
                         <br />
                         <br />
-                        <asp:Label ID="lblAvailableEvents" runat="server" Font-Bold="True" Font-Size="20pt" Text="Available Events:"></asp:Label>
+                        <asp:Label ID="lblCurrentBookings" runat="server" Font-Bold="True" Font-Size="20pt" Text="All Current Bookings"></asp:Label>
                         
                         </td>
                     <td class="auto-style32">
@@ -161,13 +143,24 @@
                 </tr>
                 <tr>
                     <td class="auto-style31" colspan="3">
-                        <asp:GridView ID="gvEvents" runat="server" Height="244px" Width="1017px">
+                        <asp:GridView ID="gvBookings" runat="server" Height="244px" Width="1017px" CellPadding="4" ForeColor="#333333" GridLines="None">
+                            <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+                            <EditRowStyle BackColor="#999999" />
+                            <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                            <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                            <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                            <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+                            <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+                            <SortedAscendingCellStyle BackColor="#E9E7E2" />
+                            <SortedAscendingHeaderStyle BackColor="#506C8C" />
+                            <SortedDescendingCellStyle BackColor="#FFFDF8" />
+                            <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
                         </asp:GridView>
                         
                         </td>
                 </tr>
                 <tr>
-                    <td class="auto-style31">
+                    <td class="auto-style39">
                         &nbsp;</td>
                     <td class="auto-style32">
                         &nbsp;</td>
@@ -175,7 +168,7 @@
                         &nbsp;</td>
                 </tr>
                 <tr>
-                    <td class="auto-style31">
+                    <td class="auto-style39">
                         &nbsp;</td>
                     <td class="auto-style32">
                         &nbsp;</td>

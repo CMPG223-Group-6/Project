@@ -78,13 +78,13 @@ namespace Project
         protected global::System.Web.UI.WebControls.Label lblEventID;
 
         /// <summary>
-        /// ddrlEventID control.
+        /// ddrlBookingID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddrlEventID;
+        protected global::System.Web.UI.WebControls.DropDownList ddrlBookingID;
 
         /// <summary>
         /// RequiredFieldValidator2 control.
@@ -148,6 +148,24 @@ namespace Project
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnProceed;
+
+        /// <summary>
+        /// pnlEvents control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlEvents;
+
+        /// <summary>
+        /// gdvDisplayEvents control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gdvDisplayEvents;
 
         /// <summary>
         /// Menu3 control.

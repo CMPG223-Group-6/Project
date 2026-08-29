@@ -187,6 +187,7 @@
                     &nbsp;</td>
                 <td class="auto-style2">
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtPhoneNumber" ErrorMessage="Please enter your phone number!" Font-Bold="True" ForeColor="#FF3300"></asp:RequiredFieldValidator>
+                    <asp:Label ID="lblCountryNoExists" runat="server" Font-Bold="True" ForeColor="#FF3300"></asp:Label>
                 </td>
                 <td>&nbsp;</td>
             </tr>

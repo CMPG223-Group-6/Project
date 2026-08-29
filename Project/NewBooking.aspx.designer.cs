@@ -231,40 +231,31 @@ namespace Project
         protected global::System.Web.UI.WebControls.Button btnBook;
 
         /// <summary>
-        /// Panel2 control.
+        /// lblError control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel Panel2;
+        protected global::System.Web.UI.WebControls.Label lblError;
 
         /// <summary>
-        /// lblInfo0 control.
+        /// pnlEvents control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblInfo0;
+        protected global::System.Web.UI.WebControls.Panel pnlEvents;
 
         /// <summary>
-        /// lblConfirmation control.
+        /// gdvDisplay control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblConfirmation;
-
-        /// <summary>
-        /// btnDone control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnDone;
+        protected global::System.Web.UI.WebControls.GridView gdvDisplay;
 
         /// <summary>
         /// Menu3 control.
@@ -274,14 +265,5 @@ namespace Project
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Menu Menu3;
-
-        /// <summary>
-        /// lblError control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblError;
     }
 }

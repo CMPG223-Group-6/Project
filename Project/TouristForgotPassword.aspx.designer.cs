@@ -51,6 +51,15 @@ namespace Project
         protected global::System.Web.UI.WebControls.TextBox txtEmailAddress;
 
         /// <summary>
+        /// lblEmailNoExists control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblEmailNoExists;
+
+        /// <summary>
         /// RequiredFieldValidator6 control.
         /// </summary>
         /// <remarks>
@@ -123,6 +132,15 @@ namespace Project
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator5;
 
         /// <summary>
+        /// lblOutputPasswords control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblOutputPasswords;
+
+        /// <summary>
         /// btnDone control.
         /// </summary>
         /// <remarks>
@@ -130,5 +148,14 @@ namespace Project
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnDone;
+
+        /// <summary>
+        /// lblOutput control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblOutput;
     }
 }

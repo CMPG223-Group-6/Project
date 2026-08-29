@@ -130,7 +130,7 @@
                             </tr>
                             <tr>
                                 <td class="auto-style14">
-                                    <asp:DropDownList ID="ddlBookingID" runat="server" Height="19px" Width="66px">
+                                    <asp:DropDownList ID="ddlBookingID" runat="server" Height="26px" Width="154px" AutoPostBack="True" OnSelectedIndexChanged="ddlBookingID_SelectedIndexChanged">
                                         <asp:ListItem></asp:ListItem>
                                         <asp:ListItem>1</asp:ListItem>
                                         <asp:ListItem>2</asp:ListItem>
@@ -224,7 +224,7 @@
                             </tr>
                             <tr>
                                 <td class="auto-style20">
-                                    <asp:Button ID="btnProcessPayment" runat="server" BackColor="#009933" Font-Bold="True" ForeColor="White" Text="Process payment" Width="165px" />
+                                    <asp:Button ID="btnProcessPayment" runat="server" BackColor="#009933" Font-Bold="True" ForeColor="White" Text="Process payment" Width="165px" OnClick="btnProcessPayment_Click" />
                                 </td>
                             </tr>
                             <tr>
@@ -260,7 +260,7 @@
                             <Items>
                                 <asp:MenuItem Text="Maintain" Value="Maintain">
                                     <asp:MenuItem NavigateUrl="~/MaintainTourists.aspx" Text="Maintain Tourists" Value="Maintain Tourists"></asp:MenuItem>
-                                    <asp:MenuItem NavigateUrl="~/MaintainEventsTypes.aspx" Text="Maintain Event Types" Value="Maintain Event Types"></asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="~/ValidateUser.aspx" Text="Maintain Event Types" Value="Maintain Event Types"></asp:MenuItem>
                                     <asp:MenuItem NavigateUrl="~/MaintainBookings.aspx" Text="Maintain Bookings" Value="Maintain Bookings"></asp:MenuItem>
                                 </asp:MenuItem>
                                 <asp:MenuItem NavigateUrl="~/ProcessPayments.aspx" Text="Process Payments" Value="Process Payments"></asp:MenuItem>

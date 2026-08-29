@@ -114,9 +114,11 @@
     <Content Include="bin\roslyn\System.Xml.XPath.XDocument.dll" />
     <Content Include="bin\roslyn\vbc.exe" />
     <Content Include="bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="BookingConfirmation.aspx" />
     <Content Include="Bookings.aspx" />
     <Content Include="CancelBooking.aspx" />
     <Content Include="CardDetails.aspx" />
+    <Content Include="ChangeBooking.aspx" />
     <Content Include="ChangeEventType.aspx" />
     <Content Include="CheckIn.aspx" />
     <Content Include="CheckInTourist.aspx" />
@@ -212,8 +214,10 @@
     <Content Include="TouristSignUp.aspx" />
     <Content Include="UpdateBooking.aspx" />
     <Content Include="UpdateTourist.aspx" />
+    <Content Include="ValidateUser.aspx" />
     <Content Include="Web.config" />
     <Content Include="zims.sql" />
+    <Content Include="zims_data_setup.sql" />
     <Content Include="ZooInformation.aspx" />
   </ItemGroup>
   <ItemGroup>
@@ -238,6 +242,13 @@
     <Compile Include="AddTourist.aspx.designer.cs">
       <DependentUpon>AddTourist.aspx</DependentUpon>
     </Compile>
+    <Compile Include="BookingConfirmation.aspx.cs">
+      <DependentUpon>BookingConfirmation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BookingConfirmation.aspx.designer.cs">
+      <DependentUpon>BookingConfirmation.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Bookings.aspx.cs">
       <DependentUpon>Bookings.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -258,6 +269,13 @@
     </Compile>
     <Compile Include="CardDetails.aspx.designer.cs">
       <DependentUpon>CardDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeBooking.aspx.cs">
+      <DependentUpon>ChangeBooking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangeBooking.aspx.designer.cs">
+      <DependentUpon>ChangeBooking.aspx</DependentUpon>
     </Compile>
     <Compile Include="ChangeEventType.aspx.cs">
       <DependentUpon>ChangeEventType.aspx</DependentUpon>
@@ -456,6 +474,13 @@
     </Compile>
     <Compile Include="UpdateTourist.aspx.designer.cs">
       <DependentUpon>UpdateTourist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ValidateUser.aspx.cs">
+      <DependentUpon>ValidateUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ValidateUser.aspx.designer.cs">
+      <DependentUpon>ValidateUser.aspx</DependentUpon>
     </Compile>
     <Compile Include="ZooInformation.aspx.cs">
       <DependentUpon>ZooInformation.aspx</DependentUpon>

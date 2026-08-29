@@ -72,11 +72,11 @@
                                     <asp:Panel ID="Panel1" runat="server" Height="426px">
                                         &nbsp;&nbsp;&nbsp;<br /> &nbsp;&nbsp; &nbsp;&nbsp;<asp:Button ID="btnAvailableEvents" runat="server" BackColor="#669999" ForeColor="White" OnClick="btnAvailableEvents_Click" Text="Available Events" Width="192px" />
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <asp:Button ID="btnNewBooking0" runat="server" BackColor="#006600" BorderColor="#003300" BorderStyle="Groove" ForeColor="White" OnClick="btnNewBooking_Click" Text="+ New Booking" Width="161px" />
+                                        <asp:Button ID="btnNewBooking0" runat="server" BackColor="#006600" BorderColor="#003300" BorderStyle="Groove" ForeColor="White" OnClick="btnNewBooking_Click" Text="+ New Booking" Width="161px" Height="27px" />
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <asp:Button ID="btnUpdate0" runat="server" BackColor="#0099CC" BorderColor="#0099CC" BorderStyle="Groove" ForeColor="White" OnClick="btnUpdate_Click" Text=" Update Booking" Width="168px" />
+                                        <asp:Button ID="btnUpdate0" runat="server" BackColor="#0099CC" BorderColor="#0099CC" BorderStyle="Groove" ForeColor="White" OnClick="btnUpdate_Click" Text=" Update Booking" Width="168px" Height="30px" />
                                         &nbsp;&nbsp;&nbsp;&nbsp;
-                                        <asp:Button ID="btnCancelBooking0" runat="server" BackColor="#FF3300" BorderColor="Red" BorderStyle="Groove" ForeColor="White" OnClick="btnCancelBooking_Click" style="margin-left: 18px" Text="Cancel Booking" Width="146px" />
+                                        <asp:Button ID="btnCancelBooking0" runat="server" BackColor="#FF3300" BorderColor="Red" BorderStyle="Groove" ForeColor="White" OnClick="btnCancelBooking_Click" style="margin-left: 18px" Text="Cancel Booking" Width="146px" Height="26px" />
                                         <br />
                                         &nbsp;
                                         <br />
@@ -84,7 +84,7 @@
                                         <asp:Label ID="lblUpcomingEvents" runat="server" Text="Booked Events:"></asp:Label>
                                         <br />
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <asp:GridView ID="gdvDisplayEvents" runat="server" Height="241px" Width="1190px">
+                                        <asp:GridView ID="gdvDisplayEvents" runat="server" Height="96px" Width="843px">
                                         </asp:GridView>
                                     </asp:Panel>
                                 </td>
