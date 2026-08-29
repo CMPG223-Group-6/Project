@@ -114,6 +114,7 @@
     <Content Include="bin\roslyn\System.Xml.XPath.XDocument.dll" />
     <Content Include="bin\roslyn\vbc.exe" />
     <Content Include="bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="BookingConfirmation.aspx" />
     <Content Include="Bookings.aspx" />
     <Content Include="CancelBooking.aspx" />
     <Content Include="CardDetails.aspx" />
@@ -240,6 +241,13 @@
     </Compile>
     <Compile Include="AddTourist.aspx.designer.cs">
       <DependentUpon>AddTourist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BookingConfirmation.aspx.cs">
+      <DependentUpon>BookingConfirmation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BookingConfirmation.aspx.designer.cs">
+      <DependentUpon>BookingConfirmation.aspx</DependentUpon>
     </Compile>
     <Compile Include="Bookings.aspx.cs">
       <DependentUpon>Bookings.aspx</DependentUpon>
