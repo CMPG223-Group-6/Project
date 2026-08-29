@@ -88,7 +88,7 @@ namespace Project
         {
             using (conn = new SqlConnection(ConString))
             {
-                string sql = "SELECT Country_ID FROM COUNTRY";
+                string sql = "SELECT COUNTRY_ID FROM COUNTRY";
 
                 cmd = new SqlCommand(sql, conn);
 
@@ -100,8 +100,8 @@ namespace Project
 
                 ddlCountries.DataSource = ds;
 
-                ddlCountries.DataTextField = "Country_ID";
-                ddlCountries.DataValueField = "Country_ID";
+                ddlCountries.DataTextField = "COUNTRY_ID";
+                ddlCountries.DataValueField = "COUNTRY_ID";
 
                 ddlCountries.DataBind();
 

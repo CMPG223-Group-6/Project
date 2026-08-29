@@ -457,3 +457,4 @@ C:\Users\siveg\OneDrive\Documents\GitHub\Abe project\Project\obj\Debug\Project.c
 C:\Users\siveg\OneDrive\Documents\GitHub\Abe project\Project\obj\Debug\Project.csproj.Up2Date
 C:\Users\siveg\OneDrive\Documents\GitHub\Abe project\Project\obj\Debug\Project.dll
 C:\Users\siveg\OneDrive\Documents\GitHub\Abe project\Project\obj\Debug\Project.pdb
+C:\Users\siveg\OneDrive\Documents\GitHub\Project\Project\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
