@@ -16,7 +16,7 @@ namespace Project
     public partial class BookEvent : System.Web.UI.Page
     {
         //Temporary Have to use sessions
-        int touristID = 0;
+        int touristID;
         private string StatusOfEvent = "";
         private int TicketsAvailable = 0;
         private double priceEvent = 0.0;
@@ -34,11 +34,10 @@ namespace Project
                 //Validate so user doesnt select a date that has passed
                 txtDate.Attributes["min"] = DateTime.Today.ToString("yyyy-MM-dd");
                 txtNumberTickets.Attributes["min"] = 0.ToString();
-
-                if (Session["Tourist_ID"] != null)
-                {
-                    touristID = int.Parse(Session["Tourist_ID"].ToString());
-                }
+            }
+            if (Session["Tourist_ID"] != null)
+            {
+                touristID = Convert.ToInt32(Session["Tourist_ID"]);
             }
         }
 
@@ -61,8 +60,7 @@ namespace Project
 
             if ( (TicketsAvailable >= numTickets) && (StatusOfEvent == "Active"))
             {
-                TicketsAvailable = TicketsAvailable - numTickets;
-                if (TicketsAvailable == 0)
+                if (ticketsAvailable == 0)
                 {
                     StatusOfEvent = "Full";
                 }
@@ -219,7 +217,7 @@ namespace Project
         //Allows the amount textbox displayed to change everytime 
         //User changes number of tickets
         protected void txtNumberTickets_TextChanged(object sender, EventArgs e)
-        {
+        { 
             numberTickets();
             decimal amount = CalculateAmount();
             txtAmount0.Text = "R " + amount.ToString("F2");

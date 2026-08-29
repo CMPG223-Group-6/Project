@@ -12,7 +12,7 @@ namespace Project
 {
     public partial class MyOverview : System.Web.UI.Page
     {
-        int Tourist_ID =3;
+        int Tourist_ID;
         string surname;
         string name;
 
@@ -34,6 +34,7 @@ namespace Project
             }
 
             lblNameDisplay.Text = name + " " + surname;
+            lblNameDisplay0.Text = "Welcome back, " + name + " " + surname;
 
             //Total booking of tourist
             lblBookedDisplay.Text = GetBookingCount(Tourist_ID).ToString();

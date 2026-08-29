@@ -154,7 +154,7 @@
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <asp:Button ID="btnDelete" runat="server" BackColor="#FF3300" BorderColor="#CC3300" BorderStyle="Groove" ForeColor="White" Text="Delete" Width="136px" ValidationGroup="btnDelete" OnClick="btnDelete_Click" />
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <asp:LinkButton ID="lnkForgotPassword" runat="server">Forgot Password?</asp:LinkButton>
+                            <asp:LinkButton ID="lnkForgotPassword" runat="server" OnClick="lnkForgotPassword_Click">Forgot Password?</asp:LinkButton>
                             <br />
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <br />

@@ -50,8 +50,11 @@ namespace Project
         {
             using (SHA256 sha256 = SHA256.Create())
             {
-                byte[] hashedBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
-                return Convert.ToBase64String(hashedBytes);
+                byte[] bytes = Encoding.UTF8.GetBytes(password);
+
+                byte[] hash = sha256.ComputeHash(bytes);
+
+                return Convert.ToBase64String(hash);
             }
         }
 
@@ -63,9 +66,8 @@ namespace Project
         }
         protected void btnDelete_Click(object sender, EventArgs e)
         {
-            string Hashpassword = HashPassword(txtPassword.Text);
 
-            string enteredPassword = txtPassword.Text;
+            string enteredPassword = txtPassword.Text.Trim();
             string storedHash = StoredPassword;
             bool isValid = VerifyPassword(enteredPassword, storedHash);
 
@@ -114,7 +116,6 @@ namespace Project
                 using (SqlCommand cmd = new SqlCommand(sql, conn))
                 {
                     cmd.Parameters.AddWithValue("@touristID", Tourist_ID);
-                    cmd.Parameters.AddWithValue("@Today", DateTime.Today);
 
                     SqlDataReader reader = cmd.ExecuteReader();
 
@@ -158,6 +159,11 @@ namespace Project
 
         protected void ddrlCountry_SelectedIndexChanged(object sender, EventArgs e)
         {
+        }
+
+        protected void lnkForgotPassword_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("TouristForgotPassword.aspx");
         }
     }
 }

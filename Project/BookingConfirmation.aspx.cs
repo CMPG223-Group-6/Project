@@ -29,7 +29,7 @@ namespace Project
             }
             if(Session["TotalAmount"] != null)
             {
-                lblAmountToPay.Text = Session["TotalAmount"].ToString();
+                lblAmountDisplay.Text = Session["TotalAmount"].ToString();
             }
             if (Session["name"] != null && Session["surname"] != null)
             {

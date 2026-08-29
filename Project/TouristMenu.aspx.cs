@@ -49,11 +49,16 @@ namespace Project
                 }
             }
 
-            lblNameDisplay0.Text = "Welcome back, " + name + " " + surname;
+            //lblNameDisplay0.Text = "Welcome back, " + name + " " + surname;
             lblNameDisplay.Text = name + " " + surname;
         }
 
         protected void Menu3_MenuItemClick(object sender, MenuEventArgs e)
+        {
+
+        }
+
+        protected void Menu1_MenuItemClick(object sender, MenuEventArgs e)
         {
 
         }

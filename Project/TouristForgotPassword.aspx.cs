@@ -17,7 +17,6 @@ namespace Project
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
 
         public static string HashPassword(string password)
@@ -86,7 +85,10 @@ namespace Project
                 }
             }
 
-            Response.Redirect("Default.aspx");
+
+                Response.Redirect("Default.aspx");
+            
+            
         }
     }
 }

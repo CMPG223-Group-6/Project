@@ -24,6 +24,10 @@ namespace Project
         string conStr = @"Data Source=localhost;Initial Catalog=zims.db;Integrated Security=True";
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["Tourist_ID"] != null)
+            {
+                Tourist_ID = int.Parse(Session["Tourist_ID"].ToString());
+            }
             if (!IsPostBack)
             {
                 //read all available events from database
@@ -35,11 +39,6 @@ namespace Project
                 //Validate so user doesnt select a date that has passed
                 txtDate.Attributes["min"] = DateTime.Today.ToString("yyyy-MM-dd");
                 txtNumberTickets.Attributes["min"] = 0.ToString();
-
-                if (Session["Tourist_ID"] != null)
-                {
-                    Tourist_ID = int.Parse(Session["Tourist_ID"].ToString());
-                }
             }
 
             //Reseting the pay now button 
@@ -242,12 +241,14 @@ namespace Project
                               WHERE B.Event_ID = E.Event_ID
                               AND E.EventType_ID = ET.EventType_ID
                               AND B.Tourist_ID = @Tourist_ID
-                              AND B.Arrive_Date >= @Today"; 
+                              AND B.Arrive_Date >= @Today
+                              AND B.Checked_In = @value"; 
 
                 using (SqlCommand cmd = new SqlCommand(sql, conn))
                 {
                     cmd.Parameters.AddWithValue("@Tourist_ID", Tourist_ID);
                     cmd.Parameters.AddWithValue("@Today", DateTime.Today);
+                    cmd.Parameters.AddWithValue("@value", false);
 
                     SqlDataAdapter adap = new SqlDataAdapter();
                     DataSet ds = new DataSet();
@@ -351,12 +352,14 @@ namespace Project
                 string sql = "SELECT Booking_ID " +
                              "FROM BOOKING " +
                              "WHERE Arrive_Date >= @Today " +
-                             " AND Tourist_ID = @touristID";
+                             "AND Checked_In = @value " +
+                             "AND Tourist_ID = @touristID";
 
                 using (SqlCommand cmd = new SqlCommand(sql, conn))
                 {
                     cmd.Parameters.AddWithValue("@touristID", Tourist_ID);
                     cmd.Parameters.AddWithValue("@Today", DateTime.Today);
+                    cmd.Parameters.AddWithValue("@value", false);
 
                     SqlDataReader reader = cmd.ExecuteReader();
 
@@ -571,18 +574,18 @@ namespace Project
 
                     using (SqlCommand comm = new SqlCommand(sql2, conn))
                     {
-                    comm.Parameters.AddWithValue("@Tourist_ID", Tourist_ID);
-                    comm.Parameters.AddWithValue("@bookingID", ddlBookingID.SelectedValue);
+                        comm.Parameters.AddWithValue("@Tourist_ID", Tourist_ID);
+                        comm.Parameters.AddWithValue("@bookingID", ddlBookingID.SelectedValue);
 
-                    SqlDataAdapter adap2 = new SqlDataAdapter();
-                    DataSet ds = new DataSet();
+                        SqlDataAdapter adap2 = new SqlDataAdapter();
+                        DataSet ds = new DataSet();
 
-                    adap2.SelectCommand = comm;
-                    adap2.Fill(ds, "BOOKING");
+                        adap2.SelectCommand = comm;
+                        adap2.Fill(ds, "BOOKING");
 
-                    gdvDisplayEvents.DataSource = ds;
-                    gdvDisplayEvents.DataBind();
-                }
+                        gdvDisplayEvents.DataSource = ds;
+                        gdvDisplayEvents.DataBind();
+                    }
 
                     conn.Close();
                 }
@@ -592,7 +595,6 @@ namespace Project
             // Now that Event ID is correctly selected, populate Event Type and recalc price
             EventID();
         }
-
         protected void btnPayNow_Click(object sender, EventArgs e)
         {
             Response.Redirect("Payment.aspx");
