@@ -3,11 +3,55 @@
   "WorkspaceRootPath": "C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\",
   "Documents": [
     {
+<<<<<<< Updated upstream
       "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\maintaintourists.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:maintaintourists.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|c:\\users\\siveg\\onedrive\\documents\\github\\project\\project\\maintaintourists.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+=======
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|c:\\users\\hansl\\onedrive\\documents\\github\\project\\project\\project\\updatetourist.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:updatetourist.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\addtourist.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:addtourist.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\updatetourist.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:updatetourist.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|c:\\users\\hansl\\onedrive\\documents\\github\\project\\project\\project\\touristsignup.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:touristsignup.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|c:\\users\\hansl\\onedrive\\documents\\github\\project\\project\\project\\addtourist.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:addtourist.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\validateuser.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:validateuser.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\validateuser.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:validateuser.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\reports.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:reports.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\checkintourist.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:checkintourist.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\checkin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:checkin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\maintaintourists.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+>>>>>>> Stashed changes
       "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:maintaintourists.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
@@ -75,8 +119,41 @@
       "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:maintaineventstypes.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
+<<<<<<< Updated upstream
       "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\maintainbookings.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:maintainbookings.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+=======
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\addbooking.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:addbooking.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\addeventtype.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:addeventtype.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\changebooking.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:changebooking.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\changeeventtype.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:changeeventtype.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\deletebooking.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:deletebooking.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\deleteevent.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:deleteevent.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\deletetourist.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:deletetourist.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\staffmenu.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{DC83FD24-818A-4613-82E3-3A901A1D68F9}|Project.csproj|solutionrelative:staffmenu.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+>>>>>>> Stashed changes
     }
   ],
   "DocumentGroupContainers": [
@@ -86,9 +163,10 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
+<<<<<<< Updated upstream
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
@@ -103,11 +181,115 @@
               "ViewState": "AgIAAAUAAAAAAAAAAAAIwBkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-28T09:21:40.016Z",
+=======
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UpdateTourist.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\UpdateTourist.aspx.cs",
+              "RelativeDocumentMoniker": "UpdateTourist.aspx.cs",
+              "ToolTip": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\UpdateTourist.aspx.cs",
+              "RelativeToolTip": "UpdateTourist.aspx.cs",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAAAIEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-29T11:54:20.759Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TouristSignUp.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\TouristSignUp.aspx.cs",
+              "RelativeDocumentMoniker": "TouristSignUp.aspx.cs",
+              "ToolTip": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\TouristSignUp.aspx.cs",
+              "RelativeToolTip": "TouristSignUp.aspx.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAAACUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-29T11:52:44.918Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AddTourist.aspx",
+              "DocumentMoniker": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\AddTourist.aspx",
+              "RelativeDocumentMoniker": "AddTourist.aspx",
+              "ToolTip": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\AddTourist.aspx",
+              "RelativeToolTip": "AddTourist.aspx",
+              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-08-29T08:04:18.826Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UpdateTourist.aspx",
+              "DocumentMoniker": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\UpdateTourist.aspx",
+              "RelativeDocumentMoniker": "UpdateTourist.aspx",
+              "ToolTip": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\UpdateTourist.aspx",
+              "RelativeToolTip": "UpdateTourist.aspx",
+              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-08-29T08:02:02.333Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "StaffMenu.aspx",
+              "DocumentMoniker": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\StaffMenu.aspx",
+              "RelativeDocumentMoniker": "StaffMenu.aspx",
+              "ToolTip": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\StaffMenu.aspx",
+              "RelativeToolTip": "StaffMenu.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-08-29T08:01:51.534Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "DeleteTourist.aspx",
+              "DocumentMoniker": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\DeleteTourist.aspx",
+              "RelativeDocumentMoniker": "DeleteTourist.aspx",
+              "ToolTip": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\DeleteTourist.aspx",
+              "RelativeToolTip": "DeleteTourist.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-08-29T08:01:12.684Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AddTourist.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\AddTourist.aspx.cs",
+              "RelativeDocumentMoniker": "AddTourist.aspx.cs",
+              "ToolTip": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\AddTourist.aspx.cs",
+              "RelativeToolTip": "AddTourist.aspx.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAAAFMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-29T07:33:54.313Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ValidateUser.aspx",
+              "DocumentMoniker": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\ValidateUser.aspx",
+              "RelativeDocumentMoniker": "ValidateUser.aspx",
+              "ToolTip": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\ValidateUser.aspx",
+              "RelativeToolTip": "ValidateUser.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-08-29T08:02:04.276Z",
+>>>>>>> Stashed changes
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
+<<<<<<< Updated upstream
               "Title": "Checkout.aspx.cs",
               "DocumentMoniker": "C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\Checkout.aspx.cs",
               "RelativeDocumentMoniker": "Checkout.aspx.cs",
@@ -116,10 +298,112 @@
               "ViewState": "AgIAAC4AAAAAAAAAAAAAwEsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-20T21:35:35.852Z",
+=======
+              "Title": "ValidateUser.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\ValidateUser.aspx.cs",
+              "RelativeDocumentMoniker": "ValidateUser.aspx.cs",
+              "ToolTip": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\ValidateUser.aspx.cs",
+              "RelativeToolTip": "ValidateUser.aspx.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAA4wCUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-29T08:09:08.158Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "DeleteEvent.aspx",
+              "DocumentMoniker": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\DeleteEvent.aspx",
+              "RelativeDocumentMoniker": "DeleteEvent.aspx",
+              "ToolTip": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\DeleteEvent.aspx",
+              "RelativeToolTip": "DeleteEvent.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-08-29T08:01:09.054Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "DeleteBooking.aspx",
+              "DocumentMoniker": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\DeleteBooking.aspx",
+              "RelativeDocumentMoniker": "DeleteBooking.aspx",
+              "ToolTip": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\DeleteBooking.aspx",
+              "RelativeToolTip": "DeleteBooking.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-08-29T08:01:04.413Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ChangeEventType.aspx",
+              "DocumentMoniker": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\ChangeEventType.aspx",
+              "RelativeDocumentMoniker": "ChangeEventType.aspx",
+              "ToolTip": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\ChangeEventType.aspx",
+              "RelativeToolTip": "ChangeEventType.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-08-29T08:00:56.805Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ChangeBooking.aspx",
+              "DocumentMoniker": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\ChangeBooking.aspx",
+              "RelativeDocumentMoniker": "ChangeBooking.aspx",
+              "ToolTip": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\ChangeBooking.aspx",
+              "RelativeToolTip": "ChangeBooking.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-08-29T08:00:52.813Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AddEventType.aspx",
+              "DocumentMoniker": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\AddEventType.aspx",
+              "RelativeDocumentMoniker": "AddEventType.aspx",
+              "ToolTip": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\AddEventType.aspx",
+              "RelativeToolTip": "AddEventType.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-08-29T08:00:36.245Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AddBooking.aspx",
+              "DocumentMoniker": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\AddBooking.aspx",
+              "RelativeDocumentMoniker": "AddBooking.aspx",
+              "ToolTip": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\AddBooking.aspx",
+              "RelativeToolTip": "AddBooking.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-08-29T08:00:34.826Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "MaintainEventsTypes.aspx",
+              "DocumentMoniker": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\MaintainEventsTypes.aspx",
+              "RelativeDocumentMoniker": "MaintainEventsTypes.aspx",
+              "ToolTip": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\MaintainEventsTypes.aspx",
+              "RelativeToolTip": "MaintainEventsTypes.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-08-09T21:41:42.066Z",
+>>>>>>> Stashed changes
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 3,
               "Title": "Bookings.aspx",
               "DocumentMoniker": "C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\Bookings.aspx",
@@ -173,6 +457,9 @@
             {
               "$type": "Document",
               "DocumentIndex": 11,
+=======
+              "DocumentIndex": 7,
+>>>>>>> Stashed changes
               "Title": "Reports.aspx",
               "DocumentMoniker": "C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\Reports.aspx",
               "RelativeDocumentMoniker": "Reports.aspx",
@@ -185,6 +472,7 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 2,
               "Title": "Checkout.aspx",
               "DocumentMoniker": "C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\Checkout.aspx",
@@ -212,6 +500,9 @@
             {
               "$type": "Document",
               "DocumentIndex": 7,
+=======
+              "DocumentIndex": 8,
+>>>>>>> Stashed changes
               "Title": "CheckInTourist.aspx",
               "DocumentMoniker": "C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\CheckInTourist.aspx",
               "RelativeDocumentMoniker": "CheckInTourist.aspx",
@@ -224,6 +515,7 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 10,
               "Title": "Default.aspx",
               "DocumentMoniker": "C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\Default.aspx",
@@ -238,6 +530,9 @@
             {
               "$type": "Document",
               "DocumentIndex": 8,
+=======
+              "DocumentIndex": 9,
+>>>>>>> Stashed changes
               "Title": "CheckIn.aspx",
               "DocumentMoniker": "C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\CheckIn.aspx",
               "RelativeDocumentMoniker": "CheckIn.aspx",
@@ -250,6 +545,7 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 13,
               "Title": "Payment.aspx",
               "DocumentMoniker": "C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\Payment.aspx",
@@ -303,6 +599,9 @@
             {
               "$type": "Document",
               "DocumentIndex": 16,
+=======
+              "DocumentIndex": 12,
+>>>>>>> Stashed changes
               "Title": "ProcessPayments.aspx",
               "DocumentMoniker": "C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\ProcessPayments.aspx",
               "RelativeDocumentMoniker": "ProcessPayments.aspx",
@@ -315,7 +614,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 18,
+=======
+              "DocumentIndex": 11,
+>>>>>>> Stashed changes
               "Title": "MaintainBookings.aspx",
               "DocumentMoniker": "C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\MaintainBookings.aspx",
               "RelativeDocumentMoniker": "MaintainBookings.aspx",
@@ -328,12 +631,21 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 17,
               "Title": "MaintainEventsTypes.aspx",
               "DocumentMoniker": "C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\MaintainEventsTypes.aspx",
               "RelativeDocumentMoniker": "MaintainEventsTypes.aspx",
               "ToolTip": "C:\\Users\\siveg\\OneDrive\\Documents\\GitHub\\Project\\Project\\MaintainEventsTypes.aspx",
               "RelativeToolTip": "MaintainEventsTypes.aspx",
+=======
+              "DocumentIndex": 10,
+              "Title": "MaintainTourists.aspx",
+              "DocumentMoniker": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\MaintainTourists.aspx",
+              "RelativeDocumentMoniker": "MaintainTourists.aspx",
+              "ToolTip": "C:\\Users\\hansl\\OneDrive\\Documents\\GitHub\\Project\\Project\\Project\\MaintainTourists.aspx",
+              "RelativeToolTip": "MaintainTourists.aspx",
+>>>>>>> Stashed changes
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2026-08-09T21:41:42.066Z",

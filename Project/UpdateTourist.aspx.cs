@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -74,6 +76,7 @@ namespace Project
                 GridView1.DataBind();
 
             }
+
         }
 
         protected void ddlUpdCountries_SelectedIndexChanged(object sender, EventArgs e)
@@ -113,6 +116,17 @@ namespace Project
         protected void btnContinue_Click(object sender, EventArgs e)
         {
             Response.Redirect("MaintainTourists.aspx");
+        }
+        public static string HashPassword(string password)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] bytes = Encoding.UTF8.GetBytes(password);
+
+                byte[] hash = sha256.ComputeHash(bytes);
+
+                return Convert.ToBase64String(hash);
+            }
         }
     }
 }

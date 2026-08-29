@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Data.SqlClient;
-using System.Data;
 
 namespace Project
 {
@@ -56,9 +58,9 @@ namespace Project
                 cmd.Parameters.AddWithValue("@Password", Password);
                 cmd.Parameters.AddWithValue("@PhoneNo", Number);
                 cmd.Parameters.AddWithValue("@Email", Email);
-               
+
                 conn.Open();
-                
+
                 cmd.ExecuteNonQuery();
 
                 LoadTourists();
@@ -69,6 +71,19 @@ namespace Project
 
             }
         }
+             public static string HashPassword(string password)
+         {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] bytes = Encoding.UTF8.GetBytes(password);
+
+                byte[] hash = sha256.ComputeHash(bytes);
+
+                return Convert.ToBase64String(hash);
+            }
+        }
+        
+
 
         private void LoadTourists()
         {
