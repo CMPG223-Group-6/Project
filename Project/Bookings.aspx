@@ -86,9 +86,9 @@
                                         <br />
                                         <br />
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <asp:Button ID="btnSearch" runat="server" BackColor="#CCCCCC" Text="Search" ValidationGroup="btnSearch" Width="81px" />
+                                        <asp:Button ID="btnSearch" runat="server" BackColor="#CCCCCC" Text="Search" ValidationGroup="btnSearch" Width="81px" OnClick="btnSearch_Click" />
                                         &nbsp;&nbsp;&nbsp;
-                                        <asp:Button ID="btnReload" runat="server" BackColor="#CCFFFF" Text="Reload" />
+                                        <asp:Button ID="btnReload" runat="server" BackColor="#CCFFFF" Text="Reload" OnClick="btnReload_Click" />
                                         <br />
                                         <br />
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -102,7 +102,7 @@
                                         <br />
                                         &nbsp;&nbsp;
                                         <asp:Panel ID="Panel2" runat="server" GroupingText="Available Events:" Height="362px" ScrollBars="Both">
-                                            <asp:GridView ID="gdvDisplayEvents" runat="server" Height="241px" Width="1190px">
+                                            <asp:GridView ID="gdvDisplayEvents" runat="server" Height="88px" Width="1066px">
                                             </asp:GridView>
                                         </asp:Panel>
                                         <br />
@@ -127,7 +127,7 @@
                                 <td class="auto-style1" style="border-style: inset; border-color: #006600; background-color: #006600">
                                     <asp:Menu ID="Menu3" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="White">
                                         <Items>
-                                            <asp:MenuItem Text="Sign Out"></asp:MenuItem>
+                                            <asp:MenuItem Text="Sign Out" NavigateUrl="~/Default.aspx"></asp:MenuItem>
                                         </Items>
                                         <StaticHoverStyle BorderColor="#669999" />
                                     </asp:Menu>

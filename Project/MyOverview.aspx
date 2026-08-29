@@ -36,7 +36,7 @@
             height: 40px;
         }
         .auto-style9 {
-            width: 625px;
+            width: 774px;
         }
     </style>
 </head>
@@ -78,10 +78,10 @@
                         </asp:Menu>
                     </td>
                     <td class="auto-style9" rowspan="4">
-                        <asp:Panel ID="Panel2" runat="server" Height="427px" Width="802px" GroupingText="Upcoming Events" ScrollBars="Both">
+                        <asp:Panel ID="Panel2" runat="server" Height="427px" Width="886px" GroupingText="Available &amp; Upcoming Events" ScrollBars="Both">
                             &nbsp;&nbsp;&nbsp;
                             <br />
-                            <asp:GridView ID="gdvDisplayEvents" runat="server" Height="367px" Width="790px">
+                            <asp:GridView ID="gdvDisplayEvents" runat="server" Height="367px" Width="842px" OnSelectedIndexChanged="gdvDisplayEvents_SelectedIndexChanged">
                             </asp:GridView>
                         </asp:Panel>
                     </td>
@@ -91,6 +91,8 @@
                             &nbsp;<asp:Label ID="lblInformation0" runat="server" style="text-align: justify" Text="Total Visits"></asp:Label>
                             <br />
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <asp:Label ID="lblDisplayVisits" runat="server" ForeColor="#006600" style="text-align: justify"></asp:Label>
                         </asp:Panel>
                     </td>
@@ -103,6 +105,8 @@
                             <asp:Label ID="lblInformation1" runat="server" style="text-align: justify" Text="Booked Events"></asp:Label>
                             <br />
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <asp:Label ID="lblBookedDisplay" runat="server" ForeColor="#0099FF" style="text-align: justify"></asp:Label>
                         </asp:Panel>
                     </td>
@@ -126,6 +130,8 @@
                             <asp:Label ID="lblInformation2" runat="server" style="text-align: justify" Text="Total Spent"></asp:Label>
                             <br />
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <asp:Label ID="lblDisplaySpent" runat="server" ForeColor="#660066" style="text-align: justify"></asp:Label>
                         </asp:Panel>
                     </td>
@@ -134,7 +140,7 @@
                     <td class="auto-style1" style="border-style: inset; border-color: #006600; background-color: #006600">
                         <asp:Menu ID="Menu3" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="White">
                             <Items>
-                                <asp:MenuItem Text="Sign Out"></asp:MenuItem>
+                                <asp:MenuItem Text="Sign Out" NavigateUrl="~/Default.aspx"></asp:MenuItem>
                             </Items>
                             <StaticHoverStyle BorderColor="#669999" />
                         </asp:Menu>
