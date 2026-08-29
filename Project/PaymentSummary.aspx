@@ -54,16 +54,16 @@
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style2">&nbsp;</td>
-                <td class="auto-style4">&nbsp;</td>
-                <td>&nbsp;</td>
+                <td class="auto-style6"></td>
+                <td class="auto-style5"></td>
+                <td class="auto-style1"></td>
             </tr>
             <tr>
                 <td class="auto-style2">
                     &nbsp;</td>
                 <td class="auto-style4">
-                    <asp:Label ID="lblTouristID" runat="server" Font-Bold="True" Text="Tourist ID:"></asp:Label>
-                &nbsp;<asp:Label ID="lblTouristIDOutput" runat="server"></asp:Label>
+                    <asp:Label ID="lblTouristID" runat="server" Font-Bold="True" Text="Tourist Name:"></asp:Label>
+                &nbsp;<asp:Label ID="lblTouristNameOutput" runat="server"></asp:Label>
                 </td>
                 <td>&nbsp;</td>
             </tr>
