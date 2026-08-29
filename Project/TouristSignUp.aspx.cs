@@ -73,6 +73,8 @@ namespace Project
             string phoneNumber = txtPhoneNumber.Text.Trim();
             string password = txtPassword.Text.Trim();
 
+            
+
             int countryID = Convert.ToInt32(ddlCountry.SelectedValue);
 
             string hashedPassword = HashPassword(password);
