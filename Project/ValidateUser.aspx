@@ -52,7 +52,7 @@
                         <asp:Label ID="lblPassword" runat="server" Text="Password"></asp:Label>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtPassword" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
                         <br />
-                        <asp:TextBox ID="txtPassword" runat="server" Width="182px"></asp:TextBox>
+                        <asp:TextBox ID="txtPassword" runat="server" Width="182px" TextMode="Password"></asp:TextBox>
                     </td>
                     <td>&nbsp;</td>
                 </tr>
