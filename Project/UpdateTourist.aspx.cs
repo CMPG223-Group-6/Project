@@ -43,6 +43,7 @@ namespace Project
             // Password is Name + Surname
             string Password = Name + Surname;
 
+            string HashedPassword = HashPassword(Password);
 
             using (conn = new SqlConnection(ConString))
             {
@@ -54,7 +55,7 @@ namespace Project
                 cmd.Parameters.AddWithValue("@LastName", Surname);
                 cmd.Parameters.AddWithValue("@PhoneNo", Number);
                 cmd.Parameters.AddWithValue("@Email", Email);
-                cmd.Parameters.AddWithValue("@Password", Password);
+                cmd.Parameters.AddWithValue("@Password", HashedPassword);
                 cmd.Parameters.AddWithValue("@Country", Country);
                 cmd.Parameters.AddWithValue("@TouristID", ID);
                 conn.Open();

@@ -45,7 +45,10 @@ namespace Project
             string Country = ddlCountries.SelectedValue;
             string Number = txtPhoneNo.Text;
             string Email = txtEmail.Text;
+
             string Password = Name + Surname;
+
+            string HashedPassword = HashPassword(Password);
 
 
             using (conn = new SqlConnection(ConString))
@@ -55,7 +58,7 @@ namespace Project
                 cmd.Parameters.AddWithValue("@FirstName", Name);
                 cmd.Parameters.AddWithValue("@LastName", Surname);
                 cmd.Parameters.AddWithValue("@Country", Country);
-                cmd.Parameters.AddWithValue("@Password", Password);
+                cmd.Parameters.AddWithValue("@Password", HashedPassword);
                 cmd.Parameters.AddWithValue("@PhoneNo", Number);
                 cmd.Parameters.AddWithValue("@Email", Email);
 
@@ -71,7 +74,7 @@ namespace Project
 
             }
         }
-             public static string HashPassword(string password)
+         public static string HashPassword(string password)
          {
             using (SHA256 sha256 = SHA256.Create())
             {
@@ -81,7 +84,7 @@ namespace Project
 
                 return Convert.ToBase64String(hash);
             }
-        }
+         }
         
 
 
