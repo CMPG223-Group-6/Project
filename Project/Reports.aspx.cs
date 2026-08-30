@@ -259,10 +259,17 @@ namespace Project
         {
             // Add the end-of-report marker and page information.
             writer.Write("<br /><br />");
-            writer.Write("<div style='text-align:center; font-weight:bold;'>" +"*** END OF REPORT ***" + "</div>");
+
+            writer.Write("<div style='text-align:center; font-style:italic; font-size:9pt; color:red;'>" +
+                "Disclaimer: Information on this extracted report is not guaranteed to be up to date. " +
+                "For reliable data, please refer to the report dashboard on the site." +
+                "</div>");
             writer.Write("<br />");
 
-            writer.Write("<div style='text-align:center;'>" +"Page 1 of 1" +"</div>");
+            writer.Write("<div style='text-align:center; font-weight:bold;'>" + "*** END OF REPORT ***" + "</div>");
+            writer.Write("<br />");
+
+            writer.Write("<div style='text-align:center;'>" + "Page 1 of 1" + "</div>");
         }
 
         protected void btnClear0_Click(object sender, EventArgs e)
