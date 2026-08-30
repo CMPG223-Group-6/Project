@@ -67,7 +67,7 @@
                         <asp:Label ID="lblQ4" runat="server" Text="Were you able to see your favorite animals easily?"></asp:Label>
                     </td>
                     <td>
-                        <asp:RadioButton ID="rbQ4Yes" runat="server" Text="Yes" GroupName="answerQ5" />
+                        <asp:RadioButton ID="rbQ4Yes" runat="server" Text="Yes" GroupName="answerQ4" />
 &nbsp;
                         <asp:RadioButton ID="rbQ4No" runat="server" Text="No" GroupName="answerQ4" />
                     </td>

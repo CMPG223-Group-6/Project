@@ -69,9 +69,6 @@
                         <br />
                         <br />
                         <asp:DropDownList ID="ddlBookingIDDetails" runat="server" Height="31px" Width="242px" OnSelectedIndexChanged="ddlBookingIDDetails_SelectedIndexChanged">
-                            <asp:ListItem>1</asp:ListItem>
-                            <asp:ListItem>2</asp:ListItem>
-                            <asp:ListItem>3</asp:ListItem>
                         </asp:DropDownList>
                         <br />
                         <br />
@@ -119,7 +116,7 @@
                         <asp:Label ID="lblNameDisplay" runat="server" Font-Size="Small" ForeColor="#999999"></asp:Label>
                     </td>
                     <td class="auto-style6" rowspan="2" colspan="2">
-                        <asp:Panel ID="Panel1" runat="server" GroupingText="Summary" Height="136px" style="margin-top: 0px" Width="1140px">
+                        <asp:Panel ID="Panel1" runat="server" GroupingText="Your information" Height="136px" style="margin-top: 0px" Width="1140px">
                             <asp:GridView ID="gvTouristActivitySummary" runat="server" Height="229px" Width="1323px">
                             </asp:GridView>
                             <br />

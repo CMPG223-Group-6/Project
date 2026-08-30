@@ -12,91 +12,144 @@ namespace Project
 {
     public partial class Checkout : System.Web.UI.Page
     {
+
+        string ConnectionString = @"Data Source= localhost;Initial Catalog=zims.db;Integrated Security=True";
+        int touristID = 5;
         protected void Page_Load(object sender, EventArgs e)
         {
- 
-                if (!IsPostBack)
-                {
+            if (Session["Tourist_ID"] != null) // tourist session
+            {
+                touristID = int.Parse(Session["Tourist_ID"].ToString());
 
-                    LoadBookings();
-       
-                    DisplayTouristSummary();
+            }
+
+
+            if (!IsPostBack) //uploads bookingIDs in the begin
+            {
+
+                string query = @"SELECT Booking_ID FROM BOOKING " +
+                                "WHERE Tourist_ID = @touristID";
+                try
+                {
+                    using (SqlConnection conn = new SqlConnection(ConnectionString))
+                    {
+                        conn.Open();
+                        using (SqlCommand cmd = new SqlCommand(query, conn))
+                        {
+                            cmd.Parameters.AddWithValue(@"touristID", touristID);
+                            SqlDataReader reader = cmd.ExecuteReader();
+
+                            ddlBookingIDDetails.Items.Add("Select Booking ID");
+                            while (reader.Read())
+                            {
+                                ddlBookingIDDetails.Items.Add(reader["Booking_ID"].ToString());
+                            }
+
+                            reader.Close();
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    lblConfirmMessage.Text = "Database error: " + ex.Message;
                 }
 
 
+               loadBookings();
+
+
+                 if (Session["QuestionnaireCompleted"] != null) // checks if the questionaire is completed. 
+                 {
+                     bool answered = (bool)Session["QuestionnaireCompleted"];
+
+                     if (answered)
+                     {
+                         lblConfirmMessage.Text = "You have succesfully checked out .";
+
+                         string bookingID = ddlBookingIDDetails.SelectedValue;
+
+                        loadBookings();
+
+                    }
+                 }
+
+            }
         }
 
         protected void btnConfirmExit_Click(object sender, EventArgs e)
         {
 
-            if (ddlBookingIDDetails.SelectedIndex == -1)
+            int bookingID;
+
+            if (!int.TryParse(ddlBookingIDDetails.SelectedValue, out bookingID))
             {
-                lblConfirmMessage.Text = "Choose an option";
+                lblConfirmMessage.Text = "Please select a booking ID.";
+                return;
             }
-            else
+
+            using (SqlConnection conn = new SqlConnection(ConnectionString))
             {
-                Response.Redirect("QuestionnaireForm.aspx");
-            }
-
-           
-        }
-
-        private void LoadBookings()
-        {
-            string connectionString = @"Data Source= localhost;Initial Catalog=zims.db;Integrated Security=True";
-
-            using (SqlConnection con = new SqlConnection(connectionString))
-            {
-                string query = "SELECT Booking_ID FROM BOOKING ORDER BY Booking_ID";
-
-                SqlDataAdapter da = new SqlDataAdapter(query, con);
-
-                DataTable dt = new DataTable();
-
-                da.Fill(dt);
-
-                ddlBookingIDDetails.DataSource = dt;
-                ddlBookingIDDetails.DataTextField = "Booking_ID";
-                ddlBookingIDDetails.DataValueField = "Booking_ID";
-                ddlBookingIDDetails.DataBind();
-            }
-        }
-
-
-        private void DisplayTouristSummary()
-        {
-            string ConnectionString = @"Data Source= localhost;Initial Catalog=zims.db;Integrated Security=True";
-            string sql_query = @" SELECT Booking_ID, Checked_In, Checked_Out FROM BOOKING";
-            try
-            {
-                using (SqlConnection conn = new SqlConnection(ConnectionString))
+                string query = @" SELECT * FROM BOOKING WHERE Booking_ID = @Booking_ID"; // get payment and checked in status
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@Booking_ID", bookingID);
+                conn.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (!reader.Read())
                 {
-                    using (SqlDataAdapter adapter = new SqlDataAdapter(sql_query, conn))
+                    lblConfirmMessage.Text = "Booking not found.";
+                    reader.Close();
+                    return;
+                }
+                
+                int checkInOrdinal = reader.GetOrdinal("Checked_In");
+                int checkOutOrdinal = reader.GetOrdinal("Checked_Out");
+
+                bool checkIn = reader.IsDBNull(checkInOrdinal) ? false : reader.GetBoolean(checkInOrdinal);
+                bool checkOut = reader.IsDBNull(checkOutOrdinal) ? false : reader.GetBoolean(checkOutOrdinal);
+
+                reader.Close();
+
+                Session["check_in"] = checkIn;
+                reader.Close();
+
+                // Check the Checked_In Session
+                if (Session["check_in"] == null || Convert.ToBoolean(Session["check_in"]) == false)
+                {
+                    lblConfirmMessage.Text = "You haven't checked in yet.";
+
+                    // Redirect to Check_In.aspx
+                    Response.Redirect("CheckIn.aspx");
+
+                    return;
+                }
+                else if (checkOut == true)
+                {
+                    lblConfirmMessage.Text = "You have already checked out.";
+                    return;
+                }
+                else
+                {
+                    string updateQuery = @" UPDATE BOOKING SET Checked_Out = @checkedOut WHERE Booking_ID = @Booking_ID"; // updates checkin bit
+                    using (SqlCommand updateCmd = new SqlCommand(updateQuery, conn))
                     {
-                        SqlCommand cmd = new SqlCommand(sql_query, conn);
+                        updateCmd.Parameters.AddWithValue("@Booking_ID", bookingID);
+                        updateCmd.Parameters.AddWithValue("@checkedOut", true);
+                        int rowsUpdated = updateCmd.ExecuteNonQuery();
 
-                        conn.Open();
-                        SqlDataReader reader = cmd.ExecuteReader();
-                        DataTable dt = new DataTable();
-                        reader.Close();
-
-                        adapter.Fill(dt);
-                        gvTouristActivitySummary.DataSource = dt;
-                        gvTouristActivitySummary.DataBind();
-
-                        conn.Close();
-
+                        if (rowsUpdated > 0)
+                        {
+                            lblConfirmMessage.Text = "Successful check-out.";
+                        }
+                        else
+                        {
+                            lblConfirmMessage.Text = "Unsuccessful check-out.";
+                        }
                     }
 
+                    loadBookings();
                 }
             }
-            catch (Exception ex)
-            {
-                lblConfirmMessage.Text = "Database error: " + ex.Message;
-            }
         }
-
-
 
         protected void btnSubmitRating_Click(object sender, EventArgs e)
         {
@@ -143,7 +196,82 @@ namespace Project
 
         protected void ddlBookingIDDetails_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (Session["Tourist_ID"] != null) // tourist session
+            {
+                touristID = int.Parse(Session["Tourist_ID"].ToString());
 
+            }
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(ConnectionString))
+                {
+                    string sql_query = @"SELECT * FROM BOOKING WHERE Booking_ID = @bookingID";
+
+                    SqlCommand cmd = new SqlCommand(sql_query, conn);
+                    cmd.Parameters.AddWithValue("@bookingID", ddlBookingIDDetails.SelectedItem.ToString());
+
+                    conn.Open();
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+
+                    DataSet ds = new DataSet();
+
+                    adapter.Fill(ds);
+
+                    gvTouristActivitySummary.DataSource = ds;
+                    gvTouristActivitySummary.DataBind();
+                }
+            }
+            catch (Exception ex)
+            {
+                lblConfirmMessage.Text = "Database error: " + ex.Message;
+
+            }
+        }
+
+
+
+
+       /* private void UpdateCheckedOut(string bookingID) // updates and selects the chosen booking details
+        {
+            
+            
+        } */
+
+        private void loadBookings()
+        {
+            string query = @"SELECT B.Booking_ID, B.Event_ID, ET.Event_Name, B.Number_Tickets, B.Arrive_Date, B.Payment_method, B.Payment_Amount, B.Payment_Made, B.Checked_In, B.Checked_Out " +
+                                "FROM BOOKING B, EVENT E, EVENTTYPE ET " +
+                                "WHERE B.Event_ID = E.Event_ID " +
+                                "AND E.EventType_ID = ET.EventType_ID " +
+                                "AND B.Tourist_ID = @touristID";
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(ConnectionString))
+                {
+                    conn.Open();
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue(@"touristID", touristID);
+
+
+                        DataSet ds = new DataSet();
+
+                        SqlDataAdapter adapter = new SqlDataAdapter();
+                        adapter.SelectCommand = cmd;
+                        adapter.Fill(ds);
+                        gvTouristActivitySummary.DataSource = ds;
+                        gvTouristActivitySummary.DataBind();
+
+                        conn.Close();
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                lblConfirmMessage.Text = "Database error: " + ex.Message;
+            }
         }
     }
 }

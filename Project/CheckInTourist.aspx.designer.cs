@@ -141,6 +141,15 @@ namespace Project
         protected global::System.Web.UI.WebControls.Button btnCheck0;
 
         /// <summary>
+        /// btnDone control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnDone;
+
+        /// <summary>
         /// lblOutput control.
         /// </summary>
         /// <remarks>

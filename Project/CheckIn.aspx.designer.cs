@@ -150,13 +150,13 @@ namespace Project
         protected global::System.Web.UI.WebControls.Panel pnlCurrentBookings;
 
         /// <summary>
-        /// gvCurrentbookings control.
+        /// gvBookings control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvCurrentbookings;
+        protected global::System.Web.UI.WebControls.GridView gvBookings;
 
         /// <summary>
         /// Menu2 control.

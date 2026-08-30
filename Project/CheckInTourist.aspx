@@ -20,6 +20,13 @@
         .auto-style46 {
             width: 246px;
         }
+        .auto-style47 {
+            width: 246px;
+            height: 33px;
+        }
+        .auto-style48 {
+            height: 33px;
+        }
         </style>
 </head>
 <body>
@@ -60,48 +67,48 @@
                                     <tr>
                                         <td class="auto-style46">
                                             <asp:Label ID="lblTouristID" runat="server" Text="Tourist ID:"></asp:Label>
-                                            <asp:RequiredFieldValidator ID="rfvTouristId" runat="server" ControlToValidate="txtTouristID" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                                            <asp:RequiredFieldValidator ID="rfvTouristId" runat="server" ControlToValidate="txtTouristID" ErrorMessage="*" ForeColor="Red" ValidationGroup="TouristID"></asp:RequiredFieldValidator>
                                             &nbsp;<asp:Label ID="lblerror" runat="server" ForeColor="Red"></asp:Label>
                                         </td>
                                         <td>&nbsp;</td>
                                     </tr>
                                     <tr>
                                         <td class="auto-style46">
-                                            <asp:TextBox ID="txtTouristID" runat="server" Width="87px" CausesValidation="True"></asp:TextBox>
+                                            <asp:TextBox ID="txtTouristID" runat="server" Width="87px" CausesValidation="True" TextMode="Number"></asp:TextBox>
                                         </td>
                                         <td>&nbsp;</td>
                                     </tr>
                                     <tr>
                                         <td class="auto-style46">
-                                            <asp:Button ID="btnEnter" runat="server" BackColor="#999999" Height="36px" Text="Enter" Width="194px" OnClick="btnEnter_Click" />
+                                            <asp:Button ID="btnEnter" runat="server" BackColor="#999999" Height="36px" Text="Enter" Width="194px" OnClick="btnEnter_Click" ValidationGroup="TouristID" />
                                         </td>
                                         <td>&nbsp;</td>
                                     </tr>
                                     <tr>
                                         <td class="auto-style46">
                                             <asp:Label ID="lblBookingID2" runat="server" Text="BookingID :"></asp:Label>
-                                            <asp:RequiredFieldValidator ID="rfvBookingID" runat="server" ControlToValidate="ddlBookingEventsStaffcheckin" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                                            <asp:RequiredFieldValidator ID="rfvBookingID" runat="server" ControlToValidate="ddlBookingEventsStaffcheckin" ErrorMessage="*" ForeColor="Red" InitialValue="0" ValidationGroup="BookingID"></asp:RequiredFieldValidator>
                                         </td>
                                         <td>&nbsp;</td>
                                     </tr>
                                     <tr>
                                         <td class="auto-style46">
                                             <asp:DropDownList ID="ddlBookingEventsStaffcheckin" runat="server" Height="23px" Width="134px" OnSelectedIndexChanged="ddlBookingEventsStaffcheckin_SelectedIndexChanged">
-                                                <asp:ListItem>1</asp:ListItem>
-                                                <asp:ListItem>2</asp:ListItem>
-                                                <asp:ListItem>3</asp:ListItem>
                                             </asp:DropDownList>
                                         </td>
                                         <td>&nbsp;</td>
                                     </tr>
                                     <tr>
-                                        <td class="auto-style46">&nbsp;</td>
-                                        <td>&nbsp;</td>
+                                        <td class="auto-style47"></td>
+                                        <td class="auto-style48"></td>
                                     </tr>
                                     <tr>
                                         <td class="auto-style46">
-                                            <asp:Button ID="btnCheck0" runat="server" BackColor="#33CC33" Height="43px" OnClick="btnCheck_Click" Text="Check In" Width="186px" />
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <asp:Button ID="btnCheck0" runat="server" BackColor="#33CC33" Height="43px" OnClick="btnCheck_Click" Text="Check In" Width="186px" ValidationGroup="BookingID" />
+                                            &nbsp;<br />
+                                            <br />
+                                            <asp:Button ID="btnDone" runat="server" BackColor="#009900" Height="38px" Text="Done" Width="183px" OnClick="btnDone_Click" />
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                             <br />
                                             <br />
                                             <asp:Label ID="lblOutput" runat="server"></asp:Label>
