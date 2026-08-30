@@ -24,6 +24,10 @@ namespace Project
                 btnExportReport.Visible = false;
                 ResetSortControls();
             }
+            string maxDateString = DateTime.Today.ToString("yyyy-MM-dd");
+
+            calStartDate.Attributes["max"] = maxDateString;
+            calEndDate.Attributes["max"] = maxDateString;
         }
 
         protected void btnGenerateReport_Click(object sender, EventArgs e)
@@ -34,9 +38,9 @@ namespace Project
                 DateTime startDate = Convert.ToDateTime(calStartDate.Text);
                 DateTime endDate = Convert.ToDateTime(calEndDate.Text);
 
-                if (startDate.Date > DateTime.Today || endDate.Date > DateTime.Today)
+                  if (startDate.Date > DateTime.Today || endDate.Date > DateTime.Today)
                 {
-                    lblDisplay1.Text = "Start and end dates cannot be in the future.";
+                    lblDisplay1.Text = "Start or end dates cannot be in the future.";
                     return;
                 }
 
@@ -551,6 +555,11 @@ namespace Project
         public override void VerifyRenderingInServerForm(Control control)
         {
             // Required by ASP.NET when exporting the GridView content.
+        }
+
+        protected void Chart1_Load(object sender, EventArgs e)
+        {
+            Chart1.ChartAreas["ChartArea1"].AxisY.Interval = 1;
         }
     }
 }

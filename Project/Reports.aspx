@@ -159,7 +159,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <asp:Chart ID="Chart1" runat="server" Height="300px" Width="550px">
+                                                        <asp:Chart ID="Chart1" runat="server" Height="300px" Width="550px" OnLoad="Chart1_Load">
                                                             <Series>
                                                                 <asp:Series ChartType="Column" Name="Series1">
                                                                 </asp:Series>
