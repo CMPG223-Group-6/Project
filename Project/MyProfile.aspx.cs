@@ -38,10 +38,8 @@ namespace Project
                 name = Session["Tourist_FirstName"].ToString();
             }
             CountriesToDropDownList();
-            if(!IsPostBack)
-            {
-                LoadDataBooking(Tourist_ID);
-            }
+            LoadDataBooking(Tourist_ID);
+
             lblNameDisplay0.Text = name + " " + surname;
         }
 
@@ -63,12 +61,13 @@ namespace Project
         {
             string hashOfEntered = HashPassword(enteredPassword);
             return hashOfEntered.Equals(storedHash);
+            //return hashOfEntered.Equals(storedHash, StringComparison.Ordinal);
+
         }
         protected void btnDelete_Click(object sender, EventArgs e)
         {
-
             string enteredPassword = txtPassword.Text.Trim();
-            string storedHash = StoredPassword;
+            string storedHash = StoredPassword.Trim();
             bool isValid = VerifyPassword(enteredPassword, storedHash);
 
             if (isValid)
