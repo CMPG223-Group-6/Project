@@ -120,6 +120,7 @@
     <Content Include="CardDetails.aspx" />
     <Content Include="ChangeBooking.aspx" />
     <Content Include="ChangeEventType.aspx" />
+    <Content Include="ChatBot.aspx" />
     <Content Include="CheckIn.aspx" />
     <Content Include="CheckInTourist.aspx" />
     <Content Include="Checkout.aspx" />
@@ -283,6 +284,13 @@
     </Compile>
     <Compile Include="ChangeEventType.aspx.designer.cs">
       <DependentUpon>ChangeEventType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChatBot.aspx.cs">
+      <DependentUpon>ChatBot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChatBot.aspx.designer.cs">
+      <DependentUpon>ChatBot.aspx</DependentUpon>
     </Compile>
     <Compile Include="CheckIn.aspx.cs">
       <DependentUpon>CheckIn.aspx</DependentUpon>
