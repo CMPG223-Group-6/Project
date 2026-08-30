@@ -137,7 +137,7 @@
                             <br />
                             <asp:Label ID="Label20" runat="server" Text="📍 Address"></asp:Label>
                             <br />
-                            <asp:Label ID="Label21" runat="server" Text="Label"></asp:Label>
+                            <asp:Label ID="Label21" runat="server" Text="Lion Park Rd, Cato Ridge, KZN"></asp:Label>
                             <br />
                             <br />
                             <asp:Label ID="Label22" runat="server" Text="☎ Phone"></asp:Label>
