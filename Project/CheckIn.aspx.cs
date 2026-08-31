@@ -7,12 +7,13 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using static System.Collections.Specialized.BitVector32;
 
 namespace Project
 {
     public partial class CheckIn : System.Web.UI.Page
     {
-        int touristID = 3;
+        int  touristID ;
 
         string ConnectionString = @"Data Source=localhost;Initial Catalog=zims.db;Integrated Security=True;Encrypt=False";
 

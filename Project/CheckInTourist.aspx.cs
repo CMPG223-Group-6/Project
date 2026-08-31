@@ -12,44 +12,46 @@ namespace Project
     public partial class CheckInTourist : System.Web.UI.Page
     {
         string ConnectionString = @"Data Source= localhost;Initial Catalog=zims.db;Integrated Security=True";
-     
+        int touristID;
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            // page loads data grid view nin the beginning
+            // page loads data grid view in the beginning
 
-            if (!IsPostBack) //uploads bookingIDs in the begin
+            if (!IsPostBack)
             {
+                string query = @"SELECT B.Booking_ID, B.Event_ID, B.Tourist_ID, ET.Event_Name, B.Number_Tickets, B.Arrive_Date, B.Payment_method, B.Payment_Amount, B.Payment_Made, B.Checked_In, B.Checked_Out                          
+                            
+                     FROM BOOKING B, EVENT E, EVENTTYPE ET
+                     WHERE B.Event_ID = E.Event_ID
+                     AND E.EventType_ID = ET.EventType_ID";
+                     
 
-                 /*string query = @"SELECT Booking_ID FROM BOOKING ";
                 try
                 {
                     using (SqlConnection conn = new SqlConnection(ConnectionString))
                     {
                         conn.Open();
+
                         using (SqlCommand cmd = new SqlCommand(query, conn))
                         {
-                            
-                            SqlDataReader reader = cmd.ExecuteReader();
+                            cmd.Parameters.AddWithValue("@touristID", touristID);
 
-                            ddlBookingEventsStaffcheckin.Items.Add("Select Booking ID");
-                            while (reader.Read())
-                            {
-                                ddlBookingEventsStaffcheckin.Items.Add(reader["Booking_ID"].ToString());
-                            }
+                            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                            DataSet ds = new DataSet();
 
-                            reader.Close();
+                            adapter.Fill(ds);
+
+                            gvBookingsStaffside.DataSource = ds;
+                            gvBookingsStaffside.DataBind();
                         }
                     }
                 }
                 catch (Exception ex)
                 {
                     lblOutput.Text = "Database error: " + ex.Message;
-                }  
-                 */
+                }
             }
-
-            
         }
 
 
@@ -120,18 +122,48 @@ namespace Project
 
         protected void btnEnter_Click(object sender, EventArgs e)
         {
-            //tourist session
-            int touristID = 0;
+            //tourist text input
+            int touristID = int.Parse(txtTouristID.Text);
 
-            if (!int.TryParse(txtTouristID.Text, out touristID))
+            if (touristID <= 0)
             {
-                lblerror.Text = "Invalid tourist ID.";
+                lblOutput.Text = "Please enter a valid number.";
                 return;
             }
 
             try
             {
-                using (SqlConnection conn = new SqlConnection(ConnectionString)) // specifically for selected bookingID
+                using (SqlConnection conn = new SqlConnection(ConnectionString))
+                {
+                    string query = @"SELECT COUNT(*) FROM BOOKING WHERE Tourist_ID = @Tourist_ID";
+
+                    SqlCommand cmd = new SqlCommand(query, conn);
+
+                    cmd.Parameters.AddWithValue("@Tourist_ID", touristID);
+
+                    conn.Open();
+
+                    // Counts how many records have this Tourist ID
+                    int touristExists = Convert.ToInt32(cmd.ExecuteScalar());
+
+                    // Validation 3: Check if Tourist ID exists
+                    if (touristExists == 0)
+                    {
+                        lblOutput.Text = "Invalid Tourist ID/ This ID doesnt exist.";
+                        
+                    }
+
+                }
+                    
+            }
+            catch (Exception ex)
+            {
+                lblOutput.Text = "Database error: " + ex.Message;
+            }
+           
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(ConnectionString)) //  shows specifically for selected bookingID in gridview
                 {
                     string sql_query = @"SELECT * FROM BOOKING WHERE Tourist_ID = @Tourist_ID";
 
@@ -148,13 +180,7 @@ namespace Project
                     while (reader.Read())
                     {
                         ddlBookingEventsStaffcheckin.Items.Add(reader.GetValue(0).ToString());
-                    }
-
-                    numberOfBookings++;
-                    // checks for invalid touristId's
-                    if (!reader.Read())
-                    {
-                        lblerror.Text = "Tourist not found.";
+                        numberOfBookings++;
                     }
 
                     reader.Close();
@@ -177,6 +203,7 @@ namespace Project
                 lblOutput.Text = "Database error: " + ex.Message;
 
             }
+           
         }
 
         protected void ddlBookingEventsStaffcheckin_SelectedIndexChanged(object sender, EventArgs e)
@@ -224,16 +251,21 @@ namespace Project
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@Booking_ID", bookingID);
                 conn.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
-                if (!reader.Read())
-                {
-                    lblOutput.Text = "Booking not found.";
-                    reader.Close();
-                    return;
-                }
+                SqlDataAdapter adap = new SqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                adap.Fill(ds);
+
+                gvBookingsStaffside.DataSource = ds;
+                gvBookingsStaffside.DataBind();
+
 
 
             }
+        }
+
+        protected void txtTouristID_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
