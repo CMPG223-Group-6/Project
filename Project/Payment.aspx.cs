@@ -16,19 +16,17 @@ namespace Project
         string connectionString = @"Data Source=localhost;Initial Catalog=zims.db;Integrated Security=True;Encrypt=False";
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!IsPostBack)
+            if (Session["Tourist_ID"] != null)
+            {
+                touristID = int.Parse(Session["Tourist_ID"].ToString());
+            }
+
+            if (!IsPostBack)
             {
                 LoadBookingIDs();
 
                 lblOutput.Visible = false;
             }
-
-            if(Session["Tourist_ID"] != null)
-            {
-                touristID = int.Parse(Session["Tourist_ID"].ToString());
-            }
-            
-
         }
 
         private void LoadBookingIDs()
