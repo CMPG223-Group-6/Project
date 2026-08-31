@@ -67,7 +67,7 @@
                                     <tr>
                                         <td class="auto-style46">
                                             <asp:Label ID="lblTouristID" runat="server" Text="Tourist ID:"></asp:Label>
-                                            <asp:RequiredFieldValidator ID="rfvTouristId" runat="server" ControlToValidate="txtTouristID" ErrorMessage="*" ForeColor="Red" ValidationGroup="TouristID" InitialValue="1"></asp:RequiredFieldValidator>
+                                            <asp:RequiredFieldValidator ID="rfvTouristId" runat="server" ControlToValidate="txtTouristID" ErrorMessage="*" ForeColor="Red" ValidationGroup="TouristID" InitialValue="0"></asp:RequiredFieldValidator>
                                             &nbsp;</td>
                                         <td>&nbsp;</td>
                                     </tr>
