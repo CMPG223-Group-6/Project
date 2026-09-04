@@ -117,7 +117,7 @@
                                     <td class="auto-style16">
                                         <asp:Label ID="lblDate" runat="server" Text="Check In Date:"></asp:Label>
                                         <br />
-                                        <asp:TextBox ID="txtArriveDate" runat="server" Height="16px" TextMode="Date"></asp:TextBox>
+                                        <asp:TextBox ID="txtArriveDate" runat="server" Height="16px" TextMode="Date" OnTextChanged="txtArriveDate_TextChanged"></asp:TextBox>
                                         <asp:Label ID="lblMessage" runat="server" ForeColor="Red"></asp:Label>
                                         <asp:RequiredFieldValidator ID="rfvDate" runat="server" ControlToValidate="txtArriveDate" ErrorMessage="Please select a Check-In Date!" ForeColor="Red"></asp:RequiredFieldValidator>
                                         <br />

@@ -9,22 +9,9 @@
         .auto-style7 {
             width: 328px;
         }
-        .auto-style1 {
-            width: 195px;
-            height: 40px;
+        .auto-style8 {
+            text-align: center;
         }
-        .auto-style6 {
-            width: 195px;
-            height: 91px;
-        }
-        .auto-style2 {
-            width: 195px;
-            height: 282px;
-        }
-        .auto-style5 {
-            height: 71px;
-        text-align: left;
-    }
         </style>
 </head>
 <body>
@@ -41,7 +28,7 @@
                         </td>
                 </tr>
                 <tr>
-                    <td class="auto-style7">
+                    <td class="auto-style7" rowspan="5">
                         <asp:Menu ID="Menu1" runat="server" BackColor="#003300" DynamicHorizontalOffset="13" Font-Bold="True" Font-Size="13pt" ForeColor="White" Height="700px" StaticSubMenuIndent="25px" Width="330px">
                             <DynamicHoverStyle BackColor="#339933" />
                             <Items>
@@ -60,6 +47,35 @@
                             <StaticSelectedStyle BackColor="#66FF33" />
                         </asp:Menu>
                     </td>
+                    <td rowspan="4">
+                        <asp:Panel ID="pnlGridView" runat="server" GroupingText="Events for today" ScrollBars="Both" Width="863px">
+                            <asp:GridView ID="GridView1" runat="server" Width="887px">
+                            </asp:GridView>
+                        </asp:Panel>
+                    </td>
+                    <td class="auto-style8" style="border-style: outset">
+                        <asp:Label ID="lblBooking" runat="server" Text="Number of bookings today:"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:Label ID="lblNumBookings" runat="server"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style8" style="border-style: outset">
+                        <asp:Label ID="Label2" runat="server" Text="Number of payments to process:"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <br />
+                        <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:Label ID="lblNumToProcess" runat="server"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>

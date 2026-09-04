@@ -152,7 +152,7 @@
                 <tr>
                     <td class="auto-style2" colspan="3">
                         
-                        <asp:Panel ID="pnlGridView" runat="server" ScrollBars="Both" Wrap="False">
+                        <asp:Panel ID="pnlGridView" runat="server" ScrollBars="Both" Wrap="False" GroupingText="Current Events">
                             <asp:GridView ID="gvEvents" runat="server" Height="305px" Width="1011px" CellPadding="4" ForeColor="#333333" GridLines="None">
                                 <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                                 <EditRowStyle BackColor="#999999" />

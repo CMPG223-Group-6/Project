@@ -86,7 +86,7 @@
                         <asp:Menu ID="Menu1" runat="server" BackColor="#003300" DynamicHorizontalOffset="13" Font-Bold="True" Font-Size="13pt" ForeColor="White" Height="700px" StaticSubMenuIndent="25px" Width="330px">
                             <DynamicHoverStyle BackColor="#339933" />
                             <Items>
-                                <asp:MenuItem Text="Back" Value="Back" NavigateUrl="~/MaintainEventsTypes.aspx">
+                                <asp:MenuItem Text="Back" Value="Back" NavigateUrl="~/MaintainBookings.aspx">
                                 </asp:MenuItem>
                             </Items>
                             <StaticHoverStyle BackColor="#339933" />
@@ -98,7 +98,6 @@
                                         <asp:Label ID="lblBookingID" runat="server" Text="Enter Booking ID:"></asp:Label>
                                         <br />
                                         <asp:DropDownList ID="ddlBookingID" runat="server" Height="35px" Width="128px">
-                                            <asp:ListItem Value="0">Select Booking ID</asp:ListItem>
                                         </asp:DropDownList>
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="ddlBookingID" ErrorMessage="Enter Booking ID" ForeColor="Red" InitialValue="0"></asp:RequiredFieldValidator>
                     </td>

@@ -14,7 +14,8 @@ namespace Project
         string conStr = @"Data Source=localhost;Initial Catalog=zims.db;Integrated Security=True;Encrypt=False";
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!IsPostBack)
+            
+            if (!IsPostBack)
             {
                 loadEvents();
             }
@@ -34,18 +35,19 @@ namespace Project
 
 
                 SqlCommand comm = new SqlCommand(sql, conn);
+
                 SqlDataReader reader = comm.ExecuteReader();
 
+                ddlEventID.Items.Clear();
+                ddlEventID.Items.Add("Select Event ID");
                 while (reader.Read())
                 {
-                    ddlEventID.Items.Add(reader.GetValue(0).ToString());
+                    ddlEventID.Items.Add(reader["Event_ID"].ToString());
                 }
                 reader.Close();
 
                 SqlDataAdapter adap = new SqlDataAdapter();
                 DataSet ds = new DataSet();
-
-
 
                 adap.SelectCommand = comm;
                 adap.Fill(ds);
@@ -53,6 +55,19 @@ namespace Project
                 gvEvents.DataSource = ds;
                 gvEvents.DataBind();
 
+
+                sql = "SELECT EventType_ID FROM EVENTTYPE";
+                comm = new SqlCommand(sql, conn);
+
+                reader = comm.ExecuteReader();
+
+                ddlEventTypeID.Items.Clear();
+                ddlEventTypeID.Items.Add("Select Event Type ID");
+                while (reader.Read())
+                {
+                    ddlEventTypeID.Items.Add(reader["EventType_ID"].ToString());
+                }
+                reader.Close();
             }
         }
 
@@ -66,6 +81,31 @@ namespace Project
                 conn.Open();
 
                 string sql = "SELECT Event_ID FROM EVENT";
+
+                SqlCommand comm = new SqlCommand(sql, conn);
+                SqlDataReader reader = comm.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    int ID = (int)reader.GetValue(0);
+                    if (ID == IDCheck)
+                    {
+                        exists = true;
+                    }
+                }
+            }
+
+            return exists;
+        }
+        private bool recordETExists(int IDCheck)
+        {
+            bool exists = false;
+
+            using (SqlConnection conn = new SqlConnection(conStr))
+            {
+                conn.Open();
+
+                string sql = "SELECT EventType_ID FROM EVENTTYPE";
 
                 SqlCommand comm = new SqlCommand(sql, conn);
                 SqlDataReader reader = comm.ExecuteReader();
@@ -101,33 +141,122 @@ namespace Project
 
         protected void btnCancel_Click(object sender, EventArgs e)
         {
-            ddlEventID.SelectedIndex = 0;
+            resetEvent();   
         }
 
-        protected void btnYes_Click(object sender, EventArgs e)
+        private void resetEvent()
         {
-            using (SqlConnection conn = new SqlConnection(conStr))
-            {
-                conn.Open();
-
-                string sql = "DELETE FROM EVENT WHERE Event_ID = @id";
-                using (SqlCommand comm = new SqlCommand(sql, conn))
-                {
-                    comm.Parameters.AddWithValue("@id", ddlEventID.Text);
-                    comm.ExecuteNonQuery();
-                }
-
-            }
-            lblMessage.Text = "Event deleted successfully.";
-            lblConfirmM.Visible = false;
-
             ddlEventID.SelectedIndex = 0;
+            lblConfirmM.Text = "";
+            lblMessage.Text = "";
             btnCancel.Visible = true;
             btnDelete.Visible = true;
             btnYes.Visible = false;
             btnNo.Visible = false;
+        }
+        private void resetEventType()
+        {
+            ddlEventTypeID.SelectedIndex = 0;
+            lblConfirm.Text = "";
+            lblETMessage.Text = "";
+            btnETCancel.Visible = true;
+            btnDeleteET.Visible = true;
+            btnETYes.Visible = false;
+            btnETNo.Visible = false;
+        }
 
-            loadEvents();
+        protected void btnYes_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(conStr))
+                {
+                    conn.Open();
+
+                    string sql = "DELETE FROM EVENT WHERE Event_ID = @id";
+                    using (SqlCommand comm = new SqlCommand(sql, conn))
+                    {
+                        comm.Parameters.AddWithValue("@id", ddlEventID.Text);
+                        comm.ExecuteNonQuery();
+                    }
+
+                }
+                lblMessage.Text = "Event deleted successfully.";
+                lblConfirmM.Visible = false;
+
+                btnCancel.Visible = true;
+                btnDelete.Visible = true;
+                btnYes.Visible = false;
+                btnNo.Visible = false;
+
+                loadEvents();
+            }
+            catch(SqlException ex)
+            {
+                lblMessage.Text = ex.Message;
+                lblConfirmM.Visible = false;
+            }
+        }
+
+        protected void btnETYes_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(conStr))
+                {
+                    conn.Open();
+
+                    string sql = "DELETE FROM EVENTTYPE WHERE EventType_ID = @id";
+                    using (SqlCommand comm = new SqlCommand(sql, conn))
+                    {
+                        comm.Parameters.AddWithValue("@id", ddlEventTypeID.Text);
+                        comm.ExecuteNonQuery();
+                    }
+
+                }
+
+                lblETMessage.Text = "Event Type deleted successfully.";
+                lblConfirm.Visible = false;
+
+                ddlEventTypeID.SelectedIndex = 0;
+                btnETCancel.Visible = true;
+                btnDeleteET.Visible = true;
+                btnETYes.Visible = false;
+                btnETNo.Visible = false;
+
+                loadEvents();
+            }
+            catch (SqlException ex)
+            {
+                lblETMessage.Text = ex.Message;
+                lblConfirm.Visible = false;
+                btnETCancel.Visible = true;
+                btnDeleteET.Visible = false;
+                btnETYes.Visible = false;
+                btnETNo.Visible = false;
+            }
+        }
+
+        protected void btnDeleteET_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(ddlEventTypeID.SelectedValue);
+            if (!recordETExists(id))
+            {
+                lblETMessage.Text = "Event Type ID does not exist";
+                return;
+            }
+
+            lblETMessage.Text = "You are about to delete the event: " + ddlEventTypeID.Text;
+            lblConfirm.Text = "Are you sure about your decision?";
+            btnETCancel.Visible = false;
+            btnDeleteET.Visible = false;
+            btnETYes.Visible = true;
+            btnETNo.Visible = true;
+        }
+
+        protected void btnETCancel_Click(object sender, EventArgs e)
+        {
+            resetEventType();
         }
     }
 }

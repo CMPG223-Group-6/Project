@@ -31,7 +31,7 @@
             <table style="width:100%;">
                 <tr>
                     <td class="auto-style10">
-                        <asp:Image ID="Image1" runat="server" Height="158px" ImageUrl="~/Images/zims_zoo_logo.png" Width="331px" />
+                        <asp:Image ID="Image1" runat="server" Height="174px" ImageUrl="~/Images/zims_zoo_logo.png" Width="331px" />
                         </td>
                     <td colspan="2" class="auto-style11" style="border-style: outset">
                         <asp:Label ID="lblInfo" runat="server" Font-Bold="True" Font-Size="X-Large" Text="Update Tourist Bookings"></asp:Label>
@@ -143,7 +143,7 @@
                 </tr>
                 <tr>
                     <td class="auto-style8">
-                        <asp:Button ID="btnCancel" runat="server" OnClick="btnCancel_Click" Text="Cancel" Width="89px" />
+                        <asp:Button ID="btnCancel" runat="server" OnClick="btnCancel_Click" Text="Cancel" Width="89px" CausesValidation="False" />
                     </td>
                 </tr>
                 <tr>

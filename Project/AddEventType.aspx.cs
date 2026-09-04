@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -14,6 +15,13 @@ namespace Project
         string conStr = @"Data Source=localhost;Initial Catalog=zims.db;Integrated Security=True;Encrypt=False";
         protected void Page_Load(object sender, EventArgs e)
         {
+            txtPrice.Attributes["Min"] = 1.ToString();
+            txtCapacity.Attributes["Min"] = 1.ToString();
+            loadData();
+        }
+
+        private void loadData()
+        {
             using (SqlConnection conn = new SqlConnection(conStr))
             {
                 conn.Open();
@@ -22,7 +30,8 @@ namespace Project
                 SqlCommand comm = new SqlCommand(sql, conn);
                 SqlDataReader reader = comm.ExecuteReader();
 
-                while(reader.Read())
+                ddlEventTypeID.Items.Add("Select Event Type ID");
+                while (reader.Read())
                 {
                     ddlEventTypeID.Items.Add(reader.GetValue(0).ToString());
                 }
@@ -79,6 +88,7 @@ namespace Project
                     txtPrice.Text = "";
                     ddlEventTypeID.SelectedIndex = 0;
                     ddlSetStatus.SelectedIndex = 0;
+                    loadData();
                 }
                 else
                 {
@@ -109,11 +119,82 @@ namespace Project
             txtPrice.Text = "";
             ddlEventTypeID.SelectedIndex = 0;
             ddlSetStatus.SelectedIndex = 0;
+            txtEventNameDisplay.Text = "";
         }
 
         protected void txtCapacity_TextChanged(object sender, EventArgs e)
         {
             
+        }
+
+        protected void gvEvents_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void gvEventTypes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void ddlEventTypeID_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            using (SqlConnection conn = new SqlConnection(conStr))
+            {
+                conn.Open();
+
+                string sql = "SELECT Event_Name FROM EVENTTYPE WHERE EventType_ID = @eventTypeID";
+
+                SqlCommand comm = new SqlCommand(sql, conn);
+                comm.Parameters.AddWithValue("@eventTypeID", ddlEventTypeID.SelectedItem.Text);
+
+                SqlDataReader reader = comm.ExecuteReader();
+
+                while(reader.Read())
+                {
+                    txtEventNameDisplay.Text = reader["Event_Name"].ToString();
+                }
+                reader.Close();
+            }
+        }
+
+        protected void btnCancelEventType_Click(object sender, EventArgs e)
+        {
+            txtEventName.Text = "";
+            txtEventDesc.Text = "";
+        }
+
+        protected void btnEventTypeAdd_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string name = txtEventName.Text;
+                string description = txtEventDesc.Text;
+                using (SqlConnection conn = new SqlConnection(conStr))
+                {
+                    conn.Open();
+
+                    string sql = "INSERT INTO EVENTTYPE (Event_Name, Event_Description)" +
+                                 "VALUES (@name, @desc)";
+                    using (SqlCommand comm = new SqlCommand(sql, conn))
+                    {
+                        comm.Parameters.AddWithValue("@name", name);
+                        comm.Parameters.AddWithValue("@desc", description);
+                        comm.ExecuteNonQuery();
+                    }
+
+                    lblEventMessage.ForeColor = System.Drawing.Color.Green;
+                    lblEventMessage.Text = "Event Type Added Succesfully";
+                }
+                txtEventDesc.Text = "";
+                txtEventName.Text = "";
+                loadData();
+            }
+            catch (SqlException ex)
+            {
+                lblMessage.Text = "Error: " + ex.Message;
+                lblMessage.ForeColor = System.Drawing.Color.Red;
+            }
         }
     }
 }
