@@ -77,12 +77,12 @@
                     <td class="auto-style19">
                         <asp:Image ID="Image1" runat="server" Height="166px" ImageUrl="~/Images/zims_zoo_logo.png" Width="331px" />
                         </td>
-                    <td class="auto-style25" colspan="2" style="border-style: double">
+                    <td class="auto-style25" colspan="2" style="border-style: outset">
                         <asp:Label ID="lblDeleteInfo" runat="server" Text="Delete Booking Dashboard:" Font-Bold="True" Font-Size="45px" style="text-align: center"></asp:Label>
                         </td>
                 </tr>
                 <tr>
-                    <td class="auto-style26" rowspan="6">
+                    <td class="auto-style26" rowspan="8" style="background-color: #003300; border-style: outset">
                         <asp:Menu ID="Menu1" runat="server" BackColor="#003300" DynamicHorizontalOffset="13" Font-Bold="True" Font-Size="13pt" ForeColor="White" Height="700px" StaticSubMenuIndent="25px" Width="330px">
                             <DynamicHoverStyle BackColor="#339933" />
                             <Items>
@@ -95,11 +95,33 @@
                         </asp:Menu>
                     </td>
                     <td class="auto-style39">
+                                        <asp:Label ID="lblTouristID" runat="server" Text="Tourist ID"></asp:Label>
+                                        <br />
+                                        <asp:TextBox ID="txtTouristID" runat="server" Height="30px" TextMode="Number"></asp:TextBox>
+                                        <br />
+                                        <br />
+                    </td>
+                    <td class="auto-style40">
+                                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style39">
+                                        <asp:Button ID="btnLoad" runat="server" Height="33px" OnClick="btnLoad_Click" Text="Load" Width="162px" />
+                                        <br />
+                                        <br />
+                    </td>
+                    <td class="auto-style40">
+                                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style39">
                                         <asp:Label ID="lblBookingID" runat="server" Text="Enter Booking ID:"></asp:Label>
                                         <br />
                                         <asp:DropDownList ID="ddlBookingID" runat="server" Height="35px" Width="128px">
                                         </asp:DropDownList>
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="ddlBookingID" ErrorMessage="Enter Booking ID" ForeColor="Red" InitialValue="0"></asp:RequiredFieldValidator>
+                                        <br />
+                                        <br />
                     </td>
                     <td class="auto-style40">
                                         <asp:Label ID="lblDeleteMessage" runat="server"></asp:Label>
@@ -110,6 +132,8 @@
                                         <asp:Button ID="BtnDelete" runat="server" Height="28px" Text="Delete" Width="145px" BackColor="Red" Font-Bold="True" ForeColor="White" OnClientClick="return confirm('Are you sure you want to delete this booking?');" OnClick="BtnDelete_Click" />
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                         <asp:Button ID="btnCancel" runat="server" Height="27px" Text="Cancel" Width="128px" BackColor="#999999" Font-Bold="True" ForeColor="White" OnClick="btnCancel_Click" />
+                                        <br />
+                                        <br />
                                         </td>
                     <td class="auto-style40">
                         <asp:Button ID="btnYes" runat="server" OnClick="btnYes_Click" Text="Yes" Visible="False" Width="93px" />
@@ -119,19 +143,21 @@
                 </tr>
                 <tr>
                     <td class="auto-style37" colspan="2">
-                        <asp:GridView ID="gvBookings" runat="server" Height="379px" Width="1022px" CellPadding="4" ForeColor="#333333" GridLines="None">
-                            <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
-                            <EditRowStyle BackColor="#999999" />
-                            <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-                            <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-                            <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
-                            <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
-                            <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
-                            <SortedAscendingCellStyle BackColor="#E9E7E2" />
-                            <SortedAscendingHeaderStyle BackColor="#506C8C" />
-                            <SortedDescendingCellStyle BackColor="#FFFDF8" />
-                            <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
-                        </asp:GridView>
+                        <asp:Panel ID="pnlBookings" runat="server" GroupingText="Bookings" Height="400px" ScrollBars="Both">
+                            <asp:GridView ID="gvBookings" runat="server" Height="336px" Width="1022px" CellPadding="4" ForeColor="#333333" GridLines="None">
+                                <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+                                <EditRowStyle BackColor="#999999" />
+                                <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                                <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                                <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                                <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+                                <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+                                <SortedAscendingCellStyle BackColor="#E9E7E2" />
+                                <SortedAscendingHeaderStyle BackColor="#506C8C" />
+                                <SortedDescendingCellStyle BackColor="#FFFDF8" />
+                                <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
+                            </asp:GridView>
+                        </asp:Panel>
                     </td>
                 </tr>
                 <tr>

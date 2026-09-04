@@ -23,7 +23,7 @@
                     <td class="auto-style7">
                         <asp:Image ID="Image1" runat="server" Height="158px" ImageUrl="~/Images/zims_zoo_logo.png" Width="331px" />
                         </td>
-                    <td colspan="2">
+                    <td colspan="2" style="border-style: outset">
                         <asp:Label ID="lblInfo" runat="server" Font-Bold="True" Font-Size="X-Large" Text="Staff Dashboard"></asp:Label>
                         </td>
                 </tr>

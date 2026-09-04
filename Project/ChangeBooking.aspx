@@ -24,6 +24,10 @@
         .auto-style11 {
             height: 167px;
         }
+        .auto-style12 {
+            width: 809px;
+            height: 30px;
+        }
     </style>
 </head>
 <body>
@@ -57,20 +61,22 @@
                         <br />
                         <asp:TextBox ID="txtTouristID" runat="server" Height="27px" TextMode="Number"></asp:TextBox>
                     </td>
-                    <td rowspan="13">
-                        <asp:GridView ID="gvTouristBookings" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Width="643px">
-                            <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
-                            <EditRowStyle BackColor="#999999" />
-                            <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-                            <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-                            <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
-                            <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
-                            <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
-                            <SortedAscendingCellStyle BackColor="#E9E7E2" />
-                            <SortedAscendingHeaderStyle BackColor="#506C8C" />
-                            <SortedDescendingCellStyle BackColor="#FFFDF8" />
-                            <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
-                        </asp:GridView>
+                    <td rowspan="7">
+                        <asp:Panel ID="pnlBookings" runat="server" GroupingText="All Bookigs" Height="265px" ScrollBars="Both">
+                            <asp:GridView ID="gvTouristBookings" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Width="643px">
+                                <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+                                <EditRowStyle BackColor="#999999" />
+                                <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                                <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                                <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                                <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+                                <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+                                <SortedAscendingCellStyle BackColor="#E9E7E2" />
+                                <SortedAscendingHeaderStyle BackColor="#506C8C" />
+                                <SortedDescendingCellStyle BackColor="#FFFDF8" />
+                                <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
+                            </asp:GridView>
+                        </asp:Panel>
                     </td>
                 </tr>
                 <tr>
@@ -114,7 +120,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style8">
+                    <td class="auto-style12">
                         <asp:Label ID="lblPaymentMethod" runat="server" Text="Payment Method"></asp:Label>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="ddlPaymentMethod" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
                         <br />
@@ -129,6 +135,12 @@
                 <tr>
                     <td class="auto-style8">Payment Amount<br />
                         <asp:TextBox ID="txtPaymentAmount" runat="server" AutoPostBack="True" Height="27px" OnTextChanged="txtPaymentAmount_TextChanged" ReadOnly="True"></asp:TextBox>
+                    </td>
+                    <td rowspan="6">
+                        <asp:Panel ID="pnlEvents" runat="server" GroupingText="All Events" Height="238px" ScrollBars="Both">
+                            <asp:GridView ID="gvEvents" runat="server" Width="679px">
+                            </asp:GridView>
+                        </asp:Panel>
                     </td>
                 </tr>
                 <tr>

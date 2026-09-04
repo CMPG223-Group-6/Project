@@ -65,8 +65,19 @@
         <div>
             <table class="auto-style1">
                 <tr>
-                    <td class="auto-style6" rowspan="8">
+                    <td class="auto-style6">
                         <asp:Image ID="imgLogo" runat="server" Height="158px" ImageUrl="~/Images/zims_zoo_logo.png" Width="331px" />
+                    </td>
+                    <td class="auto-style13" colspan="3" style="border-style: outset">
+                        
+                        <asp:Label ID="lblHeading" runat="server" Font-Bold="True" Font-Size="X-Large">Maintain Event Types</asp:Label>
+                        
+                        <br />
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style6" rowspan="6">
                         <asp:Menu ID="Menu1" runat="server" BackColor="#003300" DynamicHorizontalOffset="13" Font-Bold="True" Font-Size="13pt" ForeColor="White" Height="700px" StaticSubMenuIndent="25px" Width="330px">
                             <DynamicHoverStyle BackColor="#339933" />
                             <Items>
@@ -85,15 +96,6 @@
                             <StaticSelectedStyle BackColor="#66FF33" />
                         </asp:Menu>
                     </td>
-                    <td class="auto-style13" colspan="3" style="border-style: outset">
-                        
-                        <asp:Label ID="lblHeading" runat="server" Font-Bold="True" Font-Size="X-Large">Maintain Event Types</asp:Label>
-                        
-                        <br />
-                        
-                    </td>
-                </tr>
-                <tr>
                     <td class="auto-style9" colspan="2">
                         
                         <asp:Label ID="lblSearchEvent" runat="server" Text="Search events"></asp:Label>
@@ -176,6 +178,8 @@
                     <td class="auto-style5">&nbsp;</td>
                 </tr>
                 <tr>
+                    <td class="auto-style6">
+                        &nbsp;</td>
                     <td class="auto-style2">&nbsp;</td>
                     <td class="auto-style7">&nbsp;</td>
                     <td class="auto-style5">&nbsp;</td>

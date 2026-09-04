@@ -18,8 +18,10 @@ namespace Project
         bool checkedIn;
         bool checkedOut;
         int eventID;
+        int ticketsBefore;
         decimal amountOwed;
         decimal paymentTotal;
+        decimal NewTotalPrice;
         string paymentMethod;
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -47,7 +49,7 @@ namespace Project
                     reader.Close();
                 }
                 loadBookings();
-                
+                loadEvents();
             }
         }
 
@@ -57,9 +59,10 @@ namespace Project
             {
                 conn.Open();
 
-                string sql = "SELECT * FROM BOOKING";
+                string sql = "SELECT * FROM BOOKING WHERE Arrive_Date >= @date AND Checked_In = 0";
 
                 SqlCommand comm = new SqlCommand(sql, conn);
+                comm.Parameters.AddWithValue("@date", DateTime.Today);
                 SqlDataAdapter adap = new SqlDataAdapter();
                 DataSet ds = new DataSet();
 
@@ -117,10 +120,11 @@ namespace Project
                 {
                     conn.Open();
 
-                    string sql = "SELECT * FROM BOOKING WHERE Tourist_ID = @touristID";
+                    string sql = "SELECT * FROM BOOKING WHERE Tourist_ID = @touristID AND Arrive_Date >= @date AND Checked_In = 0";
 
                     SqlCommand comm = new SqlCommand(sql, conn);
                     comm.Parameters.AddWithValue("@touristID", touristID);
+                    comm.Parameters.AddWithValue("@date", DateTime.Today);
 
                     SqlDataReader reader = comm.ExecuteReader();
 
@@ -167,6 +171,11 @@ namespace Project
 
         protected void ddlBookingID_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if(ddlBookingID.SelectedIndex == 0)
+            {
+                loadBookings();
+                return;
+            }
             string paymentMethod = "";
 
             using (SqlConnection conn = new SqlConnection(conStr))
@@ -269,7 +278,7 @@ namespace Project
                     while(reader.Read())
                     {
                         ticketAvailable = int.Parse(reader["Tickets_Available"].ToString());
-
+                        ticketsBefore = int.Parse(reader["Number_Tickets"].ToString());
                         maxVisitors = int.Parse(reader["Max_Visitors"].ToString());
                         eventStatus = reader["Status"].ToString();
                     }
@@ -298,102 +307,192 @@ namespace Project
                 adap.SelectCommand = comm;
                 adap.Fill(ds);
 
-                gvTouristBookings.DataSource = ds;
-                gvTouristBookings.DataBind();
+                gvEvents.DataSource = ds;
+                gvEvents.DataBind();
 
             }
         }
 
+        private decimal paymentBefore()
+        {
+            decimal paymentAlreadyMade = 0.0m;
+
+            using (SqlConnection conn = new SqlConnection(conStr))
+            {
+                conn.Open();
+                string sql = @"SELECT Payment_Amount FROM BOOKING WHERE Booking_ID = @booking_id";
+
+                using (SqlCommand cmd = new SqlCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@booking_id", ddlBookingID.SelectedValue);
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        paymentAlreadyMade = decimal.Parse(reader["Payment_Amount"].ToString());
+                    }
+                }
+
+                conn.Close();
+            }
+            return paymentAlreadyMade;
+        }
         protected void btnUpdate_Click(object sender, EventArgs e)
         {
             try
             {
-                
                 AvailabilityOfEvent();
-                //loadInfo();
-                decimal totalprice;
-                int numTickets = getNumTickets();
-                if (isPaymentMade())
-                {
-                    totalprice = calculateTotalPrice(int.Parse(txtNumTickets.Text) - numTickets);
-                }
-                else
-                {
-                    totalprice = calculateTotalPrice(int.Parse(txtNumTickets.Text));
-                }
 
-                if (ticketAvailable == 0)
-                {
-                    lblOutput.Text = "Could not book event: No tickets available";
-                    return;
-                }
+                int eventID = int.Parse(ddlEventID.SelectedValue);
+                int numTickets = int.Parse(txtNumTickets.Text);
+                decimal amountOwed = CalculateAmount(out bool isSameEvent);
+                decimal paymentTotal = NewTotalPrice;
+                string paymentMethod = ddlPaymentMethod.SelectedItem.Text;
+                bool ispaymentMade = isPaymentMade();
 
-                if (checkedIn)
-                {
-                    lblOutput.Text = "Could not book event: Booking Akready Checked In";
-                    return;
-                }
+                //Ensure that a booking atleast on 1 ticket
+                bool hasValidTicketCount = numTickets >= 1;
+                //Checks for 2 validations of events 
+                bool sameEventValid = isSameEvent
+                    && hasValidTicketCount
+                    && (numTickets <= (ticketAvailable + ticketsBefore))
+                    && (eventStatus != "Inactive");
 
-                if (checkedOut)
-                {
-                    lblOutput.Text = "Could not book event: Booking already Checked Out";
-                    return;
-                }
+                bool differentEventValid = !isSameEvent
+                    && hasValidTicketCount
+                    && (ticketAvailable >= numTickets)
+                    && (eventStatus != "Inactive");
 
-                if(eventStatus == "Inactive" || eventStatus == "Full")
+                if (sameEventValid || differentEventValid)
                 {
-                    lblOutput.Text = "Could not book event: Event full or inactive";
-                    return;
-                }
-
-                int addedTickets = int.Parse(txtNumTickets.Text);
-                if((addedTickets-numTickets) > ticketAvailable)
-                {
-                    lblOutput.Text = "Could not book event: Not enough tickets available";
-                    return;
-                }
-
-                if ((ticketAvailable - (addedTickets- numTickets)) == 0)
-                {
-                    eventStatus = "Full";
-                }
-
-                using (SqlConnection conn = new SqlConnection(conStr))
-                {
-                    conn.Open();
-                    string sql = @"UPDATE BOOKING SET 
-                               Event_ID = @bookingeventID, Arrive_Date = @arriveDate, Payment_method = @paymentMethod, Number_Tickets = @numTickets,
-                               Payment_Amount = Payment_Amount + @paymentAmount, Amount_Owed = @paymentOwed, Payment_Made = @paymentMade
-                               WHERE Booking_ID = @bookingID";
-
-                    using (SqlCommand comm = new SqlCommand(sql, conn))
+                    if (isSameEvent)
                     {
-                        comm.Parameters.AddWithValue("@bookingID", ddlBookingID.SelectedItem.Text);
-                        comm.Parameters.AddWithValue("@bookingeventID", ddlEventID.SelectedItem.Text);
-                        comm.Parameters.AddWithValue("@arriveDate", txtDate.Text);
-                        comm.Parameters.AddWithValue("@numTickets", int.Parse(txtNumTickets.Text));
-                        comm.Parameters.AddWithValue("@paymentMethod", ddlPaymentMethod.SelectedItem.Text);
-                        comm.Parameters.AddWithValue("@paymentAmount", decimal.Parse(txtPaymentAmount.Text));
-                        if (!cbxPayment.Checked)
+                        // Same event: add what they already paid to what they now owe
+                        if (ispaymentMade)
                         {
-                            comm.Parameters.AddWithValue("@paymentOwed", decimal.Parse(txtPaymentAmount.Text));
+                            if (NewTotalPrice > paymentBefore())
+                            {
+                                paymentTotal = paymentBefore() + amountOwed;
+                                ispaymentMade = false;
+                                ticketAvailable = ticketAvailable - (numTickets - ticketsBefore);
+                                if (ticketAvailable == 0)
+                                {
+                                    eventStatus = "Full";
+                                }
+                            }
+                            else
+                            {
+                                //if the amount is less or still the same
+                                paymentTotal = NewTotalPrice;
+                                //check if tickets now are less than what they had before
+                                if (numTickets < ticketsBefore)
+                                {
+                                    ticketAvailable = ticketAvailable + (ticketsBefore - numTickets);
+                                    //when the tickets available is equal the max visitors
+                                    if (maxVisitors == ticketAvailable)
+                                    {
+                                        ticketAvailable = maxVisitors;
+                                    }
+                                    if (ticketAvailable > 0)
+                                    {
+                                        eventStatus = "Active";
+                                    }
+                                }
+                            }
                         }
                         else
                         {
-                            comm.Parameters.AddWithValue("@paymentOwed", 0.00);
+                            paymentTotal = amountOwed;
+                            //check if they have decreased tickets they had before
+                            if (ticketsBefore > numTickets)
+                            {
+                                ticketAvailable = ticketAvailable + (ticketsBefore - numTickets);
+                                //when the tickets available is equal the max visitors
+                                if (maxVisitors == ticketAvailable)
+                                {
+                                    ticketAvailable = maxVisitors;
+                                }
+                                if (ticketAvailable > 0)
+                                {
+                                    eventStatus = "Active";
+                                }
+                            }
+                            else if (numTickets > ticketsBefore)
+                            {
+                                //check if they added more tickets 
+                                ticketAvailable = ticketAvailable - (numTickets - ticketsBefore);
+                                if (ticketAvailable == 0)
+                                {
+                                    eventStatus = "Full";
+                                }
+                            }
                         }
-                        comm.Parameters.AddWithValue("@paymentMade", cbxPayment.Checked);
 
-                        comm.ExecuteNonQuery();
+                    }
+                    else
+                    {
+                        // Different event: start completely fresh, ignore old payment
+                        paymentTotal = amountOwed;
+                        ticketAvailable = ticketAvailable - numTickets;
+                        if (ticketAvailable == 0)
+                        {
+                            eventStatus = "Full";
+                        }
                     }
 
-                    sql = @"UPDATE EVENT SET Status = @status, Tickets_Available = Tickets_Available - @numTickets WHERE Event_ID = @eventID";
-                    using (SqlCommand comm = new SqlCommand(sql, conn))
+                    
+
+                    using (SqlConnection conn = new SqlConnection(conStr))
                     {
-                        comm.Parameters.AddWithValue("@eventID", ddlEventID.SelectedItem.Text);
-                        comm.Parameters.AddWithValue("@status", eventStatus);
-                        comm.Parameters.AddWithValue("@numTickets", int.Parse(txtNumTickets.Text));
-                        comm.ExecuteNonQuery();
+                        conn.Open();
+                        //Update Booking and Event tables
+                        string sql = @"UPDATE B SET B.Event_ID = @eventID, B.Tourist_ID = @touristID, B.Number_Tickets = @numberTickets, 
+                                         B.Arrive_Date = @arriveDate, B.Payment_method = @paymentMethod, B.Payment_Amount = @paymentAmount, 
+                                         B.Amount_Owed = @amountOwed, B.Payment_Made = @paymentMade
+                                  FROM BOOKING B
+                                  WHERE B.Booking_ID = @bookingID;
+                                  
+                                  UPDATE E
+                                  SET E.Tickets_Available = @ticketsAvailable
+                                  FROM EVENT E
+                                  WHERE E.Event_ID = @eventID";
+
+                        using (SqlCommand cmd = new SqlCommand(sql, conn))
+                        {
+                            cmd.Parameters.AddWithValue("@bookingID", ddlBookingID.SelectedValue);
+                            cmd.Parameters.AddWithValue("@eventID", eventID);
+                            cmd.Parameters.AddWithValue("@touristID", int.Parse(txtTouristID.Text));
+                            cmd.Parameters.AddWithValue("@numberTickets", numTickets);
+                            cmd.Parameters.AddWithValue("@arriveDate", GetArrivalDate());
+                            cmd.Parameters.AddWithValue("@paymentMethod", paymentMethod);
+                            cmd.Parameters.AddWithValue("@paymentAmount", paymentTotal);
+                            cmd.Parameters.AddWithValue("@amountOwed", amountOwed);
+                            cmd.Parameters.AddWithValue("@paymentMade", ispaymentMade);
+                            cmd.Parameters.AddWithValue("@ticketsAvailable", ticketAvailable);
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+
+                    loadBookings();
+                    loadEvents();
+                    ddlBookingID.SelectedIndex = 0;
+                    ddlEventID.SelectedIndex = 0;
+                    txtDate.Text = "";
+                    txtPaymentAmount.Text = "";
+                    txtNumTickets.Text = "";
+                    ddlPaymentMethod.SelectedIndex = 0;
+
+                }
+                else
+                {
+                    if (!hasValidTicketCount)
+                    {
+                        lblOutput.Text = "Please select atleast 1 ticket.";
+                    }
+                    else
+                    {
+                        lblOutput.Text = "This event is inactive or currently sold out, so we cannot update bookings.";
                     }
                 }
                 loadBookings();
@@ -406,6 +505,14 @@ namespace Project
             }
         }
 
+        private DateTime GetArrivalDate()
+        {
+            if (DateTime.TryParse(txtDate.Text, out DateTime result))
+            {
+                return result;
+            }
+            return DateTime.MinValue; // handle as "no valid date yet"
+        }
         private decimal calculateTotalPrice(int tickets)
         {
             decimal price = 0;
@@ -433,6 +540,80 @@ namespace Project
 
             return totalprice;
         }
+
+        
+        private decimal CalculateAmount(out bool isSameEvent)
+        {
+            decimal amountOwed = 0.0m;
+            decimal newTotalPrice = 0.0m;
+            double tax = 0.15;
+            isSameEvent = false;
+
+            using (SqlConnection conn = new SqlConnection(conStr))
+            {
+                conn.Open();
+                string sql = @"SELECT B.Event_ID AS OriginalEventID, B.Payment_Amount, B.Payment_Made, E.Event_Price
+                             FROM BOOKING B, EVENT E
+                             WHERE B.Booking_ID = @bookingID
+                             AND E.Event_ID = @eventID";
+
+                using (SqlCommand cmd = new SqlCommand(sql, conn))
+                {
+                    int.TryParse(ddlEventID.SelectedValue, out int eventID);
+                    cmd.Parameters.AddWithValue("@bookingID", ddlBookingID.SelectedValue);
+                    cmd.Parameters.AddWithValue("@eventID", eventID);
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        int originalEventID = int.Parse(reader["OriginalEventID"].ToString());
+                        double price = double.Parse(reader["Event_Price"].ToString());
+                        bool isPaymentMade = Boolean.Parse(reader["Payment_Made"].ToString());
+                        //stored amount that has already been made
+                        decimal storedPaymentAmount = decimal.Parse(reader["Payment_Amount"].ToString());
+                        int tickets = int.Parse(txtNumTickets.Text);
+
+                        isSameEvent = (originalEventID == eventID);
+                        newTotalPrice = (decimal)(price * tickets * (1.0 + tax));
+
+                        if (isSameEvent)
+                        {
+                            if (isPaymentMade)
+                            {
+                                if (newTotalPrice > storedPaymentAmount)
+                                {
+                                    // new total exceeds what they already paid - they owe the difference
+                                    amountOwed = newTotalPrice - storedPaymentAmount;
+                                }
+                                else
+                                {
+                                    //new total is equal to or less than what they already paid - nothing owed
+                                    amountOwed = 0.0m;
+                                }
+                            }
+                            else
+                            {
+                                //Same event - but not paid yet
+                                amountOwed = newTotalPrice;
+                            }
+                        }
+                        else
+                        {
+                            // Different event - fresh booking, full new total is owed
+                            amountOwed = newTotalPrice;
+                        }
+
+                        txtPaymentAmount.Text = amountOwed.ToString("F2");
+                    }
+                }
+            }
+
+            // new total so btnUpdate_Click can set Payment_Amount correctly
+            NewTotalPrice = newTotalPrice;
+
+            return amountOwed;
+        }
+
 
         protected void txtPaymentAmount_TextChanged(object sender, EventArgs e)
         {

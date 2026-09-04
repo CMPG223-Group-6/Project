@@ -26,10 +26,10 @@ namespace Project
             {
                 conn.Open();
 
-                string sql = "SELECT * FROM BOOKING";
+                string sql = "SELECT * FROM BOOKING WHERE Arrive_Date >= @date AND Checked_In = 0";
 
                 SqlCommand comm = new SqlCommand(sql, conn);
-
+                comm.Parameters.AddWithValue("@date", DateTime.Today);
                 SqlDataReader reader = comm.ExecuteReader();
 
                 ddlBookingID.Items.Clear();
@@ -248,6 +248,54 @@ namespace Project
         protected void btnContinue_Click(object sender, EventArgs e)
         {
 
+        }
+
+        protected void btnLoad_Click(object sender, EventArgs e)
+        {
+            int touristID = int.Parse(txtTouristID.Text);
+           
+            ddlBookingID.Items.Clear();
+
+            if (recordExists(touristID))
+            {
+
+                using (SqlConnection conn = new SqlConnection(conStr))
+                {
+                    conn.Open();
+
+                    string sql = "SELECT * FROM BOOKING WHERE Tourist_ID = @touristID AND Arrive_Date >= @date AND Checked_In = 0";
+
+                    SqlCommand comm = new SqlCommand(sql, conn);
+                    comm.Parameters.AddWithValue("@touristID", touristID);
+                    comm.Parameters.AddWithValue("@date", DateTime.Today);
+
+                    SqlDataReader reader = comm.ExecuteReader();
+
+                    ddlBookingID.Items.Add("Select Booking ID");
+
+                    while (reader.Read())
+                    {
+                        ddlBookingID.Items.Add(reader.GetValue(0).ToString());
+                    }
+                    reader.Close();
+
+                    SqlDataAdapter adap = new SqlDataAdapter();
+                    DataSet ds = new DataSet();
+
+
+
+                    adap.SelectCommand = comm;
+                    adap.Fill(ds, "BOOKING");
+
+                    gvBookings.DataSource = ds;
+                    gvBookings.DataBind();
+
+                }
+            }
+            else
+            {
+                lblDeleteMessage.Text = "Tourist ID does not exist";
+            }
         }
     }
 }
