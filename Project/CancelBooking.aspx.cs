@@ -137,6 +137,11 @@ namespace Project
 
         protected void ddrlBookingID_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (ddrlBookingID.SelectedIndex == 0)
+            {
+                LoadDataBooking(Tourist_ID);
+                return;
+            }
             using (SqlConnection conn = new SqlConnection(conStr))
             {
                 conn.Open();

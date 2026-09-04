@@ -164,6 +164,10 @@ namespace Project
         //Allows the event ID to change and display different event types 
         protected void ddrlEventID_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if(ddrlEventID.SelectedIndex == 0)
+            {
+                txtDisplayEventType.Text = "";
+            }
             EventID();
         }
         //Store the event ID selected by the user and return it
