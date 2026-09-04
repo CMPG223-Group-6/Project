@@ -125,8 +125,18 @@ namespace Project
                 int paymentMadeOrdinal = reader.GetOrdinal("Payment_Made");
                 int checkInOrdinal = reader.GetOrdinal("Checked_In");
 
-                bool paymentMade = reader.IsDBNull(paymentMadeOrdinal) ? false : reader.GetBoolean(paymentMadeOrdinal);
-                bool checkIn = reader.IsDBNull(checkInOrdinal) ? false : reader.GetBoolean(checkInOrdinal);
+                bool paymentMade = true;
+                bool checkIn = false;
+
+                if (!reader.IsDBNull(paymentMadeOrdinal))
+                {
+                    bool.TryParse(reader["Payment_Made"].ToString(), out paymentMade);
+                }
+
+                if (!reader.IsDBNull(checkInOrdinal))
+                {
+                    bool.TryParse(reader["Checked_In"].ToString(), out checkIn);
+                }
 
                 reader.Close();
 

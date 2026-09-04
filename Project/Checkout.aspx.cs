@@ -14,7 +14,7 @@ namespace Project
     {
 
         string ConnectionString = @"Data Source= localhost;Initial Catalog=zims.db;Integrated Security=True";
-        int touristID = 5;
+        int touristID;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["Tourist_ID"] != null) // tourist session
@@ -70,6 +70,11 @@ namespace Project
 
                         loadBookings();
 
+                     }
+                    else
+                    {
+                        lblConfirmMessage.Text = "Answer the questionannaire.";
+                        btnQuestionaire.Visible = true;
                     }
                  }
 
@@ -100,12 +105,22 @@ namespace Project
                     reader.Close();
                     return;
                 }
-                
-                int checkInOrdinal = reader.GetOrdinal("Checked_In");
-                int checkOutOrdinal = reader.GetOrdinal("Checked_Out");
 
-                bool checkIn = reader.IsDBNull(checkInOrdinal) ? false : reader.GetBoolean(checkInOrdinal);
-                bool checkOut = reader.IsDBNull(checkOutOrdinal) ? false : reader.GetBoolean(checkOutOrdinal);
+                bool checkIn;
+                bool checkOut;
+
+                bool.TryParse(reader["Checked_In"].ToString(), out checkIn);
+                bool.TryParse(reader["Checked_Out"].ToString(), out checkOut);
+
+                if (reader["Checked_In"] != DBNull.Value)
+                {
+                    bool.TryParse(reader["Checked_In"].ToString(), out checkIn);
+                }
+
+                if (reader["Checked_Out"] != DBNull.Value)
+                {
+                    bool.TryParse(reader["Checked_Out"].ToString(), out checkOut);
+                }
 
                 reader.Close();
 
@@ -113,7 +128,7 @@ namespace Project
                 reader.Close();
 
                 // Check the Checked_In Session
-                if (Session["check_in"] == null || Convert.ToBoolean(Session["check_in"]) == false)
+                if (Session["check_in"] == null || bool.TryParse(Session["check_in"].ToString(), out checkIn) == false)
                 {
                     lblConfirmMessage.Text = "You haven't checked in yet.";
 
@@ -138,11 +153,11 @@ namespace Project
 
                         if (rowsUpdated > 0)
                         {
-                            lblConfirmMessage.Text = "Successful check-out.";
+                            lblConfirmMessage.Text = "Successfullly updated";
                         }
                         else
                         {
-                            lblConfirmMessage.Text = "Unsuccessful check-out.";
+                            lblConfirmMessage.Text = "Unsuccessfully updated.";
                         }
                     }
 
@@ -206,7 +221,7 @@ namespace Project
             {
                 using (SqlConnection conn = new SqlConnection(ConnectionString))
                 {
-                    string sql_query = @"SELECT * FROM BOOKING WHERE Booking_ID = @bookingID";
+                    string sql_query = @"SELECT * FROM BOOKING WHERE Booking_ID = @bookingID"; // populates the ddl with selected tourist_ID
 
                     SqlCommand cmd = new SqlCommand(sql_query, conn);
                     cmd.Parameters.AddWithValue("@bookingID", ddlBookingIDDetails.SelectedItem.ToString());
@@ -228,17 +243,7 @@ namespace Project
 
             }
         }
-
-
-
-
-       /* private void UpdateCheckedOut(string bookingID) // updates and selects the chosen booking details
-        {
-            
-            
-        } */
-
-        private void loadBookings()
+        private void loadBookings() //loads initially and when you have chosen your Id
         {
             string query = @"SELECT B.Booking_ID, B.Event_ID, ET.Event_Name, B.Number_Tickets, B.Arrive_Date, B.Payment_method, B.Payment_Amount, B.Payment_Made, B.Checked_In, B.Checked_Out " +
                                 "FROM BOOKING B, EVENT E, EVENTTYPE ET " +
@@ -272,6 +277,11 @@ namespace Project
             {
                 lblConfirmMessage.Text = "Database error: " + ex.Message;
             }
+        }
+
+        protected void btnQuestionaire_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Questionnaireform.aspx");
         }
     }
 }

@@ -62,7 +62,7 @@ namespace Project
 
             if (!int.TryParse(ddlBookingEventsStaffcheckin.SelectedValue, out bookingID)) // select number in ddl
             {
-                lblOutput.Text = "Please select a booking ID.";
+                lblOutput.Text = "Select a booking ID.";
                 return;
             }
 
@@ -79,11 +79,22 @@ namespace Project
                     reader.Close();
                     return;
                 }
+
                 int paymentMadeOrdinal = reader.GetOrdinal("Payment_Made");
                 int checkInOrdinal = reader.GetOrdinal("Checked_In");
 
-                bool paymentMade = reader.IsDBNull(paymentMadeOrdinal) ? false : reader.GetBoolean(paymentMadeOrdinal);
-                bool checkIn = reader.IsDBNull(checkInOrdinal) ? false : reader.GetBoolean(checkInOrdinal);
+                bool paymentMade = true;
+                bool checkIn = false;
+
+                if (!reader.IsDBNull(paymentMadeOrdinal))
+                {
+                    bool.TryParse(reader["Payment_Made"].ToString(), out paymentMade);
+                }
+
+                if (!reader.IsDBNull(checkInOrdinal))
+                {
+                    bool.TryParse(reader["Checked_In"].ToString(), out checkIn);
+                }
 
                 reader.Close();
 
@@ -127,13 +138,13 @@ namespace Project
 
             if (touristID <= 0)
             {
-                lblOutput.Text = "Please enter a valid number.";
+                lblOutput.Text = "Enter a tourist ID.";
                 return;
             }
 
             try
             {
-                using (SqlConnection conn = new SqlConnection(ConnectionString))
+                using (SqlConnection conn = new SqlConnection(ConnectionString)) // checks if we have the tourist in the database
                 {
                     string query = @"SELECT COUNT(*) FROM BOOKING WHERE Tourist_ID = @Tourist_ID";
 
@@ -146,11 +157,11 @@ namespace Project
                     // Counts how many records have this Tourist ID
                     int touristExists = Convert.ToInt32(cmd.ExecuteScalar());
 
-                    // Validation 3: Check if Tourist ID exists
-                    if (touristExists == 0)
+                    // Check if Tourist ID exists
+                    if (touristExists <= 0)
                     {
-                        lblOutput.Text = "Invalid Tourist ID/ This ID doesnt exist.";
-                        
+                        lblOutput.Text = "Tourist ID does not exist";
+                        return;
                     }
 
                 }
@@ -163,7 +174,7 @@ namespace Project
            
             try
             {
-                using (SqlConnection conn = new SqlConnection(ConnectionString)) //  shows specifically for selected bookingID in gridview
+                using (SqlConnection conn = new SqlConnection(ConnectionString)) //  loads specific selected bookingID in the gridview
                 {
                     string sql_query = @"SELECT * FROM BOOKING WHERE Tourist_ID = @Tourist_ID";
 

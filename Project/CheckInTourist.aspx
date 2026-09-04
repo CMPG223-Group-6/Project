@@ -106,7 +106,7 @@
                                             <asp:Button ID="btnCheck0" runat="server" BackColor="#33CC33" Height="43px" OnClick="btnCheck_Click" Text="Check In" Width="186px" ValidationGroup="BookingID" />
                                             &nbsp;<br />
                                             <br />
-                                            <asp:Button ID="btnDone" runat="server" BackColor="#009900" Height="38px" Text="Done" Width="183px" OnClick="btnDone_Click" />
+                                            <asp:Button ID="btnDone" runat="server" BackColor="#009900" Height="42px" Text="Done" Width="188px" OnClick="btnDone_Click" />
                                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                             <br />
                                             <br />

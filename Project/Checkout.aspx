@@ -76,6 +76,9 @@
                         <br />
                         <br />
                         <asp:Label ID="lblConfirmMessage" runat="server"></asp:Label>
+                        &nbsp;
+                        <br />
+                        <asp:Button ID="btnQuestionaire" runat="server" BackColor="#009900" OnClick="btnQuestionaire_Click" Text="Questionaire" Visible="False" />
                         <br />
                     </td>
                     <td class="auto-style5">
