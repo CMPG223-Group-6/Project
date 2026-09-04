@@ -82,7 +82,16 @@
                         <asp:Panel ID="Panel2" runat="server" Height="427px" Width="886px" GroupingText="Available &amp; Upcoming Events" ScrollBars="Both">
                             &nbsp;&nbsp;&nbsp;
                             <br />
-                            <asp:GridView ID="gdvDisplayEvents" runat="server" Height="367px" Width="842px" OnSelectedIndexChanged="gdvDisplayEvents_SelectedIndexChanged">
+                            <asp:GridView ID="gdvDisplayEvents" runat="server" Height="367px" Width="842px" OnSelectedIndexChanged="gdvDisplayEvents_SelectedIndexChanged" AutoGenerateColumns="False">
+                            
+                                <Columns>
+                                <asp:BoundField DataField="Event_ID" HeaderText="Event ID" />
+                                <asp:BoundField DataField="Event_Name" HeaderText="Event Name" />
+                                <asp:BoundField DataField="Event_Price" HeaderText="Ticket Price" DataFormatString="{0:C}"/>
+                                <asp:BoundField DataField="Max_Visitors" HeaderText="Max Visitors" />
+                                <asp:BoundField DataField="Tickets_Available" HeaderText="No. Tickets Available" />
+                                <asp:BoundField DataField="Status" HeaderText="Status" />
+                            </Columns>
                             </asp:GridView>
                         </asp:Panel>
                     </td>
@@ -139,7 +148,7 @@
                 </tr>
                 <tr>
                     <td class="auto-style1" style="border-style: inset; border-color: #006600; background-color: #006600">
-                        <asp:Menu ID="Menu3" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="White">
+                        <asp:Menu ID="Menu3" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="White" OnMenuItemClick="Menu3_MenuItemClick">
                             <Items>
                                 <asp:MenuItem Text="Sign Out" NavigateUrl="~/Default.aspx"></asp:MenuItem>
                             </Items>

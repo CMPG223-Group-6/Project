@@ -84,7 +84,17 @@
                                         <asp:Label ID="lblUpcomingEvents" runat="server" Text="Booked Events:"></asp:Label>
                                         <br />
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <asp:GridView ID="gdvDisplayEvents" runat="server" Height="96px" Width="843px">
+                                        <asp:GridView ID="gdvDisplayEvents" runat="server" Height="96px" Width="843px" AutoGenerateColumns="False">
+                                         <Columns>
+                                            <asp:BoundField DataField="Booking_ID" HeaderText="Booking ID" />
+                                            <asp:BoundField DataField="Event_ID" HeaderText="Event ID" />
+                                            <asp:BoundField DataField="Event_Name" HeaderText="Event Name" />
+                                            <asp:BoundField DataField="Number_Tickets" HeaderText="No Tickets" />
+                                            <asp:BoundField DataField="Arrive_Date" HeaderText="Arrival Date" DataFormatString="{0:yyyy/MM/dd}" />
+                                            <asp:BoundField DataField="Payment_Method" HeaderText="Payment Method" />
+                                            <asp:BoundField DataField="Payment_Amount" HeaderText="Payment Amount" DataFormatString="{0:C}" />
+                                            <asp:BoundField DataField="Payment_Made" HeaderText="Payment Status" />
+                                        </Columns>
                                         </asp:GridView>
                                     </asp:Panel>
                                 </td>

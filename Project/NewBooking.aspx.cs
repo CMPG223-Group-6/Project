@@ -64,43 +64,46 @@ namespace Project
                 {
                     StatusOfEvent = "Full";
                 }
-
-                using (SqlConnection conn = new SqlConnection(conStr))
+                else
                 {
-                    conn.Open();
-                    string sql = @"INSERT INTO BOOKING (Event_ID, Tourist_ID, Number_Tickets, Arrive_Date, Payment_method, Payment_Amount, Amount_Owed, Payment_Made, Checked_In)
-                                      VALUES(@eventID, @touristID, @numberTickets, @arriveDate, @paymentMethod, @paymentAmount, @amountOwed, @paymentMade, @checkedIn)
+                    using (SqlConnection conn = new SqlConnection(conStr))
+                    {
+                        conn.Open();
+                        string sql = @"INSERT INTO BOOKING (Event_ID, Tourist_ID, Number_Tickets, Arrive_Date, Payment_method, Payment_Amount, Amount_Owed, Payment_Made, Checked_In, Checked_Out)
+                                      VALUES(@eventID, @touristID, @numberTickets, @arriveDate, @paymentMethod, @paymentAmount, @amountOwed, @paymentMade, @checkedIn, @checkedOut)
                                       
                                   UPDATE E
                                   SET E.Tickets_Available = @ticketsAvailable, E.Status = @status
                                   FROM EVENT E
                                   WHERE E.Event_ID = @eventID";
 
-                    using (SqlCommand cmd = new SqlCommand(sql, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@eventID", eventID);
-                        cmd.Parameters.AddWithValue("@touristID", touristID);
-                        cmd.Parameters.AddWithValue("@numberTickets", numTickets);
-                        cmd.Parameters.AddWithValue("@arriveDate", GetArrivalDate());
-                        cmd.Parameters.AddWithValue("@paymentMethod", paymentMethod);
-                        cmd.Parameters.AddWithValue("@paymentAmount", paymentAmount);
-                        cmd.Parameters.AddWithValue("@amountOwed", paymentAmount);
-                        cmd.Parameters.AddWithValue("@paymentMade", paymentMade);
-                        cmd.Parameters.AddWithValue("@checkedIn", false);
-                        cmd.Parameters.AddWithValue("@ticketsAvailable", ticketsAvailable);
-                        cmd.Parameters.AddWithValue("@status", StatusOfEvent);
-                        cmd.ExecuteNonQuery();
+                        using (SqlCommand cmd = new SqlCommand(sql, conn))
+                        {
+                            cmd.Parameters.AddWithValue("@eventID", eventID);
+                            cmd.Parameters.AddWithValue("@touristID", touristID);
+                            cmd.Parameters.AddWithValue("@numberTickets", numTickets);
+                            cmd.Parameters.AddWithValue("@arriveDate", GetArrivalDate());
+                            cmd.Parameters.AddWithValue("@paymentMethod", paymentMethod);
+                            cmd.Parameters.AddWithValue("@paymentAmount", paymentAmount);
+                            cmd.Parameters.AddWithValue("@amountOwed", paymentAmount);
+                            cmd.Parameters.AddWithValue("@paymentMade", paymentMade);
+                            cmd.Parameters.AddWithValue("@checkedIn", false);
+                            cmd.Parameters.AddWithValue("@ticketsAvailable", ticketsAvailable);
+                            cmd.Parameters.AddWithValue("@status", StatusOfEvent);
+                            cmd.Parameters.AddWithValue("@checkedOut", false);
+                            cmd.ExecuteNonQuery();
+                        }
                     }
+
+                    //Store details to display in booking confirmation page
+                    Session["Event_Name"] = txtDisplayEventType.Text;
+                    Session["Date"] = GetArrivalDate();
+                    Session["PriceOfEvent"] = priceEvent;
+                    Session["NumberOfTickets"] = numTickets;
+                    Session["TotalAmount"] = paymentAmount;
+
+                    Response.Redirect("BookingConfirmation.aspx");
                 }
-
-                //Store details to display in booking confirmation page
-                Session["Event_Name"] = txtDisplayEventType.Text;
-                Session["Date"] = GetArrivalDate();
-                Session["PriceOfEvent"] = priceEvent;
-                Session["NumberOfTickets"] = numTickets;
-                Session["TotalAmount"] = paymentAmount;
-
-                Response.Redirect("BookingConfirmation.aspx");
             }
             else
             {
@@ -294,6 +297,11 @@ namespace Project
             }
 
             return method;
+        }
+
+        protected void gdvDisplay_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

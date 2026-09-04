@@ -131,8 +131,18 @@
                     <td class="auto-style15">
                         <asp:Panel ID="pnlEvents" runat="server" GroupingText="Available Events" Height="449px">
                             <br />
-                            <asp:GridView ID="gdvDisplay" runat="server" Width="486px">
+                            <asp:GridView ID="gdvDisplay" runat="server" Width="486px" OnSelectedIndexChanged="gdvDisplay_SelectedIndexChanged" AutoGenerateColumns="False">
+                         <Columns>
+                            <asp:BoundField DataField="Event_ID" HeaderText="Event ID" />
+                            <asp:BoundField DataField="Event_Name" HeaderText="Event Name" />
+                            <asp:BoundField DataField="Event_Price" HeaderText="Ticket Price" />
+                            <asp:BoundField DataField="Max_Visitors" HeaderText="Max Visitors" />
+                            <asp:BoundField DataField="Tickets_Available" HeaderText="No. Tickets Available" />
+                            <asp:BoundField DataField="Status" HeaderText="Status" />
+                        </Columns>
                             </asp:GridView>
+
+                          
                         </asp:Panel>
                     </td>
                 </tr>

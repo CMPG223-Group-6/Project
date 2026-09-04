@@ -41,6 +41,9 @@ namespace Project
                 txtNumberTickets.Attributes["min"] = 0.ToString();
             }
 
+            //Load all the events for the user to see
+            LoadData();
+
             //Reseting the pay now button 
             btnPayNow.Visible = true;
         }
@@ -200,8 +203,6 @@ namespace Project
                 }
 
                 LoadDataBooking(Tourist_ID);
-                ReadEventIDsToDropDownList();
-                BookingIDsToDropDownList();
 
                 Panel2.Visible = true;
                 lblConfirmation.Visible = true;
@@ -256,8 +257,34 @@ namespace Project
                     adap.SelectCommand = cmd;
                     adap.Fill(ds, "BOOKING");
 
-                    gdvDisplayEvents.DataSource = ds;
-                    gdvDisplayEvents.DataBind();
+                    gdvDisplayBookings.DataSource = ds;
+                    gdvDisplayBookings.DataBind();
+                }
+
+                conn.Close();
+            }
+        }
+        //Loading all the available events
+        public void LoadData()
+        {
+            using (SqlConnection conn = new SqlConnection(conStr))
+            {
+                conn.Open();
+                string sql = @"SELECT E.Event_ID, ET.Event_Name, E.Event_Price, E.Max_Visitors, E.Tickets_Available, E.Status
+                               FROM EVENT E, EVENTTYPE ET
+                               WHERE E.EventType_ID = ET.EventType_ID";
+
+
+                using (SqlCommand cmd = new SqlCommand(sql, conn))
+                {
+                    SqlDataAdapter adap = new SqlDataAdapter();
+                    DataSet ds = new DataSet();
+
+                    adap.SelectCommand = cmd;
+                    adap.Fill(ds, "EVENT");
+
+                    gdvDisplayEvents0.DataSource = ds;
+                    gdvDisplayEvents0.DataBind();
                 }
 
                 conn.Close();
@@ -583,8 +610,8 @@ namespace Project
                         adap2.SelectCommand = comm;
                         adap2.Fill(ds, "BOOKING");
 
-                        gdvDisplayEvents.DataSource = ds;
-                        gdvDisplayEvents.DataBind();
+                        gdvDisplayBookings.DataSource = ds;
+                        gdvDisplayBookings.DataBind();
                     }
 
                     conn.Close();

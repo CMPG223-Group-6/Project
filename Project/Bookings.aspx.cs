@@ -118,5 +118,10 @@ namespace Project
             txtSearch.Text = "";
             LoadData();
         }
+
+        protected void gdvDisplayEvents_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

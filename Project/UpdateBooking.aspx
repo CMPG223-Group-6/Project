@@ -13,9 +13,10 @@
             }
         .auto-style5 {
             text-align: left;
-    }
+            height: 158px;
+        }
         .auto-style9 {
-            width: 573px;
+            width: 530px;
         }
         .auto-style1 {
             width: 195px;
@@ -24,6 +25,17 @@
         .auto-style12 {
             height: 3px;
         }
+        .auto-style13 {
+            width: 195px;
+            height: 158px;
+        }
+        .auto-style14 {
+            width: 985px;
+        }
+        .auto-style15 {
+            height: 3px;
+            width: 530px;
+        }
     </style>
 </head>
 <body>
@@ -31,7 +43,7 @@
         <div>
             <table style="width: 100%; height: 601px;">
                 <tr>
-                    <td class="auto-style4" style="border-style: inset; border-color: #006600; background-color: #006600">&nbsp;<br />
+                    <td class="auto-style13" style="border-style: inset; border-color: #006600; background-color: #006600">&nbsp;<br />
                         <asp:Label ID="lblZooInfo" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="White" Text="ZooInfoSys"></asp:Label>
                         &nbsp;&nbsp;&nbsp;
                         <asp:Image ID="Image2" runat="server" ImageUrl="~/Images/Screenshot 2026-08-10 122157.png" />
@@ -123,28 +135,39 @@
                     <td>
                         <table style="width: 100%; height: 455px;">
                             <tr>
-                                <td>
-                                    <asp:Panel ID="pnlEvents" runat="server" GroupingText="Booked Events" Height="276px">
+                                <td class="auto-style14">
+                                    <asp:Panel ID="pnlEvents" runat="server" GroupingText="Booked Events" Height="252px" ScrollBars="Both" Width="617px">
                                         <br />
-                                        <asp:GridView ID="gdvDisplayEvents" runat="server" Width="496px" AutoGenerateColumns="False">
+                                        <asp:GridView ID="gdvDisplayBookings" runat="server" Width="548px" AutoGenerateColumns="False">
                                             <Columns>
-                                                <asp:BoundField DataField="Booking_ID" HeaderText="Booking_ID" />
-                                                <asp:BoundField DataField="Event_ID" HeaderText="Event_ID" />
-                                                <asp:BoundField DataField="Event_Name" HeaderText="Event_Name" />
-                                                <asp:BoundField DataField="Number_Tickets" HeaderText="Number_Tickets" />
-                                                <asp:BoundField DataField="Arrive_Date" HeaderText="Arrive_Date" DataFormatString="{0:yyyy/MM/dd}" />
-                                                <asp:BoundField DataField="Questionnaires" HeaderText="Questionnaires" />
-                                                <asp:BoundField DataField="Payment_Method" HeaderText="Payment_Method" />
-                                                <asp:BoundField DataField="Payment_Amount" HeaderText="Payment_Amount" DataFormatString="{0:C}" />
-                                                <asp:BoundField DataField="Payment_Made" HeaderText="Payment_Made" />
+                                                <asp:BoundField DataField="Booking_ID" HeaderText="Booking ID" />
+                                                <asp:BoundField DataField="Event_ID" HeaderText="Event ID" />
+                                                <asp:BoundField DataField="Event_Name" HeaderText="Event Name" />
+                                                <asp:BoundField DataField="Number_Tickets" HeaderText="No Tickets" />
+                                                <asp:BoundField DataField="Arrive_Date" HeaderText="Arrive Date" DataFormatString="{0:yyyy/MM/dd}" />
+                                                <asp:BoundField DataField="Payment_Method" HeaderText="Payment Method" />
+                                                <asp:BoundField DataField="Payment_Amount" HeaderText="Payment Amount" DataFormatString="{0:C}" />
+                                                <asp:BoundField DataField="Payment_Made" HeaderText="Payment Status" />
                                             </Columns>
                                         </asp:GridView>
                                     </asp:Panel>
                                 </td>
                             </tr>
                             <tr>
-                                <td>
-                                    &nbsp;</td>
+                                <td class="auto-style14">
+                                        <asp:Panel ID="Panel3" runat="server" GroupingText="Available Events:" Height="211px" ScrollBars="Both" Width="615px">
+                                            <asp:GridView ID="gdvDisplayEvents0" runat="server" Height="88px" Width="528px" AutoGenerateColumns="False">
+                                                 <Columns>
+                                                 <asp:BoundField DataField="Event_ID" HeaderText="Event ID" />
+                                                 <asp:BoundField DataField="Event_Name" HeaderText="Event Name" />
+                                                 <asp:BoundField DataField="Event_Price" HeaderText="Ticket Price" DataFormatString="{0:C}"/>
+                                                 <asp:BoundField DataField="Max_Visitors" HeaderText="Max Visitors" />
+                                                 <asp:BoundField DataField="Tickets_Available" HeaderText="No. Tickets Available" />
+                                                 <asp:BoundField DataField="Status" HeaderText="Status" />
+                                             </Columns>
+                                            </asp:GridView>
+                                        </asp:Panel>
+                                        </td>
                             </tr>
                         </table>
                     </td>
@@ -158,13 +181,13 @@
                             <StaticHoverStyle BorderColor="#669999" />
                         </asp:Menu>
                     </td>
-                    <td class="auto-style12" style="border-style: groove; border-color: #000000">
+                    <td class="auto-style15" style="border-style: groove; border-color: #000000">
                         <br />
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <asp:Label ID="lblError" runat="server" ForeColor="Red"></asp:Label>
                     </td>
                     <td class="auto-style12" style="border-style: groove; border-color: #000000">
-                        <asp:Panel ID="Panel2" runat="server" Height="139px" BorderColor="Black" BorderStyle="Double" GroupingText="Confirmation Of Update" Visible="False">
+                        <asp:Panel ID="Panel2" runat="server" Height="139px" BorderColor="Black" BorderStyle="Double" GroupingText="Confirmation Of Update" Visible="False" Width="601px">
                             <br />
                             &nbsp;&nbsp;&nbsp; &nbsp;<asp:Label ID="lblConfirmation" runat="server" Visible="False">Your Booking has been updated successfully</asp:Label>
                             <br />
@@ -173,8 +196,7 @@
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <asp:Button ID="btnDone" runat="server" OnClick="btnDone_Click" Text="Later" Width="123px" />
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:Button ID="btnPayNow" runat="server" BackColor="#339933" BorderColor="#006600" BorderStyle="Double" ForeColor="White" OnClick="btnPayNow_Click" Text="Pay Now" Visible="False" Width="155px" />
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        </asp:Panel>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</asp:Panel>
                     </td>
                 </tr>
             </table>
