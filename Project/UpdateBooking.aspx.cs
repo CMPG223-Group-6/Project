@@ -353,9 +353,7 @@ namespace Project
             using (SqlConnection conn = new SqlConnection(conStr))
             {
                 conn.Open();
-                string sql = "SELECT E.Event_ID FROM EVENT E, BOOKING B " +
-                             " WHERE E.Event_ID = B.Event_ID " +
-                             "AND B.Arrive_Date >= @Today";
+                string sql = "SELECT Event_ID FROM EVENT";
 
                 using (SqlCommand cmd = new SqlCommand(sql, conn))
                 {

@@ -37,9 +37,13 @@ namespace Project
             {
                 name = Session["Tourist_FirstName"].ToString();
             }
-            CountriesToDropDownList();
-            LoadDataBooking(Tourist_ID);
-
+            if (!IsPostBack)
+            {
+                CountriesToDropDownList();
+                LoadDataBooking(Tourist_ID);
+                //lblError.Text = StoredPassword;
+            }
+            StoredPassword = Session["StoredPassword"].ToString();
             lblNameDisplay0.Text = name + " " + surname;
         }
 
@@ -51,7 +55,7 @@ namespace Project
                 byte[] bytes = Encoding.UTF8.GetBytes(password);
 
                 byte[] hash = sha256.ComputeHash(bytes);
-
+                
                 return Convert.ToBase64String(hash);
             }
         }
@@ -68,8 +72,9 @@ namespace Project
         {
             string enteredPassword = txtPassword.Text.Trim();
             string storedHash = StoredPassword.Trim();
+            //lblUpdated.Text = HashPassword(enteredPassword);
             bool isValid = VerifyPassword(enteredPassword, storedHash);
-
+            
             if (isValid)
             {
                 Response.Redirect("DeleteAccount.aspx");
@@ -82,26 +87,43 @@ namespace Project
 
         protected void btnUpdateProfile_Click(object sender, EventArgs e)
         {
-            using (SqlConnection conn = new SqlConnection(conStr))
+            //Tourist ID method
+            if (Session["Tourist_ID"] != null)
             {
-                conn.Open();
-                //Update Booking and Event tables
-                string sql = @"UPDATE TOURIST SET Tourist_LastName = @Surname, Tourist_FirstName = @name, Contact_Number = @number,
-                              Email_Address = @email, Country_ID = @country
-                              WHERE Tourist_ID = @touristID";
+                Tourist_ID = int.Parse(Session["Tourist_ID"].ToString());
 
-                using (SqlCommand cmd = new SqlCommand(sql, conn))
+                try
                 {
-                    cmd.Parameters.AddWithValue("@touristID", Tourist_ID);
-                    cmd.Parameters.AddWithValue("@Surname", txtSurname.Text);
-                    cmd.Parameters.AddWithValue("@name", txtName.Text);
-                    cmd.Parameters.AddWithValue("@number", txtNumber.Text);
-                    cmd.Parameters.AddWithValue("@email", txtEmail.Text);
-                    cmd.Parameters.AddWithValue("@country", ddrlCountry.SelectedValue);
-                    cmd.ExecuteNonQuery();
+                    using (SqlConnection conn = new SqlConnection(conStr))
+                    {
+                        conn.Open();
+                        //Update Booking and Event tables
+                        string sql = @"UPDATE TOURIST SET Tourist_LastName = @Surname, Tourist_FirstName = @name, Contact_Number = @number,
+                                     Email_Address = @email, Country_ID = @country
+                                     WHERE Tourist_ID = @touristID";
+
+                        using (SqlCommand cmd = new SqlCommand(sql, conn))
+                        {
+                            cmd.Parameters.AddWithValue("@touristID", Tourist_ID);
+                            cmd.Parameters.AddWithValue("@Surname", txtSurname.Text);
+                            cmd.Parameters.AddWithValue("@name", txtName.Text);
+                            cmd.Parameters.AddWithValue("@number", txtNumber.Text);
+                            cmd.Parameters.AddWithValue("@email", txtEmail.Text);
+                            cmd.Parameters.AddWithValue("@country", ddrlCountry.SelectedValue);
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+                    // Update session with new values
+                    Session["Tourist_LastName"] = txtSurname.Text;
+                    Session["Tourist_FirstName"] = txtName.Text;
+                    // Update displayed name
+                    lblNameDisplay0.Text = txtName.Text + " " + txtSurname.Text;
+                }
+                catch (Exception ex)
+                {
+                    lblError.Text = ex.Message;
                 }
             }
-
             lblUpdated.Text = "Your changes have been saved successfully.";
         }
 
@@ -145,7 +167,7 @@ namespace Project
                         txtName.Text = reader["Tourist_FirstName"].ToString();
                         txtNumber.Text = reader["Contact_Number"].ToString();
                         Email = reader["Email_Address"].ToString();
-                        StoredPassword = reader["User_Password"].ToString();
+                        Session["StoredPassword"] = reader["User_Password"].ToString();
                         ddrlCountry.SelectedValue = reader["Country_ID"].ToString();
                         txtEmail.Text = Email;
                     }
