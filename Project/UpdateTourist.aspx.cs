@@ -51,6 +51,27 @@ namespace Project
 
             using (conn = new SqlConnection(ConString))
             {
+                conn.Open();
+
+                // Check if email already exists
+                string checkEmail = "SELECT COUNT(*) FROM Tourist WHERE Email_Address = @Email";
+
+                using (SqlCommand checkCmd = new SqlCommand(checkEmail, conn))
+                {
+                    checkCmd.Parameters.AddWithValue("@Email", Email);
+
+                    int emailCount = (int)checkCmd.ExecuteScalar();
+
+                    if (emailCount > 0)
+                    {
+                        lblUpdMessage.Text = "Email already exists!";
+                        return;
+                    }
+                }
+            }
+
+            using (conn = new SqlConnection(ConString))
+            {
                 string sql = "UPDATE TOURIST SET Tourist_FirstName = @FirstName, Tourist_LastName = @LastName, Contact_Number = @PhoneNo, Email_Address = @Email, User_Password = @Password, Country_ID = @Country WHERE TOURIST_ID = @TouristID";
 
                 cmd = new SqlCommand(sql, conn);

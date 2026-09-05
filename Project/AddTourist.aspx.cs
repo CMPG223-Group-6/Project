@@ -52,8 +52,28 @@ namespace Project
                 lblAddMessage.Text = "Phone number too long";
                 return;
             }
+            using (conn = new SqlConnection(ConString))
+            {
+                conn.Open();
 
-            string Password = Name + Surname;
+                // Check if email already exists
+                string checkEmail = "SELECT COUNT(*) FROM Tourist WHERE Email_Address = @Email";
+
+                using (SqlCommand checkCmd = new SqlCommand(checkEmail, conn))
+                {
+                    checkCmd.Parameters.AddWithValue("@Email", Email);
+
+                    int emailCount = (int)checkCmd.ExecuteScalar();
+
+                    if (emailCount > 0)
+                    {
+                        lblAddMessage.Text = "Email already exists!";
+                        return;
+                    }
+                }
+            }
+
+                string Password = Name + Surname;
 
             string HashedPassword = HashPassword(Password);
 

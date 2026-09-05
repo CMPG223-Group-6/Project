@@ -65,7 +65,7 @@
                             <table style="width:100%; height: 698px;">
                                 <tr>
                                     <td class="auto-style19">
-                                        <asp:Label ID="lblAddMessage" runat="server"></asp:Label>
+                                        <asp:Label ID="lblAddMessage" runat="server" ForeColor="Red"></asp:Label>
                                     </td>
                                 </tr>
                                 <tr>
