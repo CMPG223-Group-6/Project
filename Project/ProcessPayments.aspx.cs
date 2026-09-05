@@ -38,7 +38,7 @@ namespace Project
                     {
                         ddlBookingID.Items.Clear();
 
-                        ddlBookingID.Items.Add(new ListItem("-- Select Booking ID --"));
+                        ddlBookingID.Items.Add(new ListItem("-- Select Booking ID --", ""));
 
                         while(reader.Read())
                         {
@@ -211,6 +211,15 @@ namespace Project
             lblPaymentProcessedOutput.Visible = false;
 
             lblPaymentProcessedOutput.Text = "";
+
+            if(ddlBookingID.SelectedValue == "")
+            {
+                ClearBookingDetails();
+
+                LoadAllBookings();
+
+                return;
+            }
 
             int bookingID = Convert.ToInt32(ddlBookingID.SelectedValue);
 

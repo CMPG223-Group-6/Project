@@ -77,6 +77,29 @@ namespace Project
 
             int countryID = Convert.ToInt32(ddlCountry.SelectedValue);
 
+            string checkEmail = @"SELECT Email_Address FROM TOURIST WHERE Email_Address = @Email";
+
+            using(SqlConnection cnn = new SqlConnection(connectionString))
+            {
+                using(SqlCommand cmd = new SqlCommand(checkEmail, cnn))
+                {
+                    cmd.Parameters.AddWithValue("@Email", email);
+
+                    cnn.Open();
+
+                    using(SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if(reader.Read())
+                        {
+                            lblOutput.Text = "A user with this email already exists.";
+                            lblOutput.Visible = true;
+
+                            return;
+                        }
+                    }
+                }
+            }
+
             string hashedPassword = HashPassword(password);
 
             string sql = @"INSERT INTO TOURIST(Tourist_LastName, Tourist_FirstName, Contact_Number, Email_Address, User_Password, Country_ID) VALUES(@LastName, @FirstName, @ContactNumber, @Email, @Password, @CountryID)";

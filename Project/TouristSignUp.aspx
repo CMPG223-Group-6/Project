@@ -60,9 +60,9 @@
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style6">&nbsp;</td>
-                <td class="auto-style2">&nbsp;</td>
-                <td>&nbsp;</td>
+                <td class="auto-style8"></td>
+                <td class="auto-style4"></td>
+                <td class="auto-style5"></td>
             </tr>
             <tr>
                 <td class="auto-style6">
@@ -96,6 +96,7 @@
                     &nbsp;</td>
                 <td class="auto-style2">
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtName" ErrorMessage="Please enter your name!" Font-Bold="True" ForeColor="#FF3300"></asp:RequiredFieldValidator>
+                    <br />
                     <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtName" ErrorMessage="Name must only contain letters." Font-Bold="True" ForeColor="#FF3300" ValidationExpression="^[A-Za-z ]+$"></asp:RegularExpressionValidator>
                 </td>
             </tr>
@@ -118,6 +119,7 @@
                     &nbsp;</td>
                 <td class="auto-style2">
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtSurname" ErrorMessage="Please enter your surname!" Font-Bold="True" ForeColor="#FF3300"></asp:RequiredFieldValidator>
+                    <br />
                     <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="txtSurname" ErrorMessage="Surname must only contain letters." Font-Bold="True" ForeColor="#FF3300" ValidationExpression="^[A-Za-z ]+$"></asp:RegularExpressionValidator>
                 </td>
             </tr>
@@ -140,7 +142,10 @@
                     &nbsp;</td>
                 <td class="auto-style2">
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtEmail" ErrorMessage="Please enter your email!" Font-Bold="True" ForeColor="#FF3300"></asp:RequiredFieldValidator>
+                    <br />
                     <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ControlToValidate="txtEmail" ErrorMessage="Invalid email adrress, please enter valid email" Font-Bold="True" ForeColor="#FF3300" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                    <br />
+                    <asp:Label ID="lblOutput" runat="server" Font-Bold="True" ForeColor="#FF3300"></asp:Label>
                 </td>
             </tr>
             <tr>
@@ -187,6 +192,7 @@
                     &nbsp;</td>
                 <td class="auto-style2">
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtPhoneNumber" ErrorMessage="Please enter your phone number!" Font-Bold="True" ForeColor="#FF3300"></asp:RequiredFieldValidator>
+                    <br />
                     <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="txtPhoneNumber" ErrorMessage="Phone number must only contain numbers " Font-Bold="True" ForeColor="#FF3300" ValidationExpression="^[0-9]{1,15}$"></asp:RegularExpressionValidator>
                 </td>
                 <td>&nbsp;</td>

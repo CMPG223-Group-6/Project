@@ -87,6 +87,13 @@ namespace Project
 
             lblOutput.Text = "";
 
+            if(ddlBookingID.SelectedValue == "")
+            {
+                ClearBookingDetails();
+
+                return;
+            }
+
             Session["Booking_ID"] = ddlBookingID.SelectedValue;
 
             Session["Payment_Method"] = ddlPaymentMethod.SelectedValue;
