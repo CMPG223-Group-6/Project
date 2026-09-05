@@ -95,9 +95,9 @@
                 <td class="auto-style6">
                     &nbsp;</td>
                 <td class="auto-style2">
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtName" ErrorMessage="Please enter your name!" Font-Bold="True" ForeColor="#FF3300"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtName" ErrorMessage="Please enter your name!" Font-Bold="True" ForeColor="#FF3300" ValidationGroup="btnSignUp"></asp:RequiredFieldValidator>
                     <br />
-                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtName" ErrorMessage="Name must only contain letters." Font-Bold="True" ForeColor="#FF3300" ValidationExpression="^[A-Za-z ]+$"></asp:RegularExpressionValidator>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtName" ErrorMessage="Name must only contain letters." Font-Bold="True" ForeColor="#FF3300" ValidationExpression="^[A-Za-z ]+$" ValidationGroup="btnSignUp"></asp:RegularExpressionValidator>
                 </td>
             </tr>
             <tr>
@@ -108,9 +108,9 @@
                 </td>
             </tr>
             <tr>
-                <td class="auto-style6">
-                    &nbsp;</td>
-                <td class="auto-style2">
+                <td class="auto-style7">
+                    </td>
+                <td class="auto-style3">
                     <asp:TextBox ID="txtSurname" runat="server" Width="148px"></asp:TextBox>
                 </td>
             </tr>
@@ -118,9 +118,9 @@
                 <td class="auto-style6">
                     &nbsp;</td>
                 <td class="auto-style2">
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtSurname" ErrorMessage="Please enter your surname!" Font-Bold="True" ForeColor="#FF3300"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtSurname" ErrorMessage="Please enter your surname!" Font-Bold="True" ForeColor="#FF3300" ValidationGroup="btnSignUp"></asp:RequiredFieldValidator>
                     <br />
-                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="txtSurname" ErrorMessage="Surname must only contain letters." Font-Bold="True" ForeColor="#FF3300" ValidationExpression="^[A-Za-z ]+$"></asp:RegularExpressionValidator>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="txtSurname" ErrorMessage="Surname must only contain letters." Font-Bold="True" ForeColor="#FF3300" ValidationExpression="^[A-Za-z ]+$" ValidationGroup="btnSignUp"></asp:RegularExpressionValidator>
                 </td>
             </tr>
             <tr>
@@ -141,9 +141,9 @@
                 <td class="auto-style6">
                     &nbsp;</td>
                 <td class="auto-style2">
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtEmail" ErrorMessage="Please enter your email!" Font-Bold="True" ForeColor="#FF3300"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtEmail" ErrorMessage="Please enter your email!" Font-Bold="True" ForeColor="#FF3300" ValidationGroup="btnSignUp"></asp:RequiredFieldValidator>
                     <br />
-                    <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ControlToValidate="txtEmail" ErrorMessage="Invalid email adrress, please enter valid email" Font-Bold="True" ForeColor="#FF3300" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ControlToValidate="txtEmail" ErrorMessage="Invalid email adrress, please enter valid email" Font-Bold="True" ForeColor="#FF3300" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGroup="btnSignUp"></asp:RegularExpressionValidator>
                     <br />
                     <asp:Label ID="lblOutput" runat="server" Font-Bold="True" ForeColor="#FF3300"></asp:Label>
                 </td>
@@ -152,7 +152,7 @@
                 <td class="auto-style6">
                     &nbsp;</td>
                 <td class="auto-style2">
-                    <asp:Label ID="lblCountry" runat="server" Text="Country:"></asp:Label>
+                    <asp:Label ID="lblCountry" runat="server" Text="Country of Origin:"></asp:Label>
                 </td>
             </tr>
             <tr>
@@ -167,7 +167,7 @@
                 <td class="auto-style6">
                     &nbsp;</td>
                 <td class="auto-style2">
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="ddlCountry" ErrorMessage="Please choose your country!" Font-Bold="True" ForeColor="#FF3300"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="ddlCountry" ErrorMessage="Please choose your country!" Font-Bold="True" ForeColor="#FF3300" ValidationGroup="btnSignUp"></asp:RequiredFieldValidator>
                 </td>
                 <td>&nbsp;</td>
             </tr>
@@ -183,7 +183,7 @@
                 <td class="auto-style6">
                     &nbsp;</td>
                 <td class="auto-style2">
-                    <asp:TextBox ID="txtPhoneNumber" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtPhoneNumber" runat="server" TextMode="Number"></asp:TextBox>
                 </td>
                 <td>&nbsp;</td>
             </tr>
@@ -191,9 +191,11 @@
                 <td class="auto-style6">
                     &nbsp;</td>
                 <td class="auto-style2">
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtPhoneNumber" ErrorMessage="Please enter your phone number!" Font-Bold="True" ForeColor="#FF3300"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtPhoneNumber" ErrorMessage="Please enter your phone number!" Font-Bold="True" ForeColor="#FF3300" ValidationGroup="btnSignUp"></asp:RequiredFieldValidator>
                     <br />
-                    <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="txtPhoneNumber" ErrorMessage="Phone number must only contain numbers " Font-Bold="True" ForeColor="#FF3300" ValidationExpression="^[0-9]{1,15}$"></asp:RegularExpressionValidator>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="txtPhoneNumber" ErrorMessage="Phone number must only contain numbers " Font-Bold="True" ForeColor="#FF3300" ValidationExpression="^[0-9]{1,15}$" ValidationGroup="btnSignUp"></asp:RegularExpressionValidator>
+                    <br />
+                            <asp:RegularExpressionValidator ID="RegularExpressionValidator5" runat="server" ControlToValidate="txtPhoneNumber" ErrorMessage="invalid number, your phone number must be 10 - 13 digits" Font-Size="Small" ForeColor="Red" ValidationExpression="^\d{10,13}$" Font-Bold="True" ValidationGroup="btnSignUp"></asp:RegularExpressionValidator>
                 </td>
                 <td>&nbsp;</td>
             </tr>
@@ -217,7 +219,7 @@
                 <td class="auto-style6">
                     &nbsp;</td>
                 <td class="auto-style2">
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtPassword" ErrorMessage="Please enter your password!" Font-Bold="True" ForeColor="#FF3300"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtPassword" ErrorMessage="Please enter your password!" Font-Bold="True" ForeColor="#FF3300" ValidationGroup="btnSignUp"></asp:RequiredFieldValidator>
                 </td>
                 <td>&nbsp;</td>
             </tr>
@@ -225,7 +227,7 @@
                 <td class="auto-style6">
                     &nbsp;</td>
                 <td class="auto-style2">
-                    <asp:Button ID="btnSignUp" runat="server" BackColor="#CCCCCC" Font-Bold="True" Text="Sign Up" Width="146px" OnClick="btnSignUp_Click" />
+                    <asp:Button ID="btnSignUp" runat="server" BackColor="#CCCCCC" Font-Bold="True" Text="Sign Up" Width="146px" OnClick="btnSignUp_Click" ValidationGroup="btnSignUp" />
                 </td>
                 <td>&nbsp;</td>
             </tr>
