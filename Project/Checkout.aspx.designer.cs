@@ -78,13 +78,13 @@ namespace Project
         protected global::System.Web.UI.WebControls.Label lblVerifyExit;
 
         /// <summary>
-        /// RequiredFieldValidator1 control.
+        /// RequiredFieldValidator3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
 
         /// <summary>
         /// ddlBookingIDDetails control.
@@ -112,15 +112,6 @@ namespace Project
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblConfirmMessage;
-
-        /// <summary>
-        /// btnQuestionaire control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnQuestionaire;
 
         /// <summary>
         /// lblOptional control.
@@ -186,6 +177,33 @@ namespace Project
         protected global::System.Web.UI.WebControls.RadioButton rbStar5;
 
         /// <summary>
+        /// lblResults control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblResults;
+
+        /// <summary>
+        /// lblReview control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblReview;
+
+        /// <summary>
+        /// txtInputreview control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtInputreview;
+
+        /// <summary>
         /// btnSubmitRating control.
         /// </summary>
         /// <remarks>
@@ -195,13 +213,13 @@ namespace Project
         protected global::System.Web.UI.WebControls.Button btnSubmitRating;
 
         /// <summary>
-        /// lblResults control.
+        /// lblError control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblResults;
+        protected global::System.Web.UI.WebControls.Label lblError;
 
         /// <summary>
         /// Menu2 control.

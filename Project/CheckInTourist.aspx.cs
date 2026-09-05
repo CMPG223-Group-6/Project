@@ -24,7 +24,8 @@ namespace Project
                             
                      FROM BOOKING B, EVENT E, EVENTTYPE ET
                      WHERE B.Event_ID = E.Event_ID
-                     AND E.EventType_ID = ET.EventType_ID";
+                     AND E.EventType_ID = ET.EventType_ID 
+                     AND Arrive_Date >= @date AND Checked_In = 0";
                      
 
                 try
@@ -36,6 +37,7 @@ namespace Project
                         using (SqlCommand cmd = new SqlCommand(query, conn))
                         {
                             cmd.Parameters.AddWithValue("@touristID", touristID);
+                            cmd.Parameters.AddWithValue("@date", DateTime.Today);
 
                             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                             DataSet ds = new DataSet();
@@ -68,9 +70,10 @@ namespace Project
 
             using (SqlConnection conn = new SqlConnection(ConnectionString))
             {
-                string query = @" SELECT * FROM BOOKING WHERE Booking_ID = @Booking_ID"; // get all of the booking id details
+                string query = @" SELECT * FROM BOOKING WHERE Booking_ID = @Booking_ID AND Arrive_Date >= @date AND Checked_In = 0"; // get all of the booking id details
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@Booking_ID", bookingID);
+                cmd.Parameters.AddWithValue("@date", DateTime.Today);
                 conn.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
                 if (!reader.Read())
@@ -146,11 +149,12 @@ namespace Project
             {
                 using (SqlConnection conn = new SqlConnection(ConnectionString)) // checks if we have the tourist in the database
                 {
-                    string query = @"SELECT COUNT(*) FROM BOOKING WHERE Tourist_ID = @Tourist_ID";
+                    string query = @"SELECT COUNT(*) FROM BOOKING WHERE Tourist_ID = @Tourist_ID AND Arrive_Date >= @date AND Checked_In = 0";
 
                     SqlCommand cmd = new SqlCommand(query, conn);
 
                     cmd.Parameters.AddWithValue("@Tourist_ID", touristID);
+                    cmd.Parameters.AddWithValue("@date", DateTime.Today);
 
                     conn.Open();
 
@@ -176,10 +180,11 @@ namespace Project
             {
                 using (SqlConnection conn = new SqlConnection(ConnectionString)) //  loads specific selected bookingID in the gridview
                 {
-                    string sql_query = @"SELECT * FROM BOOKING WHERE Tourist_ID = @Tourist_ID";
+                    string sql_query = @"SELECT * FROM BOOKING WHERE Tourist_ID = @Tourist_ID AND Arrive_Date >= @date AND Checked_In = 0";
 
                     SqlCommand cmd = new SqlCommand(sql_query, conn);
                     cmd.Parameters.AddWithValue("@Tourist_ID", touristID);
+                    cmd.Parameters.AddWithValue("@date", DateTime.Today);
 
                     conn.Open();
 
@@ -224,10 +229,11 @@ namespace Project
             {
                 using (SqlConnection conn = new SqlConnection(ConnectionString))
                 {
-                    string sql_query = @"SELECT * FROM BOOKING WHERE Booking_ID = @bookingID";
+                    string sql_query = @"SELECT * FROM BOOKING WHERE Booking_ID = @bookingID AND Arrive_Date >= @date AND Checked_In = 0";
 
                     SqlCommand cmd = new SqlCommand(sql_query, conn);
                     cmd.Parameters.AddWithValue("@bookingID", ddlBookingEventsStaffcheckin.SelectedItem.Text);
+                    cmd.Parameters.AddWithValue("@date", DateTime.Today);
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
 
                     DataSet ds = new DataSet();

@@ -90,7 +90,7 @@
                                             <tr>
                                                 <td class="auto-style12">
                                                     <br />
-                                                    <asp:DropDownList ID="ddlBookingEvents0" runat="server" Height="30px" Width="130px" AutoPostBack="true" OnSelectedIndexChanged="ddlBookingEvents0_SelectedIndexChanged"> 
+                                                    <asp:DropDownList ID="ddlBookingEvents0" runat="server" Height="30px" Width="130px" AutoPostBack="true" OnSelectedIndexChanged="ddlBookingEvents0_SelectedIndexChanged" style="margin-bottom: 0px"> 
                                                     </asp:DropDownList>
                                                     <asp:RequiredFieldValidator ID="rfvBookingIDTourist0" runat="server" ControlToValidate="ddlBookingEvents0" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
                                                 </td>

@@ -92,7 +92,7 @@
                                     </tr>
                                     <tr>
                                         <td class="auto-style46">
-                                            <asp:DropDownList ID="ddlBookingEventsStaffcheckin" runat="server" Height="23px" Width="134px" OnSelectedIndexChanged="ddlBookingEventsStaffcheckin_SelectedIndexChanged">
+                                            <asp:DropDownList ID="ddlBookingEventsStaffcheckin" runat="server" Height="23px" Width="134px" OnSelectedIndexChanged="ddlBookingEventsStaffcheckin_SelectedIndexChanged" AutoPostBack="True">
                                             </asp:DropDownList>
                                         </td>
                                         <td>&nbsp;</td>

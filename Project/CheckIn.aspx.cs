@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -13,7 +14,7 @@ namespace Project
 {
     public partial class CheckIn : System.Web.UI.Page
     {
-        int  touristID ;
+        int touristID ;
 
         string ConnectionString = @"Data Source=localhost;Initial Catalog=zims.db;Integrated Security=True;Encrypt=False";
 
@@ -28,8 +29,7 @@ namespace Project
             if (!IsPostBack) //uploads bookingIDs in the begin
             {
 
-                string query = @"SELECT Booking_ID FROM BOOKING " +
-                                "WHERE Tourist_ID = @touristID";
+                string query = @"SELECT Booking_ID FROM BOOKING " + "WHERE Tourist_ID = @touristID ";
                 try
                 {
                     using (SqlConnection conn = new SqlConnection(ConnectionString))
@@ -38,6 +38,7 @@ namespace Project
                         using (SqlCommand cmd = new SqlCommand(query, conn))
                         {
                             cmd.Parameters.AddWithValue(@"touristID", touristID);
+                            
                             SqlDataReader reader = cmd.ExecuteReader();
 
                             ddlBookingEvents0.Items.Add("Select Booking ID");
@@ -68,7 +69,8 @@ namespace Project
                                 "FROM BOOKING B, EVENT E, EVENTTYPE ET " +
                                 "WHERE B.Event_ID = E.Event_ID " +
                                 "AND E.EventType_ID = ET.EventType_ID " +
-                                "AND B.Tourist_ID = @touristID";
+                                "AND B.Tourist_ID = @touristID" 
+                             ;
             try
             {
                 using (SqlConnection conn = new SqlConnection(ConnectionString))
@@ -77,7 +79,7 @@ namespace Project
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue(@"touristID", touristID);
-
+                       
 
                         DataSet ds = new DataSet();
 
@@ -111,9 +113,10 @@ namespace Project
 
             using (SqlConnection conn = new SqlConnection(ConnectionString))
             {
-                string query = @" SELECT * FROM BOOKING WHERE Booking_ID = @Booking_ID"; // get payment and checked in status
+                string query = @" SELECT * FROM BOOKING WHERE Booking_ID = @Booking_ID "; // get payment and checked in status
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@Booking_ID", bookingID);
+               
                 conn.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
                 if (!reader.Read())
@@ -173,7 +176,7 @@ namespace Project
                         }
                         loadBookings();
                     }
-                    
+
 
 
                 }
@@ -192,11 +195,11 @@ namespace Project
             {
                 using (SqlConnection conn = new SqlConnection(ConnectionString))
                 {
-                    string sql_query = @"SELECT * FROM BOOKING WHERE Booking_ID = @bookingID";
+                    string sql_query = @"SELECT * FROM BOOKING WHERE Booking_ID = @bookingID ";
 
                     SqlCommand cmd = new SqlCommand(sql_query, conn);
                     cmd.Parameters.AddWithValue("@bookingID", ddlBookingEvents0.SelectedItem.ToString());
-
+                    
                     conn.Open();
 
 
@@ -217,6 +220,6 @@ namespace Project
 
             }
         }
-      
+
     }
 }

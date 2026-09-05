@@ -65,20 +65,18 @@
                                 </td>
                     <td class="auto-style7">
                         <asp:Label ID="lblVerifyExit" runat="server" style="text-align: left; font-size: large" Text="Enter Booking ID"></asp:Label>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="ddlBookingIDDetails" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="ddlBookingIDDetails" ErrorMessage="*" ForeColor="Red" InitialValue="0" ValidationGroup="exit"></asp:RequiredFieldValidator>
                         <br />
                         <br />
-                        <asp:DropDownList ID="ddlBookingIDDetails" runat="server" Height="31px" Width="242px" OnSelectedIndexChanged="ddlBookingIDDetails_SelectedIndexChanged">
+                        <asp:DropDownList ID="ddlBookingIDDetails" runat="server" Height="31px" Width="242px" OnSelectedIndexChanged="ddlBookingIDDetails_SelectedIndexChanged" AutoPostBack="True">
                         </asp:DropDownList>
                         <br />
                         <br />
-                        <asp:Button ID="btnConfirmExit" runat="server" Height="47px" Text="Confirm Exit" Width="276px" BackColor="#33CC33" OnClick="btnConfirmExit_Click" />
+                        <asp:Button ID="btnConfirmExit" runat="server" Height="47px" Text="Confirm Exit" Width="276px" BackColor="#33CC33" OnClick="btnConfirmExit_Click" ValidationGroup="exit" />
                         <br />
                         <br />
                         <asp:Label ID="lblConfirmMessage" runat="server"></asp:Label>
                         &nbsp;
-                        <br />
-                        <asp:Button ID="btnQuestionaire" runat="server" BackColor="#009900" OnClick="btnQuestionaire_Click" Text="Questionaire" Visible="False" />
                         <br />
                     </td>
                     <td class="auto-style5">
@@ -89,20 +87,28 @@
                         <br />
                         <br />
                         <asp:RadioButton ID="rbStar1" runat="server" GroupName="Rating" Text="★" />
-                        &nbsp;
+                        <br />
                         <asp:RadioButton ID="rbStar2" runat="server" GroupName="Rating" Text="★★" />
                         &nbsp;
+                        <br />
                         <asp:RadioButton ID="rbStar3" runat="server" GroupName="Rating" Text="★★★" />
                         &nbsp;
+                        <br />
                         <asp:RadioButton ID="rbStar4" runat="server" GroupName="Rating" Text="★★★★" />
-                        &nbsp;
+                        &nbsp;<br />
                         <asp:RadioButton ID="rbStar5" runat="server" GroupName="Rating" Text="★★★★★" />
                         <br />
                         <br />
-                        &nbsp;<asp:Button ID="btnSubmitRating" runat="server" BackColor="#33CC33" Height="45px" OnClick="btnSubmitRating_Click" Text="Submit rating" Width="211px" />
-                        <br />
-                        <br />
                         <asp:Label ID="lblResults" runat="server"></asp:Label>
+                        <br />
+                        <asp:Label ID="lblReview" runat="server" Text="Write a review"></asp:Label>
+                        <br />
+                        <asp:TextBox ID="txtInputreview" runat="server" MaxLength="50" TextMode="MultiLine" Width="283px"></asp:TextBox>
+                        <br />
+                        &nbsp;<br />
+                        <asp:Button ID="btnSubmitRating" runat="server" BackColor="#33CC33" Height="45px" OnClick="btnSubmitRating_Click" Text="Submit rating" Width="211px" ValidationGroup="btnConfirmExit" />
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:Label ID="lblError" runat="server" ForeColor="Red"></asp:Label>
                         <br />
                     </td>
                 </tr>

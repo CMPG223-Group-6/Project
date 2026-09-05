@@ -82,6 +82,7 @@ namespace Project
             // If all 7 questions have been answered
             if (allAnswered)
             {
+                            
                 // Remember that the questionnaire has been completed
                 Session["QuestionnaireCompleted"] = true;
 
