@@ -66,7 +66,8 @@
                                     <td class="auto-style16">
                                         <asp:Label ID="lblTouristID" runat="server" Text="Enter your Tourist ID:"></asp:Label>
                                         <br />
-                                        <asp:TextBox ID="txtDeleteTouristID" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="txtDeleteTouristID" runat="server" TextMode="Number" Width="55px"></asp:TextBox>
+                                        <br />
                                         <asp:RequiredFieldValidator ID="rfvTouristID" runat="server" ControlToValidate="txtDeleteTouristID" ErrorMessage="Please enter your Tourist ID!" ForeColor="Red"></asp:RequiredFieldValidator>
                                     </td>
                                 </tr>
@@ -95,7 +96,6 @@
                                     <td class="auto-style17">
                                         <asp:Button ID="BtnDelete" runat="server" Height="28px" Text="Delete" Width="145px" BackColor="Red" Font-Bold="True" ForeColor="White" OnClientClick="return confirm('Are you sure you want to delete this tourist?');" OnClick="BtnDelete_Click" />
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <asp:Button ID="btnContinue" runat="server" Height="27px" Text="Continue" Width="128px" BackColor="#009900" Font-Bold="True" ForeColor="White" OnClick="btnContinue_Click" OnClientClick="return confirm('Are you sure you want to return the Maintain Tourist dashboard?');" />
                                         <br />
                                     </td>
                                 </tr>
@@ -123,7 +123,7 @@
                             </table>
                     </td>
                     <td class="auto-style15">
-                        <asp:GridView ID="GridView1" runat="server" Height="379px" Width="603px">
+                        <asp:GridView ID="GridView1" runat="server" Height="180px" Width="861px">
                         </asp:GridView>
                     </td>
                 </tr>

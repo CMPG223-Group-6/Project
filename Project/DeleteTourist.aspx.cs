@@ -40,13 +40,21 @@ namespace Project
         {
             using (conn = new SqlConnection(ConString))
             {
-                string sql = "SELECT * FROM Tourist";
+                string sql = @"SELECT T.Tourist_ID, 
+                      T.Tourist_LastName, 
+                      T.Tourist_FirstName, 
+                      T.Contact_Number, 
+                      T.Email_Address, 
+                      C.Country_Name
+               FROM TOURIST T, COUNTRY C
+               WHERE T.Country_ID = C.Country_ID";
                 cmd = new SqlCommand(sql, conn);
                 ap = new SqlDataAdapter(cmd);
                 DataSet ds = new DataSet();
                 ap.Fill(ds);
                 GridView1.DataSource = ds;
                 GridView1.DataBind();
+
             }
         }
 

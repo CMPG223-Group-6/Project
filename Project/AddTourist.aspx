@@ -65,7 +65,7 @@
                             <table style="width:100%; height: 698px;">
                                 <tr>
                                     <td class="auto-style19">
-                                        <asp:Label ID="lblAddMessage" runat="server"></asp:Label>
+                                        <asp:Label ID="lblAddMessage" runat="server" ForeColor="Red"></asp:Label>
                                     </td>
                                 </tr>
                                 <tr>
@@ -73,7 +73,7 @@
                                         <asp:Label ID="lblName" runat="server" Text="Enter Tourist name:"></asp:Label>
                                         <br />
                                         <asp:TextBox ID="txtName" runat="server"></asp:TextBox>
-                                        <asp:RequiredFieldValidator ID="rfvName" runat="server" ControlToValidate="txtName" ErrorMessage="Please enter a name!" ForeColor="Red"></asp:RequiredFieldValidator>
+                                        <asp:RequiredFieldValidator ID="rfvName" runat="server" ControlToValidate="txtName" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
                                     </td>
                                 </tr>
                                 <tr>
@@ -81,7 +81,7 @@
                                         <asp:Label ID="lblSurname" runat="server" Text="Enter Tourist surname:"></asp:Label>
                                         <br />
                                         <asp:TextBox ID="txtSurname" runat="server"></asp:TextBox>
-                                        <asp:RequiredFieldValidator ID="rfvSurname" runat="server" ErrorMessage="Please enter a surname!" ForeColor="Red" ControlToValidate="txtSurname"></asp:RequiredFieldValidator>
+                                        <asp:RequiredFieldValidator ID="rfvSurname" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtSurname"></asp:RequiredFieldValidator>
                                     </td>
                                 </tr>
                                 <tr>
@@ -89,7 +89,10 @@
                                         <asp:Label ID="lblPhoneNo" runat="server" Text="Enter Tourist phone number:"></asp:Label>
                                         <br />
                                         <asp:TextBox ID="txtPhoneNo" runat="server"></asp:TextBox>
-                                        <asp:RequiredFieldValidator ID="rfvPhoneNo" runat="server" ControlToValidate="txtPhoneNo" ErrorMessage="Please enter a phone number!" ForeColor="Red"></asp:RequiredFieldValidator>
+                                        <asp:RequiredFieldValidator ID="rfvPhoneNo" runat="server" ControlToValidate="txtPhoneNo" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                                    &nbsp;
+                                        <br />
+                                        <asp:RegularExpressionValidator ID="revPhoneNo" runat="server" ControlToValidate="txtPhoneNo" ErrorMessage="Enter 10 - 13 digits!" ForeColor="Red" ValidationExpression="^\d{10,13}$"></asp:RegularExpressionValidator>
                                     </td>
                                 </tr>
                                 <tr>
@@ -97,25 +100,26 @@
                                         <asp:Label ID="lblEmail" runat="server" Text="Enter Tourist email:"></asp:Label>
                                         <br />
                                         <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
-                                        <asp:RegularExpressionValidator ID="revEmail" runat="server" ControlToValidate="txtEmail" ErrorMessage="Please enter a email!" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                                        <asp:RequiredFieldValidator ID="rfvEmail" runat="server" ControlToValidate="txtEmail" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                                        <br />
+                                        <asp:RegularExpressionValidator ID="revAddEmail" runat="server" ControlToValidate="txtEmail" ErrorMessage="Enter a valid email!" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="auto-style23">
-                                        <br />
                                         <asp:Label ID="lblCountry" runat="server" Text="Country of Origin:"></asp:Label>
                                         <br />
                                         <asp:DropDownList ID="ddlCountries" runat="server" Height="16px" Width="161px" OnSelectedIndexChanged="ddlCountries_SelectedIndexChanged">
                                         </asp:DropDownList>
+                                        <asp:RequiredFieldValidator ID="rfvCountries" runat="server" ControlToValidate="ddlCountries" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="auto-style23">
-                                        <br />
                                         <asp:Button ID="BtnAdd" runat="server" Height="28px" Text="Add" Width="147px" BackColor="Green" Font-Bold="True" ForeColor="White" OnClick="BtnAdd_Click" />
+                                        <br />
                                         &nbsp;&nbsp;
-                                        <asp:Button ID="btnContinue" runat="server" Height="27px" Text="Continue" Width="128px" BackColor="White" Font-Bold="True" ForeColor="Black" BorderStyle="Solid" OnClick="btnContinue_Click" OnClientClick="return confirm('Are you sure you want to return the maintain tourist dashboard?');" />
-                                    </td>
+                                        </td>
                                 </tr>
                                 <tr>
                                     <td class="auto-style17">
@@ -148,7 +152,7 @@
                         </asp:Menu>
                     </td>
                     <td class="auto-style5">
-                        <asp:GridView ID="gvTourist" runat="server" Height="379px" Width="603px" OnSelectedIndexChanged="gvTourist_SelectedIndexChanged">
+                        <asp:GridView ID="gvTourist" runat="server" Height="112px" Width="798px" OnSelectedIndexChanged="gvTourist_SelectedIndexChanged">
                         </asp:GridView>
                     </td>
                 </tr>

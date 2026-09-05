@@ -132,6 +132,15 @@ namespace Project
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPhoneNo;
 
         /// <summary>
+        /// revPhoneNo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revPhoneNo;
+
+        /// <summary>
         /// lblEmail control.
         /// </summary>
         /// <remarks>
@@ -150,13 +159,22 @@ namespace Project
         protected global::System.Web.UI.WebControls.TextBox txtEmail;
 
         /// <summary>
-        /// revEmail control.
+        /// rfvEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator revEmail;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvEmail;
+
+        /// <summary>
+        /// revAddEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revAddEmail;
 
         /// <summary>
         /// lblCountry control.
@@ -177,6 +195,15 @@ namespace Project
         protected global::System.Web.UI.WebControls.DropDownList ddlCountries;
 
         /// <summary>
+        /// rfvCountries control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCountries;
+
+        /// <summary>
         /// BtnAdd control.
         /// </summary>
         /// <remarks>
@@ -184,15 +211,6 @@ namespace Project
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button BtnAdd;
-
-        /// <summary>
-        /// btnContinue control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnContinue;
 
         /// <summary>
         /// Menu1 control.

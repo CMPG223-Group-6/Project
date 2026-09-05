@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Data.SqlClient;
-using System.Data;
 
 namespace Project
 {
@@ -21,8 +23,9 @@ namespace Project
         {
             if (!IsPostBack)
             {
-                LoadCountries();
+                //LoadCountries();
                 LoadTourists();
+                CountriesToDropDownList();
             }
         }
 
@@ -43,7 +46,36 @@ namespace Project
             string Country = ddlCountries.SelectedValue;
             string Number = txtPhoneNo.Text;
             string Email = txtEmail.Text;
-            string Password = Name + Surname;
+
+            if(Number.Length > 12)
+            {
+                lblAddMessage.Text = "Phone number too long";
+                return;
+            }
+            using (conn = new SqlConnection(ConString))
+            {
+                conn.Open();
+
+                // Check if email already exists
+                string checkEmail = "SELECT COUNT(*) FROM Tourist WHERE Email_Address = @Email";
+
+                using (SqlCommand checkCmd = new SqlCommand(checkEmail, conn))
+                {
+                    checkCmd.Parameters.AddWithValue("@Email", Email);
+
+                    int emailCount = (int)checkCmd.ExecuteScalar();
+
+                    if (emailCount > 0)
+                    {
+                        lblAddMessage.Text = "Email already exists!";
+                        return;
+                    }
+                }
+            }
+
+                string Password = Name + Surname;
+
+            string HashedPassword = HashPassword(Password);
 
 
             using (conn = new SqlConnection(ConString))
@@ -53,12 +85,12 @@ namespace Project
                 cmd.Parameters.AddWithValue("@FirstName", Name);
                 cmd.Parameters.AddWithValue("@LastName", Surname);
                 cmd.Parameters.AddWithValue("@Country", Country);
-                cmd.Parameters.AddWithValue("@Password", Password);
+                cmd.Parameters.AddWithValue("@Password", HashedPassword);
                 cmd.Parameters.AddWithValue("@PhoneNo", Number);
                 cmd.Parameters.AddWithValue("@Email", Email);
-               
+
                 conn.Open();
-                
+
                 cmd.ExecuteNonQuery();
 
                 LoadTourists();
@@ -69,49 +101,67 @@ namespace Project
 
             }
         }
+        public static string HashPassword(string password)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] bytes = Encoding.UTF8.GetBytes(password);
+
+                byte[] hash = sha256.ComputeHash(bytes);
+
+                return Convert.ToBase64String(hash);
+            }
+        }
+
+
 
         private void LoadTourists()
         {
-            using(conn = new SqlConnection(ConString))
+            using (conn = new SqlConnection(ConString))
             {
-               string sql = "SELECT * FROM Tourist";
+                string sql = @"SELECT T.Tourist_ID, 
+                      T.Tourist_LastName, 
+                      T.Tourist_FirstName, 
+                      T.Contact_Number, 
+                      T.Email_Address, 
+                      C.Country_Name
+               FROM TOURIST T, COUNTRY C
+               WHERE T.Country_ID = C.Country_ID";
                 cmd = new SqlCommand(sql, conn);
                 ap = new SqlDataAdapter(cmd);
                 DataSet ds = new DataSet();
                 ap.Fill(ds);
                 gvTourist.DataSource = ds;
                 gvTourist.DataBind();
-                
+
             }
         }
-        private void LoadCountries()
-        {
-            using (conn = new SqlConnection(ConString))
-            {
-                string sql = "SELECT COUNTRY_ID FROM COUNTRY";
 
-                cmd = new SqlCommand(sql, conn);
-
-                ap = new SqlDataAdapter(cmd);
-
-                DataSet ds = new DataSet();
-
-                ap.Fill(ds);
-
-                ddlCountries.DataSource = ds;
-
-                ddlCountries.DataTextField = "COUNTRY_ID";
-                ddlCountries.DataValueField = "COUNTRY_ID";
-
-                ddlCountries.DataBind();
-
-                ddlCountries.Items.Insert(0, new ListItem("Select a Country", "0"));
-            }
-        }
 
         protected void btnContinue_Click(object sender, EventArgs e)
         {
             Response.Redirect("MaintainTourists.aspx");
+        }
+        private void CountriesToDropDownList()
+        {
+            
+            using (SqlConnection conn = new SqlConnection(ConString))
+            {
+                conn.Open();
+                string sql = "SELECT Country_Name, Country_ID FROM COUNTRY";
+
+                using (SqlCommand cmd = new SqlCommand(sql, conn))
+                {
+                    
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        ddlCountries.Items.Add(new ListItem(reader["Country_Name"].ToString(), reader["Country_ID"].ToString()));
+                    }
+                }
+            }
         }
     }
 }

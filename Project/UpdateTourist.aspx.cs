@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -18,6 +20,10 @@ namespace Project
         SqlConnection conn;
         SqlDataAdapter ap;
         SqlDataReader reader;
+
+        string Email;
+        int ID;
+
         string ConString = @"Data Source=localhost;Initial Catalog=zims.db;Integrated Security=True";
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -34,13 +40,35 @@ namespace Project
             string Name = txtUpdName.Text;
             string Surname = txtUpdSurname.Text;
             string Number = txtUpdPhoneNo.Text;
-            string Email = txtUpdEmail.Text;
+            Email = txtUpdEmail.Text;
             string Country = ddlUpdCountries.SelectedValue;
             int ID = int.Parse(txtUpdTouristID.Text);
 
             // Password is Name + Surname
             string Password = Name + Surname;
 
+            string HashedPassword = HashPassword(Password);
+
+            using (conn = new SqlConnection(ConString))
+            {
+                conn.Open();
+
+                // Check if email already exists
+                string checkEmail = "SELECT COUNT(*) FROM Tourist WHERE Email_Address = @Email";
+
+                using (SqlCommand checkCmd = new SqlCommand(checkEmail, conn))
+                {
+                    checkCmd.Parameters.AddWithValue("@Email", Email);
+
+                    int emailCount = (int)checkCmd.ExecuteScalar();
+
+                    if (emailCount > 0)
+                    {
+                        lblUpdMessage.Text = "Email already exists!";
+                        return;
+                    }
+                }
+            }
 
             using (conn = new SqlConnection(ConString))
             {
@@ -52,7 +80,7 @@ namespace Project
                 cmd.Parameters.AddWithValue("@LastName", Surname);
                 cmd.Parameters.AddWithValue("@PhoneNo", Number);
                 cmd.Parameters.AddWithValue("@Email", Email);
-                cmd.Parameters.AddWithValue("@Password", Password);
+                cmd.Parameters.AddWithValue("@Password", HashedPassword);
                 cmd.Parameters.AddWithValue("@Country", Country);
                 cmd.Parameters.AddWithValue("@TouristID", ID);
                 conn.Open();
@@ -65,7 +93,14 @@ namespace Project
         {
             using (conn = new SqlConnection(ConString))
             {
-                string sql = "SELECT * FROM Tourist";
+                string sql = @"SELECT T.Tourist_ID, 
+                      T.Tourist_LastName, 
+                      T.Tourist_FirstName, 
+                      T.Contact_Number, 
+                      T.Email_Address, 
+                      C.Country_Name
+               FROM TOURIST T, COUNTRY C
+               WHERE T.Country_ID = C.Country_ID";
                 cmd = new SqlCommand(sql, conn);
                 ap = new SqlDataAdapter(cmd);
                 DataSet ds = new DataSet();
@@ -74,6 +109,7 @@ namespace Project
                 GridView1.DataBind();
 
             }
+
         }
 
         protected void ddlUpdCountries_SelectedIndexChanged(object sender, EventArgs e)
@@ -107,12 +143,59 @@ namespace Project
 
         protected void txtUpdPhoneNo_TextChanged(object sender, EventArgs e)
         {
-
+           
         }
 
         protected void btnContinue_Click(object sender, EventArgs e)
         {
             Response.Redirect("MaintainTourists.aspx");
+        }
+        public static string HashPassword(string password)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] bytes = Encoding.UTF8.GetBytes(password);
+
+                byte[] hash = sha256.ComputeHash(bytes);
+
+                return Convert.ToBase64String(hash);
+            }
+        }
+
+        protected void txtUpdTouristID_TextChanged(object sender, EventArgs e)
+        {
+            if (int.TryParse(txtUpdTouristID.Text.Trim(), out int touristID))
+            {
+                LoadDataBooking(touristID);
+            }
+        }
+        public void LoadDataBooking(int Tourist_ID)
+        {
+            using (SqlConnection conn = new SqlConnection(ConString))
+            {
+                conn.Open();
+                string sql = @"SELECT Tourist_LastName, Tourist_FirstName, Contact_Number, Email_Address, Country_ID
+                              FROM TOURIST WHERE Tourist_ID = @touristID";
+
+                using (SqlCommand cmd = new SqlCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@touristID", Tourist_ID);
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        txtUpdSurname.Text = reader["Tourist_LastName"].ToString();
+                        txtUpdName.Text = reader["Tourist_FirstName"].ToString();
+                        txtUpdPhoneNo.Text = reader["Contact_Number"].ToString();
+                        Email = reader["Email_Address"].ToString();
+                        ddlUpdCountries.SelectedValue = reader["Country_ID"].ToString();
+                        txtUpdEmail.Text = Email;
+                    }
+
+                }
+
+                conn.Close();
+            }
         }
     }
 }
