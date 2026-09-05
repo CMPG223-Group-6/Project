@@ -26,13 +26,15 @@ namespace Project
             {
                 conn.Open();
 
-                string sql = "SELECT * FROM BOOKING";
+                string sql = "SELECT * FROM BOOKING WHERE Arrive_Date >= @date AND Checked_In = 0";
 
                 SqlCommand comm = new SqlCommand(sql, conn);
-
+                comm.Parameters.AddWithValue("@date", DateTime.Today);
                 SqlDataReader reader = comm.ExecuteReader();
 
-                while(reader.Read())
+                ddlBookingID.Items.Clear();
+                ddlBookingID.Items.Add("Select Booking ID");
+                while (reader.Read())
                 {
                     ddlBookingID.Items.Add(reader.GetValue(0).ToString());
                 }
@@ -94,23 +96,88 @@ namespace Project
             return exists;
         }
 
+        private int getAvailableTickets()
+        {
+            int ticketAvailable = 0;
+            using (SqlConnection conn = new SqlConnection(conStr))
+            {
+                conn.Open();
+
+                string sql = @"SELECT e.Tickets_Available
+                               FROM EVENT e, BOOKING b
+                               WHERE Booking_ID = @bookingID
+                               AND b.Event_ID = e.Event_ID";
+
+                using (SqlCommand comm = new SqlCommand(sql, conn))
+                {
+                    comm.Parameters.AddWithValue("@bookingID", ddlBookingID.SelectedItem.Text);
+
+                    SqlDataReader reader = comm.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        ticketAvailable = int.Parse(reader["Tickets_Available"].ToString());
+                    }
+                }
+            }
+
+            return ticketAvailable;
+        }
+        
+        private string getStatus()
+        {
+            string status = "";
+            using (SqlConnection conn = new SqlConnection(conStr))
+            {
+                conn.Open();
+
+                string sql = @"SELECT e.Status
+                               FROM EVENT e, BOOKING b
+                               WHERE Booking_ID = @bookingID
+                               AND b.Event_ID = e.Event_ID";
+
+                using (SqlCommand comm = new SqlCommand(sql, conn))
+                {
+                    comm.Parameters.AddWithValue("@bookingID", ddlBookingID.SelectedItem.Text);
+
+                    SqlDataReader reader = comm.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+
+                        status = reader["Status"].ToString();
+                    }
+                }
+            }
+
+            return status;
+        }
         protected void btnYes_Click(object sender, EventArgs e)
         {
             
             int returnTickets = getReturnTickets(int.Parse(ddlBookingID.SelectedItem.Text));
             int eventID = getEventID(int.Parse(ddlBookingID.SelectedItem.Text));
+
+            int availableTickets = getAvailableTickets();
+            string status = getStatus(); 
+
+            if(availableTickets + returnTickets > 0)
+            {
+                status = "Active";
+            }
             using (SqlConnection conn = new SqlConnection(conStr))
             {
                 conn.Open();
 
                 string sql = @"DELETE FROM BOOKING WHERE Booking_ID = @id
                                 
-                               UPDATE EVENT SET Tickets_Available = Tickets_Available + @returnTickets WHERE Event_ID = @eventID";
+                               UPDATE EVENT SET Status = @status, Tickets_Available = Tickets_Available + @returnTickets WHERE Event_ID = @eventID";
                 using (SqlCommand comm = new SqlCommand(sql, conn))
                 {
                     comm.Parameters.AddWithValue("@id", ddlBookingID.SelectedItem.Text);
                     comm.Parameters.AddWithValue("@returnTickets", returnTickets);
                     comm.Parameters.AddWithValue("@eventID", eventID);
+                    comm.Parameters.AddWithValue("@status", status);
                     comm.ExecuteNonQuery();
                 }
 
@@ -181,6 +248,54 @@ namespace Project
         protected void btnContinue_Click(object sender, EventArgs e)
         {
 
+        }
+
+        protected void btnLoad_Click(object sender, EventArgs e)
+        {
+            int touristID = int.Parse(txtTouristID.Text);
+           
+            ddlBookingID.Items.Clear();
+
+            if (recordExists(touristID))
+            {
+
+                using (SqlConnection conn = new SqlConnection(conStr))
+                {
+                    conn.Open();
+
+                    string sql = "SELECT * FROM BOOKING WHERE Tourist_ID = @touristID AND Arrive_Date >= @date AND Checked_In = 0";
+
+                    SqlCommand comm = new SqlCommand(sql, conn);
+                    comm.Parameters.AddWithValue("@touristID", touristID);
+                    comm.Parameters.AddWithValue("@date", DateTime.Today);
+
+                    SqlDataReader reader = comm.ExecuteReader();
+
+                    ddlBookingID.Items.Add("Select Booking ID");
+
+                    while (reader.Read())
+                    {
+                        ddlBookingID.Items.Add(reader.GetValue(0).ToString());
+                    }
+                    reader.Close();
+
+                    SqlDataAdapter adap = new SqlDataAdapter();
+                    DataSet ds = new DataSet();
+
+
+
+                    adap.SelectCommand = comm;
+                    adap.Fill(ds, "BOOKING");
+
+                    gvBookings.DataSource = ds;
+                    gvBookings.DataBind();
+
+                }
+            }
+            else
+            {
+                lblDeleteMessage.Text = "Tourist ID does not exist";
+            }
         }
     }
 }

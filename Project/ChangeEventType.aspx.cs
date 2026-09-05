@@ -16,7 +16,11 @@ namespace Project
         
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!IsPostBack)
+            txtCapacity.Attributes["Min"] = 1.ToString();
+            txtAvailable.Attributes["Min"] = 1.ToString();
+            txtPrice.Attributes["Min"] = 1.ToString();
+
+            if (!IsPostBack)
             {
                 loadEvents();
             }
@@ -37,7 +41,8 @@ namespace Project
 
                 SqlCommand comm = new SqlCommand(sql, conn);
                 SqlDataReader reader = comm.ExecuteReader();
-
+                ddlEventID.Items.Clear();
+                ddlEventID.Items.Add("Select Event ID");
                 while (reader.Read())
                 {
                     ddlEventID.Items.Add(reader.GetValue(0).ToString());
@@ -55,6 +60,18 @@ namespace Project
                 gvEvents.DataSource = ds;
                 gvEvents.DataBind();
 
+                sql = "SELECT EventType_ID FROM EVENTTYPE";
+                comm = new SqlCommand(sql, conn);
+
+                reader = comm.ExecuteReader();
+
+                ddlEventTypeID.Items.Clear();
+                ddlEventTypeID.Items.Add("Select Event Type ID");
+                while (reader.Read())
+                {
+                    ddlEventTypeID.Items.Add(reader.GetValue(0).ToString());
+                }
+                reader.Close();
             }
         }
 
@@ -64,6 +81,11 @@ namespace Project
         }
 
         protected void btnCancel_Click(object sender, EventArgs e)
+        {
+            clearFields();
+        }
+
+        private void clearFields()
         {
             ddlEventID.SelectedIndex = 0;
             ddlSetStatus.SelectedIndex = 0;
@@ -83,31 +105,28 @@ namespace Project
         {
             try
             {
-                int eventTypeID = getEventTypeID(int.Parse(ddlEventID.SelectedItem.Text));
-                if (eventTypeID == 0)
+                int available = int.Parse(txtAvailable.Text);
+                string status = ddlSetStatus.SelectedItem.Text;
+
+                if (available == 0)
                 {
-                    lblMessage.Text = "Please select Event first";
-                    lblMessage.ForeColor = System.Drawing.Color.Red;
-                    return;
+                    status = "Full";
                 }
 
                 using (SqlConnection conn = new SqlConnection(conStr))
                 {
                     conn.Open();
-                    string sql = @"UPDATE EVENT SET Event_Price = @price, Max_Visitors = @capacity, Tickets_Available = @spaces, Status = @status 
-                             WHERE Event_ID = @eventID 
-
-                             UPDATE EVENTTYPE SET Event_Name = @eventName, Event_Description = @descr 
-                             WHERE EventType_ID = @eventtypeID";
+                    string sql = @"UPDATE EVENT SET EventType_ID = @eventtypeID Event_Price = @price, Max_Visitors = @capacity, Tickets_Available = @spaces, Status = @status 
+                             WHERE Event_ID = @eventID";
 
                     SqlCommand comm = new SqlCommand(sql, conn);
 
-                    comm.Parameters.AddWithValue("@eventID", ddlEventID.SelectedItem.Text);
+                    comm.Parameters.AddWithValue("@eventID", int.Parse(ddlEventID.SelectedItem.Text));
                     comm.Parameters.AddWithValue("@price", double.Parse(txtPrice.Text));
                     comm.Parameters.AddWithValue("@capacity", int.Parse(txtCapacity.Text));
-                    comm.Parameters.AddWithValue("@spaces", int.Parse(txtAvailable.Text));
-                    comm.Parameters.AddWithValue("@status", ddlSetStatus.SelectedItem.Text);
-                    comm.Parameters.AddWithValue("@eventtypeID", eventTypeID);
+                    comm.Parameters.AddWithValue("@spaces", available);
+                    comm.Parameters.AddWithValue("@status", status);
+                    comm.Parameters.AddWithValue("@eventtypeID", int.Parse(ddlUpdEventTypeID.SelectedItem.Text));
                     comm.Parameters.AddWithValue("@eventName", txtEventType.Text);
                     comm.Parameters.AddWithValue("@descr", txtDesc.Text);
                     comm.ExecuteNonQuery();
@@ -120,6 +139,8 @@ namespace Project
                 lblMessage.Text = "Error: " + ex.Message;
                 lblMessage.ForeColor = System.Drawing.Color.Red;
             }
+
+            clearFields();
         }
 
         protected void gvEvents_SelectedIndexChanged(object sender, EventArgs e)
@@ -137,6 +158,31 @@ namespace Project
                 conn.Open();
 
                 string sql = "SELECT Event_ID FROM EVENT";
+
+                SqlCommand comm = new SqlCommand(sql, conn);
+                SqlDataReader reader = comm.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    int ID = (int)reader.GetValue(0);
+                    if (ID == IDCheck)
+                    {
+                        exists = true;
+                    }
+                }
+            }
+
+            return exists;
+        }
+        private bool recordETExists(int IDCheck)
+        {
+            bool exists = false;
+
+            using (SqlConnection conn = new SqlConnection(conStr))
+            {
+                conn.Open();
+
+                string sql = "SELECT EventType_ID FROM EVENTTYPE";
 
                 SqlCommand comm = new SqlCommand(sql, conn);
                 SqlDataReader reader = comm.ExecuteReader();
@@ -204,8 +250,7 @@ namespace Project
                     while (reader.Read())
                     {
                         ddlEventID.Text = (reader.GetValue(0).ToString());
-                        txtEventType.Text = reader.GetValue(2).ToString();
-                        txtDesc.Text = reader.GetValue(3).ToString();
+                        ddlUpdEventTypeID.Text = reader.GetValue(1).ToString();
                         txtPrice.Text = reader.GetValue(4).ToString();
                         txtCapacity.Text = reader.GetValue(5).ToString();
                         txtAvailable.Text = reader.GetValue(6).ToString();
@@ -224,6 +269,85 @@ namespace Project
                         {
                             ddlSetStatus.SelectedIndex = 2;
                         }
+                    }
+                    reader.Close();
+
+                    loadEvents();
+                }
+            }
+            catch (SqlException ex)
+            {
+                lblMessage.Text = "Error: " + ex.Message;
+                lblMessage.ForeColor = System.Drawing.Color.Red;
+            }
+        }
+
+        protected void btnEventTypeCancel_Click(object sender, EventArgs e)
+        {
+            ddlEventTypeID.SelectedIndex = 0;
+            txtEventType.Text = "";
+            txtDesc.Text = "";
+            ddlSetStatus.SelectedIndex = 0;
+        }
+
+        protected void btnUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(conStr))
+                {
+                    conn.Open();
+                    string sql = @"UPDATE EVENTTYPE SET Event_Name = @eventName, Event_Description = @descr 
+                             WHERE EventType_ID = @eventtypeID";
+
+                    using (SqlCommand comm = new SqlCommand(sql, conn))
+                    {
+                        comm.Parameters.AddWithValue("@eventtypeID", int.Parse(ddlEventTypeID.SelectedItem.Text));
+                        comm.Parameters.AddWithValue("@eventName", txtEventType.Text);
+                        comm.Parameters.AddWithValue("@descr", txtDesc.Text);
+                        comm.ExecuteNonQuery();
+                    }
+                }
+                lblMessage.Text = "Event Type Updated Successfully";
+                ddlEventTypeID.SelectedIndex = 0;
+                txtDesc.Text = "";
+                txtEventType.Text = "";
+                loadEvents();
+            }
+            catch (SqlException ex)
+            {
+                lblMessage0.Text = "Error: " + ex.Message;
+                lblMessage0.ForeColor = System.Drawing.Color.Red;
+            }
+        }
+
+        protected void ddlEventTypeID_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!recordETExists(int.Parse(ddlEventTypeID.SelectedItem.Text)))
+            {
+                lblMessage.Text = "Event Type ID does not exist";
+                return;
+            }
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(conStr))
+                {
+
+                    conn.Open();
+
+                    string sql = "SELECT EventType_ID, Event_Name, Event_Description FROM EVENTTYPE " +
+                                 "WHERE EVENTTYPE_ID = @id ";
+
+
+                    SqlCommand comm = new SqlCommand(sql, conn);
+                    comm.Parameters.AddWithValue("@id", ddlEventTypeID.SelectedItem.Text);
+                    SqlDataReader reader = comm.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        txtEventType.Text = reader["Event_Name"].ToString();
+                        txtDesc.Text = reader["Event_Description"].ToString();
                     }
                     reader.Close();
                 }

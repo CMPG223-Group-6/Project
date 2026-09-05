@@ -47,26 +47,6 @@
             height: 65px;
             width: 344px;
         }
-        .auto-style35 {
-            text-align: justify;
-            height: 35px;
-            width: 307px;
-        }
-        .auto-style36 {
-            text-align: justify;
-            height: 35px;
-            width: 344px;
-        }
-        .auto-style37 {
-            text-align: justify;
-            height: 41px;
-            width: 307px;
-        }
-        .auto-style38 {
-            text-align: justify;
-            height: 41px;
-            width: 344px;
-        }
         .auto-style39 {
             text-align: justify;
             height: 102px;
@@ -82,7 +62,7 @@
                     <td class="auto-style6">
                         <asp:Image ID="Image1" runat="server" Height="211px" ImageUrl="~/Images/zims_zoo_logo.png" Width="331px" />
                     </td>
-                    <td class="auto-style18" colspan="3" style="border-style: double">&nbsp;<br />
+                    <td class="auto-style18" colspan="3" style="border-style: outset">&nbsp;<br />
                         <br />
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:Label ID="lblHeader" runat="server" Font-Size="50px" Text="Booking Management Dashboard" Font-Bold="True"></asp:Label>
                         <br />
@@ -133,7 +113,6 @@
                     <td class="auto-style39">
                         <br />
                         <br />
-                        <asp:Label ID="lblCurrentBookings" runat="server" Font-Bold="True" Font-Size="20pt" Text="All Current Bookings"></asp:Label>
                         
                         </td>
                     <td class="auto-style32">
@@ -143,19 +122,21 @@
                 </tr>
                 <tr>
                     <td class="auto-style31" colspan="3">
-                        <asp:GridView ID="gvBookings" runat="server" Height="244px" Width="1017px" CellPadding="4" ForeColor="#333333" GridLines="None">
-                            <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
-                            <EditRowStyle BackColor="#999999" />
-                            <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-                            <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-                            <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
-                            <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
-                            <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
-                            <SortedAscendingCellStyle BackColor="#E9E7E2" />
-                            <SortedAscendingHeaderStyle BackColor="#506C8C" />
-                            <SortedDescendingCellStyle BackColor="#FFFDF8" />
-                            <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
-                        </asp:GridView>
+                        <asp:Panel ID="pnlBookings" runat="server" Font-Bold="True" GroupingText=" All Current Bookings" Height="310px" ScrollBars="Both">
+                            <asp:GridView ID="gvBookings" runat="server" Height="269px" Width="1017px" CellPadding="4" ForeColor="#333333" GridLines="None">
+                                <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+                                <EditRowStyle BackColor="#999999" />
+                                <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                                <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                                <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                                <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+                                <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+                                <SortedAscendingCellStyle BackColor="#E9E7E2" />
+                                <SortedAscendingHeaderStyle BackColor="#506C8C" />
+                                <SortedDescendingCellStyle BackColor="#FFFDF8" />
+                                <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
+                            </asp:GridView>
+                        </asp:Panel>
                         
                         </td>
                 </tr>

@@ -72,6 +72,7 @@ namespace Project
         protected void btnReload_Click(object sender, EventArgs e)
         {
             loadEvents();
+            txtSearchEvent.Text = "";
         }
 
         protected void btnSearch_Click(object sender, EventArgs e)
