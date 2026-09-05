@@ -20,6 +20,12 @@ namespace Project
         protected void Page_Load(object sender, EventArgs e)
         {
             LoadData();
+
+            //Clear and Reloads booking details
+            lblBookedDisplay.Text = "";
+            lblDisplayVisits.Text = "";
+            lblDisplaySpent.Text = "";
+
             if (Session["Tourist_ID"] != null)
             {
                 Tourist_ID = int.Parse(Session["Tourist_ID"].ToString());
@@ -80,10 +86,13 @@ namespace Project
             using (SqlConnection conn = new SqlConnection(conStr))
             {
                 conn.Open();
-                string sql = "SELECT COUNT(*) FROM BOOKING WHERE Tourist_ID = @touristID";
+                string sql = "SELECT COUNT(*) FROM BOOKING WHERE Tourist_ID = @touristID" +
+                             " AND Arrive_Date >= @Today" +
+                             " AND Checked_In = 0";
                 using (SqlCommand cmd = new SqlCommand(sql, conn))
                 {
                     cmd.Parameters.AddWithValue("@touristID", touristID);
+                    cmd.Parameters.AddWithValue("@Today", DateTime.Today);
                     return (int)cmd.ExecuteScalar();
                 }
             }
@@ -110,7 +119,9 @@ namespace Project
             using (SqlConnection conn = new SqlConnection(conStr))
             {
                 conn.Open();
-                string sql = "SELECT SUM(Payment_Amount) FROM BOOKING WHERE Tourist_ID = @touristID";
+                string sql = "SELECT SUM(Payment_Amount)" +
+                             "FROM BOOKING WHERE Tourist_ID = @touristID";
+
                 using (SqlCommand cmd = new SqlCommand(sql, conn))
                 {
                     cmd.Parameters.AddWithValue("@touristID", touristID);
@@ -118,6 +129,11 @@ namespace Project
                     return result != DBNull.Value ? Convert.ToInt32(result) : 0;
                 }
             }
+        }
+
+        protected void Menu3_MenuItemClick(object sender, MenuEventArgs e)
+        {
+
         }
     }
 }

@@ -170,7 +170,7 @@
                         &nbsp;&nbsp;
                         <asp:Menu ID="Menu3" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="White">
                             <Items>
-                                <asp:MenuItem Text="Back" NavigateUrl="~/TouristMenu.aspx" Value="Back"></asp:MenuItem>
+                                <asp:MenuItem Text="Back" NavigateUrl="~/MyOverview.aspx" Value="Back"></asp:MenuItem>
                             </Items>
                             <StaticHoverStyle BorderColor="#669999" />
                         </asp:Menu>

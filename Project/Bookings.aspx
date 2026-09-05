@@ -101,8 +101,16 @@
                                         <asp:Button ID="btnCancelBooking" runat="server" BackColor="#FF3300" BorderColor="Red" BorderStyle="Groove" ForeColor="White" Height="27px" OnClick="btnCancelBooking_Click" style="margin-left: 18px" Text="Cancel Booking" Width="146px" />
                                         <br />
                                         &nbsp;&nbsp;
-                                        <asp:Panel ID="Panel2" runat="server" GroupingText="Available Events:" Height="362px" ScrollBars="Both">
-                                            <asp:GridView ID="gdvDisplayEvents" runat="server" Height="88px" Width="1066px">
+                                        <asp:Panel ID="Panel2" runat="server" GroupingText="Available Events:" Height="289px" ScrollBars="Both">
+                                            <asp:GridView ID="gdvDisplayEvents" runat="server" Height="88px" Width="1066px" OnSelectedIndexChanged="gdvDisplayEvents_SelectedIndexChanged" AutoGenerateColumns="False">
+                                             <Columns>
+                                                <asp:BoundField DataField="Event_ID" HeaderText="Event ID" />
+                                                <asp:BoundField DataField="Event_Name" HeaderText="Event Name" />
+                                                <asp:BoundField DataField="Event_Price" HeaderText="Ticket Price" DataFormatString="{0:C}"/>
+                                                <asp:BoundField DataField="Max_Visitors" HeaderText="Max Visitors" />
+                                                <asp:BoundField DataField="Tickets_Available" HeaderText="No. Tickets Available" />
+                                                <asp:BoundField DataField="Status" HeaderText="Status" />
+                                            </Columns>
                                             </asp:GridView>
                                         </asp:Panel>
                                         <br />
