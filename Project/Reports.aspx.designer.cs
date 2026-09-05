@@ -51,13 +51,13 @@ namespace Project
         protected global::System.Web.UI.WebControls.Menu Menu4;
 
         /// <summary>
-        /// pnlReports control.
+        /// pnlParameters control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlReports;
+        protected global::System.Web.UI.WebControls.Panel pnlParameters;
 
         /// <summary>
         /// lblReportType control.
@@ -96,13 +96,13 @@ namespace Project
         protected global::System.Web.UI.WebControls.Label lblStartDate;
 
         /// <summary>
-        /// txtStartDate control.
+        /// calStartDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtStartDate;
+        protected global::System.Web.UI.WebControls.TextBox calStartDate;
 
         /// <summary>
         /// RequiredFieldValidator3 control.
@@ -123,13 +123,13 @@ namespace Project
         protected global::System.Web.UI.WebControls.Label lblEndDate;
 
         /// <summary>
-        /// txtEndDate control.
+        /// calEndDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEndDate;
+        protected global::System.Web.UI.WebControls.TextBox calEndDate;
 
         /// <summary>
         /// RequiredFieldValidator2 control.
@@ -195,31 +195,40 @@ namespace Project
         protected global::System.Web.UI.WebControls.Button btnExportReport;
 
         /// <summary>
-        /// btnClear0 control.
+        /// btnClear control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnClear0;
+        protected global::System.Web.UI.WebControls.Button btnClear;
 
         /// <summary>
-        /// pnlCharts control.
+        /// lblDisplay1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlCharts;
+        protected global::System.Web.UI.WebControls.Label lblDisplay1;
 
         /// <summary>
-        /// GridView2 control.
+        /// pnlResults control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView2;
+        protected global::System.Web.UI.WebControls.Panel pnlResults;
+
+        /// <summary>
+        /// gvReport control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvReport;
 
         /// <summary>
         /// Chart1 control.

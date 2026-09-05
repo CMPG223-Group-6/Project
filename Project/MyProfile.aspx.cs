@@ -165,5 +165,10 @@ namespace Project
         {
             Response.Redirect("TouristForgotPassword.aspx");
         }
+
+        protected void btnDelete_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("DeleteAccount.aspx");
+        }
     }
 }
