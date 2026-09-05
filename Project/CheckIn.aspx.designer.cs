@@ -105,13 +105,13 @@ namespace Project
         protected global::System.Web.UI.WebControls.DropDownList ddlBookingEvents0;
 
         /// <summary>
-        /// rfvBookingIDTourist0 control.
+        /// rfvBookingIDTourist1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvBookingIDTourist0;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvBookingIDTourist1;
 
         /// <summary>
         /// btnCheck control.

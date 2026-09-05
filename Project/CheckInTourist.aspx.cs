@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
-using System.Data;
 using System.Web.UI;
+using System.Web.UI.DataVisualization.Charting;
 using System.Web.UI.WebControls;
 
 namespace Project
@@ -130,21 +131,77 @@ namespace Project
                         }
                     }
                 }
+
+                loadbookings();
+                loadtouristbookings();
+
+            }
+        }
+        private void loadtouristbookings()
+        {
+            try  // populates ddl from bookings table
+            {
+                using (SqlConnection conn = new SqlConnection(ConnectionString))
+                {
+                    string sql_query = @"SELECT * FROM BOOKING WHERE Booking_ID = @bookingID AND Arrive_Date >= @date ";
+
+                    SqlCommand cmd = new SqlCommand(sql_query, conn);
+                    cmd.Parameters.AddWithValue("@bookingID", ddlBookingEventsStaffcheckin.SelectedItem.Text);
+                    cmd.Parameters.AddWithValue("@date", DateTime.Today);
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+
+                    DataSet ds = new DataSet();
+
+                    adapter.Fill(ds);
+
+                    gvBookingsStaffside.DataSource = ds;
+                    gvBookingsStaffside.DataBind();
+                }
+            }
+            catch (Exception ex)
+            {
+                lblOutput.Text = "Database error: " + ex.Message;
+
             }
         }
 
+        private void loadbookings()
+        {
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+                string sql_statement = @"SELECT B.Booking_ID, B.Event_ID, B.Tourist_ID, ET.Event_Name, B.Number_Tickets, B.Arrive_Date, B.Payment_method, B.Payment_Amount, B.Payment_Made, B.Checked_In, B.Checked_Out                          
+                            
+                     FROM BOOKING B, EVENT E, EVENTTYPE ET
+                     WHERE B.Event_ID = E.Event_ID
+                     AND E.EventType_ID = ET.EventType_ID ";
+
+                SqlCommand command = new SqlCommand(sql_statement, con);
+                command.Parameters.AddWithValue("@Tourist_ID", touristID);
+
+                con.Open();
+
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                DataSet ds = new DataSet();
+                adapter.Fill(ds);
+
+                gvBookingsStaffside.DataSource = ds;
+                gvBookingsStaffside.DataBind();
+            }
+        }
 
         protected void btnEnter_Click(object sender, EventArgs e)
         {
             //tourist text input
-            int touristID = int.Parse(txtTouristID.Text);
-
-            if (touristID <= 0)
+            int touristID;
+            
+            if (int.Parse(txtTouristID.Text) <= 0)
             {
+                
                 lblOutput.Text = "Enter a tourist ID.";
                 return;
             }
 
+            touristID = int.Parse(txtTouristID.Text);
             try
             {
                 using (SqlConnection conn = new SqlConnection(ConnectionString)) // checks if we have the tourist in the database
@@ -192,6 +249,7 @@ namespace Project
 
                     ddlBookingEventsStaffcheckin.Items.Clear();
                     int numberOfBookings = 0;
+                    ddlBookingEventsStaffcheckin.Items.Add("Select booking ID");
 
                     while (reader.Read())
                     {
@@ -224,7 +282,6 @@ namespace Project
 
         protected void ddlBookingEventsStaffcheckin_SelectedIndexChanged(object sender, EventArgs e)
         {
-
             try  // populates ddl from bookings table
             {
                 using (SqlConnection conn = new SqlConnection(ConnectionString))
@@ -264,9 +321,16 @@ namespace Project
 
             using (SqlConnection conn = new SqlConnection(ConnectionString))
             {
-                string query = @" SELECT * FROM BOOKING WHERE Booking_ID = @Booking_ID"; // get all of the booking id details
+                string query = @"SELECT B.Booking_ID, B.Event_ID, B.Tourist_ID, ET.Event_Name, B.Number_Tickets, B.Arrive_Date, B.Payment_method, B.Payment_Amount, B.Payment_Made, B.Checked_In, B.Checked_Out
+
+                     FROM BOOKING B, EVENT E, EVENTTYPE ET
+                     WHERE B.Event_ID = E.Event_ID
+                     AND E.EventType_ID = ET.EventType_ID
+                     AND Arrive_Date >= @date AND Checked_In = 0";   // get all of the booking id details
+
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@Booking_ID", bookingID);
+                cmd.Parameters.AddWithValue("@date", DateTime.Today);
                 conn.Open();
                 SqlDataAdapter adap = new SqlDataAdapter(cmd);
                 DataSet ds = new DataSet();
@@ -275,8 +339,10 @@ namespace Project
                 gvBookingsStaffside.DataSource = ds;
                 gvBookingsStaffside.DataBind();
 
-
-
+                txtTouristID.Text = "";
+                lblOutput.Text = "";
+                ddlBookingEventsStaffcheckin.Items.Clear();
+                ddlBookingEventsStaffcheckin.Items.Add("Select Booking ID");
             }
         }
 

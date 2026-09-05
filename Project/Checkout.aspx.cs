@@ -14,7 +14,7 @@ namespace Project
     {
 
         string ConnectionString = @"Data Source= localhost;Initial Catalog=zims.db;Integrated Security=True";
-        int touristID = 1;
+        int touristID = 6;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -244,6 +244,13 @@ namespace Project
 
             }
 
+            if (ddlBookingIDDetails.SelectedIndex == 0)
+            {
+                loadBookings();               
+                lblConfirmMessage.Text = " ";
+                return;
+            }
+
             try
             {
                 using (SqlConnection conn = new SqlConnection(ConnectionString))
@@ -268,7 +275,13 @@ namespace Project
             {
                 lblConfirmMessage.Text = "Database error: " + ex.Message;
 
+                if (ddlBookingIDDetails.SelectedIndex == 0)
+                {
+                    loadBookings();
+                }
             }
+
+
         }
 
         private void loadBookings() //loads initially and when you have chosen your Id

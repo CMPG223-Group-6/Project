@@ -32,6 +32,13 @@
         .auto-style12 {
             width: 184px;
         }
+        .auto-style13 {
+            width: 184px;
+            height: 33px;
+        }
+        .auto-style14 {
+            height: 33px;
+        }
     </style>
 </head>
 <body>
@@ -80,19 +87,19 @@
                                         <br />
                                         <table style="width: 100%; height: 172px;">
                                             <tr>
-                                                <td class="auto-style12">
+                                                <td class="auto-style13">
                                                     <asp:Label ID="lblBookingID" runat="server" Text="Enter booking ID"></asp:Label>
-                                                    <br />
+                                                    &nbsp;<br />
                                                 </td>
-                                                <td>&nbsp;</td>
-                                                <td>&nbsp;</td>
+                                                <td class="auto-style14"></td>
+                                                <td class="auto-style14"></td>
                                             </tr>
                                             <tr>
                                                 <td class="auto-style12">
                                                     <br />
                                                     <asp:DropDownList ID="ddlBookingEvents0" runat="server" Height="30px" Width="130px" AutoPostBack="true" OnSelectedIndexChanged="ddlBookingEvents0_SelectedIndexChanged" style="margin-bottom: 0px"> 
                                                     </asp:DropDownList>
-                                                    <asp:RequiredFieldValidator ID="rfvBookingIDTourist0" runat="server" ControlToValidate="ddlBookingEvents0" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                                                    <asp:RequiredFieldValidator ID="rfvBookingIDTourist1" runat="server" ControlToValidate="ddlBookingEvents0" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
                                                 </td>
                                                 <td>&nbsp;</td>
                                                 <td>&nbsp;</td>
@@ -109,7 +116,7 @@
                                             <tr>
                                                 <td class="auto-style12">
                                                     <asp:Label ID="lblOutput" runat="server"></asp:Label>
-                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                     <asp:Button ID="btnpayment" runat="server" BackColor="#FF9900" OnClick="btnpayment_Click" Text="Payment" Visible="False" />
                                                 </td>
                                                 <td>

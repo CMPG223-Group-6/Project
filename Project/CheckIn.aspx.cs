@@ -14,7 +14,7 @@ namespace Project
 {
     public partial class CheckIn : System.Web.UI.Page
     {
-        int touristID ;
+        int touristID;
 
         string ConnectionString = @"Data Source=localhost;Initial Catalog=zims.db;Integrated Security=True;Encrypt=False";
 
@@ -29,7 +29,7 @@ namespace Project
             if (!IsPostBack) //uploads bookingIDs in the begin
             {
 
-                string query = @"SELECT Booking_ID FROM BOOKING " + "WHERE Tourist_ID = @touristID ";
+                string query = @"SELECT Booking_ID FROM BOOKING " + "WHERE Tourist_ID = @touristID AND Arrive_Date >= @date ";
                 try
                 {
                     using (SqlConnection conn = new SqlConnection(ConnectionString))
@@ -38,16 +38,40 @@ namespace Project
                         using (SqlCommand cmd = new SqlCommand(query, conn))
                         {
                             cmd.Parameters.AddWithValue(@"touristID", touristID);
-                            
+                            cmd.Parameters.AddWithValue(@"date", DateTime.Today);
+
                             SqlDataReader reader = cmd.ExecuteReader();
 
                             ddlBookingEvents0.Items.Add("Select Booking ID");
                             while (reader.Read())
                             {
+                                
                                 ddlBookingEvents0.Items.Add(reader["Booking_ID"].ToString());
                             }
 
                             reader.Close();
+                            
+                        }
+
+                        query = @"SELECT COUNT(*) FROM BOOKING " + "WHERE Tourist_ID = @touristID AND Arrive_Date >= @date ";
+
+                        using (SqlCommand cmd = new SqlCommand(query, conn))
+                        {
+                            cmd.Parameters.AddWithValue(@"touristID", touristID);
+                            cmd.Parameters.AddWithValue(@"date", DateTime.Today);
+
+                            SqlDataReader reader = cmd.ExecuteReader();
+                                                      
+                            while (reader.Read())
+                            {
+                                if (int.Parse(reader[0].ToString()) == 0)
+                                {
+                                    lblOutput.Text = "There are no future bookings. ";// come up with a better wording
+                                }
+                            }
+
+                            reader.Close();
+
                         }
                     }
                 }
@@ -69,8 +93,9 @@ namespace Project
                                 "FROM BOOKING B, EVENT E, EVENTTYPE ET " +
                                 "WHERE B.Event_ID = E.Event_ID " +
                                 "AND E.EventType_ID = ET.EventType_ID " +
-                                "AND B.Tourist_ID = @touristID" 
-                             ;
+                                "AND B.Tourist_ID = @touristID " +
+                                "AND Arrive_Date >= @date ";
+
             try
             {
                 using (SqlConnection conn = new SqlConnection(ConnectionString))
@@ -79,7 +104,7 @@ namespace Project
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue(@"touristID", touristID);
-                       
+                        cmd.Parameters.AddWithValue(@"date", DateTime.Today);
 
                         DataSet ds = new DataSet();
 
@@ -191,6 +216,13 @@ namespace Project
 
         protected void ddlBookingEvents0_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (ddlBookingEvents0.SelectedIndex == 0)
+            {
+                loadBookings();
+                btnpayment.Visible = false;
+                lblOutput.Text = " ";
+                return;
+            }
             try
             {
                 using (SqlConnection conn = new SqlConnection(ConnectionString))
