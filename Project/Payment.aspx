@@ -272,7 +272,7 @@
                                                 <asp:Label ID="lblPaymentDate" runat="server" Font-Bold="True" Text="Payment date:"></asp:Label>
                                             </td>
                                             <td class="auto-style26">
-                                                <asp:TextBox ID="txtPaymentDate" runat="server" TextMode="Date" Width="114px"></asp:TextBox>
+                                                <asp:TextBox ID="txtPaymentDate" runat="server" TextMode="Date" Width="114px" ReadOnly="True"></asp:TextBox>
                                             </td>
                                             <td class="auto-style22">
                                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtPaymentDate" ErrorMessage="Please choose a date!" Font-Bold="True" ForeColor="#FF3300"></asp:RequiredFieldValidator>

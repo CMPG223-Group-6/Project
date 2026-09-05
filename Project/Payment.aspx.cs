@@ -23,6 +23,7 @@ namespace Project
 
             if (!IsPostBack)
             {
+                txtPaymentDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
                 LoadBookingIDs();
 
                 lblOutput.Visible = false;
