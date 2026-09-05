@@ -44,7 +44,7 @@ namespace Project
             string Name = txtName.Text;
             string Surname = txtSurname.Text;
             string Country = ddlCountries.SelectedValue;
-            string Number = txtPhoneNo.Text;
+            string Number = txtPhoneNo.Text.Trim();
             string Email = txtEmail.Text;
 
             if(Number.Length > 12)

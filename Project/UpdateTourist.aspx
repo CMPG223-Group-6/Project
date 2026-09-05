@@ -76,7 +76,7 @@
                                         <asp:Label ID="lblName" runat="server" Text="Enter Name:"></asp:Label>
                                         <br />
                                         <asp:TextBox ID="txtUpdName" runat="server"></asp:TextBox>
-                                        <asp:RequiredFieldValidator ID="rfvName" runat="server" ControlToValidate="txtUpdName" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                                        <asp:RequiredFieldValidator ID="rfvName" runat="server" ControlToValidate="txtUpdName" ErrorMessage="*" ForeColor="Red" ValidationGroup="btnUpdate"></asp:RequiredFieldValidator>
                                         <br />
                                         <br />
                                     </td>
@@ -86,7 +86,7 @@
                                         <asp:Label ID="lblSurname" runat="server" Text="Enter Surname:"></asp:Label>
                                         <br />
                                         <asp:TextBox ID="txtUpdSurname" runat="server" Width="144px"></asp:TextBox>
-                                        <asp:RequiredFieldValidator ID="rfvSurname" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtUpdSurname"></asp:RequiredFieldValidator>
+                                        <asp:RequiredFieldValidator ID="rfvSurname" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtUpdSurname" ValidationGroup="btnUpdate"></asp:RequiredFieldValidator>
                                         <br />
                                     </td>
                                 </tr>
@@ -95,9 +95,9 @@
                                         <asp:Label ID="lblPhoneNo" runat="server" Text="Enter phone number:"></asp:Label>
                                         <br />
                                         <asp:TextBox ID="txtUpdPhoneNo" runat="server" OnTextChanged="txtUpdPhoneNo_TextChanged"></asp:TextBox>
-                                        <asp:RequiredFieldValidator ID="rfvPhoneNo" runat="server" ControlToValidate="txtUpdPhoneNo" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                                        <asp:RequiredFieldValidator ID="rfvPhoneNo" runat="server" ControlToValidate="txtUpdPhoneNo" ErrorMessage="*" ForeColor="Red" ValidationGroup="btnUpdate"></asp:RequiredFieldValidator>
                                         <br />
-                                        <asp:RegularExpressionValidator ID="revUpdPhoneNo" runat="server" ControlToValidate="txtUpdPhoneNo" ErrorMessage="Enter 10- 13 digits!" ForeColor="Red" ValidationExpression="^\d{10,13}$"></asp:RegularExpressionValidator>
+                                        <asp:RegularExpressionValidator ID="revUpdPhoneNo" runat="server" ControlToValidate="txtUpdPhoneNo" ErrorMessage="Enter 10- 13 digits!" ForeColor="Red" ValidationExpression="^\d{10,13}$" ValidationGroup="btnUpdate"></asp:RegularExpressionValidator>
                                         <br />
                                     </td>
                                 </tr>
@@ -106,9 +106,9 @@
                                         <asp:Label ID="lblEmail" runat="server" Text="Enter Email:"></asp:Label>
                                         <br />
                                         <asp:TextBox ID="txtUpdEmail" runat="server"></asp:TextBox>
-                                        <asp:RequiredFieldValidator ID="rfvEmail" runat="server" ControlToValidate="txtUpdEmail" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                                        <asp:RequiredFieldValidator ID="rfvEmail" runat="server" ControlToValidate="txtUpdEmail" ErrorMessage="*" ForeColor="Red" ValidationGroup="btnUpdate"></asp:RequiredFieldValidator>
                                         <br />
-                                        <asp:RegularExpressionValidator ID="revEmail" runat="server" ControlToValidate="txtUpdEmail" ErrorMessage="Enter a valid email!" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                                        <asp:RegularExpressionValidator ID="revEmail" runat="server" ControlToValidate="txtUpdEmail" ErrorMessage="Enter a valid email!" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGroup="btnUpdate"></asp:RegularExpressionValidator>
                                         <br />
                                     </td>
                                 </tr>
@@ -116,10 +116,10 @@
                                     <td class="auto-style17">
                                         <asp:Label ID="lblCountry" runat="server" Text="Country of Origin:"></asp:Label>
                                         <br />
-                                        <asp:DropDownList ID="ddlUpdCountries" runat="server" Height="16px" Width="161px" OnSelectedIndexChanged="ddlUpdCountries_SelectedIndexChanged">
+                                        <asp:DropDownList ID="ddlUpdCountries" runat="server" Height="31px" Width="161px" OnSelectedIndexChanged="ddlUpdCountries_SelectedIndexChanged">
                                             <asp:ListItem Value="0">Select a Country</asp:ListItem>
                                         </asp:DropDownList>
-                                        <asp:RequiredFieldValidator ID="rfvUpdCountries" runat="server" ControlToValidate="ddlUpdCountries" ErrorMessage="*" ForeColor="Red" InitialValue="0"></asp:RequiredFieldValidator>
+                                        <asp:RequiredFieldValidator ID="rfvUpdCountries" runat="server" ControlToValidate="ddlUpdCountries" ErrorMessage="*" ForeColor="Red" InitialValue="0" ValidationGroup="btnUpdate"></asp:RequiredFieldValidator>
                                         <br />
                                     </td>
                                 </tr>
@@ -130,7 +130,7 @@
                                 </tr>
                                 <tr>
                                     <td class="auto-style17">
-                                        <asp:Button ID="BtnUpdate" runat="server" Height="28px" Text="Update" Width="145px" BackColor="Green" Font-Bold="True" ForeColor="White" OnClick="BtnUpdate_Click" />
+                                        <asp:Button ID="BtnUpdate" runat="server" Height="28px" Text="Update" Width="145px" BackColor="Green" Font-Bold="True" ForeColor="White" OnClick="BtnUpdate_Click" ValidationGroup="btnUpdate" />
                                         <br />
                                     </td>
                                 </tr>

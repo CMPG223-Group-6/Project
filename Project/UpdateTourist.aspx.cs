@@ -39,7 +39,7 @@ namespace Project
         {
             string Name = txtUpdName.Text;
             string Surname = txtUpdSurname.Text;
-            string Number = txtUpdPhoneNo.Text;
+            string Number = txtUpdPhoneNo.Text.Trim();
             Email = txtUpdEmail.Text;
             string Country = ddlUpdCountries.SelectedValue;
             int ID = int.Parse(txtUpdTouristID.Text);
@@ -49,26 +49,7 @@ namespace Project
 
             string HashedPassword = HashPassword(Password);
 
-            using (conn = new SqlConnection(ConString))
-            {
-                conn.Open();
-
-                // Check if email already exists
-                string checkEmail = "SELECT COUNT(*) FROM Tourist WHERE Email_Address = @Email";
-
-                using (SqlCommand checkCmd = new SqlCommand(checkEmail, conn))
-                {
-                    checkCmd.Parameters.AddWithValue("@Email", Email);
-
-                    int emailCount = (int)checkCmd.ExecuteScalar();
-
-                    if (emailCount > 0)
-                    {
-                        lblUpdMessage.Text = "Email already exists!";
-                        return;
-                    }
-                }
-            }
+            
 
             using (conn = new SqlConnection(ConString))
             {
@@ -118,26 +99,21 @@ namespace Project
         }
         private void LoadCountries()
         {
-            using (conn = new SqlConnection(ConString))
+            using (SqlConnection conn = new SqlConnection(ConString))
             {
-                string sql = "SELECT Country_ID FROM COUNTRY";
+                conn.Open();
+                string sql = "SELECT Country_Name, Country_ID FROM COUNTRY";
 
-                cmd = new SqlCommand(sql, conn);
+                using (SqlCommand cmd = new SqlCommand(sql, conn))
+                {
 
-                ap = new SqlDataAdapter(cmd);
+                    SqlDataReader reader = cmd.ExecuteReader();
 
-                DataSet ds = new DataSet();
-
-                ap.Fill(ds);
-
-                ddlUpdCountries.DataSource = ds;
-
-                ddlUpdCountries.DataTextField = "Country_ID";
-                ddlUpdCountries.DataValueField = "Country_ID";
-
-                ddlUpdCountries.DataBind();
-
-                ddlUpdCountries.Items.Insert(0, new ListItem("Select a Country", "0"));
+                    while (reader.Read())
+                    {
+                        ddlUpdCountries.Items.Add(new ListItem(reader["Country_Name"].ToString(), reader["Country_ID"].ToString()));
+                    }
+                }
             }
         }
 
