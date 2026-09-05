@@ -49,11 +49,7 @@
             width: 569px;
         }
         .auto-style17 {
-            width: 389px;
-        }
-        .auto-style18 {
-            width: 389px;
-            height: 27px;
+            width: 184px;
         }
         .auto-style19 {
             height: 27px;
@@ -61,18 +57,25 @@
         }
         .auto-style21 {
             height: 26px;
-            width: 389px;
+            width: 184px;
         }
         .auto-style22 {
             width: 835px;
         }
-        .auto-style23 {
-            width: 389px;
-            height: 29px;
+        .auto-style25 {
+            height: 27px;
+            width: 165px;
         }
-        .auto-style24 {
+        .auto-style26 {
+            width: 165px;
+        }
+        .auto-style27 {
+            width: 165px;
+            height: 26px;
+        }
+        .auto-style28 {
             width: 835px;
-            height: 29px;
+            height: 26px;
         }
     </style>
 </head>
@@ -122,21 +125,130 @@
                                             <td class="auto-style21">
                                                 <asp:Label ID="lblHeading" runat="server" Font-Bold="True" ForeColor="#009933" style="text-decoration: underline" Text="Payment details:"></asp:Label>
                                             </td>
+                                            <td class="auto-style25">
+                                                &nbsp;</td>
                                             <td class="auto-style19">
-                                                <asp:Label ID="lblHeading2" runat="server" Font-Bold="True" ForeColor="#009933" style="text-decoration: underline" Text="Payment method"></asp:Label>
-                                            </td>
+                                                &nbsp;</td>
                                         </tr>
                                         <tr>
                                             <td class="auto-style17">&nbsp;</td>
+                                            <td class="auto-style26">
+                                                &nbsp;</td>
                                             <td class="auto-style22">
-                                                <asp:Label ID="lblPaymentMethod" runat="server" Font-Bold="True" Text="Payment method:"></asp:Label>
-                                            </td>
+                                                &nbsp;</td>
                                         </tr>
                                         <tr>
                                             <td class="auto-style17">
                                                 <asp:Label ID="lblBookingID" runat="server" Font-Bold="True" Text="Booking ID:"></asp:Label>
                                             </td>
+                                            <td class="auto-style26">
+                                                <asp:DropDownList ID="ddlBookingID" runat="server" Height="20px" Width="159px" AutoPostBack="True" OnSelectedIndexChanged="ddlBookingID_SelectedIndexChanged">
+                                                </asp:DropDownList>
+                                            </td>
                                             <td class="auto-style22">
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="ddlBookingID" ErrorMessage="Choose a booking ID!" Font-Bold="True" ForeColor="#FF3300"></asp:RequiredFieldValidator>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="auto-style21">
+                                            </td>
+                                            <td class="auto-style27">
+                                            </td>
+                                            <td class="auto-style28">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="auto-style17">
+                                                <asp:Label ID="lblEventID" runat="server" Font-Bold="True" Text="Event ID:"></asp:Label>
+                                            </td>
+                                            <td class="auto-style26">
+                                                <asp:TextBox ID="txtEventID" runat="server" ReadOnly="True" Width="63px"></asp:TextBox>
+                                            </td>
+                                            <td class="auto-style22">
+                                                &nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="auto-style21">
+                                            </td>
+                                            <td class="auto-style27">
+                                            </td>
+                                            <td class="auto-style28">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="auto-style17">
+                                                <asp:Label ID="lblTouristID" runat="server" Font-Bold="True" Text="Tourist ID:"></asp:Label>
+                                            </td>
+                                            <td class="auto-style26">
+                                                <asp:TextBox ID="txtTouristID" runat="server" Width="63px"></asp:TextBox>
+                                            </td>
+                                            <td class="auto-style22">
+                                                &nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="auto-style17">&nbsp;</td>
+                                            <td class="auto-style26">
+                                                &nbsp;</td>
+                                            <td class="auto-style22">
+                                                &nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="auto-style17">
+                                                <asp:Label ID="lblNumberTickets" runat="server" Font-Bold="True" Text="Number of tickets:"></asp:Label>
+                                            </td>
+                                            <td class="auto-style26">
+                                                <asp:TextBox ID="txtNumberTickets" runat="server" ReadOnly="True" Width="63px"></asp:TextBox>
+                                            </td>
+                                            <td class="auto-style22">
+                                                &nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="auto-style17">
+                                                &nbsp;</td>
+                                            <td class="auto-style26">
+                                                &nbsp;</td>
+                                            <td class="auto-style22">
+                                                &nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="auto-style17">
+                                                <asp:Label ID="lblArrivalDate" runat="server" Font-Bold="True" Text="Arrival date:"></asp:Label>
+                                            </td>
+                                            <td class="auto-style26">
+                                                <asp:TextBox ID="txtArrivalDate" runat="server" ReadOnly="True" Width="152px"></asp:TextBox>
+                                            </td>
+                                            <td class="auto-style22">
+                                                &nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="auto-style17">
+                                                &nbsp;</td>
+                                            <td class="auto-style26">
+                                                &nbsp;</td>
+                                            <td class="auto-style22">
+                                                &nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="auto-style17">
+                                                <asp:Label ID="lblHeading2" runat="server" Font-Bold="True" ForeColor="#009933" style="text-decoration: underline" Text="Payment method"></asp:Label>
+                                            </td>
+                                            <td class="auto-style26">
+                                                &nbsp;</td>
+                                            <td class="auto-style22">
+                                                &nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="auto-style17">&nbsp;</td>
+                                            <td class="auto-style26">
+                                                &nbsp;</td>
+                                            <td class="auto-style22">
+                                                &nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="auto-style17">
+                                                <asp:Label ID="lblPaymentMethod" runat="server" Font-Bold="True" Text="Payment method:"></asp:Label>
+                                            </td>
+                                            <td class="auto-style26">
                                                 <asp:DropDownList ID="ddlPaymentMethod" runat="server" Height="19px" Width="96px">
                                                     <asp:ListItem></asp:ListItem>
                                                     <asp:ListItem>Cash</asp:ListItem>
@@ -144,35 +256,23 @@
                                                     <asp:ListItem>Debit Card</asp:ListItem>
                                                 </asp:DropDownList>
                                             </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="auto-style23">
-                                                <asp:DropDownList ID="ddlBookingID" runat="server" Height="20px" Width="159px" AutoPostBack="True" OnSelectedIndexChanged="ddlBookingID_SelectedIndexChanged">
-                                                </asp:DropDownList>
-                                            </td>
-                                            <td class="auto-style24">
+                                            <td class="auto-style22">
                                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="ddlPaymentMethod" ErrorMessage="Choose a payment method!" Font-Bold="True" ForeColor="#FF3300"></asp:RequiredFieldValidator>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="auto-style17">
-                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="ddlBookingID" ErrorMessage="Choose a booking ID!" Font-Bold="True" ForeColor="#FF3300"></asp:RequiredFieldValidator>
-                                            </td>
+                                            <td class="auto-style17">&nbsp;</td>
+                                            <td class="auto-style26">
+                                                &nbsp;</td>
                                             <td class="auto-style22">
+                                                &nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="auto-style17">
                                                 <asp:Label ID="lblPaymentDate" runat="server" Font-Bold="True" Text="Payment date:"></asp:Label>
                                             </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="auto-style17">
-                                                <asp:Label ID="lblEventID" runat="server" Font-Bold="True" Text="Event ID:"></asp:Label>
-                                            </td>
-                                            <td class="auto-style22">
+                                            <td class="auto-style26">
                                                 <asp:TextBox ID="txtPaymentDate" runat="server" TextMode="Date" Width="114px"></asp:TextBox>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="auto-style17">
-                                                <asp:TextBox ID="txtEventID" runat="server" ReadOnly="True" Width="63px"></asp:TextBox>
                                             </td>
                                             <td class="auto-style22">
                                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtPaymentDate" ErrorMessage="Please choose a date!" Font-Bold="True" ForeColor="#FF3300"></asp:RequiredFieldValidator>
@@ -180,72 +280,86 @@
                                         </tr>
                                         <tr>
                                             <td class="auto-style17">&nbsp;</td>
+                                            <td class="auto-style26">
+                                                &nbsp;</td>
                                             <td class="auto-style22">
+                                                &nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="auto-style17">
                                                 <asp:Label ID="lblAmount" runat="server" Font-Bold="True" Text="Amount (ZAR):"></asp:Label>
                                             </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="auto-style17">
-                                                <asp:Label ID="lblTouristID" runat="server" Font-Bold="True" Text="Tourist ID:"></asp:Label>
-                                            </td>
-                                            <td class="auto-style22">
+                                            <td class="auto-style26">
                                                 <asp:TextBox ID="txtAmount" runat="server" ReadOnly="True" Width="116px"></asp:TextBox>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="auto-style17">
-                                                <asp:TextBox ID="txtTouristID" runat="server" Width="63px"></asp:TextBox>
-                                            </td>
-                                            <td class="auto-style22">
-                                                <asp:Label ID="lblTax" runat="server" Font-Bold="True" Text="Tax (15%):"></asp:Label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="auto-style17">&nbsp;</td>
-                                            <td class="auto-style22">
-                                                <asp:TextBox ID="txtTax" runat="server" ReadOnly="True" Width="119px"></asp:TextBox>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="auto-style17">
-                                                <asp:Label ID="lblNumberTickets" runat="server" Font-Bold="True" Text="Number of tickets:"></asp:Label>
-                                            </td>
-                                            <td class="auto-style22">
-                                                <asp:Label ID="lblTotalAmount" runat="server" Font-Bold="True" Text="Total Amount (ZAR):"></asp:Label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="auto-style17">
-                                                <asp:TextBox ID="txtNumberTickets" runat="server" ReadOnly="True" Width="63px"></asp:TextBox>
-                                            </td>
-                                            <td class="auto-style22">
-                                                <asp:TextBox ID="txtTotalAmount" runat="server" ReadOnly="True" Width="119px"></asp:TextBox>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="auto-style17">&nbsp;</td>
-                                            <td class="auto-style22">&nbsp;</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="auto-style18">
-                                                <asp:Label ID="lblArrivalDate" runat="server" Font-Bold="True" Text="Arrival date:"></asp:Label>
-                                            </td>
-                                            <td class="auto-style22">
-                                                <asp:Button ID="btnMakePayment" runat="server" BackColor="#009933" Font-Bold="True" ForeColor="White" OnClick="btnMakePayment_Click" Text="Make payment" Width="229px" />
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="auto-style17">
-                                                <asp:TextBox ID="txtArrivalDate" runat="server" ReadOnly="True" Width="152px"></asp:TextBox>
                                             </td>
                                             <td class="auto-style22">
                                                 &nbsp;</td>
                                         </tr>
                                         <tr>
                                             <td class="auto-style17">&nbsp;</td>
+                                            <td class="auto-style26">
+                                                &nbsp;</td>
                                             <td class="auto-style22">
+                                                &nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="auto-style17">
+                                                <asp:Label ID="lblTax" runat="server" Font-Bold="True" Text="Tax (15%):"></asp:Label>
+                                            </td>
+                                            <td class="auto-style26">
+                                                <asp:TextBox ID="txtTax" runat="server" ReadOnly="True" Width="119px"></asp:TextBox>
+                                            </td>
+                                            <td class="auto-style22">
+                                                &nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="auto-style17">&nbsp;</td>
+                                            <td class="auto-style26">
+                                                &nbsp;</td>
+                                            <td class="auto-style22">
+                                                &nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="auto-style17">
+                                                <asp:Label ID="lblTotalAmount" runat="server" Font-Bold="True" Text="Total Amount (ZAR):"></asp:Label>
+                                            </td>
+                                            <td class="auto-style26">
+                                                <asp:TextBox ID="txtTotalAmount" runat="server" ReadOnly="True" Width="119px"></asp:TextBox>
+                                            </td>
+                                            <td class="auto-style22">
+                                                &nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="auto-style17">&nbsp;</td>
+                                            <td class="auto-style26">
+                                                &nbsp;</td>
+                                            <td class="auto-style22">
+                                                &nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="auto-style17">
+                                                <asp:Button ID="btnMakePayment" runat="server" BackColor="#009933" Font-Bold="True" ForeColor="White" OnClick="btnMakePayment_Click" Text="Make payment" Width="229px" />
+                                            </td>
+                                            <td class="auto-style26">
+                                                &nbsp;</td>
+                                            <td class="auto-style22">
+                                                &nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="auto-style17">&nbsp;</td>
+                                            <td class="auto-style26">
+                                                &nbsp;</td>
+                                            <td class="auto-style22">
+                                                &nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="auto-style17">
                                                 <asp:Label ID="lblOutput" runat="server" Font-Bold="True" Visible="False"></asp:Label>
                                             </td>
+                                            <td class="auto-style26">
+                                                &nbsp;</td>
+                                            <td class="auto-style22">
+                                                &nbsp;</td>
                                         </tr>
                                         </table>
                                 </td>

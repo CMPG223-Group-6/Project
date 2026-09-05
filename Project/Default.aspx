@@ -85,6 +85,9 @@
             text-align: center;
             height: 40px;
         }
+        .auto-style31 {
+            height: 52px;
+        }
     </style>
 </head>
 <body>
@@ -120,7 +123,7 @@
                     <asp:Panel ID="pnlLogin" runat="server" GroupingText="Login" Height="542px">
                         <table style="width:100%;">
                             <tr>
-                                <td>
+                                <td class="auto-style31">
                                     <br />
                                     <asp:Label ID="lblEmail" runat="server" Text="Email:"></asp:Label>
                                 </td>

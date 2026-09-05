@@ -107,12 +107,13 @@
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style8">
-                    &nbsp;</td>
-                <td class="auto-style3">
+                <td class="auto-style9">
+                    </td>
+                <td class="auto-style6">
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtCardholderName" ErrorMessage="Please enter name!" Font-Bold="True" ForeColor="#FF3300"></asp:RequiredFieldValidator>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtCardholderName" ErrorMessage="Name must only contain letters." Font-Bold="True" ForeColor="#FF3300" ValidationExpression="^[A-Za-z ]+$"></asp:RegularExpressionValidator>
                 </td>
-                <td>&nbsp;</td>
+                <td class="auto-style7"></td>
             </tr>
             <tr>
                 <td class="auto-style8">
@@ -135,6 +136,7 @@
                     &nbsp;</td>
                 <td class="auto-style3">
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtCardholderSurname" ErrorMessage="Please enter surname!" Font-Bold="True" ForeColor="#FF3300"></asp:RequiredFieldValidator>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="txtCardholderSurname" ErrorMessage="Surname must only contain letters." Font-Bold="True" ForeColor="#FF3300" ValidationExpression="^[A-Za-z ]+$"></asp:RegularExpressionValidator>
                 </td>
                 <td>&nbsp;</td>
             </tr>
@@ -165,7 +167,7 @@
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtExpiryDate" ErrorMessage="*" Font-Bold="True" ForeColor="#FF3300"></asp:RequiredFieldValidator>
                                 </td>
                                 <td>
-                                    <asp:TextBox ID="txtCVV" runat="server" OnTextChanged="txtCVV_TextChanged" Placeholder="XXX" Width="59px"></asp:TextBox>
+                                    <asp:TextBox ID="txtCVV" runat="server" OnTextChanged="txtCVV_TextChanged" Placeholder="XXXX" Width="59px"></asp:TextBox>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtCVV" ErrorMessage="*" Font-Bold="True" ForeColor="#FF3300"></asp:RequiredFieldValidator>
                                 </td>
                             </tr>
@@ -184,7 +186,12 @@
                 <td class="auto-style8">
                     &nbsp;</td>
                 <td>
-                    &nbsp;</td>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="txtCardNumber" ErrorMessage="Card number must only contain numbers." Font-Bold="True" ForeColor="#FF3300" ValidationExpression="^[0-9]+$"></asp:RegularExpressionValidator>
+                    <br />
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ErrorMessage="Expiry date must be in MM/YY format." ControlToValidate="txtExpiryDate" Font-Bold="True" ForeColor="#FF3300" ValidationExpression="^[0-9]{2}/[0-9]{2}$"></asp:RegularExpressionValidator>
+                    <br />
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator5" runat="server" ControlToValidate="txtCVV" ErrorMessage="CVV must contain 3 or 4 digits." Font-Bold="True" ForeColor="#FF3300" ValidationExpression="^[0-9]{3,4}$"></asp:RegularExpressionValidator>
+                </td>
             </tr>
             <tr>
                 <td class="auto-style8">

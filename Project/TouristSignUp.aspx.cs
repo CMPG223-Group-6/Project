@@ -17,7 +17,35 @@ namespace Project
         string connectionString = @"Data Source=localhost;Initial Catalog=zims.db;Integrated Security=True;Encrypt=False";
         protected void Page_Load(object sender, EventArgs e)
         {
+            if(!IsPostBack)
+            {
+                LoadCountries();
+            }
+        }
 
+        private void LoadCountries()
+        {
+            string sql = @"SELECT COUNTRY_ID, Country_Name FROM COUNTRY ORDER BY Country_Name";
+
+            using (SqlConnection cnn = new SqlConnection(connectionString))
+            {
+                using(SqlCommand cmd = new SqlCommand(sql, cnn))
+                {
+                    cnn.Open();
+
+                    using(SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        ddlCountry.Items.Clear();
+
+                        ddlCountry.Items.Add(new ListItem("-- Select Country --"));
+
+                        while(reader.Read())
+                        {
+                            ddlCountry.Items.Add(new ListItem(reader["Country_Name"].ToString(), reader["COUNTRY_ID"].ToString()));
+                        }
+                    }
+                }
+            }
         }
 
         protected void lbtnHaveAnAccount_Click(object sender, EventArgs e)
@@ -42,19 +70,20 @@ namespace Project
             string name = txtName.Text.Trim();
             string surname = txtSurname.Text.Trim();
             string email = txtEmail.Text.Trim();
-            string country = txtCountry.Text.Trim();
             string phoneNumber = txtPhoneNumber.Text.Trim();
             string password = txtPassword.Text.Trim();
 
-            string sql = @"SELECT COUNTRY_ID FROM COUNTRY WHERE LOWER(Country_Name) = LOWER(@Country)";
+            
 
-            int countryID;
+            int countryID = Convert.ToInt32(ddlCountry.SelectedValue);
+
+            string checkEmail = @"SELECT Email_Address FROM TOURIST WHERE Email_Address = @Email";
 
             using(SqlConnection cnn = new SqlConnection(connectionString))
             {
-                using (SqlCommand cmd = new SqlCommand(sql, cnn))
+                using(SqlCommand cmd = new SqlCommand(checkEmail, cnn))
                 {
-                    cmd.Parameters.AddWithValue("@Country", country);
+                    cmd.Parameters.AddWithValue("@Email", email);
 
                     cnn.Open();
 
@@ -62,11 +91,8 @@ namespace Project
                     {
                         if(reader.Read())
                         {
-                            countryID = Convert.ToInt32(reader["COUNTRY_ID"]);
-                        }
-                        else
-                        {
-                            lblCountryNoExists.Text = "Country does not exist.";
+                            lblOutput.Text = "A user with this email already exists.";
+                            lblOutput.Visible = true;
 
                             return;
                         }
@@ -76,11 +102,11 @@ namespace Project
 
             string hashedPassword = HashPassword(password);
 
-            string sql2 = @"INSERT INTO TOURIST(Tourist_LastName, Tourist_FirstName, Contact_Number, Email_Address, User_Password, Country_ID) VALUES(@LastName, @FirstName, @ContactNumber, @Email, @Password, @CountryID)";
+            string sql = @"INSERT INTO TOURIST(Tourist_LastName, Tourist_FirstName, Contact_Number, Email_Address, User_Password, Country_ID) VALUES(@LastName, @FirstName, @ContactNumber, @Email, @Password, @CountryID)";
 
             using (SqlConnection cnn = new SqlConnection(connectionString))
             {
-                using (SqlCommand cmd = new SqlCommand(sql2, cnn))
+                using (SqlCommand cmd = new SqlCommand(sql, cnn))
                 {
                     cmd.Parameters.AddWithValue("@LastName", surname);
                     cmd.Parameters.AddWithValue("@FirstName", name);
@@ -95,11 +121,11 @@ namespace Project
                 }
             }
 
-            string sql3 = @"SELECT TOURIST_ID FROM TOURIST WHERE Email_Address = @Email";
+            string sql2 = @"SELECT TOURIST_ID FROM TOURIST WHERE Email_Address = @Email";
 
             using (SqlConnection cnn = new SqlConnection(connectionString))
             {
-                using (SqlCommand cmd = new SqlCommand(sql3, cnn))
+                using (SqlCommand cmd = new SqlCommand(sql2, cnn))
                 {
                     cmd.Parameters.AddWithValue("@Email", email);
 

@@ -129,7 +129,7 @@ namespace Project
 
                                     Session.Timeout = 10;
 
-                                    Response.Redirect("TouristMenu.aspx");
+                                    Response.Redirect("MyOverview.aspx");
 
                                     return;
                                 }

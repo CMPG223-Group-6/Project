@@ -11,10 +11,17 @@ namespace Project
     public partial class Payment : System.Web.UI.Page
     {
 
+        private int touristID;
+
         string connectionString = @"Data Source=localhost;Initial Catalog=zims.db;Integrated Security=True;Encrypt=False";
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!IsPostBack)
+            if (Session["Tourist_ID"] != null)
+            {
+                touristID = int.Parse(Session["Tourist_ID"].ToString());
+            }
+
+            if (!IsPostBack)
             {
                 LoadBookingIDs();
 
@@ -24,7 +31,7 @@ namespace Project
 
         private void LoadBookingIDs()
         {
-            string sql = @"SELECT Booking_ID FROM BOOKING ORDER BY Booking_ID";
+            string sql = @"SELECT Booking_ID FROM BOOKING WHERE TOURIST_ID = @Touristid AND Payment_Made = 0";
 
             using(SqlConnection cnn = new SqlConnection(connectionString))
             {
@@ -32,6 +39,7 @@ namespace Project
                 {
                     cnn.Open();
 
+                    cmd.Parameters.AddWithValue("@Touristid", touristID);
                     using(SqlDataReader reader = cmd.ExecuteReader())
                     {
                         ddlBookingID.Items.Clear();
@@ -78,6 +86,13 @@ namespace Project
             lblOutput.Visible = false;
 
             lblOutput.Text = "";
+
+            if(ddlBookingID.SelectedValue == "")
+            {
+                ClearBookingDetails();
+
+                return;
+            }
 
             Session["Booking_ID"] = ddlBookingID.SelectedValue;
 

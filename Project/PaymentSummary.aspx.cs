@@ -30,7 +30,7 @@ namespace Project
 
             int bookingID = Convert.ToInt32(Session["Booking_ID"]);
 
-            string sql = @"SELECT B.Booking_ID, B.Tourist_ID, B.Event_ID, E.EventType_ID, B.Number_Tickets, B.Arrive_Date, B.Payment_method, B.Payment_Amount, B.Amount_Owed FROM BOOKING B INNER JOIN EVENT E ON B.Event_ID = E.Event_ID WHERE B.Booking_ID = @BookingID";
+            string sql = @"SELECT B.Booking_ID, B.Tourist_ID, T.Tourist_FirstName, T.Tourist_LastName, B.Event_ID, E.EventType_ID, B.Number_Tickets, B.Arrive_Date, B.Payment_method, B.Payment_Amount, B.Amount_Owed FROM BOOKING B INNER JOIN EVENT E ON B.Event_ID = E.Event_ID INNER JOIN TOURIST T ON B.Tourist_ID = T.Tourist_ID WHERE B.Booking_ID = @BookingID";
 
             using(SqlConnection cnn = new SqlConnection(connectionString))
             {
@@ -46,7 +46,11 @@ namespace Project
                         {
                             lblBookingIDOutput.Text = reader["Booking_ID"].ToString();
 
-                            lblTouristIDOutput.Text = reader["Tourist_ID"].ToString();
+                            string firstName = reader["Tourist_FirstName"].ToString();
+
+                            string lastName = reader["Tourist_LastName"].ToString();
+
+                            lblTouristNameOutput.Text = firstName + " " + lastName;
 
                             lblEventIDOutput.Text = reader["Event_ID"].ToString();
 
