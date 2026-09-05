@@ -102,22 +102,8 @@
                             </tr>
                             <tr>
                                 <td class="auto-style2" style="border-style: inset; border-color: #006600; background-color: #006600">
-                                    <asp:Label ID="lblZooNavigation" runat="server" Font-Size="Small" ForeColor="#999999" Text="NAVIGATION"></asp:Label>
                                     <br />
                                     <br />
-                                    <asp:Menu ID="Menu1" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="White">
-                                        <Items>
-                                            <asp:MenuItem NavigateUrl="~/MyOverview.aspx" Text="My Overview" Value="0"></asp:MenuItem>
-                                            <asp:MenuItem NavigateUrl="~/Bookings.aspx" Text="Bookings" Value="1"></asp:MenuItem>
-                                            <asp:MenuItem NavigateUrl="~/Payment.aspx" Text="Payment" Value="2"></asp:MenuItem>
-                                            <asp:MenuItem NavigateUrl="~/CheckIn.aspx" Text="Check - In" Value="3"></asp:MenuItem>
-                                            <asp:MenuItem NavigateUrl="~/ZooInformation.aspx" Text="Zoo Information" Value="4"></asp:MenuItem>
-                                            <asp:MenuItem></asp:MenuItem>
-                                            <asp:MenuItem></asp:MenuItem>
-                                            <asp:MenuItem></asp:MenuItem>
-                                        </Items>
-                                        <StaticHoverStyle BackColor="#669999" />
-                                    </asp:Menu>
                                 </td>
                                 <td class="auto-style9">
                                     <table style="width: 203%;">
@@ -368,16 +354,9 @@
                             </tr>
                             <tr>
                                 <td class="auto-style6" style="border-style: inset; border-color: #006600; background-color: #006600">
-                                    <asp:Menu ID="Menu2" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="White">
-                                        <Items>
-                                            <asp:MenuItem NavigateUrl="~/MyProfile.aspx" Text="My Profile"></asp:MenuItem>
-                                        </Items>
-                                        <StaticHoverStyle BackColor="#669999" />
-                                    </asp:Menu>
                                     <br />
                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <asp:Label ID="lblNameDisplay" runat="server" Font-Size="Small" ForeColor="#999999"></asp:Label>
-                                </td>
+                                    </td>
                                 <td class="auto-style10">
                                     &nbsp;</td>
                                 <td class="auto-style7">
@@ -387,7 +366,7 @@
                                 <td class="auto-style1" style="border-style: inset; border-color: #006600; background-color: #006600">
                                     <asp:Menu ID="Menu3" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="White">
                                         <Items>
-                                            <asp:MenuItem Text="Sign Out" NavigateUrl="~/MyOverview.aspx"></asp:MenuItem>
+                                            <asp:MenuItem Text="Back" NavigateUrl="~/MyOverview.aspx" Value="Back"></asp:MenuItem>
                                         </Items>
                                         <StaticHoverStyle BorderColor="#669999" />
                                     </asp:Menu>

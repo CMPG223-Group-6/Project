@@ -43,9 +43,35 @@ namespace Project
                     reader.Close();
                 }
                 loadBookings();
-                
+                loadTourists();
             }
                
+        }
+
+        private void loadTourists()
+        {
+            using (SqlConnection conn = new SqlConnection(conStr))
+            {
+                conn.Open();
+                string sql = @"SELECT T.Tourist_ID, 
+                      T.Tourist_LastName, 
+                      T.Tourist_FirstName, 
+                      T.Contact_Number, 
+                      T.Email_Address, 
+                      C.Country_Name
+               FROM TOURIST T, COUNTRY C
+               WHERE T.Country_ID = C.Country_ID";
+
+                SqlCommand comm = new SqlCommand(sql, conn);
+                SqlDataAdapter adap = new SqlDataAdapter();
+                DataSet ds = new DataSet();
+
+                adap.SelectCommand = comm;
+                adap.Fill(ds, "TOURIST");
+
+                gvTourists.DataSource = ds;
+                gvTourists.DataBind();
+            }
         }
 
         private void loadBookings()
@@ -238,8 +264,8 @@ namespace Project
                         {
                             conn.Open();
 
-                            string sql = "INSERT INTO BOOKING (Event_ID, Tourist_ID, Number_Tickets, Arrive_Date, Payment_method, Payment_Amount, Amount_Owed, Payment_Made)" +
-                                         "VALUES (@eventID, @touristID, @numTickets, @date, @payment_method, @amount, @amount_owed, @paymentMade)";
+                            string sql = "INSERT INTO BOOKING (Event_ID, Tourist_ID, Number_Tickets, Arrive_Date, Payment_method, Payment_Amount, Amount_Owed, Payment_Made, Checked_In, Checked_Out)" +
+                                         "VALUES (@eventID, @touristID, @numTickets, @date, @payment_method, @amount, @amount_owed, @paymentMade, @checkedIn, @checkedOut)";
                             using (SqlCommand comm = new SqlCommand(sql, conn))
                             {
                                 comm.Parameters.AddWithValue("@eventID", ddlEventID.SelectedItem.Text);
@@ -256,6 +282,8 @@ namespace Project
                                     paymentMade = true;
                                 }
                                 comm.Parameters.AddWithValue("@paymentMade", paymentMade);
+                                comm.Parameters.AddWithValue("@checkedIn", false);
+                                comm.Parameters.AddWithValue("@checkedOut", false);
                                 comm.ExecuteNonQuery();
                             }
 
@@ -272,6 +300,7 @@ namespace Project
                         lblOutput.Text = "Booking Added Successful";
                         clearFields();
                         loadBookings();
+                        loadTourists();
                     }
                 }
                 
@@ -345,6 +374,34 @@ namespace Project
         protected void txtArriveDate_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        protected void txtTouristID_TextChanged(object sender, EventArgs e)
+        {
+            using (SqlConnection conn = new SqlConnection(conStr))
+            {
+                conn.Open();
+                string sql = @"SELECT T.Tourist_ID, 
+                      T.Tourist_LastName, 
+                      T.Tourist_FirstName, 
+                      T.Contact_Number, 
+                      T.Email_Address, 
+                      C.Country_Name
+               FROM TOURIST T, COUNTRY C
+               WHERE TOURIST_ID = @tourist_id
+               AND T.Country_ID = C.Country_ID";
+
+                SqlCommand comm = new SqlCommand(sql, conn);
+                comm.Parameters.AddWithValue("@tourist_id", int.Parse(txtTouristID.Text)); 
+                SqlDataAdapter adap = new SqlDataAdapter();
+                DataSet ds = new DataSet();
+
+                adap.SelectCommand = comm;
+                adap.Fill(ds, "TOURIST");
+
+                gvTourists.DataSource = ds;
+                gvTourists.DataBind();
+            }
         }
     }
 }

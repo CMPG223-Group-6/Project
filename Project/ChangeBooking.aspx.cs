@@ -468,7 +468,16 @@ namespace Project
                             cmd.Parameters.AddWithValue("@paymentMethod", paymentMethod);
                             cmd.Parameters.AddWithValue("@paymentAmount", paymentTotal);
                             cmd.Parameters.AddWithValue("@amountOwed", amountOwed);
-                            cmd.Parameters.AddWithValue("@paymentMade", ispaymentMade);
+
+                            if(cbxPayment.Checked)
+                            {
+                                cmd.Parameters.AddWithValue("@paymentMade", true);
+                            }
+                            else
+                            {
+                                cmd.Parameters.AddWithValue("@paymentMade", false);
+                            }
+                                
                             cmd.Parameters.AddWithValue("@ticketsAvailable", ticketAvailable);
                             cmd.ExecuteNonQuery();
                         }

@@ -96,6 +96,7 @@
                     </td>
                     <td class="auto-style39">
                                         <asp:Label ID="lblTouristID" runat="server" Text="Tourist ID"></asp:Label>
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtTouristID" ErrorMessage="*" ForeColor="Red" ValidationGroup="TouristID"></asp:RequiredFieldValidator>
                                         <br />
                                         <asp:TextBox ID="txtTouristID" runat="server" Height="30px" TextMode="Number"></asp:TextBox>
                                         <br />
@@ -106,7 +107,7 @@
                 </tr>
                 <tr>
                     <td class="auto-style39">
-                                        <asp:Button ID="btnLoad" runat="server" Height="33px" OnClick="btnLoad_Click" Text="Load" Width="162px" />
+                                        <asp:Button ID="btnLoad" runat="server" Height="33px" OnClick="btnLoad_Click" Text="Load" Width="162px" ValidationGroup="TouristID" />
                                         <br />
                                         <br />
                     </td>

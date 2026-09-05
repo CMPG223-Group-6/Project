@@ -11,7 +11,7 @@ namespace Project
     public partial class Payment : System.Web.UI.Page
     {
 
-        private int touristID;
+        private int touristID = 3;
 
         string connectionString = @"Data Source=localhost;Initial Catalog=zims.db;Integrated Security=True;Encrypt=False";
         protected void Page_Load(object sender, EventArgs e)
@@ -111,7 +111,8 @@ namespace Project
             {
                 int bookingID = Convert.ToInt32(ddlBookingID.SelectedValue);
 
-                string sql = @"UPDATE BOOKING SET Payment_method = @PaymentMethod, Payment_Made = 0 WHERE Booking_ID = @BookingID";
+                string sql = @"UPDATE BOOKING SET Payment_method = @PaymentMethod, Payment_Made = 0 WHERE Booking_ID = @BookingID 
+                                AND Tourist_ID = @touristID";
 
                 using(SqlConnection cnn = new SqlConnection(connectionString))
                 {
@@ -120,6 +121,7 @@ namespace Project
                         cmd.Parameters.AddWithValue("@PaymentMethod", "Cash");
 
                         cmd.Parameters.AddWithValue("@BookingID", bookingID);
+                        cmd.Parameters.AddWithValue("@touristID", touristID);
 
                         cnn.Open();
 

@@ -20,7 +20,7 @@
         }
         .auto-style15 {
             width: 450px;
-            height: 706px;
+            height: 564px;
         }
         .auto-style5 {
             width: 450px;
@@ -85,7 +85,7 @@
                                     <td class="auto-style16">
                                         <asp:Label ID="lblTouristID" runat="server" Text="Enter Tourist ID:"></asp:Label>
                                         <br />
-                                        <asp:TextBox ID="txtTouristID" runat="server" TextMode="Number" Width="145px"></asp:TextBox>
+                                        <asp:TextBox ID="txtTouristID" runat="server" TextMode="Number" Width="145px" AutoPostBack="True" OnTextChanged="txtTouristID_TextChanged"></asp:TextBox>
                                         <asp:RequiredFieldValidator ID="rfvTouristID" runat="server" ControlToValidate="txtTouristID" ErrorMessage="Please enter your Tourist ID!" ForeColor="Red"></asp:RequiredFieldValidator>
                                         <br />
                                         <br />
@@ -127,9 +127,10 @@
                                 <tr>
                                     <td class="auto-style17">
                                         <asp:Label ID="lblPaymentMethod" runat="server" Text="Payment Method:"></asp:Label>
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="ddlPaymentMethod" ErrorMessage="Select Payement Method" ForeColor="Red" InitialValue="0"></asp:RequiredFieldValidator>
                                         <br />
                                         <asp:DropDownList ID="ddlPaymentMethod" runat="server" Height="26px" Width="221px">
-                                            <asp:ListItem>Select a Payment Method</asp:ListItem>
+                                            <asp:ListItem Value="0">Select a Payment Method</asp:ListItem>
                                             <asp:ListItem Value="1">Cash</asp:ListItem>
                                             <asp:ListItem Value="2">Debit Card</asp:ListItem>
                                             <asp:ListItem Value="3">Credit Card</asp:ListItem>
@@ -184,19 +185,37 @@
                         </asp:Panel>
                     </td>
                     <td class="auto-style15">
-                        <asp:GridView ID="gvEvents" runat="server" Height="303px" Width="603px" CellPadding="4" ForeColor="#333333" GridLines="None">
-                            <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
-                            <EditRowStyle BackColor="#999999" />
-                            <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-                            <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-                            <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
-                            <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
-                            <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
-                            <SortedAscendingCellStyle BackColor="#E9E7E2" />
-                            <SortedAscendingHeaderStyle BackColor="#506C8C" />
-                            <SortedDescendingCellStyle BackColor="#FFFDF8" />
-                            <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
-                        </asp:GridView>
+                        <asp:Panel ID="pnlTourist" runat="server" GroupingText="Tourists" Height="305px" ScrollBars="Both" Width="602px">
+                            <asp:GridView ID="gvTourists" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Height="271px" Width="572px">
+                                <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+                                <EditRowStyle BackColor="#999999" />
+                                <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                                <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                                <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                                <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+                                <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+                                <SortedAscendingCellStyle BackColor="#E9E7E2" />
+                                <SortedAscendingHeaderStyle BackColor="#506C8C" />
+                                <SortedDescendingCellStyle BackColor="#FFFDF8" />
+                                <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
+                            </asp:GridView>
+                        </asp:Panel>
+                        <br />
+                        <asp:Panel ID="pnlEvents" runat="server" GroupingText="Events" Height="261px" ScrollBars="Both" Width="607px">
+                            <asp:GridView ID="gvEvents" runat="server" Height="303px" Width="603px" CellPadding="4" ForeColor="#333333" GridLines="None">
+                                <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+                                <EditRowStyle BackColor="#999999" />
+                                <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                                <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                                <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                                <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+                                <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+                                <SortedAscendingCellStyle BackColor="#E9E7E2" />
+                                <SortedAscendingHeaderStyle BackColor="#506C8C" />
+                                <SortedDescendingCellStyle BackColor="#FFFDF8" />
+                                <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
+                            </asp:GridView>
+                        </asp:Panel>
                     </td>
                 </tr>
                 <tr>

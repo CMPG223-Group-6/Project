@@ -67,10 +67,10 @@
                                             <asp:MenuItem NavigateUrl="~/MyOverview.aspx" Text="My Overview" Value="0"></asp:MenuItem>
                                             <asp:MenuItem NavigateUrl="~/Bookings.aspx" Text="Bookings" Value="1"></asp:MenuItem>
                                             <asp:MenuItem NavigateUrl="~/Payment.aspx" Text="Payment" Value="2"></asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/ChatBot.aspx" Text="AI Chat"></asp:MenuItem>
                                             <asp:MenuItem NavigateUrl="~/CheckIn.aspx" Text="Check - In" Value="3"></asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/Checkout.aspx" Text="Check Out"></asp:MenuItem>
                                             <asp:MenuItem NavigateUrl="~/ZooInformation.aspx" Text="Zoo Information" Value="4"></asp:MenuItem>
-                                            <asp:MenuItem></asp:MenuItem>
-                                            <asp:MenuItem></asp:MenuItem>
                                             <asp:MenuItem></asp:MenuItem>
                                         </Items>
                                         <StaticHoverStyle BackColor="#669999" />

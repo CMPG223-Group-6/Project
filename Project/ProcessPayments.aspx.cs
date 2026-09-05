@@ -253,7 +253,7 @@ namespace Project
 
                             if (paymentMade)
                             {
-                                lblPaymentProcessedOutput.Text = "Payment has already been processed"; //When the tourist paid with Cash/Credit Card/Debit Card and Payment_Made is true.
+                                lblPaymentProcessedOutput.Text = "Payment has been processed"; //When the tourist paid with Cash/Credit Card/Debit Card and Payment_Made is true.
 
                                 lblPaymentProcessedOutput.Visible = true;
 

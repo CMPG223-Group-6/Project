@@ -252,6 +252,7 @@ namespace Project
 
         protected void btnLoad_Click(object sender, EventArgs e)
         {
+            
             int touristID = int.Parse(txtTouristID.Text);
            
             ddlBookingID.Items.Clear();

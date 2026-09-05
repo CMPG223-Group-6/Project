@@ -62,10 +62,10 @@
                                             <asp:MenuItem NavigateUrl="~/MyOverview.aspx" Text="My Overview" Value="0"></asp:MenuItem>
                                             <asp:MenuItem NavigateUrl="~/Bookings.aspx" Text="Bookings" Value="1"></asp:MenuItem>
                                             <asp:MenuItem NavigateUrl="~/Payment.aspx" Text="Payment" Value="2"></asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/ChatBot.aspx" Text="AI Chat"></asp:MenuItem>
                                             <asp:MenuItem NavigateUrl="~/CheckIn.aspx" Text="Check - In" Value="3"></asp:MenuItem>
-                                            <asp:MenuItem NavigateUrl="~/ZooInformation.aspx" Text="Zoo Information" Value="4"></asp:MenuItem>
                                             <asp:MenuItem Text="Check Out" Value="5" NavigateUrl="~/Checkout.aspx"></asp:MenuItem>
-                                            <asp:MenuItem></asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/ZooInformation.aspx" Text="Zoo Information" Value="4"></asp:MenuItem>
                                             <asp:MenuItem></asp:MenuItem>
                                         </Items>
                                         <StaticHoverStyle BackColor="#669999" />
@@ -171,7 +171,7 @@
                                 <td class="auto-style1" style="border-style: inset; border-color: #006600; background-color: #006600">
                                     <asp:Menu ID="Menu3" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="White">
                                         <Items>
-                                            <asp:MenuItem Text="Sign Out"></asp:MenuItem>
+                                            <asp:MenuItem Text="Sign Out" NavigateUrl="~/Default.aspx"></asp:MenuItem>
                                         </Items>
                                         <StaticHoverStyle BorderColor="#669999" />
                                     </asp:Menu>
