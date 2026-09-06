@@ -103,7 +103,7 @@
                         <br />
                         <asp:Label ID="lblReview" runat="server" Text="Write a review"></asp:Label>
                         <br />
-                        <asp:TextBox ID="txtInputreview" runat="server" MaxLength="50" TextMode="MultiLine" Width="283px"></asp:TextBox>
+                        <asp:TextBox ID="txtInputreview" runat="server" MaxLength="45" TextMode="MultiLine" Width="283px"></asp:TextBox>
                         <br />
                         &nbsp;<br />
                         <asp:Button ID="btnSubmitRating" runat="server" BackColor="#33CC33" Height="45px" OnClick="btnSubmitRating_Click" Text="Submit rating" Width="211px" ValidationGroup="btnConfirmExit" />
