@@ -166,7 +166,6 @@ C:\Users\thand\OneDrive\Documents\GitHub\CMPG223 Project\Project\Project\bin\ros
 C:\Users\thand\OneDrive\Documents\GitHub\CMPG223 Project\Project\Project\bin\roslyn\vbc.rsp
 C:\Users\thand\OneDrive\Documents\GitHub\CMPG223 Project\Project\Project\bin\roslyn\VBCSCompiler.exe
 C:\Users\thand\OneDrive\Documents\GitHub\CMPG223 Project\Project\Project\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\thand\OneDrive\Documents\GitHub\CMPG223 Project\Project\Project\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\thand\OneDrive\Documents\GitHub\CMPG223 Project\Project\Project\obj\Debug\Project.csproj.AssemblyReference.cache
 C:\Users\thand\OneDrive\Documents\GitHub\CMPG223 Project\Project\Project\obj\Debug\Project.csproj.CoreCompileInputs.cache
 C:\Users\thand\OneDrive\Documents\GitHub\CMPG223 Project\Project\Project\obj\Debug\Project.csproj.Up2Date

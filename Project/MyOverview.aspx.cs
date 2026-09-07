@@ -135,5 +135,10 @@ namespace Project
         {
 
         }
+
+        protected void gdvDisplayEvents_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

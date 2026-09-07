@@ -105,13 +105,13 @@ namespace Project
         protected global::System.Web.UI.WebControls.DropDownList ddlBookingEvents0;
 
         /// <summary>
-        /// rfvBookingIDTourist0 control.
+        /// rfvBookingIDTourist1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvBookingIDTourist0;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvBookingIDTourist1;
 
         /// <summary>
         /// btnCheck control.
@@ -132,6 +132,15 @@ namespace Project
         protected global::System.Web.UI.WebControls.Label lblOutput;
 
         /// <summary>
+        /// btnpayment control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnpayment;
+
+        /// <summary>
         /// pnlCurrentBookings control.
         /// </summary>
         /// <remarks>
@@ -141,13 +150,13 @@ namespace Project
         protected global::System.Web.UI.WebControls.Panel pnlCurrentBookings;
 
         /// <summary>
-        /// gdvDisplay control.
+        /// gvBookings control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gdvDisplay;
+        protected global::System.Web.UI.WebControls.GridView gvBookings;
 
         /// <summary>
         /// Menu2 control.

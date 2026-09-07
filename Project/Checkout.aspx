@@ -66,20 +66,18 @@
                                 </td>
                     <td class="auto-style7">
                         <asp:Label ID="lblVerifyExit" runat="server" style="text-align: left; font-size: large" Text="Enter Booking ID"></asp:Label>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="ddlBookingIDDetails" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="ddlBookingIDDetails" ErrorMessage="*" ForeColor="Red" InitialValue="0" ValidationGroup="exit"></asp:RequiredFieldValidator>
                         <br />
                         <br />
-                        <asp:DropDownList ID="ddlBookingIDDetails" runat="server" Height="31px" Width="242px">
-                            <asp:ListItem>1</asp:ListItem>
-                            <asp:ListItem>2</asp:ListItem>
-                            <asp:ListItem>3</asp:ListItem>
+                        <asp:DropDownList ID="ddlBookingIDDetails" runat="server" Height="31px" Width="242px" OnSelectedIndexChanged="ddlBookingIDDetails_SelectedIndexChanged" AutoPostBack="True">
                         </asp:DropDownList>
                         <br />
                         <br />
-                        <asp:Button ID="btnConfirmExit" runat="server" Height="47px" Text="Confirm Exit" Width="276px" BackColor="#33CC33" OnClick="btnConfirmExit_Click" />
+                        <asp:Button ID="btnConfirmExit" runat="server" Height="47px" Text="Confirm Exit" Width="276px" BackColor="#33CC33" OnClick="btnConfirmExit_Click" ValidationGroup="exit" />
                         <br />
                         <br />
                         <asp:Label ID="lblConfirmMessage" runat="server"></asp:Label>
+                        &nbsp;
                         <br />
                     </td>
                     <td class="auto-style5">
@@ -90,20 +88,28 @@
                         <br />
                         <br />
                         <asp:RadioButton ID="rbStar1" runat="server" GroupName="Rating" Text="★" />
-                        &nbsp;
+                        <br />
                         <asp:RadioButton ID="rbStar2" runat="server" GroupName="Rating" Text="★★" />
                         &nbsp;
+                        <br />
                         <asp:RadioButton ID="rbStar3" runat="server" GroupName="Rating" Text="★★★" />
                         &nbsp;
+                        <br />
                         <asp:RadioButton ID="rbStar4" runat="server" GroupName="Rating" Text="★★★★" />
-                        &nbsp;
+                        &nbsp;<br />
                         <asp:RadioButton ID="rbStar5" runat="server" GroupName="Rating" Text="★★★★★" />
                         <br />
                         <br />
-                        &nbsp;<asp:Button ID="btnSubmitRating" runat="server" BackColor="#33CC33" Height="45px" OnClick="btnSubmitRating_Click" Text="Submit rating" Width="211px" />
-                        <br />
-                        <br />
                         <asp:Label ID="lblResults" runat="server"></asp:Label>
+                        <br />
+                        <asp:Label ID="lblReview" runat="server" Text="Write a review"></asp:Label>
+                        <br />
+                        <asp:TextBox ID="txtInputreview" runat="server" MaxLength="45" TextMode="MultiLine" Width="283px"></asp:TextBox>
+                        <br />
+                        &nbsp;<br />
+                        <asp:Button ID="btnSubmitRating" runat="server" BackColor="#33CC33" Height="45px" OnClick="btnSubmitRating_Click" Text="Submit rating" Width="211px" ValidationGroup="btnConfirmExit" />
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:Label ID="lblError" runat="server" ForeColor="Red"></asp:Label>
                         <br />
                     </td>
                 </tr>
@@ -120,7 +126,7 @@
                         <asp:Label ID="lblNameDisplay" runat="server" Font-Size="Small" ForeColor="#999999"></asp:Label>
                     </td>
                     <td class="auto-style6" rowspan="2" colspan="2">
-                        <asp:Panel ID="Panel1" runat="server" GroupingText="Summary" Height="136px" style="margin-top: 0px" Width="1140px">
+                        <asp:Panel ID="Panel1" runat="server" GroupingText="Your information" Height="136px" style="margin-top: 0px" Width="1140px">
                             <asp:GridView ID="gvTouristActivitySummary" runat="server" Height="229px" Width="1323px">
                             </asp:GridView>
                             <br />

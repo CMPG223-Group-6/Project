@@ -29,6 +29,16 @@
             width: 327px;
             height: 86px;
         }
+        .auto-style12 {
+            width: 184px;
+        }
+        .auto-style13 {
+            width: 184px;
+            height: 33px;
+        }
+        .auto-style14 {
+            height: 33px;
+        }
     </style>
 </head>
 <body>
@@ -77,28 +87,25 @@
                                         <br />
                                         <table style="width: 100%; height: 172px;">
                                             <tr>
-                                                <td>
+                                                <td class="auto-style13">
                                                     <asp:Label ID="lblBookingID" runat="server" Text="Enter booking ID"></asp:Label>
-                                                    <br />
+                                                    &nbsp;<br />
                                                 </td>
-                                                <td>&nbsp;</td>
-                                                <td>&nbsp;</td>
+                                                <td class="auto-style14"></td>
+                                                <td class="auto-style14"></td>
                                             </tr>
                                             <tr>
-                                                <td>
+                                                <td class="auto-style12">
                                                     <br />
-                                                    <asp:DropDownList ID="ddlBookingEvents0" runat="server" Height="30px" Width="130px">
-                                                        <asp:ListItem>1</asp:ListItem>
-                                                        <asp:ListItem>2</asp:ListItem>
-                                                        <asp:ListItem>3</asp:ListItem>
+                                                    <asp:DropDownList ID="ddlBookingEvents0" runat="server" Height="30px" Width="130px" AutoPostBack="true" OnSelectedIndexChanged="ddlBookingEvents0_SelectedIndexChanged" style="margin-bottom: 0px"> 
                                                     </asp:DropDownList>
-                                                    <asp:RequiredFieldValidator ID="rfvBookingIDTourist0" runat="server" ControlToValidate="ddlBookingEvents0" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                                                    <asp:RequiredFieldValidator ID="rfvBookingIDTourist1" runat="server" ControlToValidate="ddlBookingEvents0" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
                                                 </td>
                                                 <td>&nbsp;</td>
                                                 <td>&nbsp;</td>
                                             </tr>
                                             <tr>
-                                                <td>
+                                                <td class="auto-style12">
                                                     <br />
                                                     <asp:Button ID="btnCheck" runat="server" BackColor="#33CC33" Height="36px" OnClick="btnCheck_Click" Text="Check In" Width="140px" />
                                                     <br />
@@ -107,23 +114,27 @@
                                                 <td>&nbsp;</td>
                                             </tr>
                                             <tr>
-                                                <td>
+                                                <td class="auto-style12">
                                                     <asp:Label ID="lblOutput" runat="server"></asp:Label>
-                                                </td>
-                                                <td>&nbsp;</td>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    </td>
+                                                <td>
+                                                    &nbsp;</td>
                                                 <td>&nbsp;</td>
                                             </tr>
                                             <tr>
-                                                <td>&nbsp;</td>
+                                                <td class="auto-style12">
+                                                    <asp:Button ID="btnpayment" runat="server" BackColor="#FF9900" OnClick="btnpayment_Click" Text="Payment" Visible="False" />
+                                                </td>
                                                 <td>&nbsp;</td>
                                                 <td>&nbsp;</td>
                                             </tr>
                                             <tr>
                                                 <td colspan="3">
                                                     <asp:Panel ID="pnlCurrentBookings" runat="server" GroupingText="Current Bookings">
-                                                        <br />
-                                                        <asp:GridView ID="gdvDisplay" runat="server" Width="1313px">
+                                                        <asp:GridView ID="gvBookings" runat="server" Width="1321px">
                                                         </asp:GridView>
+                                                        <br />
                                                     </asp:Panel>
                                                 </td>
                                             </tr>

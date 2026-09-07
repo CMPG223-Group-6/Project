@@ -69,6 +69,15 @@ namespace Project
         protected global::System.Web.UI.WebControls.Label lblTouristID;
 
         /// <summary>
+        /// rfvTouristId control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvTouristId;
+
+        /// <summary>
         /// txtTouristID control.
         /// </summary>
         /// <remarks>
@@ -96,6 +105,15 @@ namespace Project
         protected global::System.Web.UI.WebControls.Label lblBookingID2;
 
         /// <summary>
+        /// rfvBookingID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvBookingID;
+
+        /// <summary>
         /// ddlBookingEventsStaffcheckin control.
         /// </summary>
         /// <remarks>
@@ -112,6 +130,15 @@ namespace Project
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnCheck0;
+
+        /// <summary>
+        /// btnDone control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnDone;
 
         /// <summary>
         /// lblOutput control.
@@ -132,12 +159,12 @@ namespace Project
         protected global::System.Web.UI.WebControls.Panel pnlBookings;
 
         /// <summary>
-        /// GridView2 control.
+        /// gvBookingsStaffside control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView2;
+        protected global::System.Web.UI.WebControls.GridView gvBookingsStaffside;
     }
 }
