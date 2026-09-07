@@ -120,11 +120,14 @@ namespace Project
             {
                 conn.Open();
                 string sql = "SELECT SUM(Payment_Amount)" +
-                             "FROM BOOKING WHERE Tourist_ID = @touristID";
+                             "FROM BOOKING WHERE Tourist_ID = @touristID " +
+                             "AND Arrive_Date >= @Today" +
+                             " AND Checked_In = 0";
 
                 using (SqlCommand cmd = new SqlCommand(sql, conn))
                 {
                     cmd.Parameters.AddWithValue("@touristID", touristID);
+                    cmd.Parameters.AddWithValue("@Today", DateTime.Today);
                     object result = cmd.ExecuteScalar();
                     return result != DBNull.Value ? Convert.ToInt32(result) : 0;
                 }

@@ -71,11 +71,14 @@ namespace Project
                               WHERE B.Event_ID = E.Event_ID
                               AND E.EventType_ID = ET.EventType_ID
                               AND B.Tourist_ID = @Tourist_ID
+                              AND Arrive_Date >= @Today
+                              AND Checked_In = 0
                               ORDER BY B.Arrive_Date ASC"; 
 
                 using (SqlCommand cmd = new SqlCommand(sql, conn))
                 {
                     cmd.Parameters.AddWithValue("@Tourist_ID", Tourist_ID);
+                    cmd.Parameters.AddWithValue("@Today", DateTime.Today);
 
                     SqlDataAdapter adap = new SqlDataAdapter();
                     DataSet ds = new DataSet();
