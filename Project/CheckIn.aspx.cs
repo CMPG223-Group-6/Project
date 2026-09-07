@@ -15,7 +15,7 @@ namespace Project
 {
     public partial class CheckIn : System.Web.UI.Page
     {
-        int touristID ;
+        int touristID = 2;
 
         string ConnectionString = @"Data Source=localhost;Initial Catalog=zims.db;Integrated Security=True;Encrypt=False";
 

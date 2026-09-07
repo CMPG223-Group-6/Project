@@ -117,14 +117,15 @@
                                                 <td class="auto-style12">
                                                     <asp:Label ID="lblOutput" runat="server"></asp:Label>
                                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    <asp:Button ID="btnpayment" runat="server" BackColor="#FF9900" OnClick="btnpayment_Click" Text="Payment" Visible="False" />
-                                                </td>
+                                                    </td>
                                                 <td>
                                                     &nbsp;</td>
                                                 <td>&nbsp;</td>
                                             </tr>
                                             <tr>
-                                                <td class="auto-style12">&nbsp;</td>
+                                                <td class="auto-style12">
+                                                    <asp:Button ID="btnpayment" runat="server" BackColor="#FF9900" OnClick="btnpayment_Click" Text="Payment" Visible="False" />
+                                                </td>
                                                 <td>&nbsp;</td>
                                                 <td>&nbsp;</td>
                                             </tr>

@@ -282,6 +282,12 @@ namespace Project
 
         protected void ddlBookingEventsStaffcheckin_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if(ddlBookingEventsStaffcheckin.SelectedIndex == 0)
+            {
+                loadtouristbookings();
+                lblOutput.Text = "";
+                return;
+            }
             try  // populates ddl from bookings table
             {
                 using (SqlConnection conn = new SqlConnection(ConnectionString))

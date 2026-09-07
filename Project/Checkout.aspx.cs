@@ -14,7 +14,7 @@ namespace Project
     {
         string ConnectionString = @"Data Source= localhost;Initial Catalog=zims.db;Integrated Security=True";
 
-        int touristID;
+        int touristID = 2;
 
 
         protected void Page_Load(object sender, EventArgs e)
