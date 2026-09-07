@@ -1,12 +1,4 @@
 -- =========================================================
--- SCHEMA FIX-UP (run once before inserting data)
--- =========================================================
--- Your TOURIST.User_Password column is currently varchar(25).
--- A SHA256 hash rendered as hex is 64 characters, so the column
--- needs to be widened to varchar(255) as requested.
-ALTER TABLE TOURIST ALTER COLUMN User_Password varchar(255);
-
--- =========================================================
 -- STEP 1: DATA INSERTION
 -- =========================================================
 
@@ -30,16 +22,16 @@ INSERT INTO EVENTTYPE (Event_Name, Event_Description) VALUES
 -- Status: Active, Inactive, Full
 -- ---------------------------------------------------------
 INSERT INTO EVENT (EventType_ID, Event_Price, Max_Visitors, Tickets_Available, Status) VALUES
-(1, 150.00, 50, 50, 'Active'),
+(1, 150.00, 50, 45, 'Active'),
 (2, 100.00, 30, 0, 'Full'),
-(3, 200.00, 20, 12, 'Active'),
-(4, 120.00, 25, 25, 'Active'),
-(5, 180.00, 40, 5, 'Active'),
-(6, 90.00, 35, 35, 'Active'),
-(7, 160.00, 45, 0, 'Full'),
+(3, 200.00, 20, 14, 'Active'),
+(4, 120.00, 25, 20, 'Active'),
+(5, 180.00, 40, 35, 'Active'),
+(6, 90.00, 35, 30, 'Active'),
+(7, 160.00, 45, 38, 'Active'),
 (8, 250.00, 15, 15, 'Inactive'),
-(9, 80.00, 30, 20, 'Active'),
-(10, 175.00, 40, 40, 'Active');
+(9, 80.00, 30, 0, 'Full'),
+(10, 175.00, 40, 33, 'Active');
 
 -- ---------------------------------------------------------
 -- COUNTRY (all countries, alphabetical by Country_Name)
@@ -238,34 +230,74 @@ INSERT INTO COUNTRY (Country_Name, Country_PhoneNumber, Country_Domains) VALUES
 ('Zambia', '260', '.zm'),
 ('Zimbabwe', '263', '.zw');
 
--- ---------------------------------------------------------
--- TOURIST (10 rows) - Country_ID references COUNTRY table above
--- User_Password values are SHA256 hashes (hex, 64 chars) of:
--- Passw0rd1 ... Passw0rd10 respectively
--- ---------------------------------------------------------
-INSERT INTO TOURIST (Tourist_LastName, Tourist_FirstName, Contact_Number, Email_Address, User_Password, Country_ID) VALUES
-('Smith', 'John', '0123456789', 'john.smith@mail.com', '963ef1140e817de9c8597680a08c4a70aea11b67cf74a4716a1b05ad9a00d11a', (SELECT Country_ID FROM COUNTRY WHERE Country_Name = 'United States')),
-('Nkosi', 'Thandi', '0731234567', 'thandi.n@mail.com', '64036712376af58109c972db893bf7e87b3a5a06a4bcd5aa1e5d1e069b43a9dc', (SELECT Country_ID FROM COUNTRY WHERE Country_Name = 'South Africa')),
-('Tanaka', 'Yuki', '0819876543', 'yuki.tanaka@mail.com', '1315b953403a0187945db10de6b2fd184a3ae87b50d28f664146391b92874f20', (SELECT Country_ID FROM COUNTRY WHERE Country_Name = 'Japan')),
-('Muller', 'Hans', '0827654321', 'hans.muller@mail.com', 'f108cefe68f8acc8f087858a720e47bd95808717b81a3b1dfd4e71f88b32e30d', (SELECT Country_ID FROM COUNTRY WHERE Country_Name = 'Germany')),
-('Dubois', 'Claire', '0765432198', 'claire.dubois@mail.com', '6b3a372bb8bf8198aa58288806594eed2d9b39700e2da58ab83b468094d352f8', (SELECT Country_ID FROM COUNTRY WHERE Country_Name = 'France')),
-('Silva', 'Mateus', '0712349876', 'mateus.silva@mail.com', 'd7bf65dc21a91361160c3cb545df9865771a6366bc1d2f464ab440665fdf7620', (SELECT Country_ID FROM COUNTRY WHERE Country_Name = 'Brazil')),
-('Khumalo', 'Lindiwe', '0798765432', 'lindiwe.k@mail.com', '371f1b44aef8e69cc82aae3db23ee871056b075499f5c55e98a594b85bad5290', (SELECT Country_ID FROM COUNTRY WHERE Country_Name = 'South Africa')),
-('Wilson', 'Emma', '0834567891', 'emma.wilson@mail.com', 'f3dc74ef369d0b2efd38315c06549f148c545c14017bb174af19eab7c8702dbf', (SELECT Country_ID FROM COUNTRY WHERE Country_Name = 'United Kingdom')),
-('Kim', 'Min-Jun', '0845678912', 'minjun.kim@mail.com', '881dba74a9f1791c929ff76f76c99127db92cf7a6874bfcc49b0ecc92730aca6', (SELECT Country_ID FROM COUNTRY WHERE Country_Name = 'South Korea')),
-('Patel', 'Anjali', '0856789123', 'anjali.patel@mail.com', '826469e0811957da693c88823ea545fb16fc3b504a1967b69cc32fbe59d4bc8e', (SELECT Country_ID FROM COUNTRY WHERE Country_Name = 'India'));
 
--- ---------------------------------------------------------
+/* =========================================================
+   INSERT 5 TOURISTS
+   Passwords have been hashed using SHA-256 + Base64.
+
+   Plain-text passwords used for testing:
+
+   John  Smith  -> Password123
+   Sarah Moyo   -> Tourist@123
+   David Ncube  -> Welcome123
+   Emily Banda  -> ZimTourist1
+   Michael Dube -> Travel@2026
+   ========================================================= */
+
+INSERT INTO TOURIST
+    (Tourist_LastName,
+     Tourist_FirstName,
+     Contact_Number,
+     Email_Address,
+     User_Password,
+     Country_ID)
+VALUES
+    ('Smith',
+     'John',
+     '0821234567',
+     'john.smith@gmail.com',
+     'AIxwOS46v70PpHu8LtlqqZvUnhWXJ/y6Dy5qvrOp1gE=',
+     1),
+
+    ('Moyo',
+     'Sarah',
+     '0712345678',
+     'sarah.moyo@gmail.com',
+     'Szhd9WMMbCSnt5lPj/nmcsdj3IzPZFoICophRez5KuM=',
+     2),
+
+    ('Ncube',
+     'David',
+     '0783456789',
+     'david.ncube@gmail.com',
+     'kl0um7NnnBud1YqyC7l0/cYfP/TbXhK7VPqwYAJhx7M=',
+     2),
+
+    ('Banda',
+     'Emily',
+     '0834567890',
+     'emily.banda@gmail.com',
+     'h0L532eGQaf0ncPe0xbUofN5+k82p4P6musZESzVcXU=',
+     3),
+
+    ('Dube',
+     'Michael',
+     '0765678901',
+     'michael.dube@gmail.com',
+     'DI9jMHwemwwhbh9gx4RfwAWctGowP9doCsRfo7X5iQA=',
+     4);
+
+     -- ---------------------------------------------------------
 -- BOOKING (10 rows) - Event_ID 1-10, Tourist_ID 1-10 from above
 -- ---------------------------------------------------------
-INSERT INTO BOOKING (Event_ID, Tourist_ID, Number_Tickets, Arrive_Date, Questionnaires, Payment_method, Payment_Amount, Payment_Made) VALUES
-(1, 1, 2, '2026-09-10', 'None', 'Credit Card', 300.00, 1),
-(2, 2, 4, '2026-09-15', 'Allergic to peanuts', 'Cash', 400.00, 0),
-(3, 3, 1, '2026-09-20', 'None', 'Debit Card', 200.00, 1),
-(4, 4, 3, '2026-09-12', 'Wheelchair access required', 'Credit Card', 360.00, 1),
-(5, 5, 2, '2026-09-18', 'None', 'EFT', 360.00, 0),
-(6, 6, 5, '2026-09-22', 'Vegetarian meal preference', 'Cash', 450.00, 1),
-(7, 7, 2, '2026-09-25', 'None', 'Credit Card', 320.00, 1),
-(8, 8, 1, '2026-09-14', 'None', 'Debit Card', 250.00, 0),
-(9, 9, 4, '2026-09-28', 'None', 'Cash', 320.00, 1),
-(10, 10, 2, '2026-09-30', 'Allergic to bee stings', 'Credit Card', 350.00, 1);
+INSERT INTO BOOKING (Event_ID, Tourist_ID, Number_Tickets, Arrive_Date, Questionnaires, Payment_method, Payment_Amount, Payment_Made, Amount_Owed, Checked_In, Checked_Out) VALUES
+(1, 1, 5, '2026-01-10', 'None', 'Credit Card', 300.00, 1,0.0, 0, 0),
+(10, 1, 7, '2026-02-15', 'Improve AI Chat', 'Cash', 400.00, 1, 0.0, 0, 0),
+(3, 2, 4, '2026-03-20', 'None', 'Debit Card', 200.00, 1, 0.0, 0, 0),
+(3, 2, 2, '2026-04-12', 'Enjoyed My Safari Tour', 'Credit Card', 360.00, 1, 0.0, 0, 0),
+(9, 3, 3, '2026-05-18', 'None', 'EFT', 360.00, 0, 0.0, 0, 0),
+(4, 3, 5, '2026-06-22', 'Have QR Codes', 'Cash', 450.00, 1, 0.0, 0, 0),
+(5, 4, 10, '2026-07-25', 'None', 'Credit Card', 320.00, 1, 0.0, 0, 0),
+(6, 4, 5, '2026-08-14', 'None', 'Debit Card', 250.00, 0, 0.0, 0, 0),
+(7, 5, 6, '2026-09-06', 'None', 'Cash', 320.00, 1, 0.0, 0, 0),
+(8, 5, 3, '2026-09-07', 'Provide more events', 'Credit Card', 350.00, 1, 0.0, 0, 0);

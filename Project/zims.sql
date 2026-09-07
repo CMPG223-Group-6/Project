@@ -19,7 +19,7 @@ CREATE TABLE EVENT
 CREATE TABLE COUNTRY (
 	COUNTRY_ID						int IDENTITY(1,1) PRIMARY KEY,
 	Country_Name					varchar(40),
-	Country_PhoneNumber				char(10),
+	Country_PhoneNumber				char(5),
 	Country_Domains					varchar(100)
 );
 
@@ -27,7 +27,7 @@ CREATE TABLE TOURIST (
 	TOURIST_ID						int IDENTITY(1,1) PRIMARY KEY,
 	Tourist_LastName				varchar(30),
 	Tourist_FirstName				varchar(30),
-	Contact_Number					char(10),
+	Contact_Number					char(13),
 	Email_Address					varchar(30),
 	User_Password					varchar(255),
 	Country_ID						int
