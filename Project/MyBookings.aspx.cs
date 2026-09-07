@@ -80,6 +80,7 @@ namespace Project
                     cmd.Parameters.AddWithValue("@Tourist_ID", Tourist_ID);
                     cmd.Parameters.AddWithValue("@Today", DateTime.Today);
 
+
                     SqlDataAdapter adap = new SqlDataAdapter();
                     DataSet ds = new DataSet();
 

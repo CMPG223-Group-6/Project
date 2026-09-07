@@ -50,10 +50,7 @@ namespace Project
             lblDisplaySpent.Text = GetTotalAmountSpent(Tourist_ID).ToString();
         }
 
-        protected void gdvDisplayEvents_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+        
         public void LoadData()
         {
             using (SqlConnection conn = new SqlConnection(conStr))
@@ -121,7 +118,7 @@ namespace Project
                 conn.Open();
                 string sql = "SELECT SUM(Payment_Amount)" +
                              "FROM BOOKING WHERE Tourist_ID = @touristID " +
-                             "AND Arrive_Date >= @Today" +
+                             " AND Arrive_Date >= @Today " +
                              " AND Checked_In = 0";
 
                 using (SqlCommand cmd = new SqlCommand(sql, conn))

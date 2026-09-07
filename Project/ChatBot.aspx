@@ -263,7 +263,7 @@
                 <div class="subtitle">Natal Zoological Gardens</div>
             </div>
             <span class="spacer"></span>
-            <a href="Default.aspx" class="close-btn" title="Close Chat">✕</a>
+            <a href="MyOverview.aspx" class="close-btn" title="Close Chat">✕</a>
         </div>
 
         <div class="chat-messages" id="chatMessages">

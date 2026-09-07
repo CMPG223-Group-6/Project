@@ -308,8 +308,12 @@ namespace Project
             {
                 return "Event_Name " + ddSortOrder.SelectedValue;
             }
+            else if (ddSortBy.SelectedValue == "Bookings")
+            {
+                return "TotalNumberOfBookings " + ddSortOrder.SelectedValue;
+            }
 
-            return "TotalNumberOfBookings " + ddSortOrder.SelectedValue;
+            return "Event_Name ASC";
         }
 
         private string GetSortDescription()
@@ -430,6 +434,17 @@ namespace Project
 
             Chart1.Series["Series1"].Points.Clear();
 
+            DataView view = table.DefaultView;
+
+            if(ddSortBy.SelectedValue == "EventType")
+            {
+                view.Sort = "Event_Name " + ddSortOrder.SelectedValue;
+            }
+            else if (ddSortBy.SelectedValue == "Bookings")
+            {
+                view.Sort = "TotalNumberOfBookings " + ddSortOrder.SelectedValue;
+            }
+
             foreach (DataRow row in table.Rows)
             {
                 string eventName = row["Event_Name"].ToString();
@@ -487,16 +502,14 @@ namespace Project
             string monthlyColumns = BuildMonthlyColumns(startDate, endDate);
             string sortOrder = GetSortOrder();
 
-            string sql =
-                "SELECT EVENTTYPE.Event_Name " +
-                monthlyColumns +
-                ", COUNT(BOOKING.Booking_ID) AS TotalNumberOfBookings " +
-                "FROM BOOKING " +
-                "INNER JOIN EVENT ON BOOKING.Event_ID = EVENT.Event_ID " +
-                "INNER JOIN EVENTTYPE ON EVENT.EventType_ID = EVENTTYPE.EventType_ID " +
-                "WHERE BOOKING.Arrive_Date BETWEEN @StartDate AND @EndDate " +
-                "GROUP BY EVENTTYPE.Event_Name " +
-                "ORDER BY " + sortOrder;
+            string sql = "SELECT EVENTTYPE.Event_Name " + monthlyColumns +
+                        ", COUNT(BOOKING.Booking_ID) AS TotalNumberOfBookings " +
+                        "FROM BOOKING " +
+                        "INNER JOIN EVENT ON BOOKING.Event_ID = EVENT.Event_ID " +
+                        "INNER JOIN EVENTTYPE ON EVENT.EventType_ID = EVENTTYPE.EventType_ID " +
+                        "WHERE BOOKING.Arrive_Date BETWEEN @StartDate AND @EndDate " +
+                        "GROUP BY EVENTTYPE.Event_Name " +
+                        "ORDER BY " + sortOrder;
 
             DisplayReport(sql, startDate, endDate);
         }
@@ -505,16 +518,22 @@ namespace Project
         {
             string monthlyColumns = BuildMonthlyColumns(startDate, endDate);
 
-            string sql =
+            string sortOrder = GetSortOrder();
+
+            string sql = "SELECT * FROM (" +
                 "SELECT TOP 5 EVENTTYPE.Event_Name " +
                 monthlyColumns +
                 ", COUNT(BOOKING.Booking_ID) AS TotalNumberOfBookings " +
                 "FROM BOOKING " +
-                "INNER JOIN EVENT ON BOOKING.Event_ID = EVENT.Event_ID " +
-                "INNER JOIN EVENTTYPE ON EVENT.EventType_ID = EVENTTYPE.EventType_ID " +
+                "INNER JOIN EVENT " +
+                "ON BOOKING.Event_ID = EVENT.Event_ID " +
+                "INNER JOIN EVENTTYPE " +
+                "ON EVENT.EventType_ID = EVENTTYPE.EventType_ID " +
                 "WHERE BOOKING.Arrive_Date BETWEEN @StartDate AND @EndDate " +
                 "GROUP BY EVENTTYPE.Event_Name " +
-                "ORDER BY TotalNumberOfBookings DESC";
+                "ORDER BY TotalNumberOfBookings DESC" +
+                ") AS TopFive " +
+                "ORDER BY " + sortOrder;
 
             DisplayReport(sql, startDate, endDate);
         }
@@ -554,7 +573,8 @@ namespace Project
             {
                 ddSortBy.Items.Add(new ListItem("Number of Bookings", "Bookings"));
 
-                ddSortOrder.Items.Clear();
+                ddSortOrder.Items.Add(new ListItem("Lowest to Highest", "ASC"));
+
                 ddSortOrder.Items.Add(new ListItem("Highest to Lowest", "DESC"));
             }
         }

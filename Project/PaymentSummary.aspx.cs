@@ -153,7 +153,7 @@ namespace Project
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Payment.aspx");
+            Response.Redirect("Bookings.aspx");
         }
     }
 }
