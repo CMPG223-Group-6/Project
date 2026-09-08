@@ -6,16 +6,16 @@ User Guideline
 
 1. System Requirements
 Before using the system, ensure that the computer has the following:
-  •	Operating System: Windows 10 or later 
+  •	Operating System: Windows 10 or later
   •	RAM: Minimum 8 GB  (Recommended 16 GB)
-  •	Storage: At least 10 GB of available space (SSD recommended) 
-  •	Processor: Intel Core i5 / AMD Ryzen 5 or better 
-  •	Internet/Wi-Fi: Required for downloading and installing the necessary software and packages 
-  •	Visual Studio Community: Installed 
-  •	SQL Server: Installed 
-  •	SQL Server Management Studio (SSMS): Installed 
+  •	Storage: At least 10 GB of available space (SSD recommended)
+  •	Processor: Intel Core i5 / AMD Ryzen 5 or better
+  •	Internet/Wi-Fi: Required for downloading and installing the necessary software and packages
+  •	Visual Studio Community: Installed
+  •	SQL Server: Installed
+  •	SQL Server Management Studio (SSMS): Installed
 
-2. Database Setup
+3. Database Setup
 The system uses Microsoft SQL Server for its database.
   • Step 1: Open SQL Server Management Studio
      - Open SQL Server Management Studio (SSMS) and connect to your SQL Server instance (Server Name - localhost).
@@ -59,13 +59,25 @@ If you already have an account:
     3.	Select Login. 
 
 5. Staff and Admin Login
-Initial Staff/Admin Login
-The initial login credentials are:
-   •	Email: Any email ending with @zims.com  (e.g. Admin@zims.com)
-   •	Password: admin123 
-Staff and Admin initially use these credentials to access the system.
-Admin Access
-Once inside the system, Admin access uses:
-   •	Required on Maintain Event Form
-   •	Email: admin@zims.com 
-   •	Password: ZimsAdmin 
+   Initial Staff/Admin Login
+      The initial login credentials are:
+      •	Email: Any email ending with @zims.com  (e.g. Admin@zims.com)
+      •	Password: admin123
+   Staff and Admin initially use these credentials to access the system.
+   Admin Access
+   Once inside the system, Admin access uses:
+      •	Required on Maintain Event Form
+      •	Email: admin@zims.com
+      •	Password: ZimsAdmin
+
+
+   
+  
+
+
+
+
+
+
+
+
