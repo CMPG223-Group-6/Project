@@ -65,10 +65,13 @@ namespace Project
 
                 reader = comm.ExecuteReader();
 
+                ddlUpdEventTypeID.Items.Clear();
                 ddlEventTypeID.Items.Clear();
+                ddlUpdEventTypeID.Items.Add("Select Event Type ID");
                 ddlEventTypeID.Items.Add("Select Event Type ID");
                 while (reader.Read())
                 {
+                    ddlUpdEventTypeID.Items.Add(reader.GetValue(0).ToString());
                     ddlEventTypeID.Items.Add(reader.GetValue(0).ToString());
                 }
                 reader.Close();
@@ -88,12 +91,14 @@ namespace Project
         private void clearFields()
         {
             ddlEventID.SelectedIndex = 0;
+            ddlUpdEventTypeID.SelectedIndex = 0;
             ddlSetStatus.SelectedIndex = 0;
             txtEventType.Text = "";
             txtDesc.Text = "";
             txtPrice.Text = "";
             txtCapacity.Text = "";
             txtAvailable.Text = "";
+            lblMessage0.Text = "";
         }
 
         protected void txtEventType_TextChanged(object sender, EventArgs e)
@@ -116,7 +121,7 @@ namespace Project
                 using (SqlConnection conn = new SqlConnection(conStr))
                 {
                     conn.Open();
-                    string sql = @"UPDATE EVENT SET EventType_ID = @eventtypeID Event_Price = @price, Max_Visitors = @capacity, Tickets_Available = @spaces, Status = @status 
+                    string sql = @"UPDATE EVENT SET EventType_ID = @eventtypeID, Event_Price = @price, Max_Visitors = @capacity, Tickets_Available = @spaces, Status = @status 
                              WHERE Event_ID = @eventID";
 
                     SqlCommand comm = new SqlCommand(sql, conn);
@@ -132,12 +137,15 @@ namespace Project
                     comm.ExecuteNonQuery();
                 }
 
+                lblMessage0.Text = "Event Updated Successfully";
+                lblMessage0.ForeColor = System.Drawing.Color.Green;
+
                 loadEvents();
             }
             catch(SqlException ex)
             {
-                lblMessage.Text = "Error: " + ex.Message;
-                lblMessage.ForeColor = System.Drawing.Color.Red;
+                lblMessage0.Text = "Error: " + ex.Message;
+                lblMessage0.ForeColor = System.Drawing.Color.Red;
             }
 
             clearFields();
@@ -271,8 +279,6 @@ namespace Project
                         }
                     }
                     reader.Close();
-
-                    loadEvents();
                 }
             }
             catch (SqlException ex)
@@ -288,6 +294,7 @@ namespace Project
             txtEventType.Text = "";
             txtDesc.Text = "";
             ddlSetStatus.SelectedIndex = 0;
+            lblMessage.Text = "";
         }
 
         protected void btnUpdate_Click(object sender, EventArgs e)
@@ -309,6 +316,7 @@ namespace Project
                     }
                 }
                 lblMessage.Text = "Event Type Updated Successfully";
+                lblMessage.ForeColor = System.Drawing.Color.Green;
                 ddlEventTypeID.SelectedIndex = 0;
                 txtDesc.Text = "";
                 txtEventType.Text = "";

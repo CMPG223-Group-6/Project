@@ -81,12 +81,12 @@
                                     <tr>
                                         <td>
                                             <asp:Label ID="lblUpdEventTyepeID" runat="server" Text="Event Type ID"></asp:Label>
-                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="ddlUpdEventTypeID" ErrorMessage="*" ForeColor="Red" ValidationGroup="UpdateEvent"></asp:RequiredFieldValidator>
+                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="ddlUpdEventTypeID" ErrorMessage="*" ForeColor="Red" ValidationGroup="UpdateEvent" InitialValue="0"></asp:RequiredFieldValidator>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <asp:DropDownList ID="ddlUpdEventTypeID" runat="server" Height="30px" Width="100px">
+                                            <asp:DropDownList ID="ddlUpdEventTypeID" runat="server" Height="33px" Width="149px">
                                             </asp:DropDownList>
                                         </td>
                                     </tr>
@@ -108,7 +108,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <asp:DropDownList ID="ddlSetStatus" runat="server" Height="30px" Width="290px">
+                                            <asp:DropDownList ID="ddlSetStatus" runat="server" Height="29px" Width="267px">
                                                 <asp:ListItem Value="1">Active</asp:ListItem>
                                                 <asp:ListItem Value="2">Inactive</asp:ListItem>
                                                 <asp:ListItem Value="3">Full</asp:ListItem>

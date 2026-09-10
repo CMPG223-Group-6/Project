@@ -54,6 +54,7 @@
                                 <asp:MenuItem NavigateUrl="~/ProcessPayments.aspx" Text="Process Payments" Value="Process Payments"></asp:MenuItem>
                                 <asp:MenuItem NavigateUrl="~/CheckInTourist.aspx" Text="Check-In" Value="Check-In"></asp:MenuItem>
                                 <asp:MenuItem NavigateUrl="~/Reports.aspx" Text="Reports" Value="Reports"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/StaffMenu.aspx" Text="Staff Menu" Value="Staff Menu"></asp:MenuItem>
                                 <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Log Out" Value="Log Out"></asp:MenuItem>
                             </Items>
                             <StaticHoverStyle BackColor="#339933" />

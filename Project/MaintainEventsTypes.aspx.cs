@@ -113,6 +113,12 @@ namespace Project
 
         protected void ddlStatus_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+            if(ddlStatus.SelectedIndex == 0)
+            {
+                loadEvents();
+                return;
+            }
             using (SqlConnection conn = new SqlConnection(conStr))
             {
 

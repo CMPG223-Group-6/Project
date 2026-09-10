@@ -211,7 +211,7 @@ namespace Project
                     
                     txtPaymentAmount.Text = reader.GetValue(7).ToString();
                     ddlEventID.Text = reader.GetValue(1).ToString();
-                    txtNumTickets.Attributes["Min"] = reader.GetValue(3).ToString();
+                    
                 }
             }
             loadEvents();
