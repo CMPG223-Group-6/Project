@@ -1,0 +1,43 @@
+
+                <style>
+                    body {
+                        font-family: Arial;
+                        font-size: 10pt;
+                    }
+
+                    .reportTable {
+                        width: 100%;
+                        border-collapse: collapse;
+                    }
+
+                    .reportTable th {
+                        border: 1px solid black;
+                        padding: 6px;
+                        text-align: center;
+                        font-weight: bold;
+                    }
+
+                    .reportTable td {
+                        border: 1px solid black;
+                        padding: 6px;
+                    }
+
+                    .eventName {
+                        text-align: left;
+                    }
+
+                    .bookingNumber {
+                        text-align: right;
+                    }
+
+                    .grandTotalLabel {
+                        text-align: right;
+                        font-weight: bold;
+                    }
+
+                    .grandTotalValue {
+                        text-align: right;
+                        font-weight: bold;
+                    }
+                </style>
+            <table style='width:100%;'><tr><td style='text-align:left; width:50%;'>2026/09/08  05:42 pm</td><td style='text-align:right; width:50%;'>Page: 1</td></tr></table><br /><div style='text-align:center; font-size:16pt; font-weight:bold;'>ZIMS Report - Zoological Gardens</div><br /><div style='text-align:center; font-size:12pt; font-weight:bold;'>Number of Bookings per Time Period</div><div style='text-align:center; font-size:10pt;'>from 2026/01/01 to 2026/09/08<br />ordered by Event Type Z to A</div><br /><table class='reportTable'><tr><th>Event Name</th><th>January</th><th>February</th><th>March</th><th>April</th><th>May</th><th>June</th><th>July</th><th>August</th><th>September</th><th>Total Number of Bookings</th></tr><tr><td class='eventName'>Sunset Safari</td><td class='bookingNumber'>0</td><td class='bookingNumber'>0</td><td class='bookingNumber'>0</td><td class='bookingNumber'>0</td><td class='bookingNumber'>0</td><td class='bookingNumber'>0</td><td class='bookingNumber'>0</td><td class='bookingNumber'>1</td><td class='bookingNumber'>0</td><td class='bookingNumber'>1</td></tr><tr><td class='eventName'>Safari Tour</td><td class='bookingNumber'>0</td><td class='bookingNumber'>0</td><td class='bookingNumber'>0</td><td class='bookingNumber'>0</td><td class='bookingNumber'>0</td><td class='bookingNumber'>0</td><td class='bookingNumber'>2</td><td class='bookingNumber'>1</td><td class='bookingNumber'>0</td><td class='bookingNumber'>3</td></tr><tr><td class='eventName'>Reptile Encounter</td><td class='bookingNumber'>0</td><td class='bookingNumber'>0</td><td class='bookingNumber'>0</td><td class='bookingNumber'>0</td><td class='bookingNumber'>0</td><td class='bookingNumber'>0</td><td class='bookingNumber'>1</td><td class='bookingNumber'>0</td><td class='bookingNumber'>0</td><td class='bookingNumber'>1</td></tr><tr><td class='eventName'>Primate Walk</td><td class='bookingNumber'>1</td><td class='bookingNumber'>0</td><td class='bookingNumber'>0</td><td class='bookingNumber'>0</td><td class='bookingNumber'>0</td><td class='bookingNumber'>0</td><td class='bookingNumber'>0</td><td class='bookingNumber'>0</td><td class='bookingNumber'>0</td><td class='bookingNumber'>1</td></tr><tr><td class='eventName'>Marine Life Show</td><td class='bookingNumber'>0</td><td class='bookingNumber'>0</td><td class='bookingNumber'>1</td><td class='bookingNumber'>0</td><td class='bookingNumber'>0</td><td class='bookingNumber'>0</td><td class='bookingNumber'>0</td><td class='bookingNumber'>0</td><td class='bookingNumber'>0</td><td class='bookingNumber'>1</td></tr><tr><td class='eventName'>Kids Petting Zoo</td><td class='bookingNumber'>0</td><td class='bookingNumber'>0</td><td class='bookingNumber'>0</td><td class='bookingNumber'>0</td><td class='bookingNumber'>1</td><td class='bookingNumber'>0</td><td class='bookingNumber'>0</td><td class='bookingNumber'>0</td><td class='bookingNumber'>0</td><td class='bookingNumber'>1</td></tr><tr><td class='eventName'>Big Cat Feeding</td><td class='bookingNumber'>0</td><td class='bookingNumber'>0</td><td class='bookingNumber'>0</td><td class='bookingNumber'>0</td><td class='bookingNumber'>0</td><td class='bookingNumber'>1</td><td class='bookingNumber'>0</td><td class='bookingNumber'>0</td><td class='bookingNumber'>0</td><td class='bookingNumber'>1</td></tr><tr><td class='eventName'>Behind the Scenes Tour</td><td class='bookingNumber'>0</td><td class='bookingNumber'>0</td><td class='bookingNumber'>0</td><td class='bookingNumber'>1</td><td class='bookingNumber'>0</td><td class='bookingNumber'>0</td><td class='bookingNumber'>0</td><td class='bookingNumber'>0</td><td class='bookingNumber'>0</td><td class='bookingNumber'>1</td></tr><tr><td class='grandTotalLabel'>GRAND TOTAL</td><td class='grandTotalValue'>1</td><td class='grandTotalValue'>0</td><td class='grandTotalValue'>1</td><td class='grandTotalValue'>1</td><td class='grandTotalValue'>1</td><td class='grandTotalValue'>1</td><td class='grandTotalValue'>3</td><td class='grandTotalValue'>2</td><td class='grandTotalValue'>0</td><td class='grandTotalValue'>10</td></tr></table><br /><br /><div style='text-align:center; font-style:italic; font-size:9pt; color:red;'>Disclaimer: Information on this extracted report is not guaranteed to be up to date. For reliable data, please refer to the report dashboard on the site.</div><br /><div style='text-align:center; font-weight:bold;'>*** END OF REPORT ***</div><br /><div style='text-align:center;'>Page 1 of 1</div>
